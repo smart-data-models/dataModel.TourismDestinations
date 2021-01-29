@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json",
+  "title": "Smart Data Models - Event",
+  "description": "Upcoming or past event associated with this place, organization, or action.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Event"
+          ],
+          "description": "Property. It has to be Event. Model:'https://schema.org/event'"
+        },
+        "touristType": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/touristType"
+        },
+        "url": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/PhysicalObject-Commons/image"
+        },
+        "isAccessibleForFree": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/isAccessibleForFree"
+        },
+        "publicAccess": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/publicAccess"
+        },
+        "startDate": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/startDate"
+        },
+        "endDate": {
+          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/endDate"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
