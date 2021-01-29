@@ -1,0 +1,41 @@
+{
+  "id": {
+    "type": "string",
+    "value": "ngsi:uri:TouristDestination:1"
+  },
+  "type": {
+    "type": "string",
+    "value": "TouristDestination"
+  },
+  "name": {
+    "type": "string",
+    "value": "Sitios Patrimonio de la Humanidad os spain"
+  },
+  "description": {
+    "type": "string",
+    "value": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>"
+  },
+  "includesAttraction": {
+    "type": "array",
+    "value": [
+      {
+        "type": [
+          "TouristAttraction",
+          "WorldHeritageSite",
+          "CivilBuilding"
+        ],
+        "name": "Alhambra, Generalife y Albaicin de Granada",
+        "url": "https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html"
+      },
+      {
+        "type": [
+          "TouristAttraction",
+          "WorldHeritageSite",
+          "PlaceOfWorship"
+        ],
+        "name": "Catedral de Burgos",
+        "url": "https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html"
+      }
+    ]
+  }
+}
