@@ -1,0 +1,18 @@
+{
+  "id": "urn:ngsi:touristTrip:1",
+  "type": "TouristTrip",
+  "name": "Descubre Conil",
+  "description": "Viaje para conocer el encanto y los atractivos turísticos de Conil de la Frontera.",
+  "touristType": [
+    "FAMILY TOURISM",
+    "WATER SPORTS TOURISM",
+    "FOOD TOURISM",
+    "BEACH AND SUN TOURISM"
+  ],
+  "url": [
+    "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"
+  ],
+  "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",
+  "sameAs": "https://inventrip.com/conil/trip/1907",
+  "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg"
+}
