@@ -1,0 +1,5 @@
+notesHeader:
+  This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org has been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json. Minor adjustments were necesary to keep compatibility with schema.org.
+notesMiddle:
+
+notesFooter:

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json",
+  "title": "Smart Data Models - Tourist Trip",
+  "description": "A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/url"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhsycalObject-Commons/properties/image"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/video"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "TouristTrip"
+          ],
+          "description": "Property. It has to be TouristDestination. Model:'https://schema.org/TouristDestination'"
+        },
+        "touristType": {
+          "type": "array",
+          "items": {
+            "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/touristType"
+          }
+        },
+        "sameAs": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
