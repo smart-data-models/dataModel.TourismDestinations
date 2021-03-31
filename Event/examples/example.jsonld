@@ -15,6 +15,6 @@
   },
   "touristType": "EVENTS AND FESTIVALS TOURISM",
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }
