@@ -1,10 +1,16 @@
-language not supported  
-======================  
-language not supported  
-language not supported  
-language not supported  
-- language not supported  ## language not supported  
-language not supported  
+Entity: Event  
+=============  
+[Open License](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
+Global description: **Upcoming or past event associated with this place, organization, or action.**  
+
+## List of properties  
+
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `endDate`: The end date and time of the item (in ISO 8601 date format).  - `id`: Unique identifier of the entity  - `isAccessibleForFree`: A flag to signal that the item, event, or place is accessible for free.  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `publicAccess`: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: The start date and time of the item (in ISO 8601 date format).  - `touristType`: Type of tourism depending on the segment and the motivation of the trip.  - `type`: It has to be Event  - `url`: Url with image related to the item    
+Required properties  
+- `id`  - `type`    
+This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org has been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json. This Type can be used on its own to describe a general TouristDestination, or be used as an additionalType to add tourist relevant properties to any other Place. A TouristDestination is defined as a Place that contains, or is colocated with, one or more TouristAttractions, often linked by a similar theme or interest to a particular touristType. The UNWTO defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.  
+## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Event:    
@@ -342,12 +348,160 @@ Event:
   type: object    
 ```  
 </details>    
-language not supported  
-language not supported  
-language not supported  
-language not supported  
-language not supported  
-language not supported  
-language not supported  
-language not supported  
-language not supported  
+## Example payloads    
+#### Event NGSI-v2 key-values Example    
+Here is an example of a Event in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "name": "Concierto de Revólver",  
+  "addressLocality": "Salamanca",  
+  "postalCode": "37008",  
+  "streetAddress": "Calle Monte Olivete, s/n",  
+  "startDate": "2019-06-08T21:00:00",  
+  "endDate": "2019-06-08T23:00:00",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "touristType": "EVENTS AND FESTIVALS TOURISM"  
+}  
+```  
+#### Event NGSI-v2 normalized Example    
+Here is an example of a Event in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": {  
+    "type": "string",  
+    "value": "uri:ngsi:event:1"  
+  },  
+  "type": {  
+    "type": "string",  
+    "value": "Event"  
+  },  
+  "name": {  
+    "type": "string",  
+    "value": "Concierto de Revólver"  
+  },  
+  "addressLocality": {  
+    "type": "string",  
+    "value": "Salamanca"  
+  },  
+  "postalCode": {  
+    "type": "string",  
+    "value": "37008"  
+  },  
+  "streetAddress": {  
+    "type": "string",  
+    "value": "Calle Monte Olivete, s/n"  
+  },  
+  "startDate": {  
+    "type": "string",  
+    "value": "2019-06-08T21:00:00"  
+  },  
+  "endDate": {  
+    "type": "string",  
+    "value": "2019-06-08T23:00:00"  
+  },  
+  "url": {  
+    "type": "string",  
+    "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
+  },  
+  "offeredBy": {  
+    "type": "object",  
+    "value": {  
+      "type": "Organization",  
+      "name": "Notikumi",  
+      "url": "https://www.notikumi.com/"  
+    }  
+  },  
+  "touristType": {  
+    "type": "string",  
+    "value": "EVENTS AND FESTIVALS TOURISM"  
+  }  
+}  
+```  
+#### Event NGSI-LD key-values Example    
+Here is an example of a Event in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "name": "Concierto de Rev\u00f3lver",  
+  "addressLocality": "Salamanca",  
+  "postalCode": "37008",  
+  "streetAddress": "Calle Monte Olivete, s/n",  
+  "startDate": "2019-06-08T21:00:00",  
+  "endDate": "2019-06-08T23:00:00",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "touristType": "EVENTS AND FESTIVALS TOURISM",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### Event NGSI-LD normalized Example    
+Here is an example of a Event in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": {  
+    "type": "string",  
+    "value": "uri:ngsi:event:1"  
+  },  
+  "type": {  
+    "type": "string",  
+    "value": "Event"  
+  },  
+  "name": {  
+    "type": "string",  
+    "value": "Concierto de Revolver"  
+  },  
+  "addressLocality": {  
+    "type": "string",  
+    "value": "Salamanca"  
+  },  
+  "postalCode": {  
+    "type": "string",  
+    "value": "37008"  
+  },  
+  "streetAddress": {  
+    "type": "string",  
+    "value": "Calle Monte Olivete, s/n"  
+  },  
+  "startDate": {  
+    "type": "string",  
+    "value": "2019-06-08T21:00:00"  
+  },  
+  "endDate": {  
+    "type": "string",  
+    "value": "2019-06-08T23:00:00"  
+  },  
+  "url": {  
+    "type": "string",  
+    "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
+  },  
+  "offeredBy": {  
+    "type": "object",  
+    "value": {  
+      "type": "Organization",  
+      "name": "Notikumi",  
+      "url": "https://www.notikumi.com/"  
+    }  
+  },  
+  "touristType": {  
+    "type": "string",  
+    "value": "EVENTS AND FESTIVALS TOURISM"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
