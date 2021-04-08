@@ -12,13 +12,19 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint/properties/url"
+      "url": {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint/properties/url"
+      }
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons/properties/image"
+      "image": {
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons/properties/image"
+      }
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/video"
+      "video": {
+        "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/video"
+      }
     },
     {
       "properties": {
