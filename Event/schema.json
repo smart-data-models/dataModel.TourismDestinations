@@ -373,14 +373,6 @@
               },
               "repeatCount": {
                 "type": "number"
-              },
-              "startTime": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "endTime": {
-                "type": "string",
-                "format": "date-time"
               }
             }
           }
@@ -396,16 +388,6 @@
         "doorTimeClose": {
           "type": "string",
           "description": "Property. Doors closing time to access the show.."
-        },
-        "startDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. Start date and time in an ISO8601 UTC format. Model:'https://schema.org/DateTime'"
-        },
-        "endDate": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. End date and time in an ISO8601 UTC format. Model:'https://schema.org/DateTime'"
         },
         "openingHoursSpecification": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
@@ -554,10 +536,6 @@
         "maximumAttendeeCapacity": {
           "type": "number",
           "description": "Property. The total number of people who can attend to the Event at that location."
-        },
-        "isAccessibleForFree": {
-          "type": "boolean",
-          "description": "Property. Free or paid Trip (True = Free / False = Paid)."
         },
         "tripPriceFrom": {
           "type": "number",
