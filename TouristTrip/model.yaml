@@ -53,16 +53,18 @@ TouristTrip:
       type: Property
     category:
       description: 'Category of the Trip. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. enum:''excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'''
-      enum:
-        - excursion
-        - gastronomy
-        - history
-        - museum
-        - outdoorActivities
-        - parksAndGardens
-        - religiousWorship
-        - shopping
-        - wellness
+      items:
+        enum:
+          - excursion
+          - gastronomy
+          - history
+          - museum
+          - outdoorActivities
+          - parksAndGardens
+          - religiousWorship
+          - shopping
+          - wellness
+        type: string
       type: Property
     contentURL:
       description: 'Specifies the URL to the official image or video of the Trip for more information.'
@@ -160,7 +162,7 @@ TouristTrip:
           name:
             type: string
           position:
-            type: Number
+            type: number
           streetAddress:
             items:
               type: string
@@ -396,13 +398,13 @@ TouristTrip:
               type: string
             type: array
           eligibleQuantity:
-            type: Number
+            type: number
           maxPrice:
-            type: Number
+            type: number
           minPrice:
-            type: Number
+            type: number
           price:
-            type: Number
+            type: number
       type: Property
     ratingValueAverage:
       description: 'Rating value of Trips. Usage guidelines: Use values from 0 to 10 depending on your standard. this is the average value of all detailed scores of `starRatingDetailed` attribute'
@@ -481,6 +483,7 @@ TouristTrip:
       items:
         enum:
           - --museum--
+          - art
           - archaeology
           - contemporaryArt
           - modernArt
