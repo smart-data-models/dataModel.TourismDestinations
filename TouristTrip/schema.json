@@ -61,7 +61,7 @@
             "type": "object",
             "properties": {
               "position": {
-                "type": "Number"
+                "type": "number"
               },
               "name": {
                 "type": "string"
@@ -89,19 +89,22 @@
           "description": "Property.  Text or Link to the access plan to the Trip."
         },
         "category": {
-          "type": "string",
+          "type": "array",
           "description": "Property. Category of the Trip. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'",
-          "enum": [
-            "excursion",
-            "gastronomy",
-            "history",
-            "museum",
-            "outdoorActivities",
-            "parksAndGardens",
-            "religiousWorship",
-            "shopping",
-            "wellness"
-          ]
+          "items": {
+            "type": "string",
+            "enum": [
+              "excursion",
+              "gastronomy",
+              "history",
+              "museum",
+              "outdoorActivities",
+              "parksAndGardens",
+              "religiousWorship",
+              "shopping",
+              "wellness"
+            ]
+          }
         },
         "subCategory": {
           "type": "array",
@@ -110,6 +113,7 @@
             "type": "string",
             "enum": [
               "--museum--",
+              "art",
               "archaeology",
               "contemporaryArt",
               "modernArt",
@@ -375,7 +379,7 @@
           "description": "Property. End date and time in an ISO8601 UTC format. Model:'https://schema.org/DateTime'"
         },
         "openingHoursSpecification": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#definitions/DateTime-Commons/properties/openingHoursSpecification"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         },
         "tripSchedule": {
           "type": "array",
@@ -548,7 +552,7 @@
           }
         },
         "wheelChairAccessible": {
-          "type": "Boolean",
+          "type": "boolean",
           "description": "Property. Access possible for Person with Reduced Mobility."
         },
         "maximumAttendeeCapacity": {
@@ -556,7 +560,7 @@
           "description": "Property. The total number of people who can attend to the Trip at that location."
         },
         "isAccessibleForFree": {
-          "type": "Boolean",
+          "type": "boolean",
           "description": "Property. Free or paid Trip (True = Free / False = Paid)."
         },
         "tripPriceFrom": {
@@ -568,7 +572,7 @@
           "description": "Property. Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**."
         },
         "priceSpecification": {
-          "type": "object",
+          "type": "array",
           "description": "Property. A structured value representing a price or price range depending categories or public.",
           "items": {
             "properties": {
@@ -579,16 +583,16 @@
                 }
               },
               "eligibleQuantity": {
-                "type": "Number"
+                "type": "number"
               },
               "price": {
-                "type": "Number"
+                "type": "number"
               },
               "minPrice": {
-                "type": "Number"
+                "type": "number"
               },
               "maxPrice": {
-                "type": "Number"
+                "type": "number"
               }
             }
           }

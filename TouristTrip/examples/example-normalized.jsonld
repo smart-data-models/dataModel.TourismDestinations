@@ -8,7 +8,7 @@
   "description": [
     {
       "type": "Property",
-      "value": "Viaje para conocer el encanto y los atractivos tur\u00edsticos de Conil de la Frontera."
+      "value": "Viaje para conocer el encanto y los atractivos turisticos de Conil de la Frontera."
     }
   ],
   "touristType": {
@@ -37,6 +37,353 @@
   "video": {
     "type": "Property",
     "value": "https://www.youtube.com/watch?v=IhnvlIzxPLg"
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": "Palais Lascaris"
+  },
+  "seeAlso": {
+    "type": "Property",
+    "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "point",
+      "coordinates": [
+        43.6976766,
+        7.2772458
+      ]
+    }
+  },
+  "address": {
+    "type": "Property",
+    "value": {
+      "streetAddress": "15, rue Droite",
+      "postalCode": "06000",
+      "addressLocality": "Nice",
+      "addressCountry": "France",
+      "addressRegion": "Marseille Nice Avignon Aix - (06)"
+    }
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Vieux Nice"
+  },
+  "dateLastReported": {
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-03-17TT08:45:00Z"
+      }
+    }
+  },
+  "itinerary": {
+    "type": "Property",
+    "value": [
+      {
+        "position": 1,
+        "name": "Cours Saleya",
+        "streetAddress": [
+          "Cours Saleya",
+          "06300 Nice"
+        ],
+        "image": [
+          "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"
+        ]
+      },
+      {
+        "position": 2,
+        "name": "Centre du patrimoine",
+        "streetAddress": [
+          "14 rue Jules Gilly",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"
+        ]
+      },
+      {
+        "position": 3,
+        "name": "Place du jÃ©sus",
+        "streetAddress": [
+          "Rue du jÃ©sus",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"
+        ]
+      },
+      {
+        "position": 4,
+        "name": "Palais Lascaris",
+        "streetAddress": [
+          "15, rue Droite",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"
+        ]
+      }
+    ]
+  },
+  "contactPoint": {
+    "type": "Property",
+    "value": {
+      "telephone": "+33(0)4 93 62 72 40",
+      "contactType": "customer reception",
+      "email": "palais.lascaris@ville-nice.fr",
+      "availableLanguage": [
+        "English",
+        "French"
+      ]
+    }
+  },
+  "accessPlan": {
+    "type": "Property",
+    "value": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr"
+  },
+  "category": {
+    "type": "Property",
+    "value": [
+      "museum"
+    ]
+  },
+  "subCategory": {
+    "type": "Property",
+    "value": [
+      "art",
+      "decorativeArts",
+      "history"
+    ]
+  },
+  "thematic": {
+    "type": "Property",
+    "value": [
+      "culture",
+      "museum",
+      "instrument",
+      "music",
+      "monument"
+    ]
+  },
+  "locationName": {
+    "type": "Property",
+    "value": "Palais Lascaris"
+  },
+  "title": {
+    "type": "Property",
+    "value": "Visite du MusÃ©e du Palais Lascaris"
+  },
+  "slogan": {
+    "type": "Property",
+    "value": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens."
+  },
+  "language": {
+    "type": "Property",
+    "value": [
+      "french",
+      "english",
+      "spanish",
+      "german"
+    ]
+  },
+  "superTrip": {
+    "type": "Property",
+    "value": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE"
+  },
+  "tripStatus": {
+    "type": "Property",
+    "value": "opened"
+  },
+  "startDate": {
+    "type": "DateTime",
+    "value": "-01-01"
+  },
+  "endDate": {
+    "type": "DateTime",
+    "value": "-12-31"
+  },
+  "openingHoursSpecification": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    },
+    {
+      "dayOfWeek": "Friday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    },
+    {
+      "dayOfWeek": "Saturday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    }
+  ],
+  "duration": {
+    "type": "Property",
+    "value": 1.25
+  },
+  "pitch": {
+    "type": "Property",
+    "value": [
+      {
+        "language": "fr",
+        "article": "Dans une ruelle Ã©troite ce palais baroque allie richesse ornementale et simplicitÃ©. Son escalier avec ses fresques est somptueux mÃªme si ses dimensions sont somme toute rÃ©duites. Lâambiance est chaleureuse avec des plafonds bas ,des piÃ¨ces Ã  lâÃ©chelle humaine qui en font un lieu intime propice Ã  la dÃ©couverte de la collection dâinstruments de musique. Ne manquez pas dâobserver les portes de communication."
+      },
+      {
+        "language": "en",
+        "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."
+      }
+    ]
+  },
+  "webSite": {
+    "type": "Property",
+    "value": "http://www.palais-lascaris.com"
+  },
+  "contenteURL": {
+    "type": "Property",
+    "value": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG"
+  },
+  "criticReview": {
+    "type": "Property",
+    "value": [
+      {
+        "language": "fr",
+        "review": {
+          "type": "Property",
+          "value": {
+            "article": "Beau palais baroque qui contient des instruments de musique variÃ©s dont une harpe-piano Ã©tonnante, et des portraits trÃ¨s beaux. A voir, surtout pour l'escalier et la dÃ©coration des salles.",
+            "origine": "Office du tourisme Nice",
+            "ratingValue": 9,
+            "starRating": 5
+          }
+        }
+      },
+      {
+        "language": "en",
+        "review": {
+          "type": "Property",
+          "value": {
+            "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",
+            "origine": "Trip Advisor",
+            "ratingValue": 8,
+            "starRating": 4
+          }
+        }
+      }
+    ]
+  },
+  "ratingValue": {
+    "type": "Property",
+    "value": 8.5
+  },
+  "starRatingDetailed": {
+    "type": "Property",
+    "value": {
+      "5": 92,
+      "4": 6,
+      "3": 2,
+      "2": 0,
+      "1": 0
+    }
+  },
+  "audience": {
+    "type": "Property",
+    "value": [
+      "AllPublic"
+    ]
+  },
+  "wheelChairAccessible": {
+    "type": "Property",
+    "value": false
+  },
+  "maximumAttendeeCapacity": {
+    "type": "Property",
+    "value": 25
+  },
+  "isAccessibleForFree": {
+    "type": "Property",
+    "value": false
+  },
+  "tripPriceFrom": {
+    "type": "Property",
+    "value": 0.00
+  },
+  "tripPriceTo": {
+    "type": "Property",
+    "value": 10.00
+  },
+  "priceSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "audience": "adult",
+        "price": 10.00
+      },
+      {
+        "audience": "senior",
+        "price": 5.00
+      },
+      {
+        "audience": "children",
+        "eligibleQuantity": 5,
+        "price": 0.00
+      }
+    ]
+  },
+  "paymentAccepted": {
+    "type": "Property",
+    "value": [
+      "Cash",
+      "CreditCard"
+    ]
+  },
+  "currencyAccepted": {
+    "type": "Property",
+    "value": [
+      "EUR",
+      "USD"
+    ]
+  },
+  "routeType": {
+    "type": "Property",
+    "value": [
+      "tram",
+      "subway",
+      "bus"
+    ]
+  },
+  "transportServices": {
+    "type": "Property",
+    "value": [
+      "taxi"
+    ]
+  },
+  "electricTransport": {
+    "type": "Property",
+    "value": [
+      "electricBicycle",
+      "electricMotorBike"
+    ]
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
