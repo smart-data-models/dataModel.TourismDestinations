@@ -1,6 +1,7 @@
 Entity: TouristTrip  
 ===================  
 [Open License](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.**  
 
 ## List of properties  
@@ -17,7 +18,7 @@ TouristTrip:
   description: 'A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.'    
   properties:    
     accessPlan:    
-      description: ' Text or Link to the access plan to the Trip.'    
+      description: 'Text or Link to the access plan to the Trip.'    
       type: Property    
     address:    
       description: 'The mailing address'    
@@ -30,9 +31,6 @@ TouristTrip:
           type: string    
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
           type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
@@ -687,7 +685,7 @@ TouristTrip:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Property    
+      type: Relationship    
     superTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -699,7 +697,7 @@ TouristTrip:
           format: uri    
           type: string    
       description: 'Reference to the Major Trip that includes this Trip.'    
-      type: Property    
+      type: Relationship    
     thematic:    
       description: 'A list of thematic as keywords'    
       items:    
@@ -843,7 +841,7 @@ TouristTrip:
         - suspended    
       type: Property    
     type:    
-      description: 'It has to be TouristDestination'    
+      description: 'It has to be TouristDestination. NGSI type'    
       enum:    
         - TouristTrip    
       type: Property    
