@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json",
     "title": "Smart Data Models - Event",
     "description": "Upcoming or past event associated with this place, organization, or action.",
