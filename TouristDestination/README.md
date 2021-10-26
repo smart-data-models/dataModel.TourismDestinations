@@ -6,7 +6,7 @@ Version: 0.0.1
 A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristDestination/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/TouristDestination/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristDestination/doc/spec.md)
 
