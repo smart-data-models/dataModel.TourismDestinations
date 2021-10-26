@@ -6,7 +6,7 @@ Version: 0.0.2
 A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/TouristTrip/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/doc/spec.md)
 
