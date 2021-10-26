@@ -6,7 +6,7 @@ Version: 0.0.1
 Upcoming or past event associated with this place, organization, or action.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/Event/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/doc/spec.md)
 
