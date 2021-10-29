@@ -19,12 +19,16 @@ Event:
   properties:    
     accessPlan:    
       description: ' Text or Link to the access plan to the item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     actor:    
       description: 'List of actors or music group.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -46,17 +50,21 @@ Event:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     audience:    
       description: 'Type of public concerned by this Event. A combination of Free text (family, adult, children, teenager, senior, allPublic, ...). Enum:''adult, allPublic, children, family, senior, teenager'''    
       items:    
@@ -68,7 +76,9 @@ Event:
           - senior    
           - teenager    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     category:    
       description: 'Category of the Trip. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. Enum:''shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'''    
       items:    
@@ -84,12 +94,16 @@ Event:
           - spectacle    
           - wellness    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     composer:    
       description: 'List of person who wrote the composition.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
@@ -106,13 +120,16 @@ Event:
         url:    
           format: uri    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
+        type: Property    
     contentURL:    
       description: 'Specifies the URL to the official image or video of the Trip for more information.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     criticReview:    
       items:    
         description: "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'"    
@@ -139,37 +156,54 @@ Event:
           - EUR    
           - USD    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/currenciesAccepted    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     director:    
       description: 'List of director who manage the composition.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     doorTimeClose:    
       description: 'Doors closing time to access the show..'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     doorTimeOpen:    
       description: 'Doors opening time to access the show.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     duration:    
       description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     electricTransport:    
       description: ' List of the different types of electric transport proposed by the city. A combination of. Enum:''electricBicycle, electricCar, electricMotorBike, electricScooter'''    
       items:    
@@ -179,13 +213,16 @@ Event:
           - electricMotorBike    
           - electricScooter    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     endDate:    
       description: 'The end date and time of the item (in ISO 8601 date format).'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/endDate    
+        type: Property    
     eventSchedule:    
       description: 'An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).*** '    
       items:    
@@ -218,7 +255,9 @@ Event:
             type: number    
           repeatFrequency:    
             type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     eventStatus:    
       description: 'Event Status regarding this event.'    
       items:    
@@ -232,7 +271,9 @@ Event:
           - postponed    
           - rescheduled    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &event_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -244,19 +285,22 @@ Event:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     isAccessibleForFree:    
       description: 'A flag to signal that the item, event, or place is accessible for free.'    
-      type: Property    
+      type: boolean    
       x-ngsi:    
         model: https://schema.org/isAccessibleForFree    
+        type: Property    
     language:    
       description: ' List of Formal language used during the Trip expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/language    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -408,13 +452,18 @@ Event:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     maximumAttendeeCapacity:    
       description: 'The total number of people who can attend to the Event at that location.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     openingHoursSpecification:    
       description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
       items:    
@@ -443,15 +492,18 @@ Event:
             format: date-time    
             type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/openingHoursSpecification    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *event_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     paymentAccepted:    
       description: 'Accepted payment if `TripFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
       items:    
@@ -461,14 +513,17 @@ Event:
           - CryptoCurrency    
           - other    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/paymentAccepted    
+        type: Property    
     performer:    
       description: 'Main actor or presenter or musician or musical group of the event.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     pitch:    
       description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
       items:    
@@ -478,7 +533,9 @@ Event:
           language:    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     priceSpecification:    
       description: 'A structured value representing a price or price range depending categories or public.'    
       items:    
@@ -498,21 +555,28 @@ Event:
           price:    
             type: number    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     publicAccess:    
       description: 'A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value'    
-      type: Property    
+      type: boolean    
       x-ngsi:    
         model: https://schema.org/publicAccess    
+        type: Property    
     ratingValueAverage:    
       description: 'Rating value of Event. Usage guidelines: Use values from 0 to 10 depending on your standard. This is the average value of all detailed scores of `starRatingDetailed` attribute'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     refPointOfInterest:    
       description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.'    
       items:    
         anyOf: *event_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     routeType:    
       description: "List of the urban transports (subway, Bus, Tram, ...) available near the Trip according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
       items:    
@@ -528,7 +592,9 @@ Event:
           - tram    
           - trolleybus    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -539,13 +605,18 @@ Event:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     slogan:    
       description: 'Trip header line, matches the text hook. '    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     starRatingDetailed:    
       description: 'Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. '    
       properties:    
@@ -569,13 +640,16 @@ Event:
           type: number    
         9:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     startDate:    
       description: 'The start date and time of the item (in ISO 8601 date format).'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/startDate    
+        type: Property    
     subCategory:    
       description: 'Sub-category of the `category` attribute. A combination of free text to remain flexible to a specific context is offered below as an initial example or any other value needed by an application. '    
       items:    
@@ -756,7 +830,9 @@ Event:
           - massage    
           - careCenter    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     subEvent:    
       description: 'Reference to a list of Minor Events that are part of this major Event'    
       items:    
@@ -769,7 +845,9 @@ Event:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     superEvent:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -781,15 +859,20 @@ Event:
           format: uri    
           type: string    
       description: 'Reference to the Major Event that includes this Event.'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     thematic:    
       description: 'A list of thematic as keywords'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     title:    
       description: ' Title of the Trip.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     touristType:    
       description: 'Type of tourism depending on the segment and the motivation of the trip.'    
       enum:    
@@ -847,9 +930,10 @@ Event:
         - 'WINE TOURISM'    
         - 'WINTER SPORTS TOURISM'    
         - 'WOMEN TOURISM'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     transportServices:    
       description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle '    
       items:    
@@ -859,33 +943,45 @@ Event:
           - uber    
           - vtc    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     tripPriceFrom:    
       description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     tripPriceTo:    
       description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'It has to be Event'    
       enum:    
         - Event    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/event    
+        type: Property    
     url:    
       description: 'Url with image related to the item'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     webSite:    
       description: 'Link to the official website for more information.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wheelChairAccessible:    
       description: 'Access possible for Person with Reduced Mobility.'    
-      type: Property    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
