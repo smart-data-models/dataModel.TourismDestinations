@@ -1,17 +1,17 @@
-Entity: TouristDestination  
-==========================  
-[Open License](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md)  
+エンティティTouristDestination  
+========================  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Global description: **A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.**  
+グローバルな説明。**観光地のこと。原則として、都市、地域、国、遊園地、ホテルなど、どのような場所でもTouristDestinationにすることができます。  
 
-## List of properties  
+## プロパティのリスト  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `includesAttraction`:   - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: It has to be TouristDestination    
-Required properties  
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `includesAttraction`:   - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: TouristDestinationである必要があります。    
+必須項目  
 - `id`  - `type`    
-This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org has been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+このデータモデルは、標準規格UNE178503に基づいています。また、schema.orgとの互換性もあります。schema.org の要素の一部は、このファイル https://smart-data-models.github.io/data-models/schema-org.json で採用されています。  
+## データモデルによるプロパティの記述  
+アルファベット順（クリックすると詳細が表示されます  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TouristDestination:    
@@ -379,9 +379,9 @@ TouristDestination:
   type: object    
 ```  
 </details>    
-## Example payloads    
-#### TouristDestination NGSI-v2 key-values Example    
-Here is an example of a TouristDestination in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## ペイロードの例  
+#### TouristDestination NGSI-v2 key-values の例。  
+ここではTouristDestinationをJSON-LD形式でkey-valuesにした例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "ngsi:uri:TouristDestination:1",  
@@ -410,8 +410,8 @@ TouristDestination:
   ]  
 }  
 ```  
-#### TouristDestination NGSI-v2 normalized Example    
-Here is an example of a TouristDestination in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### TouristDestination NGSI-v2 正規化例  
+ここでは、JSON-LD形式のTouristDestinationを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": {  
@@ -455,8 +455,8 @@ TouristDestination:
   }  
 }  
 ```  
-#### TouristDestination NGSI-LD key-values Example    
-Here is an example of a TouristDestination in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### TouristDestination NGSI-LDのキーバリューの例。  
+ここではTouristDestinationをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "ngsi:uri:TouristDestination:1",  
@@ -488,8 +488,8 @@ TouristDestination:
   ]  
 }  
 ```  
-#### TouristDestination NGSI-LD normalized Example    
-Here is an example of a TouristDestination in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### TouristDestination NGSI-LDの正規化例  
+ここでは、JSON-LD形式のTouristDestinationを正規化した例を示します。これはオプションを使わない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": {  

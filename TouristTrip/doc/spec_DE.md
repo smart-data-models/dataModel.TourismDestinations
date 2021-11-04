@@ -2,14 +2,14 @@ Entität: TouristTrip
 ====================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Eine touristische Reise. Eine erstellte Reiseroute mit Besuchen an einer oder mehreren Sehenswürdigkeiten (TouristAttraction/TouristDestination), die oft durch ein ähnliches Thema, geografisches Gebiet oder Interesse mit einem bestimmten TouristType verbunden sind. Die UNWTO definiert eine touristische Reise als die von Besuchern unternommene Reise.**  
+Globale Beschreibung: **Eine touristische Reise. Eine erstellte Reiseroute mit Besuchen einer oder mehrerer Sehenswürdigkeiten (TouristAttraction/TouristDestination), die oft durch ein ähnliches Thema, ein ähnliches geografisches Gebiet oder ein ähnliches Interesse mit einem bestimmten TouristType verbunden sind. Die UNWTO definiert eine touristische Reise als die von Besuchern unternommene Reise.**  
 
 ## Liste der Eigenschaften  
 
-- `accessPlan`: Text oder Link zum Zugriffsplan auf die Fahrt.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `audience`: Art der Öffentlichkeit, die von diesem Trip betroffen ist. Eine Kombination aus Freitext (Familie, Erwachsene, Kinder, Teenager, Senioren, allPublic, ...). Enum:'Erwachsener, allPublic, Kinder, Familie, Senior, Teenager'  - `category`: Kategorie des Ausflugs. Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel für einen bestimmten Kontext zu bleiben, als anfängliches Repository oder jeder andere Wert, der von einer Anwendung benötigt wird. enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL`: Gibt die URL zum offiziellen Bild oder Video der Reise für weitere Informationen an.  - `criticReview`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat das Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit](https://www.w3.org/TR/json-ld/#string-internationalization) basiert, die alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) integriert. Jedes Element wird durch eine Zeichenfolge mit 'Language Value' : 'Article Value' dargestellt  - `currencyAccepted`: Währung, die zur Zahlung akzeptiert wird, wenn `TripFree` False ist. Eine Kombination aus einer Liste von aktiven Codes, die im Modell definiert sind. [Norm ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateLastReported`: Letzte offizielle Aktualisierung der Daten im ISO 8601-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `duration`: Die Dauer der jeweiligen Sendung. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate`: Enddatum und -zeit im ISO8601 UTC-Format  - `id`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree`: Kostenlose oder bezahlte Fahrt (Wahr = Kostenlos / Falsch = Bezahlt).  - `itinerary`: Ziele oder Orte, aus denen sich eine Reise zusammensetzt. Für eine Reise, bei der die Reihenfolge der Ziele wichtig ist, verwenden Sie ItemList, um die Reihenfolge festzulegen, die in den Reisen enthalten ist.  - `language`:  Liste der während der Reise verwendeten formalen Sprache aus dem IETF-Standard [BCP 47](https://tools.ietf.org/html/bcp47)  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `locationName`: Name des Reiseziels.  - `maximumAttendeeCapacity`: Die Gesamtzahl der Personen, die an der Reise an diesem Ort teilnehmen können.  - `name`: Der Name dieses Elements.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einen bestimmten Dienst innerhalb eines Ortes liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `paymentAccepted`: Akzeptierte Zahlung, wenn `TripFree` False ist. Eine Kombination aus einer Liste von aktiven Codes, die im Modell definiert sind. Enum:'Cash, CreditCard, CryptoCurrency, other'  - `pitch`: Neigung der Reise. Jedes Element hat das Format, das auf der [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) basiert, die alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) integriert. Jedes Element wird durch eine Zeichenfolge mit Language Value : Article Value dargestellt.  - `priceSpecification`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne in Abhängigkeit von Kategorien oder Publikum darstellt.  - `ratingValueAverage`: Bewertungswert von Trips. Verwendungsrichtlinien: Verwenden Sie Werte von 0 bis 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "StarRatingDetailed".  - `refPointOfInterest`: Verweis auf alle in den Trips enthaltenen Point Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md). Die POI-Liste hat keine chronologische Reihenfolge.  - `routeType`: Liste der in der Nähe des Trips verfügbaren städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...) gemäß dem GFTS-Standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `slogan`: Auslösekopfzeile, entspricht dem Texthaken.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `starRatingDetailed`: Detaillierte Sterne-Bewertungen, die zu dem im ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element ein String im Format ist: `NumberOfSTar`: Prozentsatz.  - `startDate`: Startdatum und -zeit im ISO8601 UTC-Format  - `subCategory`: Unterkategorie des Attributs "category". Eine Kombination aus freiem Text, um flexibel für einen bestimmten Kontext zu bleiben, wird unten als erstes Beispiel oder jeder andere von einer Anwendung benötigte Wert angeboten.  - `subTrip`: Verweis auf eine Liste von kleineren Trips, die Teil dieses großen Trips sind  - `superTrip`: Verweis auf die Hauptreise, die diese Reise beinhaltet.  - `thematic`: Eine Liste von Themen als Schlüsselwörter  - `title`:  Titel der Reise.  - `touristType`: Aufzählung verschiedener Touristentypen, die für die TouristTrip gelten  - `transportServices`: Liste der in der Nähe des Trips verfügbaren privaten Verkehrsmittel. Zum Beispiel Taxi, uber, vtc, parkingShuttle  - `tripPriceFrom`: Min. Preis. Der Einheitencode (Text) des Maßes wird unter Verwendung der [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripPriceTo`: Max. Preis. Der Einheitencode (Text) des Maßes wird unter Verwendung der [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripSchedule`: Trip-Zeitplan. Damit kann ein Zeitplan über einen sich wiederholenden Zeitraum festgelegt werden, der zur Beschreibung einer regelmäßig auftretenden Fahrt verwendet wird. Im Beispiel am Anfang des Abschnitts für die Einschränkung zur Verwendung dieses Attributs.  - `tripStatus `: Reisestatus bezüglich dieser Reise. Enum:'storniert, geschlossen, beendet, geöffnet, verschoben, neu geplant, geplant, ausgesetzt'  - `type`: Es muss TouristDestination sein. NGSI-Typ  - `webSite`: Link zur offiziellen Website für weitere Informationen.  - `wheelChairAccessible`: Zugang für Person mit eingeschränkter Mobilität möglich.    
+- `accessPlan`: Text oder Link zum Zugangsplan für die Reise.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `audience`: Art der Öffentlichkeit, die von dieser Reise betroffen ist. Eine Kombination aus Freitext (Familie, Erwachsene, Kinder, Jugendliche, Senioren, alle Bürger, ...). Enum:'adult, allPublic, children, family, senior, teenager'  - `category`: Kategorie des Ausflugs. Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können. enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL`: Gibt die URL zum offiziellen Bild oder Video der Reise für weitere Informationen an.  - `criticReview`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch eine Zeichenkette mit "Language Value" : "Article Value" dargestellt.  - `currencyAccepted`: Währung, die für die Zahlung akzeptiert wird, wenn "TripFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. [Norm ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Börsenhandelssystem](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastReported`: Letzte offizielle Aktualisierung der Daten im ISO 8601-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `duration`: Die Dauer der einzelnen Sendungen. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate`: Enddatum und -zeit im ISO8601 UTC-Format  - `id`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree`: Kostenlose oder kostenpflichtige Reise (Wahr = Kostenlos / Falsch = Kostenpflichtig).  - `itinerary`: Ziele oder Orte, aus denen eine Reise besteht. Für eine Reise, bei der die Reihenfolge der Ziele wichtig ist, verwenden Sie ItemList, um die in den Reisen enthaltene Reihenfolge anzugeben.  - `language`:  Liste der während der Reise verwendeten formalen Sprache aus dem IETF-Standard [BCP 47] (https://tools.ietf.org/html/bcp47)  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `locationName`: Name des Reiseziels.  - `maximumAttendeeCapacity`: Die Gesamtzahl der Personen, die an der Reise an diesem Ort teilnehmen können.  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted`: Akzeptierte Zahlung, wenn `TripFree` False ist. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. Enum:'Bargeld, Kreditkarte, CryptoCurrency, andere'  - `pitch`: Neigung der Reise. Jedes Element hat das Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch einen String mit Language Value : Article Value dargestellt.  - `priceSpecification`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne je nach Kategorie oder Publikum darstellt.  - `ratingValueAverage`: Bewertungswert von Trips. Richtlinien für die Verwendung: Verwenden Sie Werte zwischen 0 und 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "StarRatingDetailed".  - `refPointOfInterest`: Verweis auf alle Points of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md), die in den Touren enthalten sind. Die POI-Liste ist nicht chronologisch geordnet.  - `routeType`: Liste der städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...), die in der Nähe des Trips verfügbar sind, gemäß dem GFTS-Standard [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `slogan`: Reisekopfzeile, entspricht dem Texthaken.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `starRatingDetailed`: Detaillierte Sternebewertungen, die zu dem in ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element eine Zeichenfolge im Format ist: `Anzahl derSterne`: Prozentsatz.  - `startDate`: Startdatum und -zeit im ISO8601 UTC-Format  - `subCategory`: Unterkategorie des Attributs "Kategorie". Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können, und zwar als erstes Beispiel oder als jeder andere Wert, den eine Anwendung benötigt.  - `subTrip`: Verweis auf eine Liste von kleineren Reisen, die Teil dieser großen Reise sind  - `superTrip`: Verweis auf die große Reise, die diese Reise einschließt.  - `thematic`: Eine Liste von Themen als Schlüsselwörter  - `title`:  Titel der Reise.  - `touristType`: Aufzählung der verschiedenen Reisetypen, die für die TouristTrip gelten  - `transportServices`: Liste der in der Nähe der Reise verfügbaren privaten Verkehrsmittel. Zum Beispiel Taxi, Uber, VTC, ParkingShuttle  - `tripPriceFrom`: Mindestpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripPriceTo`: Höchstpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripSchedule`: Zeitplan für die Reise. Damit kann ein Zeitplan für einen sich wiederholenden Zeitraum festgelegt werden, um eine regelmäßig auftretende Fahrt zu beschreiben. Im Beispiel am Anfang des Abschnitts für die Einschränkung zur Verwendung dieses Attributs.  - `tripStatus `: Reisestatus für diese Reise. Enum:'storniert, geschlossen, beendet, eröffnet, verschoben, verschoben, geplant, geplant, ausgesetzt'  - `type`: Es muss TouristDestination sein. NGSI-Typ  - `webSite`: Link zur offiziellen Website für weitere Informationen.  - `wheelChairAccessible`: Zugang für Personen mit eingeschränkter Mobilität möglich.    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
-Dieses Datenmodell basiert auf dem Standard UNE178503. Es ist auch mit schema.org kompatibel. Einige der Elemente von schema.org wurden in dieser Datei https://smart-data-models.github.io/data-models/schema-org.json angepasst. Geringfügige Anpassungen waren notwendig, um die Kompatibilität mit schema.org zu erhalten.  
+Dieses Datenmodell basiert auf dem Standard UNE178503. Es ist auch mit schema.org kompatibel. Einige der Elemente von schema.org wurden in dieser Datei https://smart-data-models.github.io/data-models/schema-org.json angepasst. Geringfügige Anpassungen waren notwendig, um die Kompatibilität mit schema.org zu gewährleisten.  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -19,7 +19,9 @@ TouristTrip:
   properties:    
     accessPlan:    
       description: 'Text or Link to the access plan to the Trip.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -41,17 +43,21 @@ TouristTrip:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     audience:    
       description: 'Type of public concerned by this Trip. A combination of Free text (family, adult, children, teenager, senior, allPublic, ...). Enum:''adult, allPublic, children, family, senior, teenager'''    
       items:    
@@ -63,7 +69,9 @@ TouristTrip:
           - senior    
           - teenager    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     category:    
       description: 'Category of the Trip. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. enum:''excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'''    
       items:    
@@ -78,11 +86,15 @@ TouristTrip:
           - shopping    
           - wellness    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     contentURL:    
       description: 'Specifies the URL to the official image or video of the Trip for more information.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     criticReview:    
       description: "Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'"    
       properties:    
@@ -99,7 +111,9 @@ TouristTrip:
             starRating:    
               type: number    
           type: array    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     currencyAccepted:    
       description: 'Currency accepted for payment if `TripFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
       items:    
@@ -107,30 +121,43 @@ TouristTrip:
           - EUR    
           - USD    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/currenciesAccepted    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateLastReported:    
       description: 'Last official update of the data in ISO 8601 format '    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     duration:    
       description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     electricTransport:    
       description: ' List of the different types of electric transport proposed by the city. A combination of. Enum:''electricBicycle, electricCar, electricMotorBike, electricScooter'''    
       items:    
@@ -140,13 +167,16 @@ TouristTrip:
           - electricMotorBike    
           - electricScooter    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     endDate:    
       description: 'End date and time in an ISO8601 UTC format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     id:    
       anyOf: &touristtrip_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -158,10 +188,13 @@ TouristTrip:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     isAccessibleForFree:    
       description: 'Free or paid Trip (True = Free / False = Paid).'    
-      type: Property    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
     itinerary:    
       description: 'Destinations or places that make up a trip. For a trip where destination order is important use ItemList to specify that order included in the trips.'    
       items:    
@@ -181,14 +214,17 @@ TouristTrip:
               type: string    
             type: array    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     language:    
       description: ' List of Formal language used during the Trip expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/language    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -340,16 +376,23 @@ TouristTrip:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     locationName:    
       description: 'Name of the trip location.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     maximumAttendeeCapacity:    
       description: 'The total number of people who can attend to the Trip at that location.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     openingHoursSpecification:    
       description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
       items:    
@@ -378,15 +421,18 @@ TouristTrip:
             format: date-time    
             type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/openingHoursSpecification    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *touristtrip_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     paymentAccepted:    
       description: 'Accepted payment if `TripFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
       items:    
@@ -396,9 +442,10 @@ TouristTrip:
           - CryptoCurrency    
           - other    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/paymentAccepted    
+        type: Property    
     pitch:    
       description: "Pitch of the Trip. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
       properties:    
@@ -406,7 +453,9 @@ TouristTrip:
           type: string    
         language:    
           type: string    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     priceSpecification:    
       description: 'A structured value representing a price or price range depending categories or public.'    
       items:    
@@ -423,16 +472,22 @@ TouristTrip:
             type: number    
           price:    
             type: number    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     ratingValueAverage:    
       description: 'Rating value of Trips. Usage guidelines: Use values from 0 to 10 depending on your standard. this is the average value of all detailed scores of `starRatingDetailed` attribute'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     refPointOfInterest:    
       description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.'    
       items:    
         anyOf: *touristtrip_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     routeType:    
       description: "List of the urban transports (subway, Bus, Tram, ...) available near the Trip according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
       items:    
@@ -448,7 +503,9 @@ TouristTrip:
           - tram    
           - trolleybus    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -459,13 +516,18 @@ TouristTrip:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     slogan:    
       description: 'Trip header line, matches the text hook. '    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     starRatingDetailed:    
       description: 'Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. '    
       properties:    
@@ -489,13 +551,16 @@ TouristTrip:
           type: number    
         9:    
           type: number    
-      type: Property    
+      type: object    
+      x-ngsi:    
+        type: Property    
     startDate:    
       description: 'Start date and time in an ISO8601 UTC format'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     subCategory:    
       description: 'Sub-category of the `category` attribute. A combination of free text to remain flexible to a specific context is offered below as an initial example or any other value needed by an application. '    
       items:    
@@ -677,7 +742,9 @@ TouristTrip:
           - massage    
           - careCenter    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     subTrip:    
       description: 'Reference to a list of Minor Trips that are part of this major Trip'    
       items:    
@@ -690,7 +757,9 @@ TouristTrip:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     superTrip:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -702,15 +771,20 @@ TouristTrip:
           format: uri    
           type: string    
       description: 'Reference to the Major Trip that includes this Trip.'    
-      type: Relationship    
+      x-ngsi:    
+        type: Relationship    
     thematic:    
       description: 'A list of thematic as keywords'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     title:    
       description: ' Title of the Trip.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     touristType:    
       description: 'enumeration of different tourist types applicable to the TouristTrip'    
       items:    
@@ -771,7 +845,9 @@ TouristTrip:
           - 'WINTER SPORTS TOURISM'    
           - 'WOMEN TOURISM'    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     transportServices:    
       description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle '    
       items:    
@@ -780,13 +856,19 @@ TouristTrip:
           - uber    
           - vtc    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     tripPriceFrom:    
       description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     tripPriceTo:    
       description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: Property    
+      type: number    
+      x-ngsi:    
+        type: Property    
     tripSchedule:    
       description: 'Trip Schedule. This allows a schedule to be set over a repeated period of time used to describe an Trip that occurs regularly. In example nota in the beginning of the section for restriction to use this attribute. '    
       items:    
@@ -832,7 +914,9 @@ TouristTrip:
             format: date-time    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     'tripStatus ':    
       description: 'Trip Status regarding this Trip. Enum:''cancelled, closed, finished, opened, postponed, rescheduled, scheduled, suspended'''    
       enum:    
@@ -844,21 +928,28 @@ TouristTrip:
         - rescheduled    
         - scheduled    
         - suspended    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'It has to be TouristDestination. NGSI type'    
       enum:    
         - TouristTrip    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/TouristDestination    
+        type: Property    
     webSite:    
       description: 'Link to the official website for more information.'    
       format: uri    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     wheelChairAccessible:    
       description: 'Access possible for Person with Reduced Mobility.'    
-      type: Property    
+      type: boolean    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -867,7 +958,7 @@ TouristTrip:
 </details>    
 ## Beispiel-Nutzlasten  
 #### TouristTrip NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für eine TouristTrip im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi:touristTrip:1",  
@@ -1117,7 +1208,7 @@ TouristTrip:
 }  
 ```  
 #### TouristTrip NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für eine TouristTrip im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "touristTrip.1",  
@@ -1502,7 +1593,7 @@ TouristTrip:
 }  
 ```  
 #### TouristTrip NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für eine TouristTrip im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi:touristTrip:1",  
@@ -1745,7 +1836,7 @@ TouristTrip:
 }  
 ```  
 #### TouristTrip NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für eine TouristTrip im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi:touristTrip:1",  
