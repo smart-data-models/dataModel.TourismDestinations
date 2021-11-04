@@ -1,0 +1,2 @@
+"id_", "type_", "name_", "address__addressLocality_", "address__postalCode_", "address__streetAddress_", "startDate_", "endDate_", "url_", "offeredBy__type_", "offeredBy__name_", "offeredBy__url_", "touristType_", "@context__0_"
+"uri:ngsi:event:1", "Event", "Concierto de Revolver", "Salamanca", "37008", "Calle Monte Olivete, s/n", "2019-06-08T21:00:00", "2019-06-08T23:00:00", "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca", "Organization", "Notikumi", "https://www.notikumi.com/", "EVENTS AND FESTIVALS TOURISM", "https://smartdatamodels.org/context.jsonld"
