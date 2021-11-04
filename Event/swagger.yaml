@@ -11,7 +11,7 @@ info:
   description:  |
     Upcoming or past event associated with this place, organization, or action.
   title: Event
-  version: "1.0.0"
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 
