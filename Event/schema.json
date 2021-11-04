@@ -448,9 +448,10 @@
                 },
                 "criticReview": {
                     "type": "array",
+                     "description": "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'",
                     "items": {
                         "type": "object",
-                        "description": "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'",
+
                         "properties": {
                             "language": {
                                 "type": "string"
