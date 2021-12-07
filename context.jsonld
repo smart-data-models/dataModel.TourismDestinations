@@ -62,7 +62,7 @@
         "tripPriceFrom": "https://smartdatamodels.org/dataModel.TourismDestinations/tripPriceFrom",
         "tripPriceTo": "https://smartdatamodels.org/dataModel.TourismDestinations/tripPriceTo",
         "tripSchedule": "https://smartdatamodels.org/dataModel.TourismDestinations/tripSchedule",
-        "tripStatus ": "https://smartdatamodels.org/dataModel.TourismDestinations/tripStatus ",
+        "tripStatus": "https://smartdatamodels.org/dataModel.TourismDestinations/tripStatus",
         "type": "@type",
         "url": "https://smartdatamodels.org/dataModel.TourismDestinations/url",
         "webSite": "https://smartdatamodels.org/dataModel.TourismDestinations/webSite",
