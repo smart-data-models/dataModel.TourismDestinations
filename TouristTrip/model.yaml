@@ -121,7 +121,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     dateLastReported:
-      description: 'Last official update of the data in ISO 8601 format '
+      description: 'Last official update of the data in ISO 8601 format'
       format: date-time
       type: string
       x-ngsi:
@@ -833,7 +833,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     transportServices:
-      description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle '
+      description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle'
       items:
         enum:
           - taxi
@@ -901,7 +901,7 @@ TouristTrip:
       type: array
       x-ngsi:
         type: Property
-    'tripStatus ':
+    tripStatus:
       description: 'Trip Status regarding this Trip. Enum:''cancelled, closed, finished, opened, postponed, rescheduled, scheduled, suspended'''
       enum:
         - cancelled
