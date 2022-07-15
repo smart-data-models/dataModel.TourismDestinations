@@ -21,9 +21,9 @@ Global description: **Upcoming or past event associated with this place, organiz
 - `category`: Category of the Event. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'  
 - `composer`: List of person who wrote the composition.  
 - `contactPoint`: The details to contact with the item.  
-- `contentURL`: Specifies the URL to the official image or video of the Trip for more information.  
+- `contentURL`: Specifies the URL to the official image or video of the Event for more information.  
 - `criticReview`:   
-- `currencyAccepted`: Currency accepted for payment if `TripFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
+- `currencyAccepted`: Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
 - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  
 - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  
 - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  
@@ -34,26 +34,28 @@ Global description: **Upcoming or past event associated with this place, organiz
 - `duration`: The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.  
 - `electricTransport`:  List of the different types of electric transport proposed by the city. A combination of. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  
 - `endDate`: The end date and time of the item (in ISO 8601 date format).  
+- `eventPriceFrom`: Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.  
+- `eventPriceTo`: Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.  
 - `eventSchedule`: An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).***   
 - `eventStatus`: Event Status regarding this event.  
 - `id`: Unique identifier of the entity  
 - `isAccessibleForFree`: A flag to signal that the item, event, or place is accessible for free.  
-- `language`:  List of Formal language used during the Trip expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard  
+- `language`:  List of Formal language used during the Event expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard  
 - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  
 - `maximumAttendeeCapacity`: The total number of people who can attend to the Event at that location.  
 - `name`: The name of this item.  
 - `openingHoursSpecification`: A structured value providing information about the opening hours of a place or a certain service inside a place  
 - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  
-- `paymentAccepted`: Accepted payment if `TripFree` is False. A combination of a list of active codes defined in the model. Enum:'Cash, CreditCard, CryptoCurrency, other'  
+- `paymentAccepted`: Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:'Cash, CreditCard, CryptoCurrency, other'  
 - `performer`: Main actor or presenter or musician or musical group of the event.  
 - `pitch`: Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value.   
 - `priceSpecification`: A structured value representing a price or price range depending categories or public.  
 - `publicAccess`: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value  
 - `ratingValueAverage`: Rating value of Event. Usage guidelines: Use values from 0 to 10 depending on your standard. This is the average value of all detailed scores of `starRatingDetailed` attribute  
-- `refPointOfInterest`: Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.  
-- `routeType`: List of the urban transports (subway, Bus, Tram, ...) available near the Trip according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'  
+- `refPointOfInterest`: Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the event. The POI list does not have a chronological order.  
+- `routeType`: List of the urban transports (subway, Bus, Tram, ...) available near the Event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'  
 - `seeAlso`: list of uri pointing to additional resources about the item  
-- `slogan`: Trip header line, matches the text hook.   
+- `slogan`: Event header line, matches the text hook.   
 - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  
 - `starRatingDetailed`: Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent.   
 - `startDate`: The start date and time of the item (in ISO 8601 date format).  
@@ -61,11 +63,9 @@ Global description: **Upcoming or past event associated with this place, organiz
 - `subEvent`: Reference to a list of Minor Events that are part of this major Event  
 - `superEvent`: Reference to the Major Event that includes this Event.  
 - `thematic`: A list of thematic as keywords  
-- `title`:  Title of the Trip.  
-- `touristType`: Type of tourism depending on the segment and the motivation of the trip.  
-- `transportServices`: List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle   
-- `tripPriceFrom`: Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.  
-- `tripPriceTo`: Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.  
+- `title`:  Title of the Event.  
+- `touristType`: Type of tourism depending on the segment and the motivation of the event.  
+- `transportServices`: List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle   
 - `type`: It has to be Event  
 - `url`: Url with image related to the item  
 - `webSite`: Link to the official website for more information.  
@@ -77,7 +77,7 @@ Required properties
 - `type`  
   
 
-This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org has been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json. This Type can be used on its own to describe a general TouristDestination, or be used as an additionalType to add tourist relevant properties to any other Place. A TouristDestination is defined as a Place that contains, or is colocated with, one or more TouristAttractions, often linked by a similar theme or interest to a particular touristType. The UNWTO defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.  
+This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org have been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json. This Type can be used on its own to describe a general TouristDestination, or be used as an additionalType to add tourist relevant properties to any other Place. A TouristDestination is defined as a Place that contains, or is colocated with, one or more TouristAttractions, often linked by a similar theme or interest to a particular touristType. The UNWTO defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.  
 
 ## Data Model description of properties  
 
@@ -200,7 +200,7 @@ Event:
         model: https://schema.org/ContactPoint    
         type: Property    
     contentURL:    
-      description: 'Specifies the URL to the official image or video of the Trip for more information.'    
+      description: 'Specifies the URL to the official image or video of the Event for more information.'    
       format: uri    
       type: string    
       x-ngsi:    
@@ -225,7 +225,7 @@ Event:
         type: object    
       type: array    
     currencyAccepted:    
-      description: 'Currency accepted for payment if `TripFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
+      description: 'Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
       items:    
         enum:    
           - EUR    
@@ -298,6 +298,16 @@ Event:
       x-ngsi:    
         model: https://schema.org/endDate    
         type: Property    
+    eventPriceFrom:    
+      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    eventPriceTo:    
+      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      type: number    
+      x-ngsi:    
+        type: Property   
     eventSchedule:    
       description: 'An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).*** '    
       items:    
@@ -369,7 +379,7 @@ Event:
         model: https://schema.org/isAccessibleForFree    
         type: Property    
     language:    
-      description: ' List of Formal language used during the Trip expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
+      description: ' List of Formal language used during the Event expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
       items:    
         type: string    
       type: array    
@@ -580,7 +590,7 @@ Event:
       x-ngsi:    
         type: Property    
     paymentAccepted:    
-      description: 'Accepted payment if `TripFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
+      description: 'Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
       items:    
         enum:    
           - Cash    
@@ -645,7 +655,7 @@ Event:
       x-ngsi:    
         type: Property    
     refPointOfInterest:    
-      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.'    
+      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the event. The POI list does not have a chronological order.'    
       items:    
         anyOf: *event_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
@@ -653,7 +663,7 @@ Event:
       x-ngsi:    
         type: Relationship    
     routeType:    
-      description: "List of the urban transports (subway, Bus, Tram, ...) available near the Trip according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
+      description: "List of the urban transports (subway, Bus, Tram, ...) available near the Event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
       items:    
         enum:    
           - bus    
@@ -683,7 +693,7 @@ Event:
       x-ngsi:    
         type: Property    
     slogan:    
-      description: 'Trip header line, matches the text hook. '    
+      description: 'Event header line, matches the text hook. '    
       type: string    
       x-ngsi:    
         type: Property    
@@ -944,12 +954,12 @@ Event:
       x-ngsi:    
         type: Property    
     title:    
-      description: ' Title of the Trip.'    
+      description: ' Title of the Event.'    
       type: string    
       x-ngsi:    
         type: Property    
     touristType:    
-      description: 'Type of tourism depending on the segment and the motivation of the trip.'    
+      description: 'Type of tourism depending on the segment and the motivation of the event.'    
       enum:    
         - 'ADVENTURE TOURISM'    
         - 'ASTRONOMY TOURISM'    
@@ -1010,7 +1020,7 @@ Event:
         model: https://schema.org/Text    
         type: Property    
     transportServices:    
-      description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle '    
+      description: 'List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle '    
       items:    
         enum:    
           - parkingShuttle    
@@ -1020,17 +1030,7 @@ Event:
         type: string    
       type: array    
       x-ngsi:    
-        type: Property    
-    tripPriceFrom:    
-      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: number    
-      x-ngsi:    
-        type: Property    
-    tripPriceTo:    
-      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: number    
-      x-ngsi:    
-        type: Property    
+        type: Property     
     type:    
       description: 'It has to be Event'    
       enum:    
