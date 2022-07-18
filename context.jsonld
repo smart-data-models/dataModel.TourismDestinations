@@ -23,6 +23,8 @@
         "duration": "https://smartdatamodels.org/dataModel.TourismDestinations/duration",
         "electricTransport": "https://smartdatamodels.org/dataModel.TourismDestinations/electricTransport",
         "endDate": "https://smartdatamodels.org/dataModel.TourismDestinations/endDate",
+        "eventPriceFrom": "https://smartdatamodels.org/dataModel.TourismDestinations/eventPriceFrom",
+        "eventPriceTo": "https://smartdatamodels.org/dataModel.TourismDestinations/eventPriceTo",
         "eventSchedule": "https://smartdatamodels.org/dataModel.TourismDestinations/eventSchedule",
         "eventStatus": "https://smartdatamodels.org/dataModel.TourismDestinations/eventStatus",
         "id": "@id",
