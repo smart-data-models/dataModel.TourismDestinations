@@ -1,17 +1,19 @@
-エンティティTouristTrip  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティTouristTrip  
 =================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**観光旅行のこと。1つ以上の興味のある場所（TouristAttraction/TouristDestination）を訪問するために作成された旅程で、特定のtouristTypeに類似したテーマ、地理的エリア、または興味によってリンクされていることが多い。UNWTOは、観光旅行を「訪問者が取る旅行」と定義している。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな説明。**観光旅行。多くの場合、特定の touristType に類似したテーマ、地理的地域、または興味によってリンクされた、1 つ以上の興味ある場所（TouristAttraction/TouristDestination）への訪問の作成された旅程。UNWTO は観光旅行を「訪問者が行く旅行」と定義している**。  
+バージョン: 0.0.3  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `accessPlan`: トリップへのアクセスプランをテキストまたはリンクで表示します。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `audience`: この旅行の対象となる人々のタイプ。自由形式（family, adult, children, teenager, senior, allPublic, ...）の組み合わせです。Enum:'adult, allPublic, children, family, senior, teenager' (大人、子供、ティーンエイジャー)  - `category`: 旅行のカテゴリー。特定のコンテクストに柔軟に対応するためのフリーテキストの組み合わせが、初期のレポジトリとして、あるいはアプリケーションが必要とするその他の値として、以下に提供されています。 enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL`: 詳しくはTripの公式画像や動画のURLを指定します。  - `criticReview`: レビュー活動で認知されているソースによって書かれた、または発行されたレビュー。各アイテムは、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づいたフォーマットを持ち、すべてのアイテムを1つのプロパティに統合する(例：71番)。各項目は、「言語値」：「記事値」の文字列で表される。  - `currencyAccepted`: TripFree`がFalseの場合に支払いに利用できる通貨です。モデルに定義されているアクティブコードのリストの組み合わせです。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastReported`: ISO 8601形式のデータの最終公式更新日  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `duration`: 各番組の継続時間です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**HUR**は**Hours**を表します。  - `electricTransport`: 市が提案するさまざまなタイプの電気交通機関の一覧です。の組み合わせです。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter' (電気自転車、電気自動車、電気バイク)  - `endDate`: 終了日時がISO8601 UTC形式の場合  - `id`: エンティティのユニークな識別子  - `isAccessibleForFree`: 無料または有料の旅行（True = 無料 / False = 有料）。  - `itinerary`: 旅行を構成する目的地または場所。目的地の順序が重要な旅行では、ItemListを使用して、旅行に含まれる順序を指定します。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)の規格で表現された、旅行中に使用されたフォーマルな言語のリスト  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `locationName`: 旅行先の名称  - `maximumAttendeeCapacity`: その場所で「Trip」に参加できる総人数です。  - `name`: このアイテムの名前です。  - `openingHoursSpecification`: 場所の営業時間や、場所にある特定のサービスに関する情報を提供する構造化された値  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `paymentAccepted`: TripFree`がFalseの場合に受け入れられる支払い。モデルに定義されているアクティブコードのリストの組み合わせです。Enum:'Cash, CreditCard, CryptoCurrency, other' (現金、クレジットカード、暗号通貨、その他)  - `pitch`: 旅のピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づいたフォーマットで、すべての項目をひとつのプロパティに統合しています（例：71番）。各項目は、Language Value : Article Valueの文字列で表されます。  - `priceSpecification`: カテゴリーやパブリックによって価格や価格帯を表す構造化された値。  - `ratingValueAverage`: Tripsの評価値です。使い方のガイドラインです。これは、`starRatingDetailed`属性のすべての詳細スコアの平均値です。  - `refPointOfInterest`: 旅行に含まれるすべての関心事[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に従って、Tripの近くで利用可能な都市交通機関(地下鉄、バス、トラム、...)のリストです。値の組み合わせです。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `slogan`: トリップヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表現される平均値につながった詳細な星評価。使用方法は以下の通りです。1から10までの構造化された値(星)で、各要素は以下の形式の文字列です。NumberOfSTar`:Percent.  - `startDate`: 開始日時がISO8601 UTC形式の場合  - `subCategory`: category`属性のサブカテゴリーです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせが、初期の例として以下に提供されています。  - `subTrip`: このメジャーな旅行の一部であるマイナーな旅行のリストへの参照  - `superTrip`: この旅行を含む主要な旅行への参照。  - `thematic`: キーワードとしてのテーマ性のあるリスト  - `title`: 旅行のタイトル。  - `touristType`: TouristTripに適用されるさまざまな観光タイプの列挙。  - `transportServices`: 旅行先で利用可能な民間交通機関のリストです。例：タクシー、ウーバー、vtc、パーキングシャトル  - `tripPriceFrom`: 最低価格です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**EUR**は**€uro**を表します。  - `tripPriceTo`: 最高価格です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**EUR**は**€uro**を表します。  - `tripSchedule`: トリップスケジュール。定期的に発生する旅行を表現するために使用され、繰り返しの期間にわたってスケジュールを設定することができます。この属性を使用するための制限については、セクションの最初にある例を参照してください。  - `tripStatus`: この旅行に関する旅行状況。Enum:'cancelled, closed, finished, opened, postponed, rescheduled, scheduled, suspended'.  - `type`: TouristDestinationである必要があります。NGSIタイプ  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 歩行困難な方でもアクセス可能です。    
-必須項目  
+- `accessPlan`: トリップへのアクセスプランをテキストまたはリンクで表示します。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `audience`: このトリップが関係する一般人のタイプ。自由形式テキスト（family, adult, children, teenager, senior, allPublic, ...）の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: 旅行のカテゴリー。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションが必要とする他の値として、以下に提供されます。 enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'.  - `contentURL`: トリップの公式画像や動画の詳細へのURLを指定します。  - `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  - `currencyAccepted`: TripFree`がFalseの場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastReported`: ISO 8601形式のデータの最終正式更新日  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って与えられます。例えば、**HUR** は **Hours** を表します。  - `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  - `endDate`: 終了日時（ISO8601 UTC形式  - `id`: エンティティの一意な識別子  - `isAccessibleForFree`: 無料または有料の旅行（True = 無料 / False = 有料）。  - `itinerary`: 旅行を構成する目的地や場所。目的地の順番が重要な旅行では、ItemListを使用して、旅行に含まれる順番を指定します。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格に基づく、トリップ中に使用された形式言語の一覧。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `locationName`: 旅行先の名称。  - `maximumAttendeeCapacity`: その場所でトリップに参加できる人数の合計です。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `paymentAccepted`: TripFree`がFalseの場合に受け入れられる支払い方法です。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' (現金、クレジットカード、暗号通貨、その他)  - `pitch`: 旅のピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  - `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  - `ratingValueAverage`: Tripsの評価値。使い方のガイドラインです。0から10までの値を基準にしてください。これは、`starRatingDetailed`属性のすべての詳細なスコアの平均値です。  - `refPointOfInterest`: トリップに含まれるすべてのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照することができます。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、トリップ周辺で利用可能な都市交通（地下鉄、バス、トラム、...）のリストです。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `slogan`: トリップヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  - `startDate`: ISO8601 UTCフォーマットによる開始日および時刻  - `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  - `subTrip`: このメジャー旅行の一部であるマイナー旅行のリストへの参照。  - `superTrip`: このトリップを含む主要トリップへの言及。  - `thematic`: キーワードとなるテーマ別リスト  - `title`: 旅のタイトル  - `touristType`: TouristTrip に適用される、さまざまな観光客の種類の列挙。  - `transportServices`: トリップ付近で利用可能な民間交通機関のリストです。例：タクシー、uber、vtc、パーキングシャトル  - `tripPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `tripPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `tripSchedule`: トリップスケジュール。定期的に発生するトリップを表現するために使用される、繰り返される期間のスケジュールを設定することができます。この属性を使用するための制限については、冒頭の例で説明します。  - `tripStatus`: このトリップに関するトリップステータスです。Enum:'cancelled, closed, finished, opened, postponeoned, rescheduled, scheduled, suspended' （キャンセル、クローズ、終了、オープン、延期、再スケジュール、予定、中断  - `type`: TouristTripでなければならない。NGSI エンティティタイプ。  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。    
+必要なプロパティ  
 - `id`  - `type`    
-このデータモデルは、標準規格UNE178503に基づいています。また、schema.orgとの互換性もあります。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が採用されています。schema.orgとの互換性を保つためには、細かな調整が必要です。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。schema.orgとの互換性を保つために、細かな調整が必要でした。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TouristTrip:    
@@ -399,26 +401,56 @@ TouristTrip:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
       minItems: 1    
       type: array    
@@ -932,12 +964,11 @@ TouristTrip:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be TouristDestination. NGSI type'    
+      description: 'It has to be TouristTrip. NGSI Entity type.'    
       enum:    
         - TouristTrip    
       type: string    
       x-ngsi:    
-        model: https://schema.org/TouristDestination    
         type: Property    
     webSite:    
       description: 'Link to the official website for more information.'    
@@ -959,12 +990,12 @@ TouristTrip:
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
-#### TouristTrip NGSI-v2 key-valuesの例。  
-ここではTouristTripをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使うとNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返すことができます。  
+#### TouristTrip NGSI-v2 key-value の例。  
+ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi:touristTrip:1",  
@@ -1214,7 +1245,7 @@ TouristTrip:
 }  
 ```  
 #### TouristTrip NGSI-v2 正規化例  
-ここでは、JSON-LD形式のTouristTripを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、TouristTripをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "touristTrip.1",  
@@ -1598,642 +1629,646 @@ TouristTrip:
   }  
 }  
 ```  
-#### TouristTrip NGSI-LDのキーバリューの例  
-ここではTouristTripをkey-valuesとしてJSON-LD形式にした例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TouristTrip NGSI-LD キー値例  
+ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
-  "id": "urn:ngsi:touristTrip:1",  
-  "type": "TouristTrip",  
+    "id": "urn:ngsi:touristTrip:1",  
+    "type": "TouristTrip",  
+    "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
+    "address": {  
+        "streetAddress": "15, rue Droite",  
+        "postalCode": "06000",  
+        "adressLocality": "Nice",  
+        "addressCountry": "France",  
+        "adressRegion": "Marseille Nice Avignon Aix - (06)"  
+    },  
+    "alternateName": "Palais Lascaris",  
+    "areaServed": "Vieux Nice",  
+    "audience": [  
+        "allPublic"  
+    ],  
+    "category": [  
+        "museum"  
+    ],  
+    "contactPoint": {  
+        "telephone": "+33(0)4 93 62 72 40",  
+        "contactType": "customer reception",  
+        "email": "palais.lascaris@ville-nice.fr",  
+        "availableLanguage": [  
+            "English",  
+            "French"  
+        ]  
+    },  
+    "contenteURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
+    "criticReview": {  
+        "fr": {  
+            "value": {  
+                "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
+                "origine": "Office du tourisme Nice",  
+                "ratingValue": 9,  
+                "starRating": 5  
+            }  
+        },  
+        "en": {  
+            "value": {  
+                "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
+                "origine": "Trip Advisor",  
+                "ratingValue": 8,  
+                "starRating": 4  
+            }  
+        }  
+    },  
+    "currencyAccepted": [  
+        "EUR",  
+        "USD"  
+    ],  
+    "dateLastReported": "2020-03-17T08:45:00Z",  
+    "description": "Le palais Lascaris est une ancienne demeure aristocratique de Nice datant de la premiere moiti du XVII sicle, aujourd'hui un musee des instruments de musique anciens",  
+    "duration": 1.25,  
+    "electricTransport": [  
+        "electricBicycle",  
+        "electricMotorBike"  
+    ],  
+    "endDate": "2021-12-31T00:00:00Z",  
+    "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
+    "isAccessibleForFree": false,  
+    "itinerary": [  
+        {  
+            "position": 1,  
+            "name": "Cours Saleya",  
+            "streetAdress": [  
+                "Cours Saleya",  
+                "06300 Nice"  
+            ],  
+            "image": [  
+                "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
+            ]  
+        },  
+        {  
+            "position": 2,  
+            "name": "Centre du patrimoine",  
+            "streetAdress": [  
+                "14 rue Jules Gilly",  
+                "06300 Nice"  
+            ],  
+            "image": [  
+                "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
+            ]  
+        },  
+        {  
+            "position": 3,  
+            "name": "Place du j\u00e9sus",  
+            "streetAdress": [  
+                "Rue du j\u00e9sus",  
+                "06300 Nice"  
+            ],  
+            "image": [  
+                "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
+            ]  
+        },  
+        {  
+            "position": 4,  
+            "name": "Palais Lascaris",  
+            "streetAdress": [  
+                "15, rue Droite",  
+                "06300 Nice"  
+            ],  
+            "image": [  
+                "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
+            ]  
+        }  
+    ],  
+    "language": [  
+        "french",  
+        "english",  
+        "spanish",  
+        "german"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            43.6976766,  
+            7.2772458  
+        ]  
+    },  
+    "locationName": "Palais Lascaris",  
+    "maximumAttendeeCapacity": 25,  
     "name": "Musee du Palais Lascaris",  
-  "alternateName": "Palais Lascaris",  
-  "description": "Le palais Lascaris est une ancienne demeure aristocratique de Nice datant de la premiere moiti du XVII sicle, aujourd'hui un musee des instruments de musique anciens",  
-  "touristType": [  
-    "FAMILY TOURISM",  
-    "WATER SPORTS TOURISM",  
-    "FOOD TOURISM",  
-    "BEACH AND SUN TOURISM"  
-  ],  
-  "url": [  
-    "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
-  ],  
-  "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
-  "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
-  "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      43.6976766,  
-      7.2772458  
+    "openingHoursSpecification": [  
+        {  
+            "dayOfWeek": "Monday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Wednesday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Thursday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Friday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Saturday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Sunday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        }  
+    ],  
+    "paymentAccepted": [  
+        "Cash",  
+        "CreditCard"  
+    ],  
+    "pitch": {  
+        "fr": {  
+            "value": {  
+                "article": "Dans une ruelle \u00e9troite ce palais baroque allie richesse ornementale et simplicit\u00e9. Son escalier avec ses fresques est somptueux m\u00eame si ses dimensions sont somme toute r\u00e9duites. L\u2019ambiance est chaleureuse avec des plafonds bas ,des pi\u00e8ces \u00e0 l\u2019\u00e9chelle humaine qui en font un lieu intime propice \u00e0 la d\u00e9couverte de la collection d\u2019instruments de musique. Ne manquez pas d\u2019observer les portes de communication."  
+            }  
+        },  
+        "en": {  
+            "value": {  
+                "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
+            }  
+        }  
+    },  
+    "priceSpecification": [  
+        {  
+            "audience": [  
+                "adult"  
+            ],  
+            "price": 10.0  
+        },  
+        {  
+            "audience": [  
+                "senior"  
+            ],  
+            "price": 5.0  
+        },  
+        {  
+            "audience": [  
+                "children"  
+            ],  
+            "eligibleQuantity": 5,  
+            "price": 0.0  
+        }  
+    ],  
+    "ratingValue": 8.5,  
+    "routeType": [  
+        "tram",  
+        "subway",  
+        "bus"  
+    ],  
+    "sameAs": "https://inventrip.com/conil/trip/1907",  
+    "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
+    "slogan": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens.",  
+    "starRatingDetailed": {  
+        "5": 92,  
+        "4": 6,  
+        "3": 2,  
+        "2": 0,  
+        "1": 0  
+    },  
+    "startDate": "2021-01-01T00:00:00Z",  
+    "subCategory": [  
+        "art",  
+        "decorativeArts",  
+        "history"  
+    ],  
+    "superTrip": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE",  
+    "thematic": [  
+        "culture",  
+        "museum",  
+        "instrument",  
+        "music",  
+        "monument"  
+    ],  
+    "title": "Visite du Mus\u00e9e du Palais Lascaris",  
+    "touristType": [  
+        "FAMILY TOURISM",  
+        "WATER SPORTS TOURISM",  
+        "FOOD TOURISM",  
+        "BEACH AND SUN TOURISM"  
+    ],  
+    "transportServices": [  
+        "taxi"  
+    ],  
+    "tripPriceFrom": 0.0,  
+    "tripPriceTo": 10.0,  
+    "tripStatus": "opened",  
+    "url": [  
+        "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
+    ],  
+    "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
+    "webSite": "http://www.palais-lascaris.com",  
+    "wheelChairAccessible": false,  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
     ]  
-  },  
-  "address": {  
-    "streetAddress": "15, rue Droite",  
-    "postalCode": "06000",  
-    "adressLocality": "Nice",  
-    "addressCountry": "France",  
-    "adressRegion": "Marseille Nice Avignon Aix - (06)"  
-  },  
-  "areaServed": "Vieux Nice",  
-  "dateLastReported": "2020-03-17T08:45:00Z",  
-  "itinerary": [  
-    {  
-      "position": 1,  
-      "name": "Cours Saleya",  
-      "streetAdress": [  
-        "Cours Saleya",  
-        "06300 Nice"  
-      ],  
-      "image": [  
-        "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
-      ]  
-    },  
-    {  
-      "position": 2,  
-      "name": "Centre du patrimoine",  
-      "streetAdress": [  
-        "14 rue Jules Gilly",  
-        "06300 Nice"  
-      ],  
-      "image": [  
-        "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
-      ]  
-    },  
-    {  
-      "position": 3,  
-      "name": "Place du j\u00e9sus",  
-      "streetAdress": [  
-        "Rue du j\u00e9sus",  
-        "06300 Nice"  
-      ],  
-      "image": [  
-        "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
-      ]  
-    },  
-    {  
-      "position": 4,  
-      "name": "Palais Lascaris",  
-      "streetAdress": [  
-        "15, rue Droite",  
-        "06300 Nice"  
-      ],  
-      "image": [  
-        "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
-      ]  
-    }  
-  ],  
-  "contactPoint": {  
-    "telephone": "+33(0)4 93 62 72 40",  
-    "contactType": "customer reception",  
-    "email": "palais.lascaris@ville-nice.fr",  
-    "availableLanguage": [  
-      "English",  
-      "French"  
-    ]  
-  },  
-  "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
-  "category": [  
-    "museum"  
-  ],  
-  "subCategory": [  
-    "art",  
-    "decorativeArts",  
-    "history"  
-  ],  
-  "thematic": [  
-    "culture",  
-    "museum",  
-    "instrument",  
-    "music",  
-    "monument"  
-  ],  
-  "locationName": "Palais Lascaris",  
-  "title": "Visite du Mus\u00e9e du Palais Lascaris",  
-  "slogan": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens.",  
-  "language": [  
-    "french",  
-    "english",  
-    "spanish",  
-    "german"  
-  ],  
-  "superTrip": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE",  
-  "tripStatus": "opened",  
-  "startDate": "2021-01-01T00:00:00Z",  
-  "endDate": "2021-12-31T00:00:00Z",  
-  "openingHoursSpecification": [  
-    {  
-      "dayOfWeek": "Monday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Wednesday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Thursday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Friday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Saturday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Sunday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    }  
-  ],  
-  "duration": 1.25,  
-  "pitch": {  
-    "fr": {  
-      "value": {  
-        "article": "Dans une ruelle \u00e9troite ce palais baroque allie richesse ornementale et simplicit\u00e9. Son escalier avec ses fresques est somptueux m\u00eame si ses dimensions sont somme toute r\u00e9duites. L\u2019ambiance est chaleureuse avec des plafonds bas ,des pi\u00e8ces \u00e0 l\u2019\u00e9chelle humaine qui en font un lieu intime propice \u00e0 la d\u00e9couverte de la collection d\u2019instruments de musique. Ne manquez pas d\u2019observer les portes de communication."  
-      }  
-    },  
-    "en": {  
-      "value": {  
-        "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
-      }  
-    }  
-  },  
-  "webSite": "http://www.palais-lascaris.com",  
-  "contenteURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
-  "criticReview": {  
-    "fr": {  
-      "value": {  
-        "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
-        "origine": "Office du tourisme Nice",  
-        "ratingValue": 9,  
-        "starRating": 5  
-      }  
-    },  
-    "en": {  
-      "value": {  
-        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
-        "origine": "Trip Advisor",  
-        "ratingValue": 8,  
-        "starRating": 4  
-      }  
-    }  
-  },  
-  "ratingValue": 8.5,  
-  "starRatingDetailed": {  
-    "5": 92,  
-    "4": 6,  
-    "3": 2,  
-    "2": 0,  
-    "1": 0  
-  },  
-  "audience": [  
-    "allPublic"  
-  ],  
-  "wheelChairAccessible": false,  
-  "maximumAttendeeCapacity": 25,  
-  "isAccessibleForFree": false,  
-  "tripPriceFrom": 0.0,  
-  "tripPriceTo": 10.0,  
-  "priceSpecification": [  
-    {  
-      "audience": ["adult"],  
-      "price": 10.0  
-    },  
-    {  
-      "audience": ["senior"],  
-      "price": 5.0  
-    },  
-    {  
-      "audience": ["children"],  
-      "eligibleQuantity": 5,  
-      "price": 0.0  
-    }  
-  ],  
-  "paymentAccepted": [  
-    "Cash",  
-    "CreditCard"  
-  ],  
-  "currencyAccepted": [  
-    "EUR",  
-    "USD"  
-  ],  
-  "routeType": [  
-    "tram",  
-    "subway",  
-    "bus"  
-  ],  
-  "transportServices": [  
-    "taxi"  
-  ],  
-  "electricTransport": [  
-    "electricBicycle",  
-    "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### TouristTrip NGSI-LDの正規化例  
-ここでは、JSON-LD形式のTouristTripを正規化した例を示します。これはオプションを使わない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### TouristTrip NGSI-LD 正規化例  
+以下は、TouristTripをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "urn:ngsi:touristTrip:1",  
-  "type": "TouristTrip",  
-  "name": {  
-    "type": "Property",  
-    "value": "Descubre Conil"  
-  },  
-  "description": [  
-    {  
-      "type": "Property",  
-      "value": "Viaje para conocer el encanto y los atractivos turisticos de Conil de la Frontera."  
-    }  
-  ],  
-  "touristType": {  
-    "type": "Property",  
-    "value": [  
-      "FAMILY TOURISM",  
-      "WATER SPORTS TOURISM",  
-      "FOOD TOURISM",  
-      "BEACH AND SUN TOURISM"  
-    ]  
-  },  
-  "url": {  
-    "type": "Property",  
-    "value": [  
-      "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
-    ]  
-  },  
-  "image": {  
-    "type": "Property",  
-    "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
-  },  
-  "sameAs": {  
-    "type": "Property",  
-    "value": "https://inventrip.com/conil/trip/1907"  
-  },  
-  "video": {  
-    "type": "Property",  
-    "value": "https://www.youtube.com/watch?v=IhnvlIzxPLg"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Palais Lascaris"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "point",  
-      "coordinates": [  
-        43.6976766,  
-        7.2772458  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "15, rue Droite",  
-      "postalCode": "06000",  
-      "addressLocality": "Nice",  
-      "addressCountry": "France",  
-      "addressRegion": "Marseille Nice Avignon Aix - (06)"  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Vieux Nice"  
-  },  
-  "dateLastReported": {  
-    "type": "DateTime",  
-    "value": "2020-03-17T08:45:00Z",  
-    "metadata": {  
-      "TimeInstant": {  
-        "type": "Text",  
-        "value": "2020-03-17TT08:45:00Z"  
-      }  
-    }  
-  },  
-  "itinerary": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "position": 1,  
-        "name": "Cours Saleya",  
-        "streetAddress": [  
-          "Cours Saleya",  
-          "06300 Nice"  
-        ],  
-        "image": [  
-          "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
-        ]  
-      },  
-      {  
-        "position": 2,  
-        "name": "Centre du patrimoine",  
-        "streetAddress": [  
-          "14 rue Jules Gilly",  
-          "06300 Nice"  
-        ],  
-        "image": [  
-          "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
-        ]  
-      },  
-      {  
-        "position": 3,  
-        "name": "Place du jÃ©sus",  
-        "streetAddress": [  
-          "Rue du jÃ©sus",  
-          "06300 Nice"  
-        ],  
-        "image": [  
-          "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
-        ]  
-      },  
-      {  
-        "position": 4,  
-        "name": "Palais Lascaris",  
-        "streetAddress": [  
-          "15, rue Droite",  
-          "06300 Nice"  
-        ],  
-        "image": [  
-          "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
-        ]  
-      }  
-    ]  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "telephone": "+33(0)4 93 62 72 40",  
-      "contactType": "customer reception",  
-      "email": "palais.lascaris@ville-nice.fr",  
-      "availableLanguage": [  
-        "English",  
-        "French"  
-      ]  
-    }  
-  },  
-  "accessPlan": {  
-    "type": "Property",  
-    "value": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "museum"  
-    ]  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": [  
-      "art",  
-      "decorativeArts",  
-      "history"  
-    ]  
-  },  
-  "thematic": {  
-    "type": "Property",  
-    "value": [  
-      "culture",  
-      "museum",  
-      "instrument",  
-      "music",  
-      "monument"  
-    ]  
-  },  
-  "locationName": {  
-    "type": "Property",  
-    "value": "Palais Lascaris"  
-  },  
-  "title": {  
-    "type": "Property",  
-    "value": "Visite du MusÃ©e du Palais Lascaris"  
-  },  
-  "slogan": {  
-    "type": "Property",  
-    "value": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens."  
-  },  
-  "language": {  
-    "type": "Property",  
-    "value": [  
-      "french",  
-      "english",  
-      "spanish",  
-      "german"  
-    ]  
-  },  
-  "superTrip": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE"  
-  },  
-  "tripStatus": {  
-    "type": "Property",  
-    "value": "opened"  
-  },  
-  "startDate": {  
-    "type": "DateTime",  
-    "value": "-01-01"  
-  },  
-  "endDate": {  
-    "type": "DateTime",  
-    "value": "-12-31"  
-  },  
-  "openingHoursSpecification": [  
-    {  
-      "dayOfWeek": "Monday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
+    "id": "urn:ngsi:touristTrip:1",  
+    "type": "TouristTrip",  
+    "accessPlan": {  
+        "type": "Property",  
+        "value": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr"  
     },  
-    {  
-      "dayOfWeek": "Wednesday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Thursday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Friday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Saturday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    },  
-    {  
-      "dayOfWeek": "Sunday",  
-      "opens": "10:00:00",  
-      "closes": "18:00:00"  
-    }  
-  ],  
-  "duration": {  
-    "type": "Property",  
-    "value": 1.25  
-  },  
-  "pitch": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "language": "fr",  
-        "article": "Dans une ruelle Ã©troite ce palais baroque allie richesse ornementale et simplicitÃ©. Son escalier avec ses fresques est somptueux mÃªme si ses dimensions sont somme toute rÃ©duites. Lâambiance est chaleureuse avec des plafonds bas ,des piÃ¨ces Ã  lâÃ©chelle humaine qui en font un lieu intime propice Ã  la dÃ©couverte de la collection dâinstruments de musique. Ne manquez pas dâobserver les portes de communication."  
-      },  
-      {  
-        "language": "en",  
-        "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
-      }  
-    ]  
-  },  
-  "webSite": {  
-    "type": "Property",  
-    "value": "http://www.palais-lascaris.com"  
-  },  
-  "contenteURL": {  
-    "type": "Property",  
-    "value": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG"  
-  },  
-  "criticReview": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "language": "fr",  
-        "review": {  
-          "type": "Property",  
-          "value": {  
-            "article": "Beau palais baroque qui contient des instruments de musique variÃ©s dont une harpe-piano Ã©tonnante, et des portraits trÃ¨s beaux. A voir, surtout pour l'escalier et la dÃ©coration des salles.",  
-            "origine": "Office du tourisme Nice",  
-            "ratingValue": 9,  
-            "starRating": 5  
-          }  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "15, rue Droite",  
+            "postalCode": "06000",  
+            "addressLocality": "Nice",  
+            "addressCountry": "France",  
+            "addressRegion": "Marseille Nice Avignon Aix - (06)"  
         }  
-      },  
-      {  
-        "language": "en",  
-        "review": {  
-          "type": "Property",  
-          "value": {  
-            "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
-            "origine": "Trip Advisor",  
-            "ratingValue": 8,  
-            "starRating": 4  
-          }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Palais Lascaris"  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Vieux Nice"  
+    },  
+    "audience": {  
+        "type": "Property",  
+        "value": [  
+            "AllPublic"  
+        ]  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "museum"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "telephone": "+33(0)4 93 62 72 40",  
+            "contactType": "customer reception",  
+            "email": "palais.lascaris@ville-nice.fr",  
+            "availableLanguage": [  
+                "English",  
+                "French"  
+            ]  
         }  
-      }  
-    ]  
-  },  
-  "ratingValue": {  
-    "type": "Property",  
-    "value": 8.5  
-  },  
-  "starRatingDetailed": {  
-    "type": "Property",  
-    "value": {  
-      "5": 92,  
-      "4": 6,  
-      "3": 2,  
-      "2": 0,  
-      "1": 0  
-    }  
-  },  
-  "audience": {  
-    "type": "Property",  
-    "value": [  
-      "AllPublic"  
-    ]  
-  },  
-  "wheelChairAccessible": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "maximumAttendeeCapacity": {  
-    "type": "Property",  
-    "value": 25  
-  },  
-  "isAccessibleForFree": {  
-    "type": "Property",  
-    "value": false  
-  },  
-  "tripPriceFrom": {  
-    "type": "Property",  
-    "value": 0.00  
-  },  
-  "tripPriceTo": {  
-    "type": "Property",  
-    "value": 10.00  
-  },  
-  "priceSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "audience": "adult",  
-        "price": 10.00  
-      },  
-      {  
-        "audience": "senior",  
-        "price": 5.00  
-      },  
-      {  
-        "audience": "children",  
-        "eligibleQuantity": 5,  
-        "price": 0.00  
-      }  
-    ]  
-  },  
-  "paymentAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "Cash",  
-      "CreditCard"  
-    ]  
-  },  
-  "currencyAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "EUR",  
-      "USD"  
-    ]  
-  },  
-  "routeType": {  
-    "type": "Property",  
-    "value": [  
-      "tram",  
-      "subway",  
-      "bus"  
-    ]  
-  },  
-  "transportServices": {  
-    "type": "Property",  
-    "value": [  
-      "taxi"  
-    ]  
-  },  
-  "electricTransport": {  
-    "type": "Property",  
-    "value": [  
-      "electricBicycle",  
-      "electricMotorBike"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    },  
+    "contenteURL": {  
+        "type": "Property",  
+        "value": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG"  
+    },  
+    "criticReview": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "language": "fr",  
+                "review": {  
+                    "type": "Property",  
+                    "value": {  
+                        "article": "Beau palais baroque qui contient des instruments de musique vari\u00c3\u00a9s dont une harpe-piano \u00c3\u00a9tonnante, et des portraits tr\u00c3\u00a8s beaux. A voir, surtout pour l'escalier et la d\u00c3\u00a9coration des salles.",  
+                        "origine": "Office du tourisme Nice",  
+                        "ratingValue": 9,  
+                        "starRating": 5  
+                    }  
+                }  
+            },  
+            {  
+                "language": "en",  
+                "review": {  
+                    "type": "Property",  
+                    "value": {  
+                        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
+                        "origine": "Trip Advisor",  
+                        "ratingValue": 8,  
+                        "starRating": 4  
+                    }  
+                }  
+            }  
+        ]  
+    },  
+    "currencyAccepted": {  
+        "type": "Property",  
+        "value": [  
+            "EUR",  
+            "USD"  
+        ]  
+    },  
+    "dateLastReported": {  
+        "type": "DateTime",  
+        "value": "2020-03-17T08:45:00Z",  
+        "metadata": {  
+            "TimeInstant": {  
+                "type": "Text",  
+                "value": "2020-03-17TT08:45:00Z"  
+            }  
+        }  
+    },  
+    "description": [  
+        {  
+            "type": "Property",  
+            "value": "Viaje para conocer el encanto y los atractivos turisticos de Conil de la Frontera."  
+        }  
+    ],  
+    "duration": {  
+        "type": "Property",  
+        "value": 1.25  
+    },  
+    "electricTransport": {  
+        "type": "Property",  
+        "value": [  
+            "electricBicycle",  
+            "electricMotorBike"  
+        ]  
+    },  
+    "endDate": {  
+        "type": "DateTime",  
+        "value": "-12-31"  
+    },  
+    "image": {  
+        "type": "Property",  
+        "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
+    },  
+    "isAccessibleForFree": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "itinerary": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "position": 1,  
+                "name": "Cours Saleya",  
+                "streetAddress": [  
+                    "Cours Saleya",  
+                    "06300 Nice"  
+                ],  
+                "image": [  
+                    "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
+                ]  
+            },  
+            {  
+                "position": 2,  
+                "name": "Centre du patrimoine",  
+                "streetAddress": [  
+                    "14 rue Jules Gilly",  
+                    "06300 Nice"  
+                ],  
+                "image": [  
+                    "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
+                ]  
+            },  
+            {  
+                "position": 3,  
+                "name": "Place du j\u00c3\u00a9sus",  
+                "streetAddress": [  
+                    "Rue du j\u00c3\u00a9sus",  
+                    "06300 Nice"  
+                ],  
+                "image": [  
+                    "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
+                ]  
+            },  
+            {  
+                "position": 4,  
+                "name": "Palais Lascaris",  
+                "streetAddress": [  
+                    "15, rue Droite",  
+                    "06300 Nice"  
+                ],  
+                "image": [  
+                    "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
+                ]  
+            }  
+        ]  
+    },  
+    "language": {  
+        "type": "Property",  
+        "value": [  
+            "french",  
+            "english",  
+            "spanish",  
+            "german"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "point",  
+            "coordinates": [  
+                43.6976766,  
+                7.2772458  
+            ]  
+        }  
+    },  
+    "locationName": {  
+        "type": "Property",  
+        "value": "Palais Lascaris"  
+    },  
+    "maximumAttendeeCapacity": {  
+        "type": "Property",  
+        "value": 25  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Descubre Conil"  
+    },  
+    "openingHoursSpecification": [  
+        {  
+            "dayOfWeek": "Monday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Wednesday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Thursday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Friday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Saturday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        },  
+        {  
+            "dayOfWeek": "Sunday",  
+            "opens": "10:00:00",  
+            "closes": "18:00:00"  
+        }  
+    ],  
+    "paymentAccepted": {  
+        "type": "Property",  
+        "value": [  
+            "Cash",  
+            "CreditCard"  
+        ]  
+    },  
+    "pitch": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "language": "fr",  
+                "article": "Dans une ruelle \u00c3\u00a9troite ce palais baroque allie richesse ornementale et simplicit\u00c3\u00a9. Son escalier avec ses fresques est somptueux m\u00c3\u00aame si ses dimensions sont somme toute r\u00c3\u00a9duites. L\u00e2\u0080\u0099ambiance est chaleureuse avec des plafonds bas ,des pi\u00c3\u00a8ces \u00c3\u00a0 l\u00e2\u0080\u0099\u00c3\u00a9chelle humaine qui en font un lieu intime propice \u00c3\u00a0 la d\u00c3\u00a9couverte de la collection d\u00e2\u0080\u0099instruments de musique. Ne manquez pas d\u00e2\u0080\u0099observer les portes de communication."  
+            },  
+            {  
+                "language": "en",  
+                "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
+            }  
+        ]  
+    },  
+    "priceSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "audience": "adult",  
+                "price": 10.0  
+            },  
+            {  
+                "audience": "senior",  
+                "price": 5.0  
+            },  
+            {  
+                "audience": "children",  
+                "eligibleQuantity": 5,  
+                "price": 0.0  
+            }  
+        ]  
+    },  
+    "ratingValue": {  
+        "type": "Property",  
+        "value": 8.5  
+    },  
+    "routeType": {  
+        "type": "Property",  
+        "value": [  
+            "tram",  
+            "subway",  
+            "bus"  
+        ]  
+    },  
+    "sameAs": {  
+        "type": "Property",  
+        "value": "https://inventrip.com/conil/trip/1907"  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"  
+    },  
+    "slogan": {  
+        "type": "Property",  
+        "value": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens."  
+    },  
+    "starRatingDetailed": {  
+        "type": "Property",  
+        "value": {  
+            "5": 92,  
+            "4": 6,  
+            "3": 2,  
+            "2": 0,  
+            "1": 0  
+        }  
+    },  
+    "startDate": {  
+        "type": "DateTime",  
+        "value": "-01-01"  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": [  
+            "art",  
+            "decorativeArts",  
+            "history"  
+        ]  
+    },  
+    "superTrip": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE"  
+    },  
+    "thematic": {  
+        "type": "Property",  
+        "value": [  
+            "culture",  
+            "museum",  
+            "instrument",  
+            "music",  
+            "monument"  
+        ]  
+    },  
+    "title": {  
+        "type": "Property",  
+        "value": "Visite du Mus\u00c3\u00a9e du Palais Lascaris"  
+    },  
+    "touristType": {  
+        "type": "Property",  
+        "value": [  
+            "FAMILY TOURISM",  
+            "WATER SPORTS TOURISM",  
+            "FOOD TOURISM",  
+            "BEACH AND SUN TOURISM"  
+        ]  
+    },  
+    "transportServices": {  
+        "type": "Property",  
+        "value": [  
+            "taxi"  
+        ]  
+    },  
+    "tripPriceFrom": {  
+        "type": "Property",  
+        "value": 0.0  
+    },  
+    "tripPriceTo": {  
+        "type": "Property",  
+        "value": 10.0  
+    },  
+    "tripStatus": {  
+        "type": "Property",  
+        "value": "opened"  
+    },  
+    "url": {  
+        "type": "Property",  
+        "value": [  
+            "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
+        ]  
+    },  
+    "video": {  
+        "type": "Property",  
+        "value": "https://www.youtube.com/watch?v=IhnvlIzxPLg"  
+    },  
+    "webSite": {  
+        "type": "Property",  
+        "value": "http://www.palais-lascaris.com"  
+    },  
+    "wheelChairAccessible": {  
+        "type": "Property",  
+        "value": false  
+    },  
+    "@context": []  
 }  
 ```  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
