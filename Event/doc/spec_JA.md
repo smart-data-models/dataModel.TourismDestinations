@@ -1,17 +1,19 @@
-エンティティイベント  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティイベント  
 ==========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**この場所、組織、または行動に関連する近日中または過去のイベント**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**この場所、組織、またはアクションに関連する近日中または過去のイベント.**。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `accessPlan`: アイテムへのアクセスプランを示すテキストまたはリンクです。  - `actor`: 俳優や音楽グループのリストです。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `audience`: このイベントの対象となる一般市民のタイプ。自由記述（family, adult, children, teenager, senior, allPublic, ...）の組み合わせ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: 旅のカテゴリー。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、初期のレポジトリとして、またはアプリケーションが必要とするその他の値として、以下に提供されます。Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'.  - `composer`: 作文を書いた人のリスト  - `contactPoint`: アイテムの連絡先です。  - `contentURL`: 詳しくはTripの公式画像や動画のURLを指定します。  - `criticReview`:   - `currencyAccepted`: TripFree`がFalseの場合に支払いに利用できる通貨です。モデルに定義されているアクティブコードのリストの組み合わせです。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `director`: 構成を管理するディレクターのリストです。  - `doorTimeClose`: 開場時間に合わせてご利用いただけます。  - `doorTimeOpen`: 開場時間は、ショーにアクセスするための時間です。  - `duration`: 各番組の継続時間です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**HUR**は**Hours**を表します。  - `electricTransport`: 市が提案するさまざまなタイプの電気交通機関の一覧です。の組み合わせです。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter' (電気自転車、電気自動車、電気バイク)  - `endDate`: アイテムの終了日時（ISO 8601の日付形式）。  - `eventSchedule`: このプロパティを使ってスケジュールに関連付けられたイベントは、`startDate`や`endDate`のプロパティを持つべきではありません。これらは代わりに関連するスケジュール内で定義され、データを使用するクライアントが曖昧さを回避することができます。このプロパティは、異なるスケジュール（異なる月や季節）を指定するために、繰り返し値を持つことがあります。  - `eventStatus`: このイベントに関するイベントステータス  - `id`: エンティティのユニークな識別子  - `isAccessibleForFree`: アイテム、イベント、または場所が無料でアクセス可能であることを示すフラグです。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)の規格で表現された、旅行中に使用されたフォーマルな言語のリスト  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `maximumAttendeeCapacity`: その場所でイベントに参加できる総人数です。  - `name`: このアイテムの名前です。  - `openingHoursSpecification`: 場所の営業時間や、場所にある特定のサービスに関する情報を提供する構造化された値  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `paymentAccepted`: TripFree`がFalseの場合に受け入れられる支払い。モデルに定義されているアクティブコードのリストの組み合わせです。Enum:'Cash, CreditCard, CryptoCurrency, other' (現金、クレジットカード、暗号通貨、その他)  - `performer`: イベントのメインアクター、プレゼンター、ミュージシャン、音楽グループなど。  - `pitch`: イベントのピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づいたフォーマットを持ち、全ての項目を一つのプロパティに統合しています（例：71番）。各項目は、Language Value : Article Valueの文字列で表されます。  - `priceSpecification`: カテゴリーやパブリックによって価格や価格帯を表す構造化された値。  - `publicAccess`: プレイスが一般のビジターに開放されていることを示すフラグ。このプロパティが省略された場合、想定されるデフォルトのブール値はありません。  - `ratingValueAverage`: イベントの評価値です。使用上のガイドライン。基準に応じて0から10の値を使用してください。starRatingDetailed` 属性のすべての詳細スコアの平均値です。  - `refPointOfInterest`: 旅行に含まれるすべての関心事[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に従って、Tripの近くで利用可能な都市交通機関(地下鉄、バス、トラム、...)のリストです。値の組み合わせです。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `slogan`: トリップヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表現される平均値につながった詳細な星評価。使用方法は以下の通りです。1から10までの構造化された値(星)で、各要素は以下の形式の文字列です。NumberOfSTar`:Percent.  - `startDate`: アイテムの開始日時（ISO 8601の日付形式）。  - `subCategory`: category`属性のサブカテゴリーです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせが、初期の例として以下に提供されています。  - `subEvent`: このメジャーイベントの一部であるマイナーイベントのリストへの参照  - `superEvent`: 本イベントを含むMajor Eventへの言及。  - `thematic`: キーワードとしてのテーマ性のあるリスト  - `title`: 旅行のタイトル。  - `touristType`: セグメントや旅の動機に応じた観光のタイプ。  - `transportServices`: 旅行先で利用可能な民間交通機関のリストです。例：タクシー、ウーバー、vtc、パーキングシャトル  - `tripPriceFrom`: 最低価格です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**EUR**は**€uro**を表します。  - `tripPriceTo`: 最高価格です。測定の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使用して与えられます。例えば、**EUR**は**€uro**を表します。  - `type`: イベントでなければならない  - `url`: アイテムに関連する画像のURL  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 歩行困難な方でもアクセス可能です。    
-必須項目  
+- `accessPlan`: アイテムへのアクセスプランのテキストまたはリンクです。  - `actor`: 俳優や音楽グループのリスト。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `audience`: 本イベントが関係する一般人の種類。Free text (family, adult, children, teenager, senior, allPublic, ...) の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: イベントのカテゴリ。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションによって必要とされる任意の他の値として、以下に提供されます。Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'.  - `composer`: 作文した人のリスト。  - `contactPoint`: 商品に関するお問い合わせ先です。  - `contentURL`: イベントの公式画像や動画の詳細へのURLを指定します。  - `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  - `currencyAccepted`: isAccessibleForFree` が False の場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `director`: 編成を管理するディレクターの一覧です。  - `doorTimeClose`: 入場は閉場時間までです。  - `doorTimeOpen`: 開場時間から入場できます。  - `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**HUR** は **Hours** を表します。  - `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  - `endDate`: 項目の終了日時（ISO 8601の日付形式）。  - `eventPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR**は、**€uro**を表します。  - `eventPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `eventSchedule`: このプロパティを使用してスケジュールに関連付けられたイベントは、`startDate`または`endDate`プロパティを持つべきではありません。これらは代わりに関連するスケジュール内で定義され、データを使用するクライアントのあいまいさを避けることができます。このプロパティは、異なるスケジュール（異なる月や季節）を指定するために、繰り返し値を持つかもしれません***。  - `eventStatus`: このイベントに関するイベントステータス。  - `id`: エンティティの一意な識別子  - `isAccessibleForFree`: そのアイテム、イベント、または場所が無料でアクセスできることを示すフラグです。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格を参考にしたイベント中の形式言語の一覧です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAttendeeCapacity`: その場所で開催されるイベントの参加可能人数の合計です。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `paymentAccepted`: isAccessibleForFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' （現金、クレジットカード、暗号通貨、その他）。  - `performer`: イベントの主な出演者、司会者、ミュージシャン、音楽グループ。  - `pitch`: イベントのピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  - `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  - `publicAccess`: (2)公開フラグ 場所の公開を示すフラグ。このプロパティが省略された場合、デフォルトのブール値は想定されない。  - `ratingValueAverage`: イベントの評価値。使用上のガイドライン。0から10までの値を基準にしてください。これは `starRatingDetailed` 属性のすべての詳細スコアの平均値である。  - `refPointOfInterest`: イベントに含まれる全てのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照する。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、イベント周辺で利用可能な都市交通（地下鉄、バス、トラム、...）の一覧です。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `slogan`: イベントヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  - `startDate`: 項目の開始日時（ISO 8601の日付形式）。  - `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  - `subEvent`: このメジャーイベントの一部であるマイナーイベントのリストへの参照。  - `superEvent`: 本イベントを含む主要イベントに関する言及。  - `thematic`: キーワードとなるテーマ別リスト  - `title`: イベントのタイトル  - `touristType`: セグメントや旅行の動機に応じた観光の種類。  - `transportServices`: イベント会場付近で利用可能な民間交通機関のリストです。例：タクシー、ウーバー、VTC、パーキングシャトルなど  - `type`: イベントである必要があります。NGSIエンティティタイプ  - `url`: アイテムに関連する画像を含むURL  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。    
+必要なプロパティ  
 - `id`  - `type`    
-このデータモデルは、標準規格UNE178503に基づいています。また、schema.orgとの互換性もあります。schema.orgの要素の一部は、このファイルhttps://smart-data-models.github.io/data-models/schema-org.json で採用されています。このTypeは、一般的なTouristDestinationを記述するために単独で使用することができ、また、他のPlaceに観光関連のプロパティを追加するためのAdditionalTypeとして使用することもできます。TouristDestinationは、1つ以上のTouristAttractionsを含む、あるいはそれと一緒に配置された場所と定義され、多くの場合、特定のtouristTypeに類似したテーマや興味によってリンクされている。UNWTOでは、Destination（観光旅行の主な目的地）を、旅行をするという決定の中心となる訪問先と定義している。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。この型はそれ自体で一般的なTouristDestinationを記述するために使用することができ、また他のPlaceに観光関連のプロパティを追加するためのadditionalTypeとして使用することができる。このタイプは、一般的な観光地を記述するために単独で使用されることも、他の場所に観光 関連プロパティを追加するための additionalType として使用されることもできる。UNWTO は、Destination（観光旅行の主要目的地）を、旅行を決定する上で中心となる訪問地と定義している。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Event:    
@@ -80,7 +82,7 @@ Event:
       x-ngsi:    
         type: Property    
     category:    
-      description: 'Category of the Trip. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. Enum:''shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'''    
+      description: 'Category of the Event. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. Enum:''shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'''    
       items:    
         enum:    
           - excursion    
@@ -107,6 +109,39 @@ Event:
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
         contactType:    
           description: 'Property. Contact type of this item.'    
           type: string    
@@ -114,8 +149,14 @@ Event:
           description: 'Property. Email address of owner.'    
           format: idn-email    
           type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          type: string    
         name:    
           description: 'Property. The name of this item.'    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
           type: string    
         telephone:    
           description: 'Property. Telephone of this contact.'    
@@ -129,14 +170,14 @@ Event:
         model: https://schema.org/ContactPoint    
         type: Property    
     contentURL:    
-      description: 'Specifies the URL to the official image or video of the Trip for more information.'    
+      description: 'Specifies the URL to the official image or video of the Event for more information.'    
       format: uri    
       type: string    
       x-ngsi:    
         type: Property    
     criticReview:    
+      description: "Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'"    
       items:    
-        description: "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'"    
         properties:    
           language:    
             type: string    
@@ -153,8 +194,10 @@ Event:
             type: array    
         type: object    
       type: array    
+      x-ngsi:    
+        type: Property    
     currencyAccepted:    
-      description: 'Currency accepted for payment if `TripFree` is False. A combination of a list of active codes defined in the model. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
+      description: 'Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
       items:    
         enum:    
           - EUR    
@@ -227,6 +270,16 @@ Event:
       x-ngsi:    
         model: https://schema.org/endDate    
         type: Property    
+    eventPriceFrom:    
+      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      type: number    
+      x-ngsi:    
+        type: Property    
+    eventPriceTo:    
+      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      type: number    
+      x-ngsi:    
+        type: Property    
     eventSchedule:    
       description: 'An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).*** '    
       items:    
@@ -298,7 +351,7 @@ Event:
         model: https://schema.org/isAccessibleForFree    
         type: Property    
     language:    
-      description: ' List of Formal language used during the Trip expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
+      description: 'List of Formal language used during the Event expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard'    
       items:    
         type: string    
       type: array    
@@ -474,26 +527,56 @@ Event:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
       minItems: 1    
       type: array    
@@ -509,7 +592,7 @@ Event:
       x-ngsi:    
         type: Property    
     paymentAccepted:    
-      description: 'Accepted payment if `TripFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
+      description: 'Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
       items:    
         enum:    
           - Cash    
@@ -574,7 +657,7 @@ Event:
       x-ngsi:    
         type: Property    
     refPointOfInterest:    
-      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.'    
+      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.'    
       items:    
         anyOf: *event_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
@@ -582,7 +665,7 @@ Event:
       x-ngsi:    
         type: Relationship    
     routeType:    
-      description: "List of the urban transports (subway, Bus, Tram, ...) available near the Trip according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
+      description: "List of the urban transports (subway, Bus, Tram, ...) available near the event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
       items:    
         enum:    
           - bus    
@@ -612,7 +695,7 @@ Event:
       x-ngsi:    
         type: Property    
     slogan:    
-      description: 'Trip header line, matches the text hook. '    
+      description: 'Event header line, matches the text hook. '    
       type: string    
       x-ngsi:    
         type: Property    
@@ -873,7 +956,7 @@ Event:
       x-ngsi:    
         type: Property    
     title:    
-      description: ' Title of the Trip.'    
+      description: ' Title of the Event.'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -939,7 +1022,7 @@ Event:
         model: https://schema.org/Text    
         type: Property    
     transportServices:    
-      description: 'List of private transport available near the Trip. In example taxi, uber, vtc, parkingShuttle '    
+      description: 'List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle '    
       items:    
         enum:    
           - parkingShuttle    
@@ -950,18 +1033,8 @@ Event:
       type: array    
       x-ngsi:    
         type: Property    
-    tripPriceFrom:    
-      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: number    
-      x-ngsi:    
-        type: Property    
-    tripPriceTo:    
-      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
-      type: number    
-      x-ngsi:    
-        type: Property    
     type:    
-      description: 'It has to be Event'    
+      description: 'It has to be Event. NGSI entity type'    
       enum:    
         - Event    
       type: string    
@@ -999,8 +1072,8 @@ Event:
 ```  
 </details>    
 ## ペイロードの例  
-#### イベント NGSI-v2 キーバリューの例  
-Eventをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### イベント NGSI-v2 キー値例  
+ここでは、EventをJSON-LD形式でkey-valuesとした場合の例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
@@ -1189,51 +1262,40 @@ Event:
   "electricTransport": [  
     "electricBicycle",  
     "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
-#### イベント NGSI-v2 正規化された例  
-ここでは、正規化されたJSON-LD形式のEventの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### イベント NGSI-v2 正規化例  
+以下は、正規化された JSON-LD 形式の Event の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "uri:ngsi:event:1"  
   },  
   "type": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Event"  
   },  
   "name": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "Concierto de Revólver"  
   },  
-  "addressLocality": {  
-    "type": "string",  
-    "value": "Salamanca"  
-  },  
-  "postalCode": {  
-    "type": "string",  
-    "value": "37008"  
-  },  
-  "streetAddress": {  
-    "type": "string",  
-    "value": "Calle Monte Olivete, s/n"  
+  "address": {  
+    "addressLocality": "Salamanca",  
+    "postalCode": "37008",  
+    "streetAddress": "Calle Monte Olivete, s/n"  
   },  
   "startDate": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-06-08T21:00:00"  
   },  
   "endDate": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "2019-06-08T23:00:00"  
   },  
   "url": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
   },  
   "offeredBy": {  
@@ -1245,395 +1307,397 @@ Event:
     }  
   },  
   "touristType": {  
-    "type": "string",  
+    "type": "Text",  
     "value": "EVENTS AND FESTIVALS TOURISM"  
   }  
 }  
 ```  
-#### イベント NGSI-LD のキーバリューの例  
-Eventをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### イベント NGSI-LD キー値例  
+ここでは、EventをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "uri:ngsi:event:1",  
-  "type": "Event",  
-  "name": "Concierto de Rev\u00f3lver",  
-  "addressLocality": "Salamanca",  
-  "postalCode": "37008",  
-  "streetAddress": "Calle Monte Olivete, s/n",  
-  "startDate": "2019-06-08T21:00:00",  
-  "endDate": "2019-06-08T23:00:00",  
-  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
-  "offeredBy": {  
-    "type": "Organization",  
-    "name": "Notikumi",  
-    "url": "https://www.notikumi.com/"  
-  },  
-  "touristType": "EVENTS AND FESTIVALS TOURISM",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "uri:ngsi:event:1",  
+    "type": "Event",  
+    "address": {  
+        "addressLocality": "Salamanca",  
+        "postalCode": "37008",  
+        "streetAddress": "Calle Monte Olivete, s/n"  
+    },  
+    "endDate": "2019-06-08T23:00:00",  
+    "name": "Concierto de Revolver",  
+    "offeredBy": {  
+        "type": "Organization",  
+        "name": "Notikumi",  
+        "url": "https://www.notikumi.com/"  
+    },  
+    "startDate": "2019-06-08T21:00:00",  
+    "touristType": "EVENTS AND FESTIVALS TOURISM",  
+    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### イベント NGSI-LDの正規化例  
-ここでは、JSON-LD形式のEventを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### イベント NGSI-LD 正規化例  
+ここでは、JSON-LD フォーマットの Event を正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
-  "type": "Event",  
-  "name": {  
-    "type": "Property",  
-    "value": "MARIAGE D ENFER"  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "Elle en revait, il l a fait : ils vont se marier !"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Information sur la piéce de théatre"  
-  },  
-  "seeAlso": {  
-    "type": "Property",  
-    "value": "https://www.billetreduc.com/260539/evt.htm"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        43.7062,  
-        7.26267  
-      ]  
-    }  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "streetAddress": "14 rue Trachel - Bat. B",  
-      "postalCode": "06000",  
-      "addressLocality": "Nice",  
-      "addressCountry": "France",  
-      "addressRegion": "Marseille Nice Avignon Aix - (06)"  
-    }  
-  },  
-  "areaServed": {  
-    "type": "Property",  
-    "value": "Gare de Nice"  
-  },  
-  "dateLastReported": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-03-17T08:45:00Z"  
-    }  
-  },  
-  "contactPoint": {  
-    "type": "Property",  
-    "value": {  
-      "telephone": "+33(0)4 93 87 08 87",  
-      "contactType": "customer reception",  
-      "email": "theatrebellecour@gmail.com",  
-      "availableLanguage": [  
-        "English",  
-        "French"  
-      ]  
-    }  
-  },  
-  "accessPlan": {  
-    "type": "Property",  
-    "value": "https://www.billetreduc.com/lieu/nice/theatre-bellecour/#planAcces"  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "spectacle"  
-    ]  
-  },  
-  "subCategory": {  
-    "type": "Property",  
-    "value": [  
-      "cabaret",  
-      "theater",  
-      "boulevard",  
-      "vaudeville",  
-      "humor"  
-    ]  
-  },  
-  "thematic": {  
-    "type": "Property",  
-    "value": [  
-      "humor"  
-    ]  
-  },  
-  "superEvent": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-FESTIVAL-THEATRE-NICE"  
-  },  
-  "eventStatus": {  
-    "type": "Property",  
-    "value": [  
-      "scheduled"  
-    ]  
-  },  
-  "locationName": {  
-    "type": "Property",  
-    "value": "Théâtre Bellecour"  
-  },  
-  "title": {  
-    "type": "Property",  
-    "value": "MARIAGE D ENFER"  
-  },  
-  "slogan": {  
-    "type": "Property",  
-    "value": "Elle en revait, il l a fait : ils vont se marier !"  
-  },  
-  "language": {  
-    "type": "Property",  
-    "value": [  
-      "French"  
-    ]  
-  },  
-  "startDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-08-01T01:20:00Z"  
-    }  
-  },  
-  "endDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-10-18T01:20:00Z"  
-    }  
-  },  
-  "openingHoursSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "validFrom": "2020-08-08T00:00:00Z",  
-        "validThrough": "2020-08-31T00:00:00Z",  
-        "dayOfWeek": "Saturday",  
-        "Opens": "21.00"  
-      },  
-      {  
-        "validFrom": "2020-08-08T00:00:00Z",  
-        "validThrough": "2020-08-31T00:00:00Z",  
-        "dayOfWeek": "Sunday",  
-        "Opens": "19.00"  
-      },  
-      {  
-        "validFrom": "2020-09-01T00:00:00Z",  
-        "validThrough": "2020-10-18T00:00:00Z",  
-        "dayOfWeek": "Friday",  
-        "Opens": "21.00"  
-      },  
-      {  
-        "validFrom": "2020-09-01T00:00:00Z",  
-        "validThrough": "2020-10-18T00:00:00Z",  
-        "dayOfWeek": "Saturday"  
-      },  
-      {  
-        "validFrom": "2020-09-01T00:00:00Z",  
-        "validThrough": "2020-10-18T00:00:00Z",  
-        "dayOfWeek": "Sunday",  
-        "Opens": "19.00"  
-      }  
-    ]  
-  },  
-  "duration": {  
-    "type": "Property",  
-    "value": 1.25  
-  },  
-  "doorTimeOpen": {  
-    "type": "Property",  
-    "value": "30 mn before the show"  
-  },  
-  "doorTimeClose": {  
-    "type": "Property",  
-    "value": "10 mn before the show"  
-  },  
-  "pitch": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "language ": "fr",  
-        "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"  
-      },  
-      {  
-        "language": "en",  
-        "article": "But before that there are some details to settle and Elo knows it well: A beautiful wedding, cannnot be organized just like that! Fortunately for Max, the wedding planner is her, and she has already anticipated everything in every detail! Evrything ? Maybe not... In any case, a marriage is managed by two ... And conflicts too! When we say for better or for worse, the worst is certainly the preparations for a wedding! Whether married, engaged, in a relationship, just friends or single, this comedy is for you! Come and discover the preparations for a colorful wedding before taking the plunge!"  
-      }  
-    ]  
-  },  
-  "webSite": {  
-    "type": "Property",  
-    "value": "http://www.theatrebellecour.com"  
-  },  
-  "contentURL": {  
-    "type": "Property",  
-    "value": "https://www.nicetourisme.com/resources/ref/events/12552/mariage-d-enfer_168.jpg"  
-  },  
-  "url": {  
-    "type": "string",  
-    "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
-  },  
-  "performer": {  
-    "type": "Property",  
-    "value": [  
-      "Lise Giraudier"  
-    ]  
-  },  
-  "actor": {  
-    "type": "Property",  
-    "value": [  
-      "Lise Giraudier",  
-      "Richard Zanca",  
-      "Vanessa Bellagamba",  
-      "Yann Bruno-Martinez"  
-    ]  
-  },  
-  "composer": {  
-    "type": "Property",  
-    "value": [  
-      "Céline Cara"  
-    ]  
-  },  
-  "director": {  
-    "type": "Property",  
-    "value": [  
-      "Sébastien El Fassi"  
-    ]  
-  },  
-  "criticReview": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "language": "fr",  
-        "reviews": [  
-          {  
-            "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",  
-            "origin": "Revue Theatrale - L. Dupont",  
-            "ratingValue": 9,  
-            "starRating": 6  
-          }  
+    "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
+    "type": "Event",  
+    "accessPlan": {  
+        "type": "Property",  
+        "value": "https://www.billetreduc.com/lieu/nice/theatre-bellecour/#planAcces"  
+    },  
+    "actor": {  
+        "type": "Property",  
+        "value": [  
+            "Lise Giraudier",  
+            "Richard Zanca",  
+            "Vanessa Bellagamba",  
+            "Yann Bruno-Martinez"  
         ]  
-      }  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "14 rue Trachel - Bat. B",  
+            "postalCode": "06000",  
+            "addressLocality": "Nice",  
+            "addressCountry": "France",  
+            "addressRegion": "Marseille Nice Avignon Aix - (06)"  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "Elle en revait, il l a fait : ils vont se marier !"  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": "Gare de Nice"  
+    },  
+    "audience": {  
+        "type": "Property",  
+        "value": [  
+            "allPublic"  
+        ]  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "spectacle"  
+        ]  
+    },  
+    "composer": {  
+        "type": "Property",  
+        "value": [  
+            "C\u00e9line Cara"  
+        ]  
+    },  
+    "contactPoint": {  
+        "type": "Property",  
+        "value": {  
+            "telephone": "+33(0)4 93 87 08 87",  
+            "contactType": "customer reception",  
+            "email": "theatrebellecour@gmail.com",  
+            "availableLanguage": [  
+                "English",  
+                "French"  
+            ]  
+        }  
+    },  
+    "contentURL": {  
+        "type": "Property",  
+        "value": "https://www.nicetourisme.com/resources/ref/events/12552/mariage-d-enfer_168.jpg"  
+    },  
+    "criticReview": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "language": "fr",  
+                "reviews": [  
+                    {  
+                        "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",  
+                        "origin": "Revue Theatrale - L. Dupont",  
+                        "ratingValue": 9,  
+                        "starRating": 6  
+                    }  
+                ]  
+            }  
+        ]  
+    },  
+    "currencyAccepted": {  
+        "type": "Property",  
+        "value": [  
+            "EUR",  
+            "USD"  
+        ]  
+    },  
+    "dateLastReported": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-03-17T08:45:00Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Information sur la pi\u00e9ce de th\u00e9atre"  
+    },  
+    "director": {  
+        "type": "Property",  
+        "value": [  
+            "S\u00e9bastien El Fassi"  
+        ]  
+    },  
+    "doorTimeClose": {  
+        "type": "Property",  
+        "value": "10 mn before the show"  
+    },  
+    "doorTimeOpen": {  
+        "type": "Property",  
+        "value": "30 mn before the show"  
+    },  
+    "duration": {  
+        "type": "Property",  
+        "value": 1.25  
+    },  
+    "electricTransport": {  
+        "type": "Property",  
+        "value": [  
+            "electricBicycle",  
+            "electricMotorBike"  
+        ]  
+    },  
+    "endDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-10-18T01:20:00Z"  
+        }  
+    },  
+    "eventPriceFrom": {  
+        "type": "number",  
+        "value": 10.95  
+    },  
+    "eventPriceTo": {  
+        "type": "number",  
+        "value": 19.5  
+    },  
+    "eventStatus": {  
+        "type": "Property",  
+        "value": [  
+            "scheduled"  
+        ]  
+    },  
+    "isAccessibleForFree": {  
+        "type": "boolean",  
+        "value": "false"  
+    },  
+    "language": {  
+        "type": "Property",  
+        "value": [  
+            "French"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                43.7062,  
+                7.26267  
+            ]  
+        }  
+    },  
+    "locationName": {  
+        "type": "Property",  
+        "value": "Th\u00e9\u00e2tre Bellecour"  
+    },  
+    "maximumAttendeeCapacity": {  
+        "type": "number",  
+        "value": 60  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "MARIAGE D ENFER"  
+    },  
+    "offeredBy": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Organization",  
+            "name": "Notikumi",  
+            "url": "https://www.notikumi.com/"  
+        }  
+    },  
+    "openingHoursSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "validFrom": "2020-08-08T00:00:00Z",  
+                "validThrough": "2020-08-31T00:00:00Z",  
+                "dayOfWeek": "Saturday",  
+                "Opens": "21.00"  
+            },  
+            {  
+                "validFrom": "2020-08-08T00:00:00Z",  
+                "validThrough": "2020-08-31T00:00:00Z",  
+                "dayOfWeek": "Sunday",  
+                "Opens": "19.00"  
+            },  
+            {  
+                "validFrom": "2020-09-01T00:00:00Z",  
+                "validThrough": "2020-10-18T00:00:00Z",  
+                "dayOfWeek": "Friday",  
+                "Opens": "21.00"  
+            },  
+            {  
+                "validFrom": "2020-09-01T00:00:00Z",  
+                "validThrough": "2020-10-18T00:00:00Z",  
+                "dayOfWeek": "Saturday"  
+            },  
+            {  
+                "validFrom": "2020-09-01T00:00:00Z",  
+                "validThrough": "2020-10-18T00:00:00Z",  
+                "dayOfWeek": "Sunday",  
+                "Opens": "19.00"  
+            }  
+        ]  
+    },  
+    "paymentAccepted": {  
+        "type": "Property",  
+        "value": [  
+            "Cash",  
+            "CreditCard"  
+        ]  
+    },  
+    "performer": {  
+        "type": "Property",  
+        "value": [  
+            "Lise Giraudier"  
+        ]  
+    },  
+    "pitch": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "language ": "fr",  
+                "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"  
+            },  
+            {  
+                "language": "en",  
+                "article": "But before that there are some details to settle and Elo knows it well: A beautiful wedding, cannnot be organized just like that! Fortunately for Max, the wedding planner is her, and she has already anticipated everything in every detail! Evrything ? Maybe not... In any case, a marriage is managed by two ... And conflicts too! When we say for better or for worse, the worst is certainly the preparations for a wedding! Whether married, engaged, in a relationship, just friends or single, this comedy is for you! Come and discover the preparations for a colorful wedding before taking the plunge!"  
+            }  
+        ]  
+    },  
+    "priceSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "categoryDescription": "Category 1 : Seat Range 1 to 2",  
+                "eligibleQuantity": 20,  
+                "price": 19.5  
+            },  
+            {  
+                "categoryDescription": "Category 2 : Seat Range 3 to 6",  
+                "eligibleQuantity": 40,  
+                "price": 15.95  
+            },  
+            {  
+                "categoryDescription": "Special price from Monday to Wednesday : Category 1 - 2",  
+                "eligibleQuantity": 60,  
+                "price": 10.95  
+            }  
+        ]  
+    },  
+    "ratingValueAverage": {  
+        "type": "number",  
+        "value": 9.2  
+    },  
+    "routeType": {  
+        "type": "Property",  
+        "value": [  
+            "tram",  
+            "subway",  
+            "bus"  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": "https://www.billetreduc.com/260539/evt.htm"  
+    },  
+    "slogan": {  
+        "type": "Property",  
+        "value": "Elle en revait, il l a fait : ils vont se marier !"  
+    },  
+    "starRatingDetailed": {  
+        "type": "object",  
+        "value": {  
+            "5": 94,  
+            "4": 6,  
+            "3": 0,  
+            "2": 0,  
+            "1": 0  
+        }  
+    },  
+    "startDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-08-01T01:20:00Z"  
+        }  
+    },  
+    "subCategory": {  
+        "type": "Property",  
+        "value": [  
+            "cabaret",  
+            "theater",  
+            "boulevard",  
+            "vaudeville",  
+            "humor"  
+        ]  
+    },  
+    "superEvent": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-FESTIVAL-THEATRE-NICE"  
+    },  
+    "thematic": {  
+        "type": "Property",  
+        "value": [  
+            "humor"  
+        ]  
+    },  
+    "title": {  
+        "type": "Property",  
+        "value": "MARIAGE D ENFER"  
+    },  
+    "touristType": {  
+        "type": "Property",  
+        "value": "EVENTS AND FESTIVALS TOURISM"  
+    },  
+    "transportServices": {  
+        "type": "Property",  
+        "value": [  
+            "taxi",  
+            "uber",  
+            "vtc",  
+            "parkingShuttle"  
+        ]  
+    },  
+    "url": {  
+        "type": "string",  
+        "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
+    },  
+    "webSite": {  
+        "type": "Property",  
+        "value": "http://www.theatrebellecour.com"  
+    },  
+    "wheelChairAccessible": {  
+        "type": "boolean",  
+        "value": "true"  
+    },  
+    "@context": [  
+        "https://smartdatamodelsorg/context.jsonld"  
     ]  
-  },  
-  "ratingValueAverage": {  
-    "type": "number",  
-    "value": 9.2  
-  },  
-  "starRatingDetailed": {  
-    "type": "object",  
-    "value": {  
-      "5": 94,  
-      "4": 6,  
-      "3": 0,  
-      "2": 0,  
-      "1": 0  
-    }  
-  },  
-  "audience": {  
-    "type": "Property",  
-    "value": [  
-      "allPublic"  
-    ]  
-  },  
-  "wheelChairAccessible": {  
-    "type": "boolean",  
-    "value": "true"  
-  },  
-  "maximumAttendeeCapacity": {  
-    "type": "number",  
-    "value": 60  
-  },  
-  "isAccessibleForFree": {  
-    "type": "boolean",  
-    "value": "false"  
-  },  
-  "eventPriceFrom": {  
-    "type": "number",  
-    "value": 10.95  
-  },  
-  "eventPriceTo": {  
-    "type": "number",  
-    "value": 19.5  
-  },  
-  "priceSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "categoryDescription": "Category 1 : Seat Range 1 to 2",  
-        "eligibleQuantity": 20,  
-        "price": 19.5  
-      },  
-      {  
-        "categoryDescription": "Category 2 : Seat Range 3 to 6",  
-        "eligibleQuantity": 40,  
-        "price": 15.95  
-      },  
-      {  
-        "categoryDescription": "Special price from Monday to Wednesday : Category 1 - 2",  
-        "eligibleQuantity": 60,  
-        "price": 10.95  
-      }  
-    ]  
-  },  
-  "paymentAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "Cash",  
-      "CreditCard"  
-    ]  
-  },  
-  "currencyAccepted": {  
-    "type": "Property",  
-    "value": [  
-      "EUR",  
-      "USD"  
-    ]  
-  },  
-  "routeType": {  
-    "type": "Property",  
-    "value": [  
-      "tram",  
-      "subway",  
-      "bus"  
-    ]  
-  },  
-  "transportServices": {  
-    "type": "Property",  
-    "value": [  
-      "taxi",  
-      "uber",  
-      "vtc",  
-      "parkingShuttle"  
-    ]  
-  },  
-  "electricTransport": {  
-    "type": "Property",  
-    "value": [  
-      "electricBicycle",  
-      "electricMotorBike"  
-    ]  
-  },  
-  "offeredBy": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Organization",  
-      "name": "Notikumi",  
-      "url": "https://www.notikumi.com/"  
-    }  
-  },  
-  "touristType": {  
-    "type": "Property",  
-    "value": "EVENTS AND FESTIVALS TOURISM"  
-  },  
-  "@context": [  
-    "https://smartdatamodelsorg/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
