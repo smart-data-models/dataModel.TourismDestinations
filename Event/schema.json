@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.1.1",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json",
   "title": "Smart Data Models - Event",
@@ -337,6 +337,7 @@
           "type": "array",
           "description": "Property. An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).*** ",
           "items": {
+            "type": "object",
             "properties": {
               "dayOfWeek": {
                 "type": "string",
@@ -396,7 +397,7 @@
         },
         "pitch": {
           "type": "array",
-          "description": "Property. Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. ",
+          "description": "Property. Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. ",
           "items": {
             "type": "object",
             "properties": {
@@ -652,6 +653,5 @@
   "required": [
     "id",
     "type"
-  ],
-  "$schemaVersion": "0.0.1"
+  ]
 }

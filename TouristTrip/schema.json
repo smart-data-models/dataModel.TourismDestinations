@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json",
-  "$schemaVersion": "0.0.3",
+  "$schemaVersion": "0.1.0",
   "title": "Smart Data Models - Tourist Trip",
   "description": "A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.",
   "type": "object",
@@ -577,6 +577,7 @@
           "type": "array",
           "description": "Property. A structured value representing a price or price range depending categories or public.",
           "items": {
+            "type": "object",
             "properties": {
               "audience": {
                 "type": "array",
