@@ -246,10 +246,6 @@
     "electricMotorBike"
   ],
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
   ]
 }
