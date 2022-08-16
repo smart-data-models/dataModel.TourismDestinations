@@ -1,389 +1,387 @@
 {
-    "id": "urn:ngsi:touristTrip:1",
-    "type": "TouristTrip",
-    "accessPlan": {
-        "type": "Property",
-        "value": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr"
-    },
-    "address": {
-        "type": "Property",
-        "value": {
-            "streetAddress": "15, rue Droite",
-            "postalCode": "06000",
-            "addressLocality": "Nice",
-            "addressCountry": "France",
-            "addressRegion": "Marseille Nice Avignon Aix - (06)"
-        }
-    },
-    "alternateName": {
-        "type": "Property",
-        "value": "Palais Lascaris"
-    },
-    "areaServed": {
-        "type": "Property",
-        "value": "Vieux Nice"
-    },
-    "audience": {
-        "type": "Property",
-        "value": [
-            "AllPublic"
+  "id": "urn:ngsi:touristTrip:1",
+  "type": "TouristTrip",
+  "accessPlan": {
+    "type": "Property",
+    "value": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr"
+  },
+  "address": {
+    "type": "Property",
+    "value": {
+      "streetAddress": "15, rue Droite",
+      "postalCode": "06000",
+      "addressLocality": "Nice",
+      "addressCountry": "France",
+      "addressRegion": "Marseille Nice Avignon Aix - (06)"
+    }
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": "Palais Lascaris"
+  },
+  "areaServed": {
+    "type": "Property",
+    "value": "Vieux Nice"
+  },
+  "audience": {
+    "type": "Property",
+    "value": [
+      "AllPublic"
+    ]
+  },
+  "category": {
+    "type": "Property",
+    "value": [
+      "museum"
+    ]
+  },
+  "contactPoint": {
+    "type": "Property",
+    "value": {
+      "telephone": "+33(0)4 93 62 72 40",
+      "contactType": "customer reception",
+      "email": "palais.lascaris@ville-nice.fr",
+      "availableLanguage": [
+        "English",
+        "French"
+      ]
+    }
+  },
+  "contenteURL": {
+    "type": "Property",
+    "value": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG"
+  },
+  "criticReview": {
+    "type": "Property",
+    "value": [
+      {
+        "language": "fr",
+        "reviews": [
+          {
+            "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",
+            "origin": "Office du tourisme Nice",
+            "ratingValue": 9,
+            "starRating": 5
+          }
         ]
-    },
-    "category": {
-        "type": "Property",
-        "value": [
-            "museum"
+      },
+      {
+        "language": "en",
+        "reviews": [
+          {
+            "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",
+            "origin": "Trip Advisor",
+            "ratingValue": 8,
+            "starRating": 4
+          }
         ]
-    },
-    "contactPoint": {
-        "type": "Property",
-        "value": {
-            "telephone": "+33(0)4 93 62 72 40",
-            "contactType": "customer reception",
-            "email": "palais.lascaris@ville-nice.fr",
-            "availableLanguage": [
-                "English",
-                "French"
-            ]
-        }
-    },
-    "contenteURL": {
-        "type": "Property",
-        "value": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG"
-    },
-    "criticReview": {
-        "type": "Property",
-        "value": [
-            {
-                "language": "fr",
-                "review": {
-                    "type": "Property",
-                    "value": {
-                        "article": "Beau palais baroque qui contient des instruments de musique vari\u00c3\u00a9s dont une harpe-piano \u00c3\u00a9tonnante, et des portraits tr\u00c3\u00a8s beaux. A voir, surtout pour l'escalier et la d\u00c3\u00a9coration des salles.",
-                        "origine": "Office du tourisme Nice",
-                        "ratingValue": 9,
-                        "starRating": 5
-                    }
-                }
-            },
-            {
-                "language": "en",
-                "review": {
-                    "type": "Property",
-                    "value": {
-                        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",
-                        "origine": "Trip Advisor",
-                        "ratingValue": 8,
-                        "starRating": 4
-                    }
-                }
-            }
+      }
+    ]
+  },
+  "currencyAccepted": {
+    "type": "Property",
+    "value": [
+      "EUR",
+      "USD"
+    ]
+  },
+  "dateLastReported": {
+    "type": "DateTime",
+    "value": "2020-03-17T08:45:00Z",
+    "metadata": {
+      "TimeInstant": {
+        "type": "Text",
+        "value": "2020-03-17TT08:45:00Z"
+      }
+    }
+  },
+  "description": [
+    {
+      "type": "Property",
+      "value": "Viaje para conocer el encanto y los atractivos turisticos de Conil de la Frontera."
+    }
+  ],
+  "duration": {
+    "type": "Property",
+    "value": 1.25
+  },
+  "electricTransport": {
+    "type": "Property",
+    "value": [
+      "electricBicycle",
+      "electricMotorBike"
+    ]
+  },
+  "endDate": {
+    "type": "DateTime",
+    "value": "-12-31"
+  },
+  "image": {
+    "type": "Property",
+    "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"
+  },
+  "isAccessibleForFree": {
+    "type": "Property",
+    "value": false
+  },
+  "itinerary": {
+    "type": "Property",
+    "value": [
+      {
+        "position": 1,
+        "name": "Cours Saleya",
+        "streetAddress": [
+          "Cours Saleya",
+          "06300 Nice"
+        ],
+        "image": [
+          "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"
         ]
-    },
-    "currencyAccepted": {
-        "type": "Property",
-        "value": [
-            "EUR",
-            "USD"
+      },
+      {
+        "position": 2,
+        "name": "Centre du patrimoine",
+        "streetAddress": [
+          "14 rue Jules Gilly",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"
         ]
-    },
-    "dateLastReported": {
-        "type": "DateTime",
-        "value": "2020-03-17T08:45:00Z",
-        "metadata": {
-            "TimeInstant": {
-                "type": "Text",
-                "value": "2020-03-17TT08:45:00Z"
-            }
-        }
-    },
-    "description": [
-        {
-            "type": "Property",
-            "value": "Viaje para conocer el encanto y los atractivos turisticos de Conil de la Frontera."
-        }
-    ],
-    "duration": {
-        "type": "Property",
-        "value": 1.25
-    },
-    "electricTransport": {
-        "type": "Property",
-        "value": [
-            "electricBicycle",
-            "electricMotorBike"
+      },
+      {
+        "position": 3,
+        "name": "Place du j\u00c3\u00a9sus",
+        "streetAddress": [
+          "Rue du j\u00c3\u00a9sus",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"
         ]
-    },
-    "endDate": {
-        "type": "DateTime",
-        "value": "-12-31"
-    },
-    "image": {
-        "type": "Property",
-        "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"
-    },
-    "isAccessibleForFree": {
-        "type": "Property",
-        "value": false
-    },
-    "itinerary": {
-        "type": "Property",
-        "value": [
-            {
-                "position": 1,
-                "name": "Cours Saleya",
-                "streetAddress": [
-                    "Cours Saleya",
-                    "06300 Nice"
-                ],
-                "image": [
-                    "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"
-                ]
-            },
-            {
-                "position": 2,
-                "name": "Centre du patrimoine",
-                "streetAddress": [
-                    "14 rue Jules Gilly",
-                    "06300 Nice"
-                ],
-                "image": [
-                    "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"
-                ]
-            },
-            {
-                "position": 3,
-                "name": "Place du j\u00c3\u00a9sus",
-                "streetAddress": [
-                    "Rue du j\u00c3\u00a9sus",
-                    "06300 Nice"
-                ],
-                "image": [
-                    "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"
-                ]
-            },
-            {
-                "position": 4,
-                "name": "Palais Lascaris",
-                "streetAddress": [
-                    "15, rue Droite",
-                    "06300 Nice"
-                ],
-                "image": [
-                    "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"
-                ]
-            }
+      },
+      {
+        "position": 4,
+        "name": "Palais Lascaris",
+        "streetAddress": [
+          "15, rue Droite",
+          "06300 Nice"
+        ],
+        "image": [
+          "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"
         ]
+      }
+    ]
+  },
+  "language": {
+    "type": "Property",
+    "value": [
+      "french",
+      "english",
+      "spanish",
+      "german"
+    ]
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "point",
+      "coordinates": [
+        43.6976766,
+        7.2772458
+      ]
+    }
+  },
+  "locationName": {
+    "type": "Property",
+    "value": "Palais Lascaris"
+  },
+  "maximumAttendeeCapacity": {
+    "type": "Property",
+    "value": 25
+  },
+  "name": {
+    "type": "Property",
+    "value": "Descubre Conil"
+  },
+  "openingHoursSpecification": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
     },
-    "language": {
-        "type": "Property",
-        "value": [
-            "french",
-            "english",
-            "spanish",
-            "german"
-        ]
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
     },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "point",
-            "coordinates": [
-                43.6976766,
-                7.2772458
-            ]
-        }
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
     },
-    "locationName": {
-        "type": "Property",
-        "value": "Palais Lascaris"
+    {
+      "dayOfWeek": "Friday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
     },
-    "maximumAttendeeCapacity": {
-        "type": "Property",
-        "value": 25
+    {
+      "dayOfWeek": "Saturday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
     },
-    "name": {
-        "type": "Property",
-        "value": "Descubre Conil"
-    },
-    "openingHoursSpecification": [
-        {
-            "dayOfWeek": "Monday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        },
-        {
-            "dayOfWeek": "Wednesday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        },
-        {
-            "dayOfWeek": "Thursday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        },
-        {
-            "dayOfWeek": "Friday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        },
-        {
-            "dayOfWeek": "Saturday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        },
-        {
-            "dayOfWeek": "Sunday",
-            "opens": "10:00:00",
-            "closes": "18:00:00"
-        }
-    ],
-    "paymentAccepted": {
-        "type": "Property",
-        "value": [
-            "Cash",
-            "CreditCard"
-        ]
-    },
-    "pitch": {
-        "type": "Property",
-        "value": [
-            {
-                "language": "fr",
-                "article": "Dans une ruelle \u00c3\u00a9troite ce palais baroque allie richesse ornementale et simplicit\u00c3\u00a9. Son escalier avec ses fresques est somptueux m\u00c3\u00aame si ses dimensions sont somme toute r\u00c3\u00a9duites. L\u00e2\u0080\u0099ambiance est chaleureuse avec des plafonds bas ,des pi\u00c3\u00a8ces \u00c3\u00a0 l\u00e2\u0080\u0099\u00c3\u00a9chelle humaine qui en font un lieu intime propice \u00c3\u00a0 la d\u00c3\u00a9couverte de la collection d\u00e2\u0080\u0099instruments de musique. Ne manquez pas d\u00e2\u0080\u0099observer les portes de communication."
-            },
-            {
-                "language": "en",
-                "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."
-            }
-        ]
-    },
-    "priceSpecification": {
-        "type": "Property",
-        "value": [
-            {
-                "audience": "adult",
-                "price": 10.0
-            },
-            {
-                "audience": "senior",
-                "price": 5.0
-            },
-            {
-                "audience": "children",
-                "eligibleQuantity": 5,
-                "price": 0.0
-            }
-        ]
-    },
-    "ratingValue": {
-        "type": "Property",
-        "value": 8.5
-    },
-    "routeType": {
-        "type": "Property",
-        "value": [
-            "tram",
-            "subway",
-            "bus"
-        ]
-    },
-    "sameAs": {
-        "type": "Property",
-        "value": "https://inventrip.com/conil/trip/1907"
-    },
-    "seeAlso": {
-        "type": "Property",
-        "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"
-    },
-    "slogan": {
-        "type": "Property",
-        "value": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens."
-    },
-    "starRatingDetailed": {
-        "type": "Property",
-        "value": {
-            "5": 92,
-            "4": 6,
-            "3": 2,
-            "2": 0,
-            "1": 0
-        }
-    },
-    "startDate": {
-        "type": "DateTime",
-        "value": "-01-01"
-    },
-    "subCategory": {
-        "type": "Property",
-        "value": [
-            "art",
-            "decorativeArts",
-            "history"
-        ]
-    },
-    "superTrip": {
-        "type": "Property",
-        "value": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE"
-    },
-    "thematic": {
-        "type": "Property",
-        "value": [
-            "culture",
-            "museum",
-            "instrument",
-            "music",
-            "monument"
-        ]
-    },
-    "title": {
-        "type": "Property",
-        "value": "Visite du Mus\u00c3\u00a9e du Palais Lascaris"
-    },
-    "touristType": {
-        "type": "Property",
-        "value": [
-            "FAMILY TOURISM",
-            "WATER SPORTS TOURISM",
-            "FOOD TOURISM",
-            "BEACH AND SUN TOURISM"
-        ]
-    },
-    "transportServices": {
-        "type": "Property",
-        "value": [
-            "taxi"
-        ]
-    },
-    "tripPriceFrom": {
-        "type": "Property",
-        "value": 0.0
-    },
-    "tripPriceTo": {
-        "type": "Property",
-        "value": 10.0
-    },
-    "tripStatus": {
-        "type": "Property",
-        "value": "opened"
-    },
-    "url": {
-        "type": "Property",
-        "value": [
-            "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"
-        ]
-    },
-    "video": {
-        "type": "Property",
-        "value": "https://www.youtube.com/watch?v=IhnvlIzxPLg"
-    },
-    "webSite": {
-        "type": "Property",
-        "value": "http://www.palais-lascaris.com"
-    },
-    "wheelChairAccessible": {
-        "type": "Property",
-        "value": false
-    },
-    "@context": []
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "10:00:00",
+      "closes": "18:00:00"
+    }
+  ],
+  "paymentAccepted": {
+    "type": "Property",
+    "value": [
+      "Cash",
+      "CreditCard"
+    ]
+  },
+  "pitch": {
+    "type": "Property",
+    "value": [
+      {
+        "language": "fr",
+        "article": "Dans une ruelle \u00c3\u00a9troite ce palais baroque allie richesse ornementale et simplicit\u00c3\u00a9. Son escalier avec ses fresques est somptueux m\u00c3\u00aame si ses dimensions sont somme toute r\u00c3\u00a9duites. L\u00e2\u0080\u0099ambiance est chaleureuse avec des plafonds bas ,des pi\u00c3\u00a8ces \u00c3\u00a0 l\u00e2\u0080\u0099\u00c3\u00a9chelle humaine qui en font un lieu intime propice \u00c3\u00a0 la d\u00c3\u00a9couverte de la collection d\u00e2\u0080\u0099instruments de musique. Ne manquez pas d\u00e2\u0080\u0099observer les portes de communication."
+      },
+      {
+        "language": "en",
+        "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."
+      }
+    ]
+  },
+  "priceSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "audience": "adult",
+        "price": 10.0
+      },
+      {
+        "audience": "senior",
+        "price": 5.0
+      },
+      {
+        "audience": "children",
+        "eligibleQuantity": 5,
+        "price": 0.0
+      }
+    ]
+  },
+  "ratingValue": {
+    "type": "Property",
+    "value": 8.5
+  },
+  "routeType": {
+    "type": "Property",
+    "value": [
+      "tram",
+      "subway",
+      "bus"
+    ]
+  },
+  "sameAs": {
+    "type": "Property",
+    "value": "https://inventrip.com/conil/trip/1907"
+  },
+  "seeAlso": {
+    "type": "Property",
+    "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"
+  },
+  "slogan": {
+    "type": "Property",
+    "value": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens."
+  },
+  "starRatingDetailed": {
+    "type": "Property",
+    "value": {
+      "5": 92,
+      "4": 6,
+      "3": 2,
+      "2": 0,
+      "1": 0
+    }
+  },
+  "startDate": {
+    "type": "DateTime",
+    "value": "-01-01"
+  },
+  "subCategory": {
+    "type": "Property",
+    "value": [
+      "art",
+      "decorativeArts",
+      "history"
+    ]
+  },
+  "superTrip": {
+    "type": "Property",
+    "value": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE"
+  },
+  "thematic": {
+    "type": "Property",
+    "value": [
+      "culture",
+      "museum",
+      "instrument",
+      "music",
+      "monument"
+    ]
+  },
+  "title": {
+    "type": "Property",
+    "value": "Visite du Mus\u00c3\u00a9e du Palais Lascaris"
+  },
+  "touristType": {
+    "type": "Property",
+    "value": [
+      "FAMILY TOURISM",
+      "WATER SPORTS TOURISM",
+      "FOOD TOURISM",
+      "BEACH AND SUN TOURISM"
+    ]
+  },
+  "transportServices": {
+    "type": "Property",
+    "value": [
+      "taxi"
+    ]
+  },
+  "tripPriceFrom": {
+    "type": "Property",
+    "value": 0.0
+  },
+  "tripPriceTo": {
+    "type": "Property",
+    "value": 10.0
+  },
+  "tripStatus": {
+    "type": "Property",
+    "value": "opened"
+  },
+  "url": {
+    "type": "Property",
+    "value": [
+      "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"
+    ]
+  },
+  "video": {
+    "type": "Property",
+    "value": "https://www.youtube.com/watch?v=IhnvlIzxPLg"
+  },
+  "webSite": {
+    "type": "Property",
+    "value": "http://www.palais-lascaris.com"
+  },
+  "wheelChairAccessible": {
+    "type": "Property",
+    "value": false
+  },
+  "@context": []
 }

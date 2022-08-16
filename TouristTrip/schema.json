@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.2.0",
   "title": "Smart Data Models - Tourist Trip",
   "description": "A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.",
   "type": "object",
@@ -473,26 +473,29 @@
           "description": "Property. Specifies the URL to the official image or video of the Trip for more information."
         },
         "criticReview": {
-          "type": "object",
+          "type": "array",
           "description": "Property. Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'",
-          "properties": {
-            "language": {
-              "type": "string"
-            },
-            "reviews": {
-              "type": "array",
-              "items": {
-                "article": {
-                  "type": "string"
-                },
-                "origin": {
-                  "type": "string"
-                },
-                "ratingValue": {
-                  "type": "number"
-                },
-                "starRating": {
-                  "type": "number"
+          "items": {
+            "type": "object",
+            "properties": {
+              "language": {
+                "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "article": {
+                    "type": "string"
+                  },
+                  "origin": {
+                    "type": "string"
+                  },
+                  "ratingValue": {
+                    "type": "number"
+                  },
+                  "starRating": {
+                    "type": "number"
+                  }
                 }
               }
             }

@@ -163,25 +163,31 @@
     }
   },
   "webSite": "http://www.palais-lascaris.com",
-  "contenteURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",
-  "criticReview": {
-    "fr": {
-      "value": {
-        "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",
-        "origine": "Office du tourisme Nice",
-        "ratingValue": 9,
-        "starRating": 5
-      }
+  "contentURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",
+  "criticReview": [
+    {
+      "language": "fr",
+      "reviews": [
+        {
+          "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",
+          "origin": "Office du tourisme Nice",
+          "ratingValue": 9,
+          "starRating": 5
+        }
+      ]
     },
-    "en": {
-      "value": {
-        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",
-        "origine": "Trip Advisor",
-        "ratingValue": 8,
-        "starRating": 4
-      }
+    {
+      "language": "en",
+      "reviews": [
+        {
+          "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",
+          "origin": "Trip Advisor",
+          "ratingValue": 8,
+          "starRating": 4
+        }
+      ]
     }
-  },
+  ],
   "ratingValue": 8.5,
   "starRatingDetailed": {
     "5": 92,
