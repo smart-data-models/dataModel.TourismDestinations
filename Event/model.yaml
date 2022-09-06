@@ -294,6 +294,7 @@ Event:
             type: number
           repeatFrequency:
             type: string
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -509,7 +510,6 @@ Event:
         properties:
           closes:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           dayOfWeek:
             anyOf:
@@ -539,7 +539,6 @@ Event:
             type: string
           opens:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           validFrom:
             anyOf:
@@ -595,7 +594,7 @@ Event:
       x-ngsi:
         type: Property
     pitch:
-      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "
+      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "
       items:
         properties:
           article:
@@ -1047,8 +1046,8 @@ Event:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json
   x-model-tags: ""
-  x-version: 0.0.1
+  x-version: 0.1.1
