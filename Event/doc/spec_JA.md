@@ -4,14 +4,14 @@
 [オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 グローバルな記述です。**この場所、組織、またはアクションに関連する近日中または過去のイベント.**。  
-バージョン: 0.0.1  
+バージョン: 0.1.1  
 
 ## プロパティ一覧  
 
-- `accessPlan`: アイテムへのアクセスプランのテキストまたはリンクです。  - `actor`: 俳優や音楽グループのリスト。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `audience`: 本イベントが関係する一般人の種類。Free text (family, adult, children, teenager, senior, allPublic, ...) の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: イベントのカテゴリ。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションによって必要とされる任意の他の値として、以下に提供されます。Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'.  - `composer`: 作曲した人のリスト。  - `contactPoint`: 商品に関するお問い合わせ先です。  - `contentURL`: イベントの公式画像や動画の詳細へのURLを指定します。  - `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  - `currencyAccepted`: isAccessibleForFree` が False の場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `director`: 編成を管理するディレクターの一覧です。  - `doorTimeClose`: 入場は閉場時間までです。  - `doorTimeOpen`: 開場時間から入場できます。  - `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って与えられます。例えば、**HUR** は **Hours** を表します。  - `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  - `endDate`: 項目の終了日時（ISO 8601の日付形式）。  - `eventPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR**は、**€uro**を表します。  - `eventPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `eventSchedule`: このプロパティを使用してスケジュールに関連付けられたイベントは、`startDate`または`endDate`プロパティを持つべきではありません。これらは代わりに関連するスケジュール内で定義され、データを使用するクライアントのあいまいさを避けることができます。このプロパティは、異なるスケジュール（異なる月や季節）を指定するために、繰り返し値を持つかもしれません***。  - `eventStatus`: このイベントに関するイベントステータス。  - `id`: エンティティの一意な識別子  - `isAccessibleForFree`: そのアイテム、イベント、または場所が無料でアクセスできることを示すフラグです。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格を参考にしたイベント中の形式言語の一覧です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAttendeeCapacity`: その場所で開催されるイベントの参加可能人数の合計です。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `paymentAccepted`: isAccessibleForFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' （現金、クレジットカード、暗号通貨、その他）。  - `performer`: イベントの主な出演者、司会者、ミュージシャン、音楽グループ。  - `pitch`: イベントのピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  - `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  - `publicAccess`: (2)公開フラグ 場所の公開を示すフラグ。このプロパティが省略された場合、デフォルトのブール値は想定されない。  - `ratingValueAverage`: イベントの評価値。使用上のガイドライン。0から10までの値を基準にしてください。これは `starRatingDetailed` 属性のすべての詳細スコアの平均値である。  - `refPointOfInterest`: イベントに含まれる全てのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照する。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、イベント周辺で利用可能な都市交通（地下鉄、バス、トラム、...）の一覧です。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `slogan`: イベントヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  - `startDate`: 項目の開始日時（ISO 8601の日付形式）。  - `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  - `subEvent`: このメジャーイベントの一部であるマイナーイベントのリストへの参照。  - `superEvent`: 本イベントを含む主要イベントに関する言及。  - `thematic`: キーワードとなるテーマ別リスト  - `title`: イベントのタイトル  - `touristType`: セグメントや旅行の動機に応じた観光の種類。  - `transportServices`: イベント会場付近で利用可能な民間交通機関のリストです。例：タクシー、ウーバー、VTC、パーキングシャトルなど  - `type`: イベントである必要があります。NGSIエンティティタイプ  - `url`: アイテムに関連する画像を含むURL  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。    
+- `accessPlan`: アイテムへのアクセスプランのテキストまたはリンクです。  - `actor`: 俳優や音楽グループのリスト。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `audience`: 本イベントが関係する一般人の種類。Free text (family, adult, children, teenager, senior, allPublic, ...) の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: イベントのカテゴリ。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションによって必要とされる任意の他の値として、以下に提供されます。Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness' （ショッピング、ガストロノミー、ミュージアム、宗教的礼拝、公園、庭園、歴史、アウトドア活動、遠足、健康  - `composer`: 作曲した人のリスト。  - `contactPoint`: 商品に関するお問い合わせ先です。  - `contentURL`: イベントの公式画像や動画の詳細へのURLを指定します。  - `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  - `currencyAccepted`: isAccessibleForFree` が False の場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `director`: 編成を管理するディレクターの一覧です。  - `doorTimeClose`: 入場は閉場時間までです。  - `doorTimeOpen`: 開場時間から入場できます。  - `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って与えられます。例えば、**HUR** は **Hours** を表します。  - `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  - `endDate`: 項目の終了日時（ISO 8601の日付形式）。  - `eventPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR**は、**€uro**を表します。  - `eventPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `eventSchedule`: このプロパティを使用してスケジュールに関連付けられたイベントは、`startDate`または`endDate`プロパティを持つべきではありません。これらは代わりに関連するスケジュール内で定義され、データを使用するクライアントのあいまいさを避けることができます。このプロパティは、異なるスケジュール（異なる月や季節）を指定するために、繰り返し値を持つかもしれません***。  - `eventStatus`: このイベントに関するイベントステータス。  - `id`: エンティティの一意な識別子  - `isAccessibleForFree`: そのアイテム、イベント、または場所が無料でアクセスできることを示すフラグです。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格を参考にしたイベント中の形式言語の一覧です。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `maximumAttendeeCapacity`: その場所で開催されるイベントの参加可能人数の合計です。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `paymentAccepted`: isAccessibleForFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' （現金、クレジットカード、暗号通貨、その他）。  - `performer`: イベントの主な出演者、司会者、ミュージシャン、音楽グループ。  - `pitch`: イベントのピッチ。各項目は、[国際化(i18N) - 多言語化のためのW3C勧告](https://www.w3.org/TR/json-ld/#string-internationalization)に基づくフォーマットを持ち、全ての項目を一つのプロパティに統合しています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  - `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  - `publicAccess`: (2)公開フラグ 場所の公開を示すフラグ。このプロパティが省略された場合、デフォルトのブール値は想定されない。  - `ratingValueAverage`: イベントの評価値。使用上のガイドライン。0から10までの値を基準にしてください。これは `starRatingDetailed` 属性のすべての詳細スコアの平均値である。  - `refPointOfInterest`: イベントに含まれる全てのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照する。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、イベント周辺で利用可能な都市交通（地下鉄、バス、トラム、...）の一覧です。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `slogan`: イベントヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  - `startDate`: 項目の開始日時（ISO 8601の日付形式）。  - `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  - `subEvent`: このメジャーイベントの一部であるマイナーイベントのリストへの参照。  - `superEvent`: 本イベントを含む主要イベントに関する言及。  - `thematic`: キーワードとなるテーマ別リスト  - `title`: イベントのタイトル  - `touristType`: セグメントや旅行の動機に応じた観光の種類。  - `transportServices`: イベント会場付近で利用可能な民間交通機関のリストです。例：タクシー、ウーバー、VTC、パーキングシャトルなど  - `type`: イベントである必要があります。NGSIエンティティタイプ  - `url`: アイテムに関連する画像を含むURL  - `webSite`: 詳細は公式サイトへリンクしています。  - `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。    
 必要なプロパティ  
 - `id`  - `type`    
-このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。この型はそれ自体で一般的なTouristDestinationを記述するために使用することができ、また他のPlaceに観光関連のプロパティを追加するためのadditionalTypeとして使用することができる。このタイプは、一般的な観光地を記述するために単独で使用されることも、他の場所に観光 関連プロパティを追加するための additionalType として使用されることもできる。UNWTO は、Destination（観光旅行の主要目的地）を、旅行を決定する上で中心となる訪問地と定義している。  
+このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。この型はそれ自体で一般的なTouristDestinationを記述するために使用することができ、また他のPlaceに観光関連のプロパティを追加するためのadditionalTypeとして使用することができる。このタイプは、一般的な観光地を記述するために単独で使用されることも、他の場所に観光 関連プロパティを追加するための追加タイプとして使用されることもできる。TouristDestination は、1 つまたは複数の TouristAttractions を含む、またはそれと一緒に配置される場所と定義され、しばしば特定の touristType と同様のテーマまたは関心によってリンクされる。UNWTO は、Destination（観光旅行の主要目的地）を、旅行を決定する上で中心となる訪問地と定義している。  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -312,6 +312,7 @@ Event:
             type: number    
           repeatFrequency:    
             type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
@@ -527,7 +528,6 @@ Event:
         properties:    
           closes:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
             anyOf:    
@@ -557,7 +557,6 @@ Event:
             type: string    
           opens:    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
             anyOf:    
@@ -613,7 +612,7 @@ Event:
       x-ngsi:    
         type: Property    
     pitch:    
-      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
+      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
       items:    
         properties:    
           article:    
@@ -1065,11 +1064,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## ペイロードの例  
@@ -1340,7 +1339,7 @@ Event:
 }  
 ```  
 #### イベント NGSI-LD 正規化例  
-ここでは、JSON-LD フォーマットの Event を正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+ここでは、JSON-LD フォーマットの Event を正規化した例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 ```json  
 {  
     "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
