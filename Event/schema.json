@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.1.1",
+  "$schemaVersion": "0.2.0",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json",
   "title": "Smart Data Models - Event",
@@ -460,17 +460,20 @@
               "reviews": {
                 "type": "array",
                 "items": {
-                  "article": {
-                    "type": "string"
-                  },
-                  "origin": {
-                    "type": "string"
-                  },
-                  "ratingValue": {
-                    "type": "number"
-                  },
-                  "starRating": {
-                    "type": "number"
+                  "type": "object",
+                  "properties": {
+                    "article": {
+                      "type": "string"
+                    },
+                    "origin": {
+                      "type": "string"
+                    },
+                    "ratingValue": {
+                      "type": "number"
+                    },
+                    "starRating": {
+                      "type": "number"
+                    }
                   }
                 }
               }
