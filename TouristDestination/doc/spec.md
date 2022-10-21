@@ -1,17 +1,32 @@
-Entity: TouristDestination  
-==========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: TouristDestination  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.**  
+version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `includesAttraction`:   - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: It has to be TouristDestination    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `includesAttraction[array]`:   . Model: []()- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: It has to be TouristDestination  . Model: [https://schema.org/TouristDestination](https://schema.org/TouristDestination)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 This data model is based on the standard UNE178503. It is also compatible with schema.org. Some of the elements of schema.org has been adapted in this file https://smart-data-models.github.io/data-models/schema-org.json  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TouristDestination:    
@@ -377,11 +392,22 @@ TouristDestination:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristDestination/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### TouristDestination NGSI-v2 key-values Example    
 Here is an example of a TouristDestination in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "ngsi:uri:TouristDestination:1",  
@@ -410,8 +436,10 @@ TouristDestination:
   ]  
 }  
 ```  
+</details>  
 #### TouristDestination NGSI-v2 normalized Example    
 Here is an example of a TouristDestination in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": {  
@@ -455,85 +483,99 @@ TouristDestination:
   }  
 }  
 ```  
+</details>  
 #### TouristDestination NGSI-LD key-values Example    
 Here is an example of a TouristDestination in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "ngsi:uri:TouristDestination:1",  
-  "type": "TouristDestination",  
-  "name": "Sitios Patrimonio de la Humanidad in Spain",  
-  "description": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>",  
-  "includesAttraction": [  
-    {  
-      "type": [  
-        "TouristAttraction",  
-        "WorldHeritageSite",  
-        "CivilBuilding"  
-      ],  
-      "name": "Alhambra, Generalife y Albaicin de Granada",  
-      "url": "https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html"  
-    },  
-    {  
-      "type": [  
-        "TouristAttraction",  
-        "WorldHeritageSite",  
-        "PlaceOfWorship"  
-      ],  
-      "name": "Catedral de Burgos",  
-      "url": "https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html"  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
+    "id": "ngsi:uri:TouristDestination:1",  
+    "type": "TouristDestination",  
+    "description": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>",  
+    "includesAttraction": [  
+        {  
+            "type": [  
+                "TouristAttraction",  
+                "WorldHeritageSite",  
+                "CivilBuilding"  
+            ],  
+            "name": "Alhambra, Generalife y Albaicin de Granada",  
+            "url": "https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html"  
+        },  
+        {  
+            "type": [  
+                "TouristAttraction",  
+                "WorldHeritageSite",  
+                "PlaceOfWorship"  
+            ],  
+            "name": "Catedral de Burgos",  
+            "url": "https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html"  
+        }  
+    ],  
+    "name": "Sitios Patrimonio de la Humanidad in Spain",  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### TouristDestination NGSI-LD normalized Example    
 Here is an example of a TouristDestination in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": {  
-    "type": "string",  
-    "value": "ngsi:uri:TouristDestination:1"  
-  },  
-  "type": {  
-    "type": "string",  
-    "value": "TouristDestination"  
-  },  
-  "name": {  
-    "type": "string",  
-    "value": "Sitios Patrimonio de la Humanidad os spain"  
-  },  
-  "description": {  
-    "type": "string",  
-    "value": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>"  
-  },  
-  "includesAttraction": {  
-    "type": "array",  
-    "value": [  
-      {  
-        "type": [  
-          "TouristAttraction",  
-          "WorldHeritageSite",  
-          "CivilBuilding"  
-        ],  
-        "name": "Alhambra, Generalife y Albaicin de Granada",  
-        "url": "https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html"  
-      },  
-      {  
-        "type": [  
-          "TouristAttraction",  
-          "WorldHeritageSite",  
-          "PlaceOfWorship"  
-        ],  
-        "name": "Catedral de Burgos",  
-        "url": "https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html"  
-      }  
+    "id": {  
+        "type": "string",  
+        "value": "ngsi:uri:TouristDestination:1"  
+    },  
+    "type": {  
+        "type": "string",  
+        "value": "TouristDestination"  
+    },  
+    "description": {  
+        "type": "string",  
+        "value": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>"  
+    },  
+    "includesAttraction": {  
+        "type": "array",  
+        "value": [  
+            {  
+                "type": [  
+                    "TouristAttraction",  
+                    "WorldHeritageSite",  
+                    "CivilBuilding"  
+                ],  
+                "name": "Alhambra, Generalife y Albaicin de Granada",  
+                "url": "https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html"  
+            },  
+            {  
+                "type": [  
+                    "TouristAttraction",  
+                    "WorldHeritageSite",  
+                    "PlaceOfWorship"  
+                ],  
+                "name": "Catedral de Burgos",  
+                "url": "https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html"  
+            }  
+        ]  
+    },  
+    "name": {  
+        "type": "string",  
+        "value": "Sitios Patrimonio de la Humanidad os spain"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
-  ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
