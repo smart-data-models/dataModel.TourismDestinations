@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: TouristTrip  
-====================  
+====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Eine touristische Reise. Eine erstellte Reiseroute mit Besuchen einer oder mehrerer Sehenswürdigkeiten (TouristAttraction/TouristDestination), die oft durch ein ähnliches Thema, ein ähnliches geografisches Gebiet oder ein ähnliches Interesse mit einem bestimmten TouristType verbunden sind. Die UNWTO definiert eine touristische Reise als die von Besuchern unternommene Reise.**  
 Version: 0.0.3  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `accessPlan`: Text oder Link zum Zugangsplan für die Reise.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `audience`: Art der Öffentlichkeit, die von dieser Reise betroffen ist. Eine Kombination aus Freitext (Familie, Erwachsene, Kinder, Jugendliche, Senioren, alleÖffentlichkeit, ...). Enum:'adult, allPublic, children, family, senior, teenager'  - `category`: Kategorie des Ausflugs. Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können. enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL`: Gibt die URL zum offiziellen Bild oder Video der Reise für weitere Informationen an.  - `criticReview`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch eine Zeichenkette mit "Language Value" : "Article Value" dargestellt.  - `currencyAccepted`: Währung, die für die Zahlung akzeptiert wird, wenn "TripFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. [Norm ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Börsenhandelssystem](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastReported`: Letzte offizielle Aktualisierung der Daten im ISO 8601-Format  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `duration`: Die Dauer der einzelnen Sendungen. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate`: Enddatum und -zeit im ISO8601 UTC-Format  - `id`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree`: Kostenlose oder kostenpflichtige Reise (Wahr = Kostenlos / Falsch = Kostenpflichtig).  - `itinerary`: Ziele oder Orte, aus denen eine Reise besteht. Für eine Reise, bei der die Reihenfolge der Ziele wichtig ist, verwenden Sie ItemList, um die in den Reisen enthaltene Reihenfolge anzugeben.  - `language`:  Liste der während der Reise verwendeten formalen Sprache aus dem IETF-Standard [BCP 47] (https://tools.ietf.org/html/bcp47)  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `locationName`: Name des Reiseziels.  - `maximumAttendeeCapacity`: Die Gesamtzahl der Personen, die an der Reise an diesem Ort teilnehmen können.  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted`: Akzeptierte Zahlung, wenn `TripFree` False ist. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. Enum:'Bargeld, Kreditkarte, CryptoCurrency, andere'  - `pitch`: Neigung der Reise. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch einen String mit Language Value : Article Value dargestellt.  - `priceSpecification`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne je nach Kategorie oder Publikum darstellt.  - `ratingValueAverage`: Bewertungswert von Trips. Richtlinien für die Verwendung: Verwenden Sie Werte zwischen 0 und 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "StarRatingDetailed".  - `refPointOfInterest`: Verweis auf alle Points of Interest [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md), die in den Touren enthalten sind. Die POI-Liste ist nicht chronologisch geordnet.  - `routeType`: Liste der städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...), die in der Nähe des Trips verfügbar sind, gemäß dem GFTS-Standard [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `slogan`: Reisekopfzeile, entspricht dem Texthaken.  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `starRatingDetailed`: Detaillierte Sternebewertungen, die zu dem in ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element eine Zeichenkette im Format ist: `Anzahl derSterne`: Prozentsatz.  - `startDate`: Startdatum und -zeit im ISO8601 UTC-Format  - `subCategory`: Unterkategorie des Attributs "Kategorie". Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können, und zwar als erstes Beispiel oder als jeder andere Wert, den eine Anwendung benötigt.  - `subTrip`: Verweis auf eine Liste von kleineren Reisen, die Teil dieser großen Reise sind  - `superTrip`: Verweis auf die große Reise, die diese Reise einschließt.  - `thematic`: Eine Liste von Themen als Schlüsselwörter  - `title`:  Titel der Reise.  - `touristType`: Aufzählung der verschiedenen Reisetypen, die für die TouristTrip gelten  - `transportServices`: Liste der in der Nähe der Reise verfügbaren privaten Verkehrsmittel. Zum Beispiel Taxi, Uber, VTC, ParkingShuttle  - `tripPriceFrom`: Mindestpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripPriceTo`: Höchstpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripSchedule`: Zeitplan für die Reise. Damit kann ein Zeitplan für einen sich wiederholenden Zeitraum festgelegt werden, um eine regelmäßig auftretende Fahrt zu beschreiben. Im Beispiel am Anfang des Abschnitts für die Einschränkung zur Verwendung dieses Attributs.  - `tripStatus`: Reisestatus für diese Reise. Enum:'storniert, geschlossen, beendet, eröffnet, verschoben, verschoben, geplant, geplant, ausgesetzt'  - `type`: Es muss TouristTrip sein. NGSI Entitätstyp.  - `webSite`: Link zur offiziellen Website für weitere Informationen.  - `wheelChairAccessible`: Zugang für Personen mit eingeschränkter Mobilität möglich.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `accessPlan[string]`: Text oder Link zum Zugangsplan für die Reise.  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: Art der Öffentlichkeit, die von dieser Reise betroffen ist. Eine Kombination aus Freitext (Familie, Erwachsene, Kinder, Jugendliche, Senioren, alleÖffentlichkeit, ...). Enum:'adult, allPublic, children, family, senior, teenager'  - `category[array]`: Kategorie des Ausflugs. Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können. enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL[string]`: Gibt die URL zum offiziellen Bild oder Video der Reise für weitere Informationen an.  - `criticReview[object]`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch eine Zeichenkette mit "Language Value" : "Article Value" dargestellt.  - `currencyAccepted[array]`: Währung, die für die Zahlung akzeptiert wird, wenn "TripFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. [Norm ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Börsenhandelssystem](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateLastReported[string]`: Letzte offizielle Aktualisierung der Daten im ISO 8601-Format  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `duration[number]`: Die Dauer der einzelnen Sendungen. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport[array]`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate[string]`: Enddatum und -zeit im ISO8601 UTC-Format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree[boolean]`: Kostenlose oder kostenpflichtige Reise (Wahr = Kostenlos / Falsch = Kostenpflichtig).  - `itinerary[array]`: Ziele oder Orte, aus denen eine Reise besteht. Für eine Reise, bei der die Reihenfolge der Ziele wichtig ist, verwenden Sie ItemList, um die in den Reisen enthaltene Reihenfolge anzugeben.  - `language[array]`:  Liste der während der Reise verwendeten formalen Sprache aus dem IETF-Standard [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `locationName[string]`: Name des Reiseziels.  - `maximumAttendeeCapacity[number]`: Die Gesamtzahl der Personen, die an der Reise an diesem Ort teilnehmen können.  - `name[string]`: Der Name dieses Artikels.  - `openingHoursSpecification[array]`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted[array]`: Akzeptierte Zahlung, wenn `TripFree` False ist. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. Enum:'Bargeld, Kreditkarte, CryptoCurrency, andere'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: Neigung der Reise. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch einen String mit Language Value : Article Value dargestellt.  - `priceSpecification[array]`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne je nach Kategorie oder Publikum darstellt.  - `ratingValueAverage[number]`: Bewertungswert von Trips. Richtlinien für die Verwendung: Verwenden Sie Werte zwischen 0 und 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "StarRatingDetailed".  - `refPointOfInterest[array]`: Verweis auf alle Points of Interest [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md), die in den Touren enthalten sind. Die POI-Liste ist nicht chronologisch geordnet.  - `routeType[array]`: Liste der städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...), die in der Nähe des Trips verfügbar sind, gemäß dem GFTS-Standard [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `slogan[string]`: Reisekopfzeile, entspricht dem Texthaken.  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `starRatingDetailed[object]`: Detaillierte Sternebewertungen, die zu dem in ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element eine Zeichenkette im Format ist: `Anzahl derSterne`: Prozentsatz.  - `startDate[string]`: Startdatum und -zeit im ISO8601 UTC-Format  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: Unterkategorie des Attributs "Kategorie". Im Folgenden wird eine Kombination aus freiem Text angeboten, um flexibel auf einen bestimmten Kontext reagieren zu können, und zwar als erstes Beispiel oder als jeder andere Wert, den eine Anwendung benötigt.  - `subTrip[array]`: Verweis auf eine Liste von kleineren Reisen, die Teil dieser großen Reise sind  - `superTrip[*]`: Verweis auf die große Reise, die diese Reise einschließt.  - `thematic[array]`: Eine Liste von Themen als Schlüsselwörter  - `title[string]`:  Titel der Reise.  - `touristType[array]`: Aufzählung der verschiedenen Reisetypen, die für die TouristTrip gelten  - `transportServices[array]`: Liste der in der Nähe der Reise verfügbaren privaten Verkehrsmittel. Zum Beispiel Taxi, Uber, VTC, ParkingShuttle  - `tripPriceFrom[number]`: Mindestpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripPriceTo[number]`: Höchstpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `tripSchedule[array]`: Zeitplan für die Reise. Damit kann ein Zeitplan für einen sich wiederholenden Zeitraum festgelegt werden, um eine regelmäßig auftretende Fahrt zu beschreiben. Im Beispiel am Anfang des Abschnitts für die Einschränkung zur Verwendung dieses Attributs.  - `tripStatus[string]`: Reisestatus für diese Reise. Enum:'storniert, geschlossen, beendet, eröffnet, verschoben, verschoben, geplant, geplant, ausgesetzt'  - `type[string]`: Es muss TouristTrip sein. NGSI Entitätstyp.  - `webSite[string]`: Link zur offiziellen Website für weitere Informationen.  - `wheelChairAccessible[boolean]`: Zugang für Personen mit eingeschränkter Mobilität möglich.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Dieses Datenmodell basiert auf dem Standard UNE178503. Es ist auch mit schema.org kompatibel. Einige der Elemente von schema.org wurden in dieser Datei https://smart-data-models.github.io/data-models/schema-org.json angepasst. Geringfügige Anpassungen waren notwendig, um die Kompatibilität mit schema.org zu gewährleisten.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 TouristTrip:    
@@ -994,9 +1007,14 @@ TouristTrip:
   x-version: 0.0.3    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### TouristTrip NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi:touristTrip:1",  
@@ -1163,25 +1181,31 @@ TouristTrip:
     }  
   },  
   "webSite": "http://www.palais-lascaris.com",  
-  "contenteURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
-  "criticReview": {  
-    "fr": {  
-      "value": {  
-        "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
-        "origine": "Office du tourisme Nice",  
-        "ratingValue": 9,  
-        "starRating": 5  
-      }  
+  "contentURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
+  "criticReview": [  
+    {  
+      "language": "fr",  
+      "reviews": [  
+        {  
+          "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
+          "origin": "Office du tourisme Nice",  
+          "ratingValue": 9,  
+          "starRating": 5  
+        }  
+      ]  
     },  
-    "en": {  
-      "value": {  
-        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
-        "origine": "Trip Advisor",  
-        "ratingValue": 8,  
-        "starRating": 4  
-      }  
+    {  
+      "language": "en",  
+      "reviews": [  
+        {  
+          "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
+          "origin": "Trip Advisor",  
+          "ratingValue": 8,  
+          "starRating": 4  
+        }  
+      ]  
     }  
-  },  
+  ],  
   "ratingValue": 8.5,  
   "starRatingDetailed": {  
     "5": 92,  
@@ -1245,8 +1269,10 @@ TouristTrip:
   ]  
 }  
 ```  
+</details>  
 #### TouristTrip NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "touristTrip.1",  
@@ -1513,25 +1539,25 @@ TouristTrip:
     "value": [  
       {  
         "language": "fr",  
-        "review": {  
-          "value": {  
-            "article": "Beau palais baroque qui contient des instruments de musique varios dont une harpe-piano tonnante, et des portraits trÃ¨s beaux. A voir, surtout pour l'escalier et la decoration des salles.",  
+        "reviews": [  
+          {  
+            "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
             "origin": "Office du tourisme Nice",  
             "ratingValue": 9,  
             "starRating": 5  
           }  
-        }  
+        ]  
       },  
       {  
         "language": "en",  
-        "review": {  
-          "value": {  
+        "reviews": [  
+          {  
             "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
             "origin": "Trip Advisor",  
             "ratingValue": 8,  
             "starRating": 4  
           }  
-        }  
+        ]  
       }  
     ]  
   },  
@@ -1630,257 +1656,267 @@ TouristTrip:
   }  
 }  
 ```  
+</details>  
 #### TouristTrip NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi:touristTrip:1",  
-    "type": "TouristTrip",  
-    "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
-    "address": {  
-        "streetAddress": "15, rue Droite",  
-        "postalCode": "06000",  
-        "adressLocality": "Nice",  
-        "addressCountry": "France",  
-        "adressRegion": "Marseille Nice Avignon Aix - (06)"  
-    },  
-    "alternateName": "Palais Lascaris",  
-    "areaServed": "Vieux Nice",  
-    "audience": [  
-        "allPublic"  
-    ],  
-    "category": [  
-        "museum"  
-    ],  
-    "contactPoint": {  
-        "telephone": "+33(0)4 93 62 72 40",  
-        "contactType": "customer reception",  
-        "email": "palais.lascaris@ville-nice.fr",  
-        "availableLanguage": [  
-            "English",  
-            "French"  
-        ]  
-    },  
-    "contenteURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
-    "criticReview": {  
-        "fr": {  
-            "value": {  
-                "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
-                "origine": "Office du tourisme Nice",  
-                "ratingValue": 9,  
-                "starRating": 5  
-            }  
-        },  
-        "en": {  
-            "value": {  
-                "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
-                "origine": "Trip Advisor",  
-                "ratingValue": 8,  
-                "starRating": 4  
-            }  
-        }  
-    },  
-    "currencyAccepted": [  
-        "EUR",  
-        "USD"  
-    ],  
-    "dateLastReported": "2020-03-17T08:45:00Z",  
-    "description": "Le palais Lascaris est une ancienne demeure aristocratique de Nice datant de la premiere moiti du XVII sicle, aujourd'hui un musee des instruments de musique anciens",  
-    "duration": 1.25,  
-    "electricTransport": [  
-        "electricBicycle",  
-        "electricMotorBike"  
-    ],  
-    "endDate": "2021-12-31T00:00:00Z",  
-    "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-    "isAccessibleForFree": false,  
-    "itinerary": [  
-        {  
-            "position": 1,  
-            "name": "Cours Saleya",  
-            "streetAdress": [  
-                "Cours Saleya",  
-                "06300 Nice"  
-            ],  
-            "image": [  
-                "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
-            ]  
-        },  
-        {  
-            "position": 2,  
-            "name": "Centre du patrimoine",  
-            "streetAdress": [  
-                "14 rue Jules Gilly",  
-                "06300 Nice"  
-            ],  
-            "image": [  
-                "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
-            ]  
-        },  
-        {  
-            "position": 3,  
-            "name": "Place du j\u00e9sus",  
-            "streetAdress": [  
-                "Rue du j\u00e9sus",  
-                "06300 Nice"  
-            ],  
-            "image": [  
-                "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
-            ]  
-        },  
-        {  
-            "position": 4,  
-            "name": "Palais Lascaris",  
-            "streetAdress": [  
-                "15, rue Droite",  
-                "06300 Nice"  
-            ],  
-            "image": [  
-                "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
-            ]  
-        }  
-    ],  
-    "language": [  
-        "french",  
-        "english",  
-        "spanish",  
-        "german"  
-    ],  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            43.6976766,  
-            7.2772458  
-        ]  
-    },  
-    "locationName": "Palais Lascaris",  
-    "maximumAttendeeCapacity": 25,  
-    "name": "Musee du Palais Lascaris",  
-    "openingHoursSpecification": [  
-        {  
-            "dayOfWeek": "Monday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        },  
-        {  
-            "dayOfWeek": "Wednesday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        },  
-        {  
-            "dayOfWeek": "Thursday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        },  
-        {  
-            "dayOfWeek": "Friday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        },  
-        {  
-            "dayOfWeek": "Saturday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        },  
-        {  
-            "dayOfWeek": "Sunday",  
-            "opens": "10:00:00",  
-            "closes": "18:00:00"  
-        }  
-    ],  
-    "paymentAccepted": [  
-        "Cash",  
-        "CreditCard"  
-    ],  
-    "pitch": {  
-        "fr": {  
-            "value": {  
-                "article": "Dans une ruelle \u00e9troite ce palais baroque allie richesse ornementale et simplicit\u00e9. Son escalier avec ses fresques est somptueux m\u00eame si ses dimensions sont somme toute r\u00e9duites. L\u2019ambiance est chaleureuse avec des plafonds bas ,des pi\u00e8ces \u00e0 l\u2019\u00e9chelle humaine qui en font un lieu intime propice \u00e0 la d\u00e9couverte de la collection d\u2019instruments de musique. Ne manquez pas d\u2019observer les portes de communication."  
-            }  
-        },  
-        "en": {  
-            "value": {  
-                "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
-            }  
-        }  
-    },  
-    "priceSpecification": [  
-        {  
-            "audience": [  
-                "adult"  
-            ],  
-            "price": 10.0  
-        },  
-        {  
-            "audience": [  
-                "senior"  
-            ],  
-            "price": 5.0  
-        },  
-        {  
-            "audience": [  
-                "children"  
-            ],  
-            "eligibleQuantity": 5,  
-            "price": 0.0  
-        }  
-    ],  
-    "ratingValue": 8.5,  
-    "routeType": [  
-        "tram",  
-        "subway",  
-        "bus"  
-    ],  
-    "sameAs": "https://inventrip.com/conil/trip/1907",  
-    "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
-    "slogan": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens.",  
-    "starRatingDetailed": {  
-        "5": 92,  
-        "4": 6,  
-        "3": 2,  
-        "2": 0,  
-        "1": 0  
-    },  
-    "startDate": "2021-01-01T00:00:00Z",  
-    "subCategory": [  
-        "art",  
-        "decorativeArts",  
-        "history"  
-    ],  
-    "superTrip": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE",  
-    "thematic": [  
-        "culture",  
-        "museum",  
-        "instrument",  
-        "music",  
-        "monument"  
-    ],  
-    "title": "Visite du Mus\u00e9e du Palais Lascaris",  
-    "touristType": [  
-        "FAMILY TOURISM",  
-        "WATER SPORTS TOURISM",  
-        "FOOD TOURISM",  
-        "BEACH AND SUN TOURISM"  
-    ],  
-    "transportServices": [  
-        "taxi"  
-    ],  
-    "tripPriceFrom": 0.0,  
-    "tripPriceTo": 10.0,  
-    "tripStatus": "opened",  
-    "url": [  
-        "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
-    ],  
-    "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
-    "webSite": "http://www.palais-lascaris.com",  
-    "wheelChairAccessible": false,  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  "id": "urn:ngsi:touristTrip:1",  
+  "type": "TouristTrip",  
+  "name": "Musee du Palais Lascaris",  
+  "alternateName": "Palais Lascaris",  
+  "description": "Le palais Lascaris est une ancienne demeure aristocratique de Nice datant de la premiere moiti du XVII sicle, aujourd'hui un musee des instruments de musique anciens",  
+  "touristType": [  
+    "FAMILY TOURISM",  
+    "WATER SPORTS TOURISM",  
+    "FOOD TOURISM",  
+    "BEACH AND SUN TOURISM"  
+  ],  
+  "url": [  
+    "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
+  ],  
+  "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
+  "sameAs": "https://inventrip.com/conil/trip/1907",  
+  "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
+  "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      43.6976766,  
+      7.2772458  
     ]  
+  },  
+  "address": {  
+    "streetAddress": "15, rue Droite",  
+    "postalCode": "06000",  
+    "adressLocality": "Nice",  
+    "addressCountry": "France",  
+    "adressRegion": "Marseille Nice Avignon Aix - (06)"  
+  },  
+  "areaServed": "Vieux Nice",  
+  "dateLastReported": "2020-03-17T08:45:00Z",  
+  "itinerary": [  
+    {  
+      "position": 1,  
+      "name": "Cours Saleya",  
+      "streetAdress": [  
+        "Cours Saleya",  
+        "06300 Nice"  
+      ],  
+      "image": [  
+        "https://www.nicetourisme.com/nice/1507-marche-aux-fruits-legumes-et-maree-du-cours-saleya"  
+      ]  
+    },  
+    {  
+      "position": 2,  
+      "name": "Centre du patrimoine",  
+      "streetAdress": [  
+        "14 rue Jules Gilly",  
+        "06300 Nice"  
+      ],  
+      "image": [  
+        "https: //nice.city-life.fr/Services/Nice/Services-touristiques/768/Centre-du-Patrimoine?lang=fr"  
+      ]  
+    },  
+    {  
+      "position": 3,  
+      "name": "Place du j\u00e9sus",  
+      "streetAdress": [  
+        "Rue du j\u00e9sus",  
+        "06300 Nice"  
+      ],  
+      "image": [  
+        "https: //fr.wikipedia.org/wiki/%C3%89glise_Saint-Jacques-le-Majeur_de_Nice"  
+      ]  
+    },  
+    {  
+      "position": 4,  
+      "name": "Palais Lascaris",  
+      "streetAdress": [  
+        "15, rue Droite",  
+        "06300 Nice"  
+      ],  
+      "image": [  
+        "https: //upload.wikimedia.org/wikipedia/commons/e/ed/Lascaris2.JPG"  
+      ]  
+    }  
+  ],  
+  "contactPoint": {  
+    "telephone": "+33(0)4 93 62 72 40",  
+    "contactType": "customer reception",  
+    "email": "palais.lascaris@ville-nice.fr",  
+    "availableLanguage": [  
+      "English",  
+      "French"  
+    ]  
+  },  
+  "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
+  "category": [  
+    "museum"  
+  ],  
+  "subCategory": [  
+    "art",  
+    "decorativeArts",  
+    "history"  
+  ],  
+  "thematic": [  
+    "culture",  
+    "museum",  
+    "instrument",  
+    "music",  
+    "monument"  
+  ],  
+  "locationName": "Palais Lascaris",  
+  "title": "Visite du Mus\u00e9e du Palais Lascaris",  
+  "slogan": "Une demeure aristocratique joyau du baroque et une remarquable collection d instruments de musiques anciens.",  
+  "language": [  
+    "french",  
+    "english",  
+    "spanish",  
+    "german"  
+  ],  
+  "superTrip": "urn:ngsi-ld:Trip:Trip:MNCA-TRIP-NCE-VISTE-DES-MUSEES-NICE",  
+  "tripStatus": "opened",  
+  "startDate": "2021-01-01T00:00:00Z",  
+  "endDate": "2021-12-31T00:00:00Z",  
+  "openingHoursSpecification": [  
+    {  
+      "dayOfWeek": "Monday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    },  
+    {  
+      "dayOfWeek": "Wednesday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    },  
+    {  
+      "dayOfWeek": "Thursday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    },  
+    {  
+      "dayOfWeek": "Friday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    },  
+    {  
+      "dayOfWeek": "Saturday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    },  
+    {  
+      "dayOfWeek": "Sunday",  
+      "opens": "10:00:00",  
+      "closes": "18:00:00"  
+    }  
+  ],  
+  "duration": 1.25,  
+  "pitch": {  
+    "fr": {  
+      "value": {  
+        "article": "Dans une ruelle \u00e9troite ce palais baroque allie richesse ornementale et simplicit\u00e9. Son escalier avec ses fresques est somptueux m\u00eame si ses dimensions sont somme toute r\u00e9duites. L\u2019ambiance est chaleureuse avec des plafonds bas ,des pi\u00e8ces \u00e0 l\u2019\u00e9chelle humaine qui en font un lieu intime propice \u00e0 la d\u00e9couverte de la collection d\u2019instruments de musique. Ne manquez pas d\u2019observer les portes de communication."  
+      }  
+    },  
+    "en": {  
+      "value": {  
+        "article": "In a narrow alley, this baroque palace combines ornamental richness and simplicity. Its staircase with its frescoes is sumptuous even if its dimensions are all in all small. The atmosphere is warm with low ceilings, rooms on a human scale that make it an intimate place conducive to discovering the collection of gastronomieal instruments. Do not miss to observe the communication doors."  
+      }  
+    }  
+  },  
+  "webSite": "http://www.palais-lascaris.com",  
+  "contentURL": "https://www.nice.fr/uploads/media/paysage/0001/03/Lascaris.JPG",  
+  "criticReview": [  
+    {  
+      "language": "fr",  
+      "reviews": [  
+        {  
+          "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
+          "origin": "Office du tourisme Nice",  
+          "ratingValue": 9,  
+          "starRating": 5  
+        }  
+      ]  
+    },  
+    {  
+      "language": "en",  
+      "reviews": [  
+        {  
+          "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
+          "origin": "Trip Advisor",  
+          "ratingValue": 8,  
+          "starRating": 4  
+        }  
+      ]  
+    }  
+  ],  
+  "ratingValue": 8.5,  
+  "starRatingDetailed": {  
+    "5": 92,  
+    "4": 6,  
+    "3": 2,  
+    "2": 0,  
+    "1": 0  
+  },  
+  "audience": [  
+    "allPublic"  
+  ],  
+  "wheelChairAccessible": false,  
+  "maximumAttendeeCapacity": 25,  
+  "isAccessibleForFree": false,  
+  "tripPriceFrom": 0.0,  
+  "tripPriceTo": 10.0,  
+  "priceSpecification": [  
+    {  
+      "audience": [  
+        "adult"  
+      ],  
+      "price": 10.0  
+    },  
+    {  
+      "audience": [  
+        "senior"  
+      ],  
+      "price": 5.0  
+    },  
+    {  
+      "audience": [  
+        "children"  
+      ],  
+      "eligibleQuantity": 5,  
+      "price": 0.0  
+    }  
+  ],  
+  "paymentAccepted": [  
+    "Cash",  
+    "CreditCard"  
+  ],  
+  "currencyAccepted": [  
+    "EUR",  
+    "USD"  
+  ],  
+  "routeType": [  
+    "tram",  
+    "subway",  
+    "bus"  
+  ],  
+  "transportServices": [  
+    "taxi"  
+  ],  
+  "electricTransport": [  
+    "electricBicycle",  
+    "electricMotorBike"  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
 }  
 ```  
+</details>  
 #### TouristTrip NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen TouristTrip im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi:touristTrip:1",  
@@ -1940,27 +1976,25 @@ TouristTrip:
         "value": [  
             {  
                 "language": "fr",  
-                "review": {  
-                    "type": "Property",  
-                    "value": {  
-                        "article": "Beau palais baroque qui contient des instruments de musique vari\u00c3\u00a9s dont une harpe-piano \u00c3\u00a9tonnante, et des portraits tr\u00c3\u00a8s beaux. A voir, surtout pour l'escalier et la d\u00c3\u00a9coration des salles.",  
-                        "origine": "Office du tourisme Nice",  
+                "reviews": [  
+                    {  
+                        "article": "Beau palais baroque qui contient des instruments de musique vari\u00e9s dont une harpe-piano \u00e9tonnante, et des portraits tr\u00e8s beaux. A voir, surtout pour l'escalier et la d\u00e9coration des salles.",  
+                        "origin": "Office du tourisme Nice",  
                         "ratingValue": 9,  
                         "starRating": 5  
                     }  
-                }  
+                ]  
             },  
             {  
                 "language": "en",  
-                "review": {  
-                    "type": "Property",  
-                    "value": {  
-                        "article": "Beautiful baroque palace which contains various gastronomieal instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
-                        "origine": "Trip Advisor",  
+                "reviews": [  
+                    {  
+                        "article": "Beautiful baroque palace which contains various gastronomical instruments including an astonishing harp-piano, and very beautiful portraits. To see, especially for the staircase and the decoration of the rooms.",  
+                        "origin": "Trip Advisor",  
                         "ratingValue": 8,  
                         "starRating": 4  
                     }  
-                }  
+                ]  
             }  
         ]  
     },  
@@ -2269,7 +2303,17 @@ TouristTrip:
         "type": "Property",  
         "value": false  
     },  
-    "@context": []  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
