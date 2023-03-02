@@ -7,14 +7,14 @@ Event:
       x-ngsi:
         type: Property
     actor:
-      description: 'List of actors or music group.'
+      description: List of actors or music group.
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -25,6 +25,9 @@ Event:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -34,17 +37,20 @@ Event:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -82,28 +88,28 @@ Event:
       x-ngsi:
         type: Property
     composer:
-      description: 'List of person who wrote the composition.'
+      description: List of person who wrote the composition.
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     contactPoint:
-      description: 'The details to contact with the item.'
+      description: The details to contact with the item.
       properties:
         areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.
           type: string
         availabilityRestriction:
           anyOf:
-            - description: 'Property. Array of identifiers format of any NGSI entity.'
+            - description: Property. Array of identifiers format of any NGSI entity.
               items:
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
               type: array
-            - description: 'Property. Array of identifiers format of any NGSI entity.'
+            - description: Property. Array of identifiers format of any NGSI entity.
               items:
                 format: uri
                 type: string
@@ -125,26 +131,26 @@ Event:
               type: array
           description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
         contactType:
-          description: 'Property. Contact type of this item.'
+          description: Property. Contact type of this item.
           type: string
         email:
-          description: 'Property. Email address of owner.'
+          description: Property. Email address of owner.
           format: idn-email
           type: string
         faxNumber:
           description: 'Property. Model:''http://schema.org/Text''. The fax number.'
           type: string
         name:
-          description: 'Property. The name of this item.'
+          description: Property. The name of this item.
           type: string
         productSupported:
           description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
           type: string
         telephone:
-          description: 'Property. Telephone of this contact.'
+          description: Property. Telephone of this contact.
           type: string
         url:
-          description: 'Property. URL which provides a description or further information about this item.'
+          description: Property. URL which provides a description or further information about this item.
           format: uri
           type: string
       type: object
@@ -152,7 +158,7 @@ Event:
         model: https://schema.org/ContactPoint
         type: Property
     contentURL:
-      description: 'Specifies the URL to the official image or video of the Event for more information.'
+      description: Specifies the URL to the official image or video of the Event for more information.
       format: uri
       type: string
       x-ngsi:
@@ -190,41 +196,41 @@ Event:
         model: https://schema.org/currenciesAccepted
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
     director:
-      description: 'List of director who manage the composition.'
+      description: List of director who manage the composition.
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     doorTimeClose:
-      description: 'Doors closing time to access the show..'
+      description: Doors closing time to access the show..
       type: string
       x-ngsi:
         type: Property
     doorTimeOpen:
-      description: 'Doors opening time to access the show.'
+      description: Doors opening time to access the show.
       type: string
       x-ngsi:
         type: Property
@@ -246,7 +252,7 @@ Event:
       x-ngsi:
         type: Property
     endDate:
-      description: 'The end date and time of the item (in ISO 8601 date format).'
+      description: The end date and time of the item (in ISO 8601 date format).
       format: date-time
       type: string
       x-ngsi:
@@ -299,7 +305,7 @@ Event:
       x-ngsi:
         type: Property
     eventStatus:
-      description: 'Event Status regarding this event.'
+      description: Event Status regarding this event.
       items:
         enum:
           - opened
@@ -316,15 +322,15 @@ Event:
         type: Property
     id:
       anyOf: &event_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     isAccessibleForFree:
@@ -344,7 +350,7 @@ Event:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -363,9 +369,9 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -387,9 +393,9 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -413,9 +419,9 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -436,9 +442,9 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -462,9 +468,9 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -490,22 +496,22 @@ Event:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     maximumAttendeeCapacity:
-      description: 'The total number of people who can attend to the Event at that location.'
+      description: The total number of people who can attend to the Event at that location.
       type: number
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     openingHoursSpecification:
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place
       items:
         properties:
           closes:
@@ -513,7 +519,7 @@ Event:
             type: string
           dayOfWeek:
             anyOf:
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - Monday
                   - Tuesday
@@ -524,7 +530,7 @@ Event:
                   - Sunday
                   - PublicHolidays
                 type: string
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - https://schema.org/Monday
                   - https://schema.org/Tuesday
@@ -566,10 +572,10 @@ Event:
         model: https://schema.org/openingHoursSpecification
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *event_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -587,7 +593,7 @@ Event:
         model: https://schema.org/paymentAccepted
         type: Property
     performer:
-      description: 'Main actor or presenter or musician or musical group of the event.'
+      description: Main actor or presenter or musician or musical group of the event.
       items:
         type: string
       type: array
@@ -606,7 +612,7 @@ Event:
       x-ngsi:
         type: Property
     priceSpecification:
-      description: 'A structured value representing a price or price range depending categories or public.'
+      description: A structured value representing a price or price range depending categories or public.
       items:
         properties:
           audience:
@@ -628,7 +634,7 @@ Event:
       x-ngsi:
         type: Property
     publicAccess:
-      description: 'A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value'
+      description: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value
       type: boolean
       x-ngsi:
         model: https://schema.org/publicAccess
@@ -642,7 +648,7 @@ Event:
       description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.'
       items:
         anyOf: *event_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Relationship
@@ -665,7 +671,7 @@ Event:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -713,7 +719,7 @@ Event:
       x-ngsi:
         type: Property
     startDate:
-      description: 'The start date and time of the item (in ISO 8601 date format).'
+      description: The start date and time of the item (in ISO 8601 date format).
       format: date-time
       type: string
       x-ngsi:
@@ -903,15 +909,15 @@ Event:
       x-ngsi:
         type: Property
     subEvent:
-      description: 'Reference to a list of Minor Events that are part of this major Event'
+      description: Reference to a list of Minor Events that are part of this major Event
       items:
         anyOf:
-          - description: 'Property. Identifier format of any NGSI entity'
+          - description: Property. Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: 'Property. Identifier format of any NGSI entity'
+          - description: Property. Identifier format of any NGSI entity
             format: uri
             type: string
       type: array
@@ -919,19 +925,19 @@ Event:
         type: Property
     superEvent:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to the Major Event that includes this Event.'
+      description: Reference to the Major Event that includes this Event.
       x-ngsi:
         type: Property
     thematic:
-      description: 'A list of thematic as keywords'
+      description: A list of thematic as keywords
       items:
         type: string
       type: array
@@ -943,62 +949,62 @@ Event:
       x-ngsi:
         type: Property
     touristType:
-      description: 'Type of tourism depending on the segment and the motivation of the trip.'
+      description: Type of tourism depending on the segment and the motivation of the trip.
       enum:
-        - 'ADVENTURE TOURISM'
-        - 'ASTRONOMY TOURISM'
-        - 'BACKPACKING TOURISM'
-        - 'BEACH AND SUN TOURISM'
-        - 'BEER TOURISM'
-        - 'BIRDING TOURISM'
-        - 'BULLFIGHTING TOURISM'
+        - ADVENTURE TOURISM
+        - ASTRONOMY TOURISM
+        - BACKPACKING TOURISM
+        - BEACH AND SUN TOURISM
+        - BEER TOURISM
+        - BIRDING TOURISM
+        - BULLFIGHTING TOURISM
         - BUSINESS
-        - 'COMMUNITY-BASED TOURISM'
-        - 'CRUISE TOURISM'
-        - 'CULTURAL TOURISM'
-        - 'CYCLING TOURISM'
-        - 'DIVING TOURISM'
+        - COMMUNITY-BASED TOURISM
+        - CRUISE TOURISM
+        - CULTURAL TOURISM
+        - CYCLING TOURISM
+        - DIVING TOURISM
         - ECOTOURISM
-        - 'EVENTS AND FESTIVALS TOURISM'
-        - 'FAMILY TOURISM'
-        - 'FILM TOURISM'
-        - 'FISHING TOURISM'
-        - 'FOOD TOURISM'
-        - 'GAMBLING TOURISM'
-        - 'GEOLOGICAL TOURISM'
-        - 'HERITAGE TOURISM'
-        - 'HUNTING TOURISM'
-        - 'INDUSTRIAL TOURISM'
-        - 'LANGUAGE TOURISM'
-        - 'LGTBI TOURISM'
-        - 'LUXURY TOURISM'
-        - 'MEDICAL TOURISM'
-        - 'MEMORIAL TOURISM'
-        - 'MICE TOURISM'
-        - 'NATURE TOURISM'
-        - 'OLIVE OIL TOURISM'
-        - 'PARTY TOURISM'
-        - 'PHOTOGRAPHY TOURISM'
-        - 'RELIGIOUS TOURISM'
-        - 'ROMANTIC TOURISM'
-        - 'RURAL TOURISM'
-        - 'SAFARI TOURISM'
-        - 'SAILING TOURISM'
-        - 'SENIOR TOURISM'
-        - 'SHOPPING TOURISM'
-        - 'SHORT BREAK TOURISM'
-        - 'SINGLES TOURISM'
-        - 'SPORTS TOURISM'
+        - EVENTS AND FESTIVALS TOURISM
+        - FAMILY TOURISM
+        - FILM TOURISM
+        - FISHING TOURISM
+        - FOOD TOURISM
+        - GAMBLING TOURISM
+        - GEOLOGICAL TOURISM
+        - HERITAGE TOURISM
+        - HUNTING TOURISM
+        - INDUSTRIAL TOURISM
+        - LANGUAGE TOURISM
+        - LGTBI TOURISM
+        - LUXURY TOURISM
+        - MEDICAL TOURISM
+        - MEMORIAL TOURISM
+        - MICE TOURISM
+        - NATURE TOURISM
+        - OLIVE OIL TOURISM
+        - PARTY TOURISM
+        - PHOTOGRAPHY TOURISM
+        - RELIGIOUS TOURISM
+        - ROMANTIC TOURISM
+        - RURAL TOURISM
+        - SAFARI TOURISM
+        - SAILING TOURISM
+        - SENIOR TOURISM
+        - SHOPPING TOURISM
+        - SHORT BREAK TOURISM
+        - SINGLES TOURISM
+        - SPORTS TOURISM
         - TOURISM
-        - 'TREKKING TOURISM'
-        - 'URBAN TOURISM'
-        - 'WATER SPORTS TOURISM'
-        - 'WEDDING & HONEYMOON TOURISM'
-        - 'WELLNESS TOURISM'
-        - 'WHISKY TOURISM'
-        - 'WINE TOURISM'
-        - 'WINTER SPORTS TOURISM'
-        - 'WOMEN TOURISM'
+        - TREKKING TOURISM
+        - URBAN TOURISM
+        - WATER SPORTS TOURISM
+        - WEDDING & HONEYMOON TOURISM
+        - WELLNESS TOURISM
+        - WHISKY TOURISM
+        - WINE TOURISM
+        - WINTER SPORTS TOURISM
+        - WOMEN TOURISM
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -1016,7 +1022,7 @@ Event:
       x-ngsi:
         type: Property
     type:
-      description: 'It has to be Event. NGSI entity type'
+      description: It has to be Event. NGSI entity type
       enum:
         - Event
       type: string
@@ -1024,20 +1030,20 @@ Event:
         model: https://schema.org/event
         type: Property
     url:
-      description: 'Url with image related to the item'
+      description: Url with image related to the item
       format: uri
       type: string
       x-ngsi:
         model: https://schema.org/URL
         type: Property
     webSite:
-      description: 'Link to the official website for more information.'
+      description: Link to the official website for more information.
       format: uri
       type: string
       x-ngsi:
         type: Property
     wheelChairAccessible:
-      description: 'Access possible for Person with Reduced Mobility.'
+      description: Access possible for Person with Reduced Mobility.
       type: boolean
       x-ngsi:
         type: Property
