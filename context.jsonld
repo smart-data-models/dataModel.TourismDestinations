@@ -1,5 +1,8 @@
 {
     "@context": {
+        "Event": "https://smartdatamodels.org/dataModel.TourismDestinations/Event",
+        "TouristDestination": "https://smartdatamodels.org/dataModel.TourismDestinations/TouristDestination",
+        "TouristTrip": "https://smartdatamodels.org/dataModel.TourismDestinations/TouristTrip",
         "accessPlan": "https://smartdatamodels.org/dataModel.TourismDestinations/accessPlan",
         "actor": "https://smartdatamodels.org/dataModel.TourismDestinations/actor",
         "address": "https://smartdatamodels.org/address",

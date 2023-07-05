@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.
   title: TouristTrip
-  version: "0.0.3"
+  version: "0.2.0"
 openapi: "3.0.0"
 
 paths: 

@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.
   title: TouristDestination
-  version: "1.0.0"
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 

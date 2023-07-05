@@ -2,12 +2,12 @@ TouristTrip:
   description: 'A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.'
   properties:
     accessPlan:
-      description: 'Text or Link to the access plan to the Trip.'
+      description: Text or Link to the access plan to the Trip.
       type: string
       x-ngsi:
         type: Property
     address:
-      description: 'The mailing address'
+      description: The mailing address
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
@@ -18,6 +18,9 @@ TouristTrip:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
+        district:
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -27,17 +30,20 @@ TouristTrip:
         streetAddress:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
+        streetNr:
+          description: Number identifying a specific property on a public street.
+          type: string
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
     alternateName:
-      description: 'An alternative name for this item'
+      description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided'
+      description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
@@ -74,28 +80,30 @@ TouristTrip:
       x-ngsi:
         type: Property
     contentURL:
-      description: 'Specifies the URL to the official image or video of the Trip for more information.'
+      description: Specifies the URL to the official image or video of the Trip for more information.
       format: uri
       type: string
       x-ngsi:
         type: Property
     criticReview:
       description: "Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'"
-      properties:
-        language:
-          type: string
-        reviews:
-          items:
-            article:
-              type: string
-            origin:
-              type: string
-            ratingValue:
-              type: number
-            starRating:
-              type: number
-          type: array
-      type: object
+      items:
+        properties:
+          language:
+            type: string
+          reviews:
+            items:
+              article:
+                type: string
+              origin:
+                type: string
+              ratingValue:
+                type: number
+              starRating:
+                type: number
+            type: array
+        type: object
+      type: array
       x-ngsi:
         type: Property
     currencyAccepted:
@@ -110,30 +118,30 @@ TouristTrip:
         model: https://schema.org/currenciesAccepted
         type: Property
     dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      description: A sequence of characters identifying the provider of the harmonised data entity.
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      description: Entity creation timestamp. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateLastReported:
-      description: 'Last official update of the data in ISO 8601 format'
+      description: Last official update of the data in ISO 8601 format
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
       format: date-time
       type: string
       x-ngsi:
         type: Property
     description:
-      description: 'A description of this item'
+      description: A description of this item
       type: string
       x-ngsi:
         type: Property
@@ -155,7 +163,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     endDate:
-      description: 'End date and time in an ISO8601 UTC format'
+      description: End date and time in an ISO8601 UTC format
       format: date-time
       type: string
       x-ngsi:
@@ -163,24 +171,24 @@ TouristTrip:
         type: Property
     id:
       anyOf: &touristtrip_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     isAccessibleForFree:
-      description: 'Free or paid Trip (True = Free / False = Paid).'
+      description: Free or paid Trip (True = Free / False = Paid).
       type: boolean
       x-ngsi:
         type: Property
     itinerary:
-      description: 'Destinations or places that make up a trip. For a trip where destination order is important use ItemList to specify that order included in the trips.'
+      description: Destinations or places that make up a trip. For a trip where destination order is important use ItemList to specify that order included in the trips.
       items:
         properties:
           description:
@@ -212,7 +220,7 @@ TouristTrip:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: 'Geoproperty. Geojson reference to the item. Point'
+        - description: GeoProperty. Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -231,9 +239,9 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Point'
+          title: GeoJSON Point
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. LineString'
+        - description: GeoProperty. Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -255,9 +263,9 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON LineString'
+          title: GeoJSON LineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'
+        - description: GeoProperty. Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -281,9 +289,9 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON Polygon'
+          title: GeoJSON Polygon
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'
+        - description: GeoProperty. Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -304,9 +312,9 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPoint'
+          title: GeoJSON MultiPoint
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -330,9 +338,9 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiLineString'
+          title: GeoJSON MultiLineString
           type: object
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'
+        - description: GeoProperty. Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -358,36 +366,35 @@ TouristTrip:
           required:
             - type
             - coordinates
-          title: 'GeoJSON MultiPolygon'
+          title: GeoJSON MultiPolygon
           type: object
       x-ngsi:
-        type: Geoproperty
+        type: GeoProperty
     locationName:
-      description: 'Name of the trip location.'
+      description: Name of the trip location.
       type: string
       x-ngsi:
         type: Property
     maximumAttendeeCapacity:
-      description: 'The total number of people who can attend to the Trip at that location.'
+      description: The total number of people who can attend to the Trip at that location.
       type: number
       x-ngsi:
         type: Property
     name:
-      description: 'The name of this item.'
+      description: The name of this item.
       type: string
       x-ngsi:
         type: Property
     openingHoursSpecification:
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place
       items:
         properties:
           closes:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           dayOfWeek:
             anyOf:
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - Monday
                   - Tuesday
@@ -398,7 +405,7 @@ TouristTrip:
                   - Sunday
                   - PublicHolidays
                 type: string
-              - description: 'Property. Array of days of the week.'
+              - description: Property. Array of days of the week.
                 enum:
                   - https://schema.org/Monday
                   - https://schema.org/Tuesday
@@ -413,7 +420,6 @@ TouristTrip:
             type: string
           opens:
             format: time
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$
             type: string
           validFrom:
             anyOf:
@@ -441,10 +447,10 @@ TouristTrip:
         model: https://schema.org/openingHoursSpecification
         type: Property
     owner:
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
         anyOf: *touristtrip_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Property
@@ -472,7 +478,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     priceSpecification:
-      description: 'A structured value representing a price or price range depending categories or public.'
+      description: A structured value representing a price or price range depending categories or public.
       items:
         properties:
           audience:
@@ -487,6 +493,7 @@ TouristTrip:
             type: number
           price:
             type: number
+        type: object
       type: array
       x-ngsi:
         type: Property
@@ -499,7 +506,7 @@ TouristTrip:
       description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the trips. The POI list does not have a chronological order.'
       items:
         anyOf: *touristtrip_-_properties_-_owner_-_items_-_anyof
-        description: 'Property. Unique identifier of the entity'
+        description: Property. Unique identifier of the entity
       type: array
       x-ngsi:
         type: Relationship
@@ -522,7 +529,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     seeAlso:
-      description: 'list of uri pointing to additional resources about the item'
+      description: list of uri pointing to additional resources about the item
       oneOf:
         - items:
             format: uri
@@ -570,7 +577,7 @@ TouristTrip:
       x-ngsi:
         type: Property
     startDate:
-      description: 'Start date and time in an ISO8601 UTC format'
+      description: Start date and time in an ISO8601 UTC format
       format: date-time
       type: string
       x-ngsi:
@@ -761,15 +768,15 @@ TouristTrip:
       x-ngsi:
         type: Property
     subTrip:
-      description: 'Reference to a list of Minor Trips that are part of this major Trip'
+      description: Reference to a list of Minor Trips that are part of this major Trip
       items:
         anyOf:
-          - description: 'Property. Identifier format of any NGSI entity'
+          - description: Property. Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: 'Property. Identifier format of any NGSI entity'
+          - description: Property. Identifier format of any NGSI entity
             format: uri
             type: string
       type: array
@@ -777,19 +784,19 @@ TouristTrip:
         type: Relationship
     superTrip:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Reference to the Major Trip that includes this Trip.'
+      description: Reference to the Major Trip that includes this Trip.
       x-ngsi:
         type: Relationship
     thematic:
-      description: 'A list of thematic as keywords'
+      description: A list of thematic as keywords
       items:
         type: string
       type: array
@@ -801,64 +808,64 @@ TouristTrip:
       x-ngsi:
         type: Property
     touristType:
-      description: 'enumeration of different tourist types applicable to the TouristTrip'
+      description: enumeration of different tourist types applicable to the TouristTrip
       items:
         description: 'Property. Model:''https://schema.org/Text''. Type of tourism depending on the segment and the motivation of the trip.'
         enum:
-          - 'ADVENTURE TOURISM'
-          - 'ASTRONOMY TOURISM'
-          - 'BACKPACKING TOURISM'
-          - 'BEACH AND SUN TOURISM'
-          - 'BEER TOURISM'
-          - 'BIRDING TOURISM'
-          - 'BULLFIGHTING TOURISM'
+          - ADVENTURE TOURISM
+          - ASTRONOMY TOURISM
+          - BACKPACKING TOURISM
+          - BEACH AND SUN TOURISM
+          - BEER TOURISM
+          - BIRDING TOURISM
+          - BULLFIGHTING TOURISM
           - BUSINESS
-          - 'COMMUNITY-BASED TOURISM'
-          - 'CRUISE TOURISM'
-          - 'CULTURAL TOURISM'
-          - 'CYCLING TOURISM'
-          - 'DIVING TOURISM'
+          - COMMUNITY-BASED TOURISM
+          - CRUISE TOURISM
+          - CULTURAL TOURISM
+          - CYCLING TOURISM
+          - DIVING TOURISM
           - ECOTOURISM
-          - 'EVENTS AND FESTIVALS TOURISM'
-          - 'FAMILY TOURISM'
-          - 'FILM TOURISM'
-          - 'FISHING TOURISM'
-          - 'FOOD TOURISM'
-          - 'GAMBLING TOURISM'
-          - 'GEOLOGICAL TOURISM'
-          - 'HERITAGE TOURISM'
-          - 'HUNTING TOURISM'
-          - 'INDUSTRIAL TOURISM'
-          - 'LANGUAGE TOURISM'
-          - 'LGTBI TOURISM'
-          - 'LUXURY TOURISM'
-          - 'MEDICAL TOURISM'
-          - 'MEMORIAL TOURISM'
-          - 'MICE TOURISM'
-          - 'NATURE TOURISM'
-          - 'OLIVE OIL TOURISM'
-          - 'PARTY TOURISM'
-          - 'PHOTOGRAPHY TOURISM'
-          - 'RELIGIOUS TOURISM'
-          - 'ROMANTIC TOURISM'
-          - 'RURAL TOURISM'
-          - 'SAFARI TOURISM'
-          - 'SAILING TOURISM'
-          - 'SENIOR TOURISM'
-          - 'SHOPPING TOURISM'
-          - 'SHORT BREAK TOURISM'
-          - 'SINGLES TOURISM'
-          - 'SPORTS TOURISM'
+          - EVENTS AND FESTIVALS TOURISM
+          - FAMILY TOURISM
+          - FILM TOURISM
+          - FISHING TOURISM
+          - FOOD TOURISM
+          - GAMBLING TOURISM
+          - GEOLOGICAL TOURISM
+          - HERITAGE TOURISM
+          - HUNTING TOURISM
+          - INDUSTRIAL TOURISM
+          - LANGUAGE TOURISM
+          - LGTBI TOURISM
+          - LUXURY TOURISM
+          - MEDICAL TOURISM
+          - MEMORIAL TOURISM
+          - MICE TOURISM
+          - NATURE TOURISM
+          - OLIVE OIL TOURISM
+          - PARTY TOURISM
+          - PHOTOGRAPHY TOURISM
+          - RELIGIOUS TOURISM
+          - ROMANTIC TOURISM
+          - RURAL TOURISM
+          - SAFARI TOURISM
+          - SAILING TOURISM
+          - SENIOR TOURISM
+          - SHOPPING TOURISM
+          - SHORT BREAK TOURISM
+          - SINGLES TOURISM
+          - SPORTS TOURISM
           - TOURISM
-          - 'TREKKING TOURISM'
-          - 'URBAN TOURISM'
-          - 'WATER SPORTS TOURISM'
-          - 'WEDDING & HONEYMOON TOURISM'
-          - 'WELLNESS TOURISM'
-          - 'WHISKY TOURISM'
-          - 'WINE TOURISM'
-          - 'WINTER SPORTS TOURISM'
-          - 'WOMEN TOURISM'
+          - TREKKING TOURISM
+          - URBAN TOURISM
+          - WATER SPORTS TOURISM
+          - WEDDING & HONEYMOON TOURISM
+          - WELLNESS TOURISM
+          - WHISKY TOURISM
+          - WINE TOURISM
+          - WINTER SPORTS TOURISM
+          - WOMEN TOURISM
         type: string
       type: array
       x-ngsi:
@@ -947,20 +954,20 @@ TouristTrip:
       x-ngsi:
         type: Property
     type:
-      description: 'It has to be TouristTrip. NGSI Entity type.'
+      description: It has to be TouristTrip. NGSI Entity type.
       enum:
         - TouristTrip
       type: string
       x-ngsi:
         type: Property
     webSite:
-      description: 'Link to the official website for more information.'
+      description: Link to the official website for more information.
       format: uri
       type: string
       x-ngsi:
         type: Property
     wheelChairAccessible:
-      description: 'Access possible for Person with Reduced Mobility.'
+      description: Access possible for Person with Reduced Mobility.
       type: boolean
       x-ngsi:
         type: Property
@@ -969,8 +976,8 @@ TouristTrip:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json
   x-model-tags: ""
-  x-version: 0.0.3
+  x-version: 0.2.0

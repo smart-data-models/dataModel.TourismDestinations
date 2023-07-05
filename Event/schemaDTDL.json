@@ -1,0 +1,900 @@
+{
+    "@id": "dtmi:com:ngsi-ld:Event;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Event adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/Event/schema.json",
+    "description": "Upcoming or past event associated with this place, organization, or action.",
+    "displayName": "Event",
+    "contents": [
+        {
+            "name": "accessPlan",
+            "writable": true,
+            "displayName": "accessPlan",
+            "@type": "Property",
+            "schema": "string",
+            "comment": " Text or Link to the access plan to the item."
+        },
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "contentURL",
+            "writable": true,
+            "displayName": "contentURL",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Specifies the URL to the official image or video of the Event for more information."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "doorTimeClose",
+            "writable": true,
+            "displayName": "doorTimeClose",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Doors closing time to access the show.."
+        },
+        {
+            "name": "doorTimeOpen",
+            "writable": true,
+            "displayName": "doorTimeOpen",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Doors opening time to access the show."
+        },
+        {
+            "name": "duration",
+            "writable": true,
+            "displayName": "duration",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**."
+        },
+        {
+            "name": "endDate",
+            "writable": true,
+            "displayName": "endDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The end date and time of the item (in ISO 8601 date format)."
+        },
+        {
+            "name": "eventPriceFrom",
+            "writable": true,
+            "displayName": "eventPriceFrom",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**."
+        },
+        {
+            "name": "eventPriceTo",
+            "writable": true,
+            "displayName": "eventPriceTo",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**."
+        },
+        {
+            "name": "isAccessibleForFree",
+            "writable": true,
+            "displayName": "isAccessibleForFree",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "A flag to signal that the item, event, or place is accessible for free."
+        },
+        {
+            "name": "maximumAttendeeCapacity",
+            "writable": true,
+            "displayName": "maximumAttendeeCapacity",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "The total number of people who can attend to the Event at that location."
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "publicAccess",
+            "writable": true,
+            "displayName": "publicAccess",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value"
+        },
+        {
+            "name": "ratingValueAverage",
+            "writable": true,
+            "displayName": "ratingValueAverage",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Rating value of Event. Usage guidelines: Use values from 0 to 10 depending on your standard. This is the average value of all detailed scores of `starRatingDetailed` attribute"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "slogan",
+            "writable": true,
+            "displayName": "slogan",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Event header line, matches the text hook. "
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "name": "startDate",
+            "writable": true,
+            "displayName": "startDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "The start date and time of the item (in ISO 8601 date format)."
+        },
+        {
+            "name": "superEvent",
+            "writable": true,
+            "displayName": "superEvent"
+        },
+        {
+            "name": "title",
+            "writable": true,
+            "displayName": "title",
+            "@type": "Property",
+            "schema": "string",
+            "comment": " Title of the Event."
+        },
+        {
+            "name": "url",
+            "writable": true,
+            "displayName": "url",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Url with image related to the item"
+        },
+        {
+            "name": "webSite",
+            "writable": true,
+            "displayName": "webSite",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Link to the official website for more information."
+        },
+        {
+            "name": "wheelChairAccessible",
+            "writable": true,
+            "displayName": "wheelChairAccessible",
+            "@type": "Property",
+            "schema": "boolean",
+            "comment": "Access possible for Person with Reduced Mobility."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "actor",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of actors or music group.",
+            "displayName": "actor"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "audience",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Type of public concerned by this Event. A combination of Free text (family, adult, children, teenager, senior, allPublic, ...). Enum:'adult, allPublic, children, family, senior, teenager'",
+            "displayName": "audience"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "category",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Category of the Event. A combination of free text to remain flexible to a specific context is offered below as an initial repository or any other value needed by an application. Enum:'shopping, gastronomy, museum, religiousWorship, parksAndGardens, history, outdoorActivities, excursion, wellness'",
+            "displayName": "category"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "composer",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of person who wrote the composition.",
+            "displayName": "composer"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "criticReview",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Review written or published by a source that is recognized for its reviewing activities. Each items have the format based on the  [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with 'Language Value' : 'Article Value'",
+            "displayName": "criticReview"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "currencyAccepted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)",
+            "displayName": "currencyAccepted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "director",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of director who manage the composition.",
+            "displayName": "director"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "electricTransport",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": " List of the different types of electric transport proposed by the city. A combination of. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'",
+            "displayName": "electricTransport"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "eventSchedule",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "An Event that is associated with a Schedule using this property should not have `startDate` or `endDate` properties. These are instead defined within the associated Schedule, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules (different months or seasons).*** ",
+            "displayName": "eventSchedule"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "eventStatus",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Event Status regarding this event.",
+            "displayName": "eventStatus"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "language",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of Formal language used during the Event expressed from the IETF [BCP 47](https://tools.ietf.org/html/bcp47) standard",
+            "displayName": "language"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "openingHoursSpecification",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "A structured value providing information about the opening hours of a place or a certain service inside a place",
+            "displayName": "openingHoursSpecification"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "paymentAccepted",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:'Cash, CreditCard, CryptoCurrency, other'",
+            "displayName": "paymentAccepted"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "performer",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Main actor or presenter or musician or musical group of the event.",
+            "displayName": "performer"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "pitch",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. ",
+            "displayName": "pitch"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "priceSpecification",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "object"
+            },
+            "comment": "A structured value representing a price or price range depending categories or public.",
+            "displayName": "priceSpecification"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "refPointOfInterest",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.",
+            "displayName": "refPointOfInterest"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "routeType",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of the urban transports (subway, Bus, Tram, ...) available near the event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'",
+            "displayName": "routeType"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "subCategory",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Sub-category of the `category` attribute. A combination of free text to remain flexible to a specific context is offered below as an initial example or any other value needed by an application. ",
+            "displayName": "subCategory"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "subEvent",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "Reference to a list of Minor Events that are part of this major Event",
+            "displayName": "subEvent"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "thematic",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A list of thematic as keywords",
+            "displayName": "thematic"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "transportServices",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle ",
+            "displayName": "transportServices"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "contactPoint",
+            "comment": "The details to contact with the item.",
+            "displayName": "contactPoint",
+            "fields": [
+                {
+                    "name": "areaServed",
+                    "schema": "string"
+                },
+                {
+                    "name": "availabilityRestriction",
+                    "schema": "array"
+                },
+                {
+                    "name": "availableLanguage",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactOption",
+                    "schema": "string"
+                },
+                {
+                    "name": "contactType",
+                    "schema": "string"
+                },
+                {
+                    "name": "email",
+                    "schema": "string"
+                },
+                {
+                    "name": "faxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "productSupported",
+                    "schema": "string"
+                },
+                {
+                    "name": "telephone",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "starRatingDetailed",
+            "comment": "Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. ",
+            "displayName": "starRatingDetailed",
+            "fields": [
+                {
+                    "name": 1,
+                    "schema": "long"
+                },
+                {
+                    "name": 10,
+                    "schema": "long"
+                },
+                {
+                    "name": 2,
+                    "schema": "long"
+                },
+                {
+                    "name": 3,
+                    "schema": "long"
+                },
+                {
+                    "name": 4,
+                    "schema": "long"
+                },
+                {
+                    "name": 5,
+                    "schema": "long"
+                },
+                {
+                    "name": 6,
+                    "schema": "long"
+                },
+                {
+                    "name": 7,
+                    "schema": "long"
+                },
+                {
+                    "name": 8,
+                    "schema": "long"
+                },
+                {
+                    "name": 9,
+                    "schema": "long"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Point",
+            "schema": "point"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_LineString",
+            "schema": "lineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_Polygon",
+            "schema": "polygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPoint",
+            "schema": "multiPoint"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiLineString",
+            "schema": "multiLineString"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "location_MultiPolygon",
+            "schema": "multiPolygon"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "touristType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "ADVENTURE TOURISM",
+                        "displayName": "ADVENTURE TOURISM",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "ASTRONOMY TOURISM",
+                        "displayName": "ASTRONOMY TOURISM",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "BACKPACKING TOURISM",
+                        "displayName": "BACKPACKING TOURISM",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "BEACH AND SUN TOURISM",
+                        "displayName": "BEACH AND SUN TOURISM",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "BEER TOURISM",
+                        "displayName": "BEER TOURISM",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "BIRDING TOURISM",
+                        "displayName": "BIRDING TOURISM",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "BULLFIGHTING TOURISM",
+                        "displayName": "BULLFIGHTING TOURISM",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "BUSINESS",
+                        "displayName": "BUSINESS",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "COMMUNITY-BASED TOURISM",
+                        "displayName": "COMMUNITY-BASED TOURISM",
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "CRUISE TOURISM",
+                        "displayName": "CRUISE TOURISM",
+                        "enumValue": 10
+                    },
+                    {
+                        "name": "CULTURAL TOURISM",
+                        "displayName": "CULTURAL TOURISM",
+                        "enumValue": 11
+                    },
+                    {
+                        "name": "CYCLING TOURISM",
+                        "displayName": "CYCLING TOURISM",
+                        "enumValue": 12
+                    },
+                    {
+                        "name": "DIVING TOURISM",
+                        "displayName": "DIVING TOURISM",
+                        "enumValue": 13
+                    },
+                    {
+                        "name": "ECOTOURISM",
+                        "displayName": "ECOTOURISM",
+                        "enumValue": 14
+                    },
+                    {
+                        "name": "EVENTS AND FESTIVALS TOURISM",
+                        "displayName": "EVENTS AND FESTIVALS TOURISM",
+                        "enumValue": 15
+                    },
+                    {
+                        "name": "FAMILY TOURISM",
+                        "displayName": "FAMILY TOURISM",
+                        "enumValue": 16
+                    },
+                    {
+                        "name": "FILM TOURISM",
+                        "displayName": "FILM TOURISM",
+                        "enumValue": 17
+                    },
+                    {
+                        "name": "FISHING TOURISM",
+                        "displayName": "FISHING TOURISM",
+                        "enumValue": 18
+                    },
+                    {
+                        "name": "FOOD TOURISM",
+                        "displayName": "FOOD TOURISM",
+                        "enumValue": 19
+                    },
+                    {
+                        "name": "GAMBLING TOURISM",
+                        "displayName": "GAMBLING TOURISM",
+                        "enumValue": 20
+                    },
+                    {
+                        "name": "GEOLOGICAL TOURISM",
+                        "displayName": "GEOLOGICAL TOURISM",
+                        "enumValue": 21
+                    },
+                    {
+                        "name": "HERITAGE TOURISM",
+                        "displayName": "HERITAGE TOURISM",
+                        "enumValue": 22
+                    },
+                    {
+                        "name": "HUNTING TOURISM",
+                        "displayName": "HUNTING TOURISM",
+                        "enumValue": 23
+                    },
+                    {
+                        "name": "INDUSTRIAL TOURISM",
+                        "displayName": "INDUSTRIAL TOURISM",
+                        "enumValue": 24
+                    },
+                    {
+                        "name": "LANGUAGE TOURISM",
+                        "displayName": "LANGUAGE TOURISM",
+                        "enumValue": 25
+                    },
+                    {
+                        "name": "LGTBI TOURISM",
+                        "displayName": "LGTBI TOURISM",
+                        "enumValue": 26
+                    },
+                    {
+                        "name": "LUXURY TOURISM",
+                        "displayName": "LUXURY TOURISM",
+                        "enumValue": 27
+                    },
+                    {
+                        "name": "MEDICAL TOURISM",
+                        "displayName": "MEDICAL TOURISM",
+                        "enumValue": 28
+                    },
+                    {
+                        "name": "MEMORIAL TOURISM",
+                        "displayName": "MEMORIAL TOURISM",
+                        "enumValue": 29
+                    },
+                    {
+                        "name": "MICE TOURISM",
+                        "displayName": "MICE TOURISM",
+                        "enumValue": 30
+                    },
+                    {
+                        "name": "NATURE TOURISM",
+                        "displayName": "NATURE TOURISM",
+                        "enumValue": 31
+                    },
+                    {
+                        "name": "OLIVE OIL TOURISM",
+                        "displayName": "OLIVE OIL TOURISM",
+                        "enumValue": 32
+                    },
+                    {
+                        "name": "PARTY TOURISM",
+                        "displayName": "PARTY TOURISM",
+                        "enumValue": 33
+                    },
+                    {
+                        "name": "PHOTOGRAPHY TOURISM",
+                        "displayName": "PHOTOGRAPHY TOURISM",
+                        "enumValue": 34
+                    },
+                    {
+                        "name": "RELIGIOUS TOURISM",
+                        "displayName": "RELIGIOUS TOURISM",
+                        "enumValue": 35
+                    },
+                    {
+                        "name": "ROMANTIC TOURISM",
+                        "displayName": "ROMANTIC TOURISM",
+                        "enumValue": 36
+                    },
+                    {
+                        "name": "RURAL TOURISM",
+                        "displayName": "RURAL TOURISM",
+                        "enumValue": 37
+                    },
+                    {
+                        "name": "SAFARI TOURISM",
+                        "displayName": "SAFARI TOURISM",
+                        "enumValue": 38
+                    },
+                    {
+                        "name": "SAILING TOURISM",
+                        "displayName": "SAILING TOURISM",
+                        "enumValue": 39
+                    },
+                    {
+                        "name": "SENIOR TOURISM",
+                        "displayName": "SENIOR TOURISM",
+                        "enumValue": 40
+                    },
+                    {
+                        "name": "SHOPPING TOURISM",
+                        "displayName": "SHOPPING TOURISM",
+                        "enumValue": 41
+                    },
+                    {
+                        "name": "SHORT BREAK TOURISM",
+                        "displayName": "SHORT BREAK TOURISM",
+                        "enumValue": 42
+                    },
+                    {
+                        "name": "SINGLES TOURISM",
+                        "displayName": "SINGLES TOURISM",
+                        "enumValue": 43
+                    },
+                    {
+                        "name": "SPORTS TOURISM",
+                        "displayName": "SPORTS TOURISM",
+                        "enumValue": 44
+                    },
+                    {
+                        "name": "TOURISM",
+                        "displayName": "TOURISM",
+                        "enumValue": 45
+                    },
+                    {
+                        "name": "TREKKING TOURISM",
+                        "displayName": "TREKKING TOURISM",
+                        "enumValue": 46
+                    },
+                    {
+                        "name": "URBAN TOURISM",
+                        "displayName": "URBAN TOURISM",
+                        "enumValue": 47
+                    },
+                    {
+                        "name": "WATER SPORTS TOURISM",
+                        "displayName": "WATER SPORTS TOURISM",
+                        "enumValue": 48
+                    },
+                    {
+                        "name": "WEDDING & HONEYMOON TOURISM",
+                        "displayName": "WEDDING & HONEYMOON TOURISM",
+                        "enumValue": 49
+                    },
+                    {
+                        "name": "WELLNESS TOURISM",
+                        "displayName": "WELLNESS TOURISM",
+                        "enumValue": 50
+                    },
+                    {
+                        "name": "WHISKY TOURISM",
+                        "displayName": "WHISKY TOURISM",
+                        "enumValue": 51
+                    },
+                    {
+                        "name": "WINE TOURISM",
+                        "displayName": "WINE TOURISM",
+                        "enumValue": 52
+                    },
+                    {
+                        "name": "WINTER SPORTS TOURISM",
+                        "displayName": "WINTER SPORTS TOURISM",
+                        "enumValue": 53
+                    },
+                    {
+                        "name": "WOMEN TOURISM",
+                        "displayName": "WOMEN TOURISM",
+                        "enumValue": 54
+                    }
+                ]
+            }
+        }
+    ]
+}
