@@ -1,21 +1,88 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-エンティティTouristTrip  
-=================  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**観光旅行。多くの場合、特定の touristType に類似したテーマ、地理的地域、または興味によってリンクされた、1 つ以上の興味ある場所（TouristAttraction/TouristDestination）への訪問の作成された旅程。UNWTO は観光旅行を「訪問者が行く旅行」と定義している**。  
-バージョン: 0.0.3  
 
-## プロパティ一覧  
+エンティティTouristTrip  
+=================
+  
 
-- `accessPlan`: トリップへのアクセスプランをテキストまたはリンクで表示します。  - `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `audience`: このトリップが関係する一般人のタイプ。自由形式テキスト（family, adult, children, teenager, senior, allPublic, ...）の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  - `category`: 旅行のカテゴリー。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションが必要とする他の値として、以下に提供されます。 enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'.  - `contentURL`: トリップの公式画像や動画の詳細へのURLを指定します。  - `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  - `currencyAccepted`: TripFree`がFalseの場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateLastReported`: ISO 8601形式のデータの最終正式更新日  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**HUR** は **Hours** を表します。  - `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  - `endDate`: 終了日時（ISO8601 UTC形式  - `id`: エンティティの一意な識別子  - `isAccessibleForFree`: 無料または有料の旅行（True = 無料 / False = 有料）。  - `itinerary`: 旅行を構成する目的地や場所。目的地の順番が重要な旅行では、ItemListを使用して、旅行に含まれる順番を指定します。  - `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格に基づく、トリップ中に使用された形式言語の一覧。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `locationName`: 旅行先の名称。  - `maximumAttendeeCapacity`: その場所でトリップに参加できる人数の合計です。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `paymentAccepted`: TripFree`がFalseの場合に受け入れられる支払い方法です。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' (現金、クレジットカード、暗号通貨、その他)  - `pitch`: 旅のピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  - `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  - `ratingValueAverage`: Tripsの評価値。使い方のガイドラインです。この値は、`starRatingDetailed`属性のすべての詳細スコアの平均値である。  - `refPointOfInterest`: トリップに含まれるすべてのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照することができます。POIリストは時系列ではありません。  - `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、トリップ周辺で利用可能な都市交通（地下鉄、バス、トラム、...）のリストです。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `slogan`: トリップヘッダーライン、テキストフックにマッチします。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  - `startDate`: ISO8601 UTCフォーマットによる開始日および時刻  - `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  - `subTrip`: このメジャー旅行の一部であるマイナー旅行のリストへの参照。  - `superTrip`: このトリップを含む主要なトリップを参照する。  - `thematic`: キーワードとなるテーマ別リスト  - `title`: 旅のタイトル  - `touristType`: TouristTrip に適用される、さまざまな観光客の種類の列挙。  - `transportServices`: トリップ付近で利用可能な民間交通機関のリストです。例：タクシー、uber、vtc、パーキングシャトル  - `tripPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR**は、**€uro**を表します。  - `tripPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  - `tripSchedule`: トリップスケジュール。定期的に発生するトリップを表現するために、繰り返しのスケジュールを設定することができる。この属性を使用するための制限については、冒頭の例で説明します。  - `tripStatus`: このトリップに関するトリップステータスです。Enum:'cancelled, closed, finished, opened, postponeoned, rescheduled, scheduled, suspended' （キャンセル、クローズ、終了、オープン、延期、再スケジュール、予定、中断  - `type`: TouristTripでなければならない。NGSI エンティティタイプ。  - `webSite`: 詳細は公式サイトにリンクしています。  - `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。    
-必要なプロパティ  
-- `id`  - `type`    
-このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。schema.orgとの互換性を保つために、細かな調整が必要でした。  
-## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
+
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+
+グローバルな説明。**観光旅行。多くの場合、特定の touristType に類似したテーマ、地理的地域、または興味によってリンクされた、1 つ以上の興味ある場所（TouristAttraction/TouristDestination）への訪問の作成された旅程。UNWTO は観光旅行を「訪問者が行く旅行」と定義している**。  
+
+バージョン: 0.0.3  
+
+
+## プロパティ一覧  
+
+
+- `accessPlan`: トリップへのアクセスプランをテキストまたはリンクで表示します。  
+- `address`: 郵送先住所  
+- `alternateName`: この項目の別称  
+- `areaServed`: サービスまたは提供品が提供される地理的な地域  
+- `audience`: このトリップが関係する一般人のタイプ。自由形式テキスト（family, adult, children, teenager, senior, allPublic, ...）の組合せ。Enum:'adult, allPublic, children, family, senior, teenager'.  
+- `category`: 旅行のカテゴリー。特定のコンテキストに柔軟性を保つためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションが必要とする他の値として、以下に提供されます。 enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'.  
+- `contentURL`: トリップの公式画像や動画の詳細へのURLを指定します。  
+- `criticReview`: レビュー活動で認められている情報源によって書かれた、または公開されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、'Language Value' : 'Article Value' の文字列で表現されます。  
+- `currencyAccepted`: TripFree`がFalseの場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
+- `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  
+- `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  
+- `dateLastReported`: ISO 8601形式のデータの最終正式更新日  
+- `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  
+- `description`: このアイテムの説明  
+- `duration`: 各番組の放送時間。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**HUR** は **Hours** を表します。  
+- `electricTransport`: 市が提案する電気交通の種類をリストアップ。の組み合わせ。Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'.  
+- `endDate`: 終了日時（ISO8601 UTC形式  
+- `id`: エンティティの一意な識別子  
+- `isAccessibleForFree`: 無料または有料の旅行（True = 無料 / False = 有料）。  
+- `itinerary`: 旅行を構成する目的地や場所。目的地の順番が重要な旅行では、ItemListを使用して、旅行に含まれる順番を指定します。  
+- `language`: IETF [BCP 47](https://tools.ietf.org/html/bcp47)規格に基づく、トリップ中に使用された形式言語の一覧。  
+- `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  
+- `locationName`: 旅行先の名称。  
+- `maximumAttendeeCapacity`: その場所でトリップに参加できる人数の合計です。  
+- `name`: このアイテムの名称です。  
+- `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  
+- `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  
+- `paymentAccepted`: TripFree`がFalseの場合に受け入れられる支払い方法です。モデルで定義されたアクティブコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other' (現金、クレジットカード、暗号通貨、その他)  
+- `pitch`: 旅のピッチ。各項目は、[Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) に基づくフォーマットを持ち、全ての項目が一つのプロパティに統合されています（例：番号71）。各項目は、Language Value : Article Value の文字列で表現されます。  
+- `priceSpecification`: カテゴリやパブリックによって、価格や価格帯を表す構造化された値。  
+- `ratingValueAverage`: Tripsの評価値。使い方のガイドラインです。この値は、`starRatingDetailed`属性のすべての詳細スコアの平均値である。  
+- `refPointOfInterest`: トリップに含まれるすべてのPoint Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)を参照することができます。POIリストは時系列ではありません。  
+- `routeType`: GFTS規格[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に基づき、トリップ周辺で利用可能な都市交通（地下鉄、バス、トラム、...）のリストです。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  
+- `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  
+- `slogan`: トリップヘッダーライン、テキストフックにマッチします。  
+- `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  
+- `starRatingDetailed`: ratingValueで表される平均値につながった詳細な星評価。使用方法を説明する。1から10の出現回数(Stars)の構造化された値で、各要素は以下のような形式の文字列である。NumberOfSTar`:パーセンテージ  
+- `startDate`: ISO8601 UTCフォーマットによる開始日および時刻  
+- `subCategory`: category` 属性のサブカテゴリです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせは、最初の例として、またはアプリケーションが必要とするその他の値として、以下に提供されます。  
+- `subTrip`: このメジャー旅行の一部であるマイナー旅行のリストへの参照。  
+- `superTrip`: このトリップを含む主要なトリップを参照する。  
+- `thematic`: キーワードとなるテーマ別リスト  
+- `title`: 旅のタイトル  
+- `touristType`: TouristTrip に適用される、さまざまな観光客の種類の列挙。  
+- `transportServices`: トリップ付近で利用可能な民間交通機関のリストです。例：タクシー、uber、vtc、パーキングシャトル  
+- `tripPriceFrom`: 最低価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR**は、**€uro**を表します。  
+- `tripPriceTo`: 最大価格です。計測の単位コード（テキスト）は、[UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)を使って示されます。例えば、**EUR** は **€uro** を表します。  
+- `tripSchedule`: トリップスケジュール。定期的に発生するトリップを表現するために、繰り返しのスケジュールを設定することができる。この属性を使用するための制限については、冒頭の例で説明します。  
+- `tripStatus`: このトリップに関するトリップステータスです。Enum:'cancelled, closed, finished, opened, postponeoned, rescheduled, scheduled, suspended' （キャンセル、クローズ、終了、オープン、延期、再スケジュール、予定、中断  
+- `type`: TouristTripでなければならない。NGSI エンティティタイプ。  
+- `webSite`: 詳細は公式サイトにリンクしています。  
+- `wheelChairAccessible`: 移動に不自由のある方のアクセスも可能です。  
+  
+
+必要なプロパティ  
+- `id`  
+- `type`  
+  
+
+このデータモデルは、UNE178503規格に準拠しています。また、schema.orgと互換性がある。このファイル https://smart-data-models.github.io/data-models/schema-org.json では、schema.org の要素の一部が適応されている。schema.orgとの互換性を保つために、細かな調整が必要でした。  
+
+## プロパティのデータモデル記述  
+
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 TouristTrip:    
   description: 'A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.'    
   properties:    
@@ -994,11 +1061,16 @@ TouristTrip:
   x-version: 0.0.3    
 ```  
 </details>    
-## ペイロードの例  
-#### TouristTrip NGSI-v2 key-value の例。  
-ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
-```json  
-{  
+
+## ペイロードの例  
+
+#### TouristTrip NGSI-v2 key-value の例。  
+
+ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+
+```json  
+
+{  
   "id": "urn:ngsi:touristTrip:1",  
   "type": "TouristTrip",  
   "name": "Musee du Palais Lascaris",  
@@ -1240,15 +1312,19 @@ TouristTrip:
     "electricMotorBike"  
   ],  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
-#### TouristTrip NGSI-v2 正規化例  
-以下は、TouristTripをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
+
+#### TouristTrip NGSI-v2 正規化例  
+
+以下は、TouristTripをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+```json  
+
+{  
   "id": "touristTrip.1",  
   "type": "TouristTrip",  
   "name": {  
@@ -1630,10 +1706,14 @@ TouristTrip:
   }  
 }  
 ```  
-#### TouristTrip NGSI-LD キー値例  
-ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
-```json  
-{  
+
+#### TouristTrip NGSI-LD キー値例  
+
+ここでは、TouristTripをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
+
+```json  
+
+{  
     "id": "urn:ngsi:touristTrip:1",  
     "type": "TouristTrip",  
     "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
@@ -1879,10 +1959,14 @@ TouristTrip:
     ]  
 }  
 ```  
-#### TouristTrip NGSI-LD 正規化例  
-以下は、TouristTripをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
+
+#### TouristTrip NGSI-LD 正規化例  
+
+以下は、TouristTripをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+
+```json  
+
+{  
     "id": "urn:ngsi:touristTrip:1",  
     "type": "TouristTrip",  
     "accessPlan": {  
@@ -2272,4 +2356,5 @@ TouristTrip:
     "@context": []  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  

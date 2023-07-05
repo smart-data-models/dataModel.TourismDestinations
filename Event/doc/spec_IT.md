@@ -1,21 +1,94 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: Evento  
-==============  
-[Licenza aperta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
-[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Evento imminente o passato associato a questo luogo, organizzazione o azione.**  
-versione: 0.0.1  
 
-## Elenco delle proprietà  
+Entità: Evento  
+==============
+  
 
-- `accessPlan`:  Testo o link al piano di accesso all'elemento.  - `actor`: Elenco di attori o gruppi musicali.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `audience`: Tipo di pubblico interessato dall'evento. Una combinazione di testo libero (famiglia, adulto, bambini, adolescente, senior, tutto il pubblico, ...). Enum:'adulto, tutto il pubblico, bambini, famiglia, anziano, adolescente'.  - `category`: Categoria dell'evento. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta di seguito come repository iniziale o qualsiasi altro valore necessario a un'applicazione. Enum:'shopping, gastronomia, museo, culto religioso, parchi e giardini, storia, attività all'aperto, escursione, benessere'.  - `composer`: Elenco della persona che ha scritto la composizione.  - `contactPoint`: I dettagli da contattare con l'articolo.  - `contentURL`: Specifica l'URL dell'immagine o del video ufficiale dell'evento per maggiori informazioni.  - `criticReview`: Recensione scritta o pubblicata da una fonte riconosciuta per le sue attività di revisione. Ogni voce ha un formato basato sulla [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (ex numero 71). Ogni voce è rappresentata da una stringa con "Valore lingua" : "Valore articolo".  - `currencyAccepted`: Valuta accettata per il pagamento se `isAccessibleForFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Criptovalute](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `director`: Elenco dei direttori che gestiscono la composizione.  - `doorTimeClose`: Orario di chiusura delle porte per accedere allo spettacolo....  - `doorTimeOpen`: Orario di apertura delle porte per accedere allo spettacolo.  - `duration`: La durata di ogni spettacolo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HUR** rappresenta **ore**.  - `electricTransport`:  Elenco dei diversi tipi di trasporto elettrico proposti dalla città. Una combinazione di. Enum:'bicicletta elettrica, auto elettrica, moto elettrica, scooter elettrico'.  - `endDate`: La data e l'ora di fine dell'elemento (in formato data ISO 8601).  - `eventPriceFrom`: Prezzo minimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  - `eventPriceTo`: Prezzo massimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  - `eventSchedule`: Un evento associato a una pianificazione tramite questa proprietà non deve avere le proprietà `startDate` o `endDate`. Queste sono invece definite all'interno della Pianificazione associata, in modo da evitare qualsiasi ambiguità per i clienti che utilizzano i dati. La proprietà può avere valori ripetuti per specificare diverse pianificazioni (diversi mesi o stagioni).***  - `eventStatus`: Stato dell'evento per questo evento.  - `id`: Identificatore univoco dell'entità  - `isAccessibleForFree`: Una bandiera per segnalare che l'oggetto, l'evento o il luogo sono accessibili gratuitamente.  - `language`: Elenco dei linguaggi formali utilizzati durante l'Evento espressi dallo standard IETF [BCP 47](https://tools.ietf.org/html/bcp47)  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `maximumAttendeeCapacity`: Il numero totale di persone che possono partecipare all'evento in quel luogo.  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted`: Pagamento accettato se `isAccessibleForFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. Enum:'Contanti, carta di credito, criptovaluta, altro'.  - `performer`: Attore o presentatore principale o musicista o gruppo musicale dell'evento.  - `pitch`: Pitch dell'evento. Ogni voce ha un formato basato su [Internationalization (i18N) - W3C recommandation for multilanguage] (https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (es. numero 71). Ogni voce è rappresentata da una stringa con Valore lingua: Valore articolo.  - `priceSpecification`: Un valore strutturato che rappresenta un prezzo o una fascia di prezzo a seconda delle categorie o del pubblico.  - `publicAccess`: Un flag per segnalare che il Luogo è aperto ai visitatori pubblici. Se questa proprietà viene omessa, non viene assunto un valore booleano predefinito.  - `ratingValueAverage`: Valore di valutazione dell'evento. Linee guida per l'uso: Utilizzare valori da 0 a 10, a seconda degli standard. È il valore medio di tutti i punteggi dettagliati dell'attributo `starRatingDetailed`.  - `refPointOfInterest`: Riferimento a tutti i punti di interesse [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclusi nell'evento. L'elenco dei POI non ha un ordine cronologico.  - `routeType`: Elenco dei trasporti urbani (metropolitana, autobus, tram, ...) disponibili nei pressi dell'evento secondo lo standard GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Una combinazione di valori. Enum:" autobus, cableCar, cableTram, traghetto, funicolare, monorotaia, metropolitana, treno, tram, filobus".  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `slogan`: Linea di intestazione dell'evento, corrisponde al gancio di testo.  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `starRatingDetailed`: Valutazione dettagliata delle stelle che ha portato al valore medio espresso nel ratingValue. Istruzioni per l'uso: Un valore strutturato da 1 a 10 occorrenze (Stelle) in cui ogni elemento è una stringa nel formato: `NumberOfSTar`: Percentuale.  - `startDate`: La data e l'ora di inizio dell'elemento (in formato data ISO 8601).  - `subCategory`: Sottocategoria dell'attributo `category`. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta qui di seguito come esempio iniziale o qualsiasi altro valore necessario a un'applicazione.  - `subEvent`: Riferimento a un elenco di Eventi minori che fanno parte di questo Evento principale.  - `superEvent`: Riferimento all'Evento principale che include questo Evento.  - `thematic`: Un elenco di parole chiave tematiche  - `title`:  Titolo dell'evento.  - `touristType`: Il tipo di turismo dipende dal segmento e dalla motivazione del viaggio.  - `transportServices`: Elenco dei mezzi di trasporto privati disponibili nei pressi dell'evento. Ad esempio taxi, uber, vtc, parkingShuttle  - `type`: Deve essere Evento. Tipo di entità NGSI  - `url`: Url con immagine relativa all'articolo  - `webSite`: Link al sito web ufficiale per ulteriori informazioni.  - `wheelChairAccessible`: Accesso possibile per le persone con mobilità ridotta.    
-Proprietà richieste  
-- `id`  - `type`    
-Questo modello di dati si basa sullo standard UNE178503. È anche compatibile con schema.org. Alcuni elementi di schema.org sono stati adattati in questo file https://smart-data-models.github.io/data-models/schema-org.json. Questo tipo può essere utilizzato da solo per descrivere una destinazione turistica generale, oppure può essere utilizzato come tipo aggiuntivo per aggiungere proprietà turistiche a qualsiasi altro luogo. Una destinazione turistica è definita come un luogo che contiene o è collegato a una o più attrazioni turistiche, spesso collegate da un tema o un interesse simile a un particolare tipo di turista. L'UNWTO definisce la Destinazione (destinazione principale di un viaggio turistico) come il luogo visitato che è centrale nella decisione di intraprendere il viaggio.  
-## Modello di dati descrizione delle proprietà  
-Ordinati in ordine alfabetico (clicca per i dettagli)  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
+
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+
+Descrizione globale: **Evento imminente o passato associato a questo luogo, organizzazione o azione.**  
+
+versione: 0.0.1  
+
+
+## Elenco delle proprietà  
+
+
+- `accessPlan`:  Testo o link al piano di accesso all'elemento.  
+- `actor`: Elenco di attori o gruppi musicali.  
+- `address`: L'indirizzo postale  
+- `alternateName`: Un nome alternativo per questa voce  
+- `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  
+- `audience`: Tipo di pubblico interessato dall'evento. Una combinazione di testo libero (famiglia, adulto, bambini, adolescente, senior, tutto il pubblico, ...). Enum:'adulto, tutto il pubblico, bambini, famiglia, anziano, adolescente'.  
+- `category`: Categoria dell'evento. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta di seguito come repository iniziale o qualsiasi altro valore necessario a un'applicazione. Enum:'shopping, gastronomia, museo, culto religioso, parchi e giardini, storia, attività all'aperto, escursione, benessere'.  
+- `composer`: Elenco della persona che ha scritto la composizione.  
+- `contactPoint`: I dettagli da contattare con l'articolo.  
+- `contentURL`: Specifica l'URL dell'immagine o del video ufficiale dell'evento per maggiori informazioni.  
+- `criticReview`: Recensione scritta o pubblicata da una fonte riconosciuta per le sue attività di revisione. Ogni voce ha un formato basato sulla [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (ex numero 71). Ogni voce è rappresentata da una stringa con "Valore lingua" : "Valore articolo".  
+- `currencyAccepted`: Valuta accettata per il pagamento se `isAccessibleForFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Criptovalute](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
+- `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  
+- `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  
+- `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  
+- `description`: Descrizione dell'articolo  
+- `director`: Elenco dei direttori che gestiscono la composizione.  
+- `doorTimeClose`: Orario di chiusura delle porte per accedere allo spettacolo....  
+- `doorTimeOpen`: Orario di apertura delle porte per accedere allo spettacolo.  
+- `duration`: La durata di ogni spettacolo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HUR** rappresenta **ore**.  
+- `electricTransport`:  Elenco dei diversi tipi di trasporto elettrico proposti dalla città. Una combinazione di. Enum:'bicicletta elettrica, auto elettrica, moto elettrica, scooter elettrico'.  
+- `endDate`: La data e l'ora di fine dell'elemento (in formato data ISO 8601).  
+- `eventPriceFrom`: Prezzo minimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  
+- `eventPriceTo`: Prezzo massimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  
+- `eventSchedule`: Un evento associato a una pianificazione tramite questa proprietà non deve avere le proprietà `startDate` o `endDate`. Queste sono invece definite all'interno della Pianificazione associata, in modo da evitare qualsiasi ambiguità per i clienti che utilizzano i dati. La proprietà può avere valori ripetuti per specificare diverse pianificazioni (diversi mesi o stagioni).***  
+- `eventStatus`: Stato dell'evento per questo evento.  
+- `id`: Identificatore univoco dell'entità  
+- `isAccessibleForFree`: Una bandiera per segnalare che l'oggetto, l'evento o il luogo sono accessibili gratuitamente.  
+- `language`: Elenco dei linguaggi formali utilizzati durante l'Evento espressi dallo standard IETF [BCP 47](https://tools.ietf.org/html/bcp47)  
+- `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  
+- `maximumAttendeeCapacity`: Il numero totale di persone che possono partecipare all'evento in quel luogo.  
+- `name`: Il nome di questo elemento.  
+- `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  
+- `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  
+- `paymentAccepted`: Pagamento accettato se `isAccessibleForFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. Enum:'Contanti, carta di credito, criptovaluta, altro'.  
+- `performer`: Attore o presentatore principale o musicista o gruppo musicale dell'evento.  
+- `pitch`: Pitch dell'evento. Ogni voce ha un formato basato su [Internationalization (i18N) - W3C recommandation for multilanguage] (https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (es. numero 71). Ogni voce è rappresentata da una stringa con Valore lingua: Valore articolo.  
+- `priceSpecification`: Un valore strutturato che rappresenta un prezzo o una fascia di prezzo a seconda delle categorie o del pubblico.  
+- `publicAccess`: Un flag per segnalare che il Luogo è aperto ai visitatori pubblici. Se questa proprietà viene omessa, non viene assunto un valore booleano predefinito.  
+- `ratingValueAverage`: Valore di valutazione dell'evento. Linee guida per l'uso: Utilizzare valori da 0 a 10, a seconda degli standard. È il valore medio di tutti i punteggi dettagliati dell'attributo `starRatingDetailed`.  
+- `refPointOfInterest`: Riferimento a tutti i punti di interesse [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclusi nell'evento. L'elenco dei POI non ha un ordine cronologico.  
+- `routeType`: Elenco dei trasporti urbani (metropolitana, autobus, tram, ...) disponibili nei pressi dell'evento secondo lo standard GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Una combinazione di valori. Enum:" autobus, cableCar, cableTram, traghetto, funicolare, monorotaia, metropolitana, treno, tram, filobus".  
+- `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  
+- `slogan`: Linea di intestazione dell'evento, corrisponde al gancio di testo.  
+- `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  
+- `starRatingDetailed`: Valutazione dettagliata delle stelle che ha portato al valore medio espresso nel ratingValue. Istruzioni per l'uso: Un valore strutturato da 1 a 10 occorrenze (Stelle) in cui ogni elemento è una stringa nel formato: `NumberOfSTar`: Percentuale.  
+- `startDate`: La data e l'ora di inizio dell'elemento (in formato data ISO 8601).  
+- `subCategory`: Sottocategoria dell'attributo `category`. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta qui di seguito come esempio iniziale o qualsiasi altro valore necessario a un'applicazione.  
+- `subEvent`: Riferimento a un elenco di Eventi minori che fanno parte di questo Evento principale.  
+- `superEvent`: Riferimento all'Evento principale che include questo Evento.  
+- `thematic`: Un elenco di parole chiave tematiche  
+- `title`:  Titolo dell'evento.  
+- `touristType`: Il tipo di turismo dipende dal segmento e dalla motivazione del viaggio.  
+- `transportServices`: Elenco dei mezzi di trasporto privati disponibili nei pressi dell'evento. Ad esempio taxi, uber, vtc, parkingShuttle  
+- `type`: Deve essere Evento. Tipo di entità NGSI  
+- `url`: Url con immagine relativa all'articolo  
+- `webSite`: Link al sito web ufficiale per ulteriori informazioni.  
+- `wheelChairAccessible`: Accesso possibile per le persone con mobilità ridotta.  
+  
+
+Proprietà richieste  
+- `id`  
+- `type`  
+  
+
+Questo modello di dati si basa sullo standard UNE178503. È anche compatibile con schema.org. Alcuni elementi di schema.org sono stati adattati in questo file https://smart-data-models.github.io/data-models/schema-org.json. Questo tipo può essere utilizzato da solo per descrivere una destinazione turistica generale, oppure può essere utilizzato come tipo aggiuntivo per aggiungere proprietà turistiche a qualsiasi altro luogo. Una destinazione turistica è definita come un luogo che contiene o è collegato a una o più attrazioni turistiche, spesso collegate da un tema o un interesse simile a un particolare tipo di turista. L'UNWTO definisce la Destinazione (destinazione principale di un viaggio turistico) come il luogo visitato che è centrale nella decisione di intraprendere il viaggio.  
+
+## Modello di dati descrizione delle proprietà  
+
+Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 Event:    
   description: 'Upcoming or past event associated with this place, organization, or action.'    
   properties:    
@@ -1072,11 +1145,16 @@ Event:
   x-version: 0.0.1    
 ```  
 </details>    
-## Esempi di payload  
-#### Evento NGSI-v2 valori-chiave Esempio  
-Ecco un esempio di Evento in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+## Esempi di payload  
+
+#### Evento NGSI-v2 valori-chiave Esempio  
+
+Ecco un esempio di Evento in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
   "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
@@ -1266,10 +1344,14 @@ Event:
   ]  
 }  
 ```  
-#### Evento NGSI-v2 normalizzato Esempio  
-Ecco un esempio di Evento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### Evento NGSI-v2 normalizzato Esempio  
+
+Ecco un esempio di Evento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
   "id": {  
     "type": "Text",  
     "value": "uri:ngsi:event:1"  
@@ -1313,10 +1395,14 @@ Event:
   }  
 }  
 ```  
-#### Evento Valori chiave NGSI-LD Esempio  
-Ecco un esempio di Evento in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### Evento Valori chiave NGSI-LD Esempio  
+
+Ecco un esempio di Evento in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
     "id": "uri:ngsi:event:1",  
     "type": "Event",  
     "address": {  
@@ -1339,10 +1425,14 @@ Event:
     ]  
 }  
 ```  
-#### Evento NGSI-LD normalizzato Esempio  
-Ecco un esempio di Evento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### Evento NGSI-LD normalizzato Esempio  
+
+Ecco un esempio di Evento in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
     "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
     "type": "Event",  
     "accessPlan": {  
@@ -1697,8 +1787,9 @@ Event:
         "value": "true"  
     },  
     "@context": [  
-        "https://smartdatamodelsorg/context.jsonld"  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
     ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  

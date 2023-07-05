@@ -383,5 +383,7 @@
     "type": "Property",
     "value": false
   },
-  "@context": []
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
+  ]
 }

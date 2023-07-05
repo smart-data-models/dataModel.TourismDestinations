@@ -1,21 +1,88 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: ViaggioTuristico  
-========================  
-[Licenza aperta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
-[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Un viaggio turistico. Un itinerario creato di visite a uno o più luoghi di interesse (TouristAttraction/TouristDestination) spesso collegati da un tema, un'area geografica o un interesse simile a un particolare touristType. L'UNWTO definisce il viaggio turistico come il viaggio intrapreso dai visitatori **.  
-versione: 0.0.3  
 
-## Elenco delle proprietà  
+Entità: ViaggioTuristico  
+========================
+  
 
-- `accessPlan`: Testo o link al piano di accesso al viaggio.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `audience`: Tipo di pubblico interessato da questo Viaggio. Una combinazione di testo libero (famiglia, adulto, bambini, adolescente, senior, tutto il pubblico, ...). Enum:'adulto, tutto il pubblico, bambini, famiglia, senior, adolescente'.  - `category`: Categoria del viaggio. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta di seguito come repository iniziale o qualsiasi altro valore necessario a un'applicazione. enum:'escursione, gastronomia, storia, museo, attività all'aperto, parchi e giardini, culto religioso, shopping, benessere'  - `contentURL`: Specifica l'URL dell'immagine o del video ufficiale del Viaggio per maggiori informazioni.  - `criticReview`: Recensione scritta o pubblicata da una fonte riconosciuta per le sue attività di revisione. Ogni voce ha un formato basato sulla [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (ex numero 71). Ogni voce è rappresentata da una stringa con "Valore lingua" : "Valore articolo".  - `currencyAccepted`: Valuta accettata per il pagamento se `TripFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Criptovalute](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateLastReported`: Ultimo aggiornamento ufficiale dei dati in formato ISO 8601  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `duration`: La durata di ogni spettacolo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HUR** rappresenta **ore**.  - `electricTransport`:  Elenco dei diversi tipi di trasporto elettrico proposti dalla città. Una combinazione di. Enum:'bicicletta elettrica, auto elettrica, moto elettrica, scooter elettrico'.  - `endDate`: Data e ora finale in formato ISO8601 UTC  - `id`: Identificatore univoco dell'entità  - `isAccessibleForFree`: Viaggio gratuito o a pagamento (Vero = gratuito / Falso = a pagamento).  - `itinerary`: Destinazioni o luoghi che compongono un viaggio. Per un viaggio in cui l'ordine delle destinazioni è importante, utilizzare ItemList per specificare l'ordine di inclusione nel viaggio.  - `language`:  Elenco del linguaggio formale utilizzato durante il Viaggio espresso dallo standard IETF [BCP 47](https://tools.ietf.org/html/bcp47)  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `locationName`: Nome della località di viaggio.  - `maximumAttendeeCapacity`: Il numero totale di persone che possono partecipare alla gita in quel luogo.  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted`: Pagamento accettato se `TripFree` è Falso. Una combinazione di un elenco di codici attivi definiti nel modello. Enum:'Contanti, carta di credito, criptovaluta, altro'.  - `pitch`: Piazzola del viaggio. Ogni voce ha un formato basato su [Internationalization (i18N) - W3C recommandation for multilanguage] (https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (es. numero 71). Ogni voce è rappresentata da una stringa con Valore lingua: Valore articolo.  - `priceSpecification`: Un valore strutturato che rappresenta un prezzo o una fascia di prezzo a seconda delle categorie o del pubblico.  - `ratingValueAverage`: Valore di valutazione dei viaggi. Linee guida per l'uso: Utilizzare valori da 0 a 10, a seconda degli standard. è il valore medio di tutti i punteggi dettagliati dell'attributo `starRatingDetailed`.  - `refPointOfInterest`: Riferimento a tutti i punti di interesse [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclusi nei viaggi. L'elenco dei POI non ha un ordine cronologico.  - `routeType`: Elenco dei trasporti urbani (metropolitana, autobus, tram, ...) disponibili nei pressi del viaggio secondo lo standard GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Una combinazione di valori. Enum:" autobus, cableCar, cableTram, traghetto, funicolare, monorotaia, metropolitana, treno, tram, filobus".  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `slogan`: Riga di intestazione del viaggio, corrisponde al gancio di testo.  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `starRatingDetailed`: Valutazione dettagliata delle stelle che ha portato al valore medio espresso nel ratingValue. Istruzioni per l'uso: Un valore strutturato da 1 a 10 occorrenze (Stelle) in cui ogni elemento è una stringa nel formato: `NumberOfSTar`: Percentuale.  - `startDate`: Data e ora di inizio in formato ISO8601 UTC  - `subCategory`: Sottocategoria dell'attributo `category`. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta qui di seguito come esempio iniziale o qualsiasi altro valore necessario a un'applicazione.  - `subTrip`: Riferimento a un elenco di viaggi minori che fanno parte di questo viaggio principale.  - `superTrip`: Riferimento al Viaggio Principale che include questo Viaggio.  - `thematic`: Un elenco di parole chiave tematiche  - `title`:  Titolo del viaggio.  - `touristType`: enumerazione di diversi tipi di turisti applicabili al TouristTrip  - `transportServices`: Elenco dei mezzi di trasporto privati disponibili nei pressi del Viaggio. Ad esempio taxi, uber, vtc, parcheggioShuttle  - `tripPriceFrom`: Prezzo minimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  - `tripPriceTo`: Prezzo massimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  - `tripSchedule`: Programma di viaggio. Consente di impostare un programma per un periodo di tempo ripetuto, utilizzato per descrivere un viaggio che si verifica regolarmente. Per le restrizioni all'uso di questo attributo, vedere le note di esempio all'inizio della sezione.  - `tripStatus`: Stato del viaggio per questo viaggio. Enum:'cancellato, chiuso, finito, aperto, rinviato, riprogrammato, programmato, sospeso'.  - `type`: Deve essere TouristTrip. Tipo di entità NGSI.  - `webSite`: Link al sito web ufficiale per ulteriori informazioni.  - `wheelChairAccessible`: Accesso possibile per le persone con mobilità ridotta.    
-Proprietà richieste  
-- `id`  - `type`    
-Questo modello di dati si basa sullo standard UNE178503. È anche compatibile con schema.org. Alcuni elementi di schema.org sono stati adattati in questo file https://smart-data-models.github.io/data-models/schema-org.json. Sono stati necessari piccoli aggiustamenti per mantenere la compatibilità con schema.org.  
-## Modello di dati descrizione delle proprietà  
-Ordinati in ordine alfabetico (clicca per i dettagli)  
+[Licenza aperta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md)  
+
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+
+Descrizione globale: **Un viaggio turistico. Un itinerario creato di visite a uno o più luoghi di interesse (TouristAttraction/TouristDestination) spesso collegati da un tema, un'area geografica o un interesse simile a un particolare touristType. L'UNWTO definisce il viaggio turistico come il viaggio intrapreso dai visitatori **.  
+
+versione: 0.0.3  
+
+
+## Elenco delle proprietà  
+
+
+- `accessPlan`: Testo o link al piano di accesso al viaggio.  
+- `address`: L'indirizzo postale  
+- `alternateName`: Un nome alternativo per questa voce  
+- `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  
+- `audience`: Tipo di pubblico interessato da questo Viaggio. Una combinazione di testo libero (famiglia, adulto, bambini, adolescente, senior, tutto il pubblico, ...). Enum:'adulto, tutto il pubblico, bambini, famiglia, senior, adolescente'.  
+- `category`: Categoria del viaggio. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta di seguito come repository iniziale o qualsiasi altro valore necessario a un'applicazione. enum:'escursione, gastronomia, storia, museo, attività all'aperto, parchi e giardini, culto religioso, shopping, benessere'  
+- `contentURL`: Specifica l'URL dell'immagine o del video ufficiale del Viaggio per maggiori informazioni.  
+- `criticReview`: Recensione scritta o pubblicata da una fonte riconosciuta per le sue attività di revisione. Ogni voce ha un formato basato sulla [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (ex numero 71). Ogni voce è rappresentata da una stringa con "Valore lingua" : "Valore articolo".  
+- `currencyAccepted`: Valuta accettata per il pagamento se `TripFree` è False. Una combinazione di un elenco di codici attivi definiti nel modello. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Criptovalute](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
+- `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  
+- `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  
+- `dateLastReported`: Ultimo aggiornamento ufficiale dei dati in formato ISO 8601  
+- `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  
+- `description`: Descrizione dell'articolo  
+- `duration`: La durata di ogni spettacolo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **HUR** rappresenta **ore**.  
+- `electricTransport`:  Elenco dei diversi tipi di trasporto elettrico proposti dalla città. Una combinazione di. Enum:'bicicletta elettrica, auto elettrica, moto elettrica, scooter elettrico'.  
+- `endDate`: Data e ora finale in formato ISO8601 UTC  
+- `id`: Identificatore univoco dell'entità  
+- `isAccessibleForFree`: Viaggio gratuito o a pagamento (Vero = gratuito / Falso = a pagamento).  
+- `itinerary`: Destinazioni o luoghi che compongono un viaggio. Per un viaggio in cui l'ordine delle destinazioni è importante, utilizzare ItemList per specificare l'ordine di inclusione nel viaggio.  
+- `language`:  Elenco del linguaggio formale utilizzato durante il Viaggio espresso dallo standard IETF [BCP 47](https://tools.ietf.org/html/bcp47)  
+- `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  
+- `locationName`: Nome della località di viaggio.  
+- `maximumAttendeeCapacity`: Il numero totale di persone che possono partecipare alla gita in quel luogo.  
+- `name`: Il nome di questo elemento.  
+- `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  
+- `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  
+- `paymentAccepted`: Pagamento accettato se `TripFree` è Falso. Una combinazione di un elenco di codici attivi definiti nel modello. Enum:'Contanti, carta di credito, criptovaluta, altro'.  
+- `pitch`: Piazzola del viaggio. Ogni voce ha un formato basato su [Internationalization (i18N) - W3C recommandation for multilanguage] (https://www.w3.org/TR/json-ld/#string-internationalization) che integra tutte le voci in un'unica proprietà (es. numero 71). Ogni voce è rappresentata da una stringa con Valore lingua: Valore articolo.  
+- `priceSpecification`: Un valore strutturato che rappresenta un prezzo o una fascia di prezzo a seconda delle categorie o del pubblico.  
+- `ratingValueAverage`: Valore di valutazione dei viaggi. Linee guida per l'uso: Utilizzare valori da 0 a 10, a seconda degli standard. è il valore medio di tutti i punteggi dettagliati dell'attributo `starRatingDetailed`.  
+- `refPointOfInterest`: Riferimento a tutti i punti di interesse [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclusi nei viaggi. L'elenco dei POI non ha un ordine cronologico.  
+- `routeType`: Elenco dei trasporti urbani (metropolitana, autobus, tram, ...) disponibili nei pressi del viaggio secondo lo standard GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Una combinazione di valori. Enum:" autobus, cableCar, cableTram, traghetto, funicolare, monorotaia, metropolitana, treno, tram, filobus".  
+- `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  
+- `slogan`: Riga di intestazione del viaggio, corrisponde al gancio di testo.  
+- `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  
+- `starRatingDetailed`: Valutazione dettagliata delle stelle che ha portato al valore medio espresso nel ratingValue. Istruzioni per l'uso: Un valore strutturato da 1 a 10 occorrenze (Stelle) in cui ogni elemento è una stringa nel formato: `NumberOfSTar`: Percentuale.  
+- `startDate`: Data e ora di inizio in formato ISO8601 UTC  
+- `subCategory`: Sottocategoria dell'attributo `category`. Una combinazione di testo libero per rimanere flessibile a un contesto specifico è offerta qui di seguito come esempio iniziale o qualsiasi altro valore necessario a un'applicazione.  
+- `subTrip`: Riferimento a un elenco di viaggi minori che fanno parte di questo viaggio principale.  
+- `superTrip`: Riferimento al Viaggio Principale che include questo Viaggio.  
+- `thematic`: Un elenco di parole chiave tematiche  
+- `title`:  Titolo del viaggio.  
+- `touristType`: enumerazione di diversi tipi di turisti applicabili al TouristTrip  
+- `transportServices`: Elenco dei mezzi di trasporto privati disponibili nei pressi del Viaggio. Ad esempio taxi, uber, vtc, parcheggioShuttle  
+- `tripPriceFrom`: Prezzo minimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  
+- `tripPriceTo`: Prezzo massimo. Il codice dell'unità di misura (testo) è indicato utilizzando i [Codici comuni UN/CEFACT] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Ad esempio, **EUR** rappresenta **€uro**.  
+- `tripSchedule`: Programma di viaggio. Consente di impostare un programma per un periodo di tempo ripetuto, utilizzato per descrivere un viaggio che si verifica regolarmente. Per le restrizioni all'uso di questo attributo, vedere le note di esempio all'inizio della sezione.  
+- `tripStatus`: Stato del viaggio per questo viaggio. Enum:'cancellato, chiuso, finito, aperto, rinviato, riprogrammato, programmato, sospeso'.  
+- `type`: Deve essere TouristTrip. Tipo di entità NGSI.  
+- `webSite`: Link al sito web ufficiale per ulteriori informazioni.  
+- `wheelChairAccessible`: Accesso possibile per le persone con mobilità ridotta.  
+  
+
+Proprietà richieste  
+- `id`  
+- `type`  
+  
+
+Questo modello di dati si basa sullo standard UNE178503. È anche compatibile con schema.org. Alcuni elementi di schema.org sono stati adattati in questo file https://smart-data-models.github.io/data-models/schema-org.json. Sono stati necessari piccoli aggiustamenti per mantenere la compatibilità con schema.org.  
+
+## Modello di dati descrizione delle proprietà  
+
+Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 TouristTrip:    
   description: 'A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.'    
   properties:    
@@ -994,11 +1061,16 @@ TouristTrip:
   x-version: 0.0.3    
 ```  
 </details>    
-## Esempi di payload  
-#### TouristTrip NGSI-v2 valori-chiave Esempio  
-Ecco un esempio di TouristTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+## Esempi di payload  
+
+#### TouristTrip NGSI-v2 valori-chiave Esempio  
+
+Ecco un esempio di TouristTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
   "id": "urn:ngsi:touristTrip:1",  
   "type": "TouristTrip",  
   "name": "Musee du Palais Lascaris",  
@@ -1240,15 +1312,19 @@ TouristTrip:
     "electricMotorBike"  
   ],  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
-#### TouristTrip NGSI-v2 normalizzato Esempio  
-Ecco un esempio di TouristTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### TouristTrip NGSI-v2 normalizzato Esempio  
+
+Ecco un esempio di TouristTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
   "id": "touristTrip.1",  
   "type": "TouristTrip",  
   "name": {  
@@ -1630,10 +1706,14 @@ TouristTrip:
   }  
 }  
 ```  
-#### TouristTrip Valori chiave NGSI-LD Esempio  
-Ecco un esempio di TouristTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### TouristTrip Valori chiave NGSI-LD Esempio  
+
+Ecco un esempio di TouristTrip in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
     "id": "urn:ngsi:touristTrip:1",  
     "type": "TouristTrip",  
     "accessPlan": "https://www.google.fr/maps/place/Mus%C3%A9e+du+Palais+Lascaris/@43.6976805,7.2750571,17z/data=!3m1!4b1!4m5!3m4!1s0x12cddabca1950653:0x8d425022ef476dde!8m2!3d43.6976766!4d7.2772458?hl=fr",  
@@ -1879,10 +1959,14 @@ TouristTrip:
     ]  
 }  
 ```  
-#### TouristTrip NGSI-LD normalizzato Esempio  
-Ecco un esempio di TouristTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
-```json  
-{  
+
+#### TouristTrip NGSI-LD normalizzato Esempio  
+
+Ecco un esempio di TouristTrip in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+
+```json  
+
+{  
     "id": "urn:ngsi:touristTrip:1",  
     "type": "TouristTrip",  
     "accessPlan": {  
@@ -2272,4 +2356,5 @@ TouristTrip:
     "@context": []  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  

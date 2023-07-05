@@ -1,19 +1,47 @@
 Entidad: TouristDestination  
-===========================  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md)  
-[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **Un destino turístico. En principio, cualquier lugar puede ser un TouristDestination, desde una ciudad, región o país hasta un AmusementPark u hotel.**  
+===========================
+  
 
-## Lista de propiedades  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/TouristDestination/LICENSE.md)  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `includesAttraction`:   - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tiene que ser TouristDestination    
-Propiedades requeridas  
-- `id`  - `type`    
-Este modelo de datos está basado en la norma UNE178503. También es compatible con schema.org. Algunos de los elementos de schema.org han sido adaptados en este archivo https://smart-data-models.github.io/data-models/schema-org.json  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+
+Descripción global: **Un destino turístico. En principio, cualquier lugar puede ser un TouristDestination, desde una ciudad, región o país hasta un AmusementPark u hotel.**  
+
+
+## Lista de propiedades  
+
+
+- `address`: La dirección postal  
+- `alternateName`: Un nombre alternativo para este artículo  
+- `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  
+- `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  
+- `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  
+- `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  
+- `description`: Una descripción de este artículo  
+- `id`: Identificador único de la entidad  
+- `includesAttraction`:   
+- `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  
+- `name`: El nombre de este artículo.  
+- `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  
+- `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  
+- `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  
+- `type`: Tiene que ser TouristDestination  
+  
+
+Propiedades requeridas  
+- `id`  
+- `type`  
+  
+
+Este modelo de datos está basado en la norma UNE178503. También es compatible con schema.org. Algunos de los elementos de schema.org han sido adaptados en este archivo https://smart-data-models.github.io/data-models/schema-org.json  
+
+## Descripción del modelo de datos de las propiedades  
+
+Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
-```yaml  
+
+```yaml  
 TouristDestination:    
   description: 'A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.'    
   properties:    
@@ -379,11 +407,16 @@ TouristDestination:
   type: object    
 ```  
 </details>    
-## Ejemplo de carga útil  
-#### TouristDestination NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un TouristDestination en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+## Ejemplo de carga útil  
+
+#### TouristDestination NGSI-v2 key-values Ejemplo  
+
+Aquí hay un ejemplo de un TouristDestination en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": "ngsi:uri:TouristDestination:1",  
   "type": "TouristDestination",  
   "name": "Sitios Patrimonio de la Humanidad in Spain",  
@@ -410,10 +443,14 @@ TouristDestination:
   ]  
 }  
 ```  
-#### TouristDestination NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un TouristDestination en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+#### TouristDestination NGSI-v2 normalizado Ejemplo  
+
+Este es un ejemplo de un TouristDestination en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": {  
     "type": "string",  
     "value": "ngsi:uri:TouristDestination:1"  
@@ -455,10 +492,14 @@ TouristDestination:
   }  
 }  
 ```  
-#### TouristDestination NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un TouristDestination en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+#### TouristDestination NGSI-LD key-values Ejemplo  
+
+Aquí hay un ejemplo de un TouristDestination en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": "ngsi:uri:TouristDestination:1",  
   "type": "TouristDestination",  
   "name": "Sitios Patrimonio de la Humanidad in Spain",  
@@ -484,14 +525,18 @@ TouristDestination:
     }  
   ],  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
   ]  
 }  
 ```  
-#### TouristDestination NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un TouristDestination en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
+
+#### TouristDestination NGSI-LD normalizado Ejemplo  
+
+Este es un ejemplo de un TouristDestination en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+
+```json  
+
+{  
   "id": {  
     "type": "string",  
     "value": "ngsi:uri:TouristDestination:1"  
@@ -532,7 +577,7 @@ TouristDestination:
     ]  
   },  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
   ]  
 }  
 ```  
