@@ -7,6 +7,8 @@ The following entity types are available:
 
 - [TouristDestination](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristDestination/README.md). A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.
 
+- [TouristProfile](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristProfile/README.md). Description of a tourist profile based on the characteristics of a person, trip, choice of stay and spending while in destination.
+
 - [TouristTrip](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/README.md). A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.
 
 
