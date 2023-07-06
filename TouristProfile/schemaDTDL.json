@@ -1,0 +1,560 @@
+{
+    "@id": "dtmi:com:ngsi-ld:TouristProfile;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "General profile of a Tourist adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/TouristProfile/schema.json",
+    "description": "Description of a tourist profile based on the characteristics of a person, trip, choice of stay and spending while in destination.",
+    "displayName": "TouristProfile",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "bookingChannel",
+            "writable": true,
+            "displayName": "bookingChannel",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Property. Channel used by the tourist for the reservation."
+        },
+        {
+            "name": "country",
+            "writable": true,
+            "displayName": "country",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Property. Country of nationality - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2."
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "ageRange",
+            "comment": "Property. Age range of the person profiled.",
+            "displayName": "ageRange",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "avgDailyAccommodationAndBoardExpenditure",
+            "comment": "Property. Range of avg daily amount of money invoiced by the lodging establishment in accommodation and board concepts.",
+            "displayName": "avgDailyAccommodationAndBoardExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "avgDailyExpenditure",
+            "comment": "Property. Range of avg daily amount of money invoiced by the lodging establishment.",
+            "displayName": "avgDailyExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "avgDailyExtraExpenditure",
+            "comment": "Property. Range of avg daily amount of money invoiced by the lodging establishment in extra concepts",
+            "displayName": "avgDailyExtraExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "lodgingSize",
+            "comment": "Property. Range size in number of rooms of the lodging",
+            "displayName": "lodgingSize",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "reservationLeadTime",
+            "comment": "Property. Range of days between booking and check-in.",
+            "displayName": "reservationLeadTime",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "stayLength",
+            "comment": "Property. Range of number of staying nights.",
+            "displayName": "stayLength",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "totalAccommodationAndBoardExpenditure",
+            "comment": "Property. Range of total amount of money invoiced by the lodging establishment in accommodation and board concepts.",
+            "displayName": "totalAccommodationAndBoardExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "totalExpenditure",
+            "comment": "Property. Range of total amount of money invoiced by the lodging establishment.",
+            "displayName": "totalExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "object",
+            "name": "totalExtraExpenditure",
+            "comment": "Property. Range of total amount of money invoiced by the lodging establishment in extra concepts.",
+            "displayName": "totalExtraExpenditure",
+            "fields": [
+                {
+                    "name": "range",
+                    "schema": "string"
+                },
+                {
+                    "name": "sortingOrder",
+                    "schema": "array"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "board",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "RO",
+                        "displayName": "RO",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "BB",
+                        "displayName": "BB",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "HB",
+                        "displayName": "HB",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "FB",
+                        "displayName": "FB",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "AI",
+                        "displayName": "AI",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "gender",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Female",
+                        "displayName": "Female",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Male",
+                        "displayName": "Male",
+                        "enumValue": 2
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lodgingCategory",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 1,
+                        "displayName": 1,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "1 Superior",
+                        "displayName": "1 Superior",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 2,
+                        "displayName": 2,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "2 Superior",
+                        "displayName": "2 Superior",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": 3,
+                        "displayName": 3,
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "3 Superior",
+                        "displayName": "3 Superior",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": 4,
+                        "displayName": 4,
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "4 Superior",
+                        "displayName": "4 Superior",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": 5,
+                        "displayName": 5,
+                        "enumValue": 9
+                    },
+                    {
+                        "name": "5 Superior",
+                        "displayName": "5 Superior",
+                        "enumValue": 10
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "lodgingType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Hotel",
+                        "displayName": "Hotel",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Resort",
+                        "displayName": "Resort",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Hostel",
+                        "displayName": "Hostel",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Motel",
+                        "displayName": "Motel",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "B&B",
+                        "displayName": "B&B",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "Aparthotel",
+                        "displayName": "Aparthotel",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "Lodge",
+                        "displayName": "Lodge",
+                        "enumValue": 7
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "roomOfStayType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Apartment",
+                        "displayName": "Apartment",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Bungalow",
+                        "displayName": "Bungalow",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Studio",
+                        "displayName": "Studio",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Single",
+                        "displayName": "Single",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Double",
+                        "displayName": "Double",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "Family",
+                        "displayName": "Family",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "Junior Suite",
+                        "displayName": "Junior Suite",
+                        "enumValue": 7
+                    },
+                    {
+                        "name": "Senior/Executive Suite",
+                        "displayName": "Senior/Executive Suite",
+                        "enumValue": 8
+                    },
+                    {
+                        "name": "Royal/Presidential Suite",
+                        "displayName": "Royal/Presidential Suite",
+                        "enumValue": 9
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "travelPartyComposition",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Single",
+                        "displayName": "Single",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Single parent",
+                        "displayName": "Single parent",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Family",
+                        "displayName": "Family",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Couple",
+                        "displayName": "Couple",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Friends/Relatives",
+                        "displayName": "Friends/Relatives",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        }
+    ]
+}
