@@ -7,16 +7,18 @@
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+Description globale : **Description d'un profil touristique basé sur les caractéristiques d'une personne, d'un voyage, d'un choix de séjour et de dépenses pendant la durée du séjour**.  
+version : 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
 <sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-<!-- /30-PropertiesList -->  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `ageRange[object]`: Propriété. Tranche d'âge de la personne faisant l'objet du profil.  - `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `avgDailyAccommodationAndBoardExpenditure[object]`: Propriété. Fourchette du montant journalier moyen facturé par l'établissement d'hébergement dans les concepts d'hébergement et de pension.  - `avgDailyExpenditure[object]`: Propriété. Fourchette du montant quotidien moyen facturé par l'établissement d'hébergement.  - `avgDailyExtraExpenditure[object]`: Propriété. Fourchette du montant journalier moyen facturé par l'établissement d'hébergement en concepts supplémentaires  - `board[string]`: Propriété. Type habituel de carte réservé. Enum : "RO, BB, HB, FB, AI".  - `bookingChannel[string]`: Propriété. Canal utilisé par le touriste pour la réservation.  - `country[string]`: Propriété. Pays de nationalité - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `gender[string]`: Propriété. Sexe de la personne dont le profil est établi. Enum : "Female, Male".  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `lodgingCategory[string]`: Propriété. Catégorie habituelle de l'hébergement. Enum : "1, 1 supérieur, 2, 2 supérieur, 3, 3 supérieur, 4, 4 supérieur, 5, 5 supérieur".  - `lodgingSize[object]`: Propriété. Taille en nombre de chambres de l'hébergement  - `lodgingType[string]`: Propriété. Type d'hébergement habituel pour le séjour. Pourrait faire référence à UNE178506 à l'avenir. Enum : "Hotel, Resort, Hostel, Motel, B&B, Aparthotel, Lodge".  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `reservationLeadTime[object]`: Propriété. Nombre de jours entre la réservation et l'enregistrement.  - `roomOfStayType[string]`: Propriété. Type habituel de la chambre d'hébergement réservée. Enum : "Appartement, Bungalow, Studio, Simple, Double, Famille, Suite Junior, Suite Senior/Exécutif, Suite Royale/Présidentielle".  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `stayLength[object]`: Propriété. Nombre de nuits de séjour.  - `totalAccommodationAndBoardExpenditure[object]`: Propriété. Fourchette du montant total facturé par l'établissement d'hébergement dans les concepts d'hébergement et de pension.  - `totalExpenditure[object]`: Propriété. Fourchette du montant total facturé par l'établissement d'hébergement.  - `totalExtraExpenditure[object]`: Propriété. Fourchette du montant total facturé par l'établissement d'hébergement en concepts supplémentaires.  - `travelPartyComposition[string]`: Propriété. Composition du groupe de voyageurs en fonction du nombre d'adultes et d'enfants. Enum : "Célibataire, Monoparentale, Famille, Couple, Amis/Relatifs".  - `type[string]`: Propriété. Type d'entité NGSI. Il doit s'agir de TouristProfile.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
-- Aucune propriété requise  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 L'entité TouristProfile contient une description du profil recherché d'un certain type de touriste en fonction des détails de sa réservation et de son séjour dans un établissement d'hébergement.  
 <!-- /40-RequiredProperties -->  
@@ -788,7 +790,7 @@ TouristProfile:
 }  
 ```  
 </details>  
-#### Profil touristique Valeurs clés de l'INS-LD Exemple  
+#### TouristProfile Valeurs clés NGSI-LD Exemple  
 Voici un exemple de profil touristique au format JSON-LD sous forme de valeurs clés. Ce format est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
