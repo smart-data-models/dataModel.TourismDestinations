@@ -7,22 +7,24 @@
 [文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+全球描述**基于个人特征、行程、住宿选择和目的地消费的游客概况描述。  
+版本: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ##属性列表  
 
-<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
-<!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `ageRange[object]`: 属性。被调查者的年龄范围。  - `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或产品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `avgDailyAccommodationAndBoardExpenditure[object]`: 属性。住宿设施按食宿概念开具的日平均发票金额范围。  - `avgDailyExpenditure[object]`: 属性。住宿设施开具的日平均发票金额范围。  - `avgDailyExtraExpenditure[object]`: 财产。住宿设施开具的日均额外概念金额范围  - `board[string]`: 属性。保留的板类型的通常类型。枚举：'RO, BB, HB, FB, AI'。  - `bookingChannel[string]`: 属性。游客预订时使用的通道。  - `country[string]`: 财产。国籍 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2。  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列。  - `dateCreated[string]`: 实体创建时间戳。这通常由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。通常由存储平台分配。  - `description[string]`: 项目描述  - `gender[string]`: 属性。被描述者的性别。枚举：'女，男'。  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的Geojson引用。可以是点、线条字符串、多边形、多点、多线条字符串或多多边形。  - `lodgingCategory[string]`: 属性。住宿的通常类别。Enum:'1, 1 Superior, 2, 2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior'。  - `lodgingSize[object]`: 物业。客房数量范围  - `lodgingType[string]`: 物业。通常的住宿类型。将来可参考UNE178506。Enum:'Hotel, Resort, Hostel, Motel, B&B, Aparthotel, Lodge'。  - `name[string]`: 该项目的名称。  - `owner[array]`: 一个列表，包含一个JSON编码的字符序列，引用所有者的唯一标识  - `reservationLeadTime[object]`: 物业。预订和入住之间的天数范围。  - `roomOfStayType[string]`: 属性。预订房间的通常类型。Enum:'公寓、平房、单间、单人间、双人间、家庭间、普通套房、高级/行政套房、皇家/总统套房'。  - `seeAlso[*]`: 指向有关该项目的其他资源的uri列表  - `source[string]`: 实体数据原始来源的URL字符串。建议使用源提供者的完全合格域名或源对象的URL。  - `stayLength[object]`: 物业。入住天数范围。  - `totalAccommodationAndBoardExpenditure[object]`: 属性。住宿机构开具的膳宿概念发票的总金额范围。  - `totalExpenditure[object]`: 财产。住宿机构开具发票的总金额范围。  - `totalExtraExpenditure[object]`: 属性。住宿设施开具的额外概念发票的总金额范围。  - `travelPartyComposition[string]`: 财产。根据成人和儿童人数确定旅行团队的组成。枚举：'单身、单亲、家庭、夫妇、朋友/亲戚'。  - `type[string]`: 属性。NGSI实体类型。必须是TouristProfile。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
-- 没有要求的属性  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-TouristProfile实体包含了对某一类型游客的研究概况的描述，该描述是根据他们在住宿设施中的预订和住宿的细节而得出的。  
+TouristProfile（游客档案）实体包含根据游客预订和住宿详情对某类游客的研究档案描述。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## 数据模型的属性描述  
-按字母顺序排列（点击查看详情）。  
+## 数据模型属性描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -537,9 +539,9 @@ TouristProfile:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## ＃＃＃＃有效载荷的例子  
+## 有效载荷示例  
 #### TouristProfile NGSI-v2 key-values 示例  
-这里是一个以JSON-LD格式作为key-values的TouristProfile的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+下面是一个以JSON-LD格式作为key-values的TouristProfile示例。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -710,8 +712,8 @@ TouristProfile:
 }  
 ```  
 </details>  
-#### TouristProfile NGSI-v2规范化示例  
-下面是一个以JSON-LD格式规范化的TouristProfile的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
+#### TouristProfile NGSI-v2 标准化示例  
+下面是一个规范化的JSON-LD格式的TouristProfile示例。当不使用选项时，它与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -789,7 +791,7 @@ TouristProfile:
 ```  
 </details>  
 #### TouristProfile NGSI-LD key-values 示例  
-这里是一个以JSON-LD格式作为关键值的TouristProfile的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+下面是一个以JSON-LD格式作为key-values的TouristProfile示例。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -963,8 +965,8 @@ TouristProfile:
 }  
 ```  
 </details>  
-#### TouristProfile NGSI-LD规范化示例  
-下面是一个以JSON-LD格式规范化的TouristProfile的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
+#### TouristProfile NGSI-LD 标准化示例  
+下面是一个规范化的JSON-LD格式的TouristProfile示例。当不使用选项时，它与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1047,7 +1049,7 @@ TouristProfile:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
+参见[FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获得如何处理幅值单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
