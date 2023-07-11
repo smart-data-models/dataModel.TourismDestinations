@@ -7,16 +7,18 @@
 [文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+グローバルな記述：**人、旅行、滞在の選択、目的地での消費などの特徴に基づく観光客のプロフィールの記述。  
+バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## プロパティのリスト  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-<!-- /30-PropertiesList -->  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `ageRange[object]`: プロパティ。プロファイルされた人の年齢層。  - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `avgDailyAccommodationAndBoardExpenditure[object]`: 物件。宿泊施設から請求される宿泊・食事コンセプトの1日平均金額の範囲。  - `avgDailyExpenditure[object]`: プロパティ宿泊施設が請求する1日の平均金額の範囲。  - `avgDailyExtraExpenditure[object]`: プロパティ宿泊施設が請求する追加概念の1日平均金額の範囲  - `board[string]`: プロパティ。通常のボードタイプの予約。列挙：「RO、BB、HB、FB、AI」。  - `bookingChannel[string]`: プロパティ。観光客が予約に使用するチャンネル。  - `country[string]`: 財産国籍 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `gender[string]`: プロパティ。プロファイル対象者の性別。Enum:'女性、男性'。  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `lodgingCategory[string]`: 物件。宿泊施設の通常のカテゴリー。Enum:'1, 1 Superior, 2, 2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior'.  - `lodgingSize[object]`: 物件宿泊施設の部屋数の範囲  - `lodgingType[string]`: 物件通常のタイプの宿泊施設。将来UNE178506を参照する可能性がある。Enum:'ホテル、リゾート、ホステル、モーテル、B&B、アパートホテル、ロッジ'.  - `name[string]`: このアイテムの名前。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `reservationLeadTime[object]`: 物件予約からチェックインまでの日数  - `roomOfStayType[string]`: 物件予約した宿泊施設の部屋タイプ。Enum:'Apartment, Bungalow, Studio, Single, Double, Family, Junior Suite, Senior/Executive Suite, Royal/Presidential Suite'.  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `stayLength[object]`: 物件宿泊数の範囲  - `totalAccommodationAndBoardExpenditure[object]`: 物件。宿泊施設から請求された宿泊・食事コンセプトの合計金額の範囲。  - `totalExpenditure[object]`: 物件。宿泊施設からの請求金額の総額の範囲。  - `totalExtraExpenditure[object]`: プロパティ。宿泊施設が追加コンセプトで請求した合計金額の範囲。  - `travelPartyComposition[string]`: 物件大人と子供の人数に基づく旅行者の構成。Enum:'Single, Single parent, Family, Couple, Friends/Relatives'.  - `type[string]`: プロパティ。NGSI エンティティタイプ。TouristProfile でなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
-- 必須プロパティなし  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 TouristProfileエンティティは、宿泊施設での予約と滞在の詳細に従って、特定のタイプの観光客の検索プロファイルの記述を含む。  
 <!-- /40-RequiredProperties -->  
