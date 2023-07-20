@@ -14,10 +14,17 @@ contributors:
     project: TOURiLab-SDG - i4Trust 2nd Open Call experiment
     comments: Experiment coordinator and SDM supervisor
     year: 2023
+  - name: José Manuel
+    surname: Sola Quesada
+    mail: jsola@noray.com
+    organization: Noray
+    project: TOURiLab-SDG - i4Trust 2nd Open Call experiment
+    comments: Data model supervisor
+    year: 2023
   - name: Pablo
     surname: Viera Ruiz
     mail: pviera@noray.com
-    organization: Noray (Consultores Canarios de Informática SA)
+    organization: Noray
     project: TOURiLab-SDG - i4Trust 2nd Open Call experiment
     comments: Data model creator
     year: 2023
