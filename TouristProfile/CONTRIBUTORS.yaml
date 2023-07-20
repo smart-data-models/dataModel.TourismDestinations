@@ -1,6 +1,14 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
+ name: José Manuel
+ surname: Sola Quesada
+ mail: jsola@noray.com
+ organization: Noray  
+ project: TOURiLab-SDG - i4Trust 2nd Open Call experiment
+ comments: Data model supervisor
+ year: 2023
+ 
  name: Mannix
  surname: Manglani Mankani
  mail: mannix@mnxonline.com
@@ -12,7 +20,7 @@ contributors:
  name: Pablo
  surname: Viera Ruiz
  mail: pviera@noray.com
- organization: Noray (Consultores Canarios de Informática SA)
+ organization: Noray  
  project: TOURiLab-SDG - i4Trust 2nd Open Call experiment
  comments: Data model creator
  year: 2023
