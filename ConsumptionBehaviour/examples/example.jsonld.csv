@@ -1,0 +1,2 @@
+"id_", "type_", "resourceType_", "sourceOfConsumption_", "startDate_", "endDate_", "initialMeasurement_", "finalMeasurement_", "usersInvolved_", "@context__0_"
+"urn:ngsi-ld:ConsumptionBehaviour:VC17", "ConsumptionBehaviour", "Diesel", "urn:ngsi-ld:Vehicle:VC0001", "2018-09-21T12:00:00Z", "2018-09-21T12:00:00Z", "455555", "456123", "2", "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
