@@ -1,0 +1,214 @@
+{
+    "@id": "dtmi:com:ngsi-ld:ConsumptionBehaviour;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Consumption Behaviour adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/ConsumptionBehaviour/schema.json",
+    "description": "This model is designed to record and track the consumption of various resources such as electricity, diesel, and water over a specified period.",
+    "displayName": "ConsumptionBehaviour",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "areaServed",
+            "writable": true,
+            "displayName": "areaServed",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The geographic area where a service or offered item is provided"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "endDate",
+            "writable": true,
+            "displayName": "endDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Property. End date of the consumption."
+        },
+        {
+            "name": "finalMeasurement",
+            "writable": true,
+            "displayName": "finalMeasurement",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Final measurement of the resource."
+        },
+        {
+            "name": "initialMeasurement",
+            "writable": true,
+            "displayName": "initialMeasurement",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Initial measurement of the resource."
+        },
+        {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
+        },
+        {
+            "name": "sourceOfConsumption",
+            "writable": true,
+            "displayName": "sourceOfConsumption"
+        },
+        {
+            "name": "startDate",
+            "writable": true,
+            "displayName": "startDate",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Property. Start date of the consumption."
+        },
+        {
+            "name": "usersInvolved",
+            "writable": true,
+            "displayName": "usersInvolved",
+            "@type": "Property",
+            "schema": "long",
+            "comment": "Property. Number of persons/users involved in the consumption."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "object",
+            "name": "address",
+            "comment": "The mailing address",
+            "displayName": "address",
+            "fields": [
+                {
+                    "name": "addressCountry",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressLocality",
+                    "schema": "string"
+                },
+                {
+                    "name": "addressRegion",
+                    "schema": "string"
+                },
+                {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
+                    "name": "postOfficeBoxNumber",
+                    "schema": "string"
+                },
+                {
+                    "name": "postalCode",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "Telemetry",
+            "name": "resourceType",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Diesel",
+                        "displayName": "Diesel",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Petrol",
+                        "displayName": "Petrol",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "Electricity",
+                        "displayName": "Electricity",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "Gas",
+                        "displayName": "Gas",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "Water",
+                        "displayName": "Water",
+                        "enumValue": 5
+                    }
+                ]
+            }
+        }
+    ]
+}
