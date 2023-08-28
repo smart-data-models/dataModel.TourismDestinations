@@ -1,0 +1,34 @@
+{
+  "id": "urn:ngsi-ld:TouristRental:VC:17",
+  "type": "TouristRental",
+  "rentalSource": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:Vehicle:VC:0001"
+  },
+  "startDate": {
+    "type": "Property",
+    "value": {
+      "@type": "date-time",
+      "@value": "2018-09-21T12:00:00Z"
+    }
+  },
+  "endDate": {
+    "type": "Property",
+    "value": {
+      "@type": "date-time",
+      "@value": "2018-09-21T12:00:00Z"}
+  },
+  "leadTourist": {
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:TouristProfile:VC:0001"
+  },
+  "consumptionBehaviour": {
+    "type": "Property",
+    "value": [
+      "urn:ngsi-ld:ConsumptionBehaviour:VC:42"
+    ]
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
+  ]
+}
