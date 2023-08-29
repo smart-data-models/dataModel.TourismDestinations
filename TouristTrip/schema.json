@@ -25,7 +25,7 @@
     },
     {
       "video": {
-        "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/video"
+        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/video"
       }
     },
     {
@@ -41,7 +41,7 @@
           "type": "array",
           "description": "Property. enumeration of different tourist types applicable to the TouristTrip",
           "items": {
-            "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/touristType"
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/touristType"
           }
         },
         "dateLastReported": {

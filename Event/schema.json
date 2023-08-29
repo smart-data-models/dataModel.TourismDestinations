@@ -23,22 +23,22 @@
           "description": "Property. It has to be Event. NGSI entity type. Model:'https://schema.org/event'"
         },
         "touristType": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/touristType"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/touristType"
         },
         "url": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/image"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/url"
         },
         "isAccessibleForFree": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/isAccessibleForFree"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/isAccessibleForFree"
         },
         "publicAccess": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/publicAccess"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/publicAccess"
         },
         "startDate": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/startDate"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Date-Commons/properties/startDate"
         },
         "endDate": {
-          "$ref": "https://smart-data-models.github.io/data-models/schema-org.json#/definitions/endDate"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Date-Commons/properties/endDate"
         },
         "refPointOfInterest": {
           "type": "array",
