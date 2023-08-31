@@ -7,16 +7,18 @@
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+Global description: **This model is designed to record and track the consumption of various resources such as electricity, diesel, and water over a specified period.**  
+version: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-<!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `endDate[string]`: Property. End date of the consumption.  - `finalMeasurement[number]`: Property. Final measurement of the resource.  - `id[*]`: Unique identifier of the entity  - `initialMeasurement[number]`: Property. Initial measurement of the resource.  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `resourceType[string]`: Property. Type of resource consumed.  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `sourceOfConsumption[*]`: Relationship. The object that is generating the consumption.  - `startDate[string]`: Property. Start date of the consumption.  - `type[string]`: Property. Entity type ConsumptionBehaviour.  - `usersInvolved[number]`: Property. Number of persons/users involved in the consumption.  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
-- No required properties  <!-- /35-RequiredProperties -->  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
@@ -358,13 +360,120 @@ ConsumptionBehaviour:
 ## Example payloads    
 #### ConsumptionBehaviour NGSI-v2 key-values Example    
 Here is an example of a ConsumptionBehaviour in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:ConsumptionBehaviour:VC17",  
+    "type": "ConsumptionBehaviour",  
+    "resourceType": "Diesel",  
+    "sourceOfConsumption": "urn:ngsi-ld:Vehicle:VC0001",  
+    "startDate": "2018-09-21T12:00:00Z",  
+    "endDate": "2018-09-21T12:00:00Z",  
+    "initialMeasurement": 455555,  
+    "finalMeasurement": 456123,  
+    "usersInvolved": 2  
+}  
+```  
+</details>  
 #### ConsumptionBehaviour NGSI-v2 normalized Example    
 Here is an example of a ConsumptionBehaviour in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:ConsumptionBehaviour:VC17",  
+  "type": "ConsumptionBehaviour",  
+  "resourceType": {  
+    "type": "Text",  
+    "value": "Diesel"  
+  },  
+  "sourceOfConsumption": {  
+    "type": "URI",  
+    "value": "urn:ngsi-ld:Vehicle:VC0001"  
+  },  
+  "startDate": {  
+    "type": "DateTime",  
+    "value": "2018-09-21T12:00:00Z"  
+  },  
+  "endDate": {  
+    "type": "DateTime",  
+    "value": "2018-09-21T12:00:00Z"  
+  },  
+  "initialMeasurement": {  
+    "type": "Number",  
+    "value": 455555  
+  },  
+  "finalMeasurement": {  
+    "type": "Number",  
+    "value": 456123  
+  },  
+  "usersInvolved": {  
+    "type": "Number",  
+    "value": 2  
+  }  
+}  
+```  
+</details>  
 #### ConsumptionBehaviour NGSI-LD key-values Example    
 Here is an example of a ConsumptionBehaviour in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:ConsumptionBehaviour:VC17",  
+  "type": "ConsumptionBehaviour",  
+  "resourceType": "Diesel",  
+  "sourceOfConsumption": "urn:ngsi-ld:Vehicle:VC0001",  
+  "startDate": "2018-09-21T12:00:00Z",  
+  "endDate": "2018-09-21T12:00:00Z",  
+  "initialMeasurement": 455555,  
+  "finalMeasurement": 456123,  
+  "usersInvolved": 2,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
+}  
+```  
+</details>  
 #### ConsumptionBehaviour NGSI-LD normalized Example    
 Here is an example of a ConsumptionBehaviour in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-<!-- /80-Examples -->  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "sourceOfConsumption": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Vehicle:VC0001"  
+  },  
+  "startDate": {  
+    "type": "Property",  
+    "value": {  
+      "@value": "2018-09-21T12:00:00Z",  
+      "@type": "date-time"  
+    }  
+  },  
+  "endDate": {  
+    "type": "Property",  
+    "value": {  
+      "@value": "2018-09-21T12:00:00Z",  
+      "@type": "date-time"  
+    }  
+  },  
+  "initialMeasurement": {  
+    "type": "Property",  
+    "value": 455555  
+  },  
+  "finalMeasurement": {  
+    "type": "Property",  
+    "value": 456123  
+  },  
+  "usersInvolved": {  
+    "type": "Property",  
+    "value": 2  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
+}  
+```  
+</details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
