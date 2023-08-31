@@ -38,14 +38,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of ageRange. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of ageRange. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of different age groups for ageRange. OrderedSet: '0-1, 2-5, 6-11, 12-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65+'."
+                            "description": "Property. Ordered set of different age groups for ageRange. OrderedSet: '0-1, 2-5, 6-11, 12-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65+'"
                         }
                     }
                 },
@@ -103,7 +103,7 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of lodgingSize. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of lodgingSize. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
@@ -150,14 +150,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of reservationLeadTime. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of reservationLeadTime. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of days for reservationLeadTime. OrderedSet: '1 to 7 days, 8 to 14 days, 15 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 120 days, 121 to 240 days, 241 to 365 days, 366+ days'."
+                            "description": "Property. Ordered set of range of days for reservationLeadTime. OrderedSet: '1 to 7 days, 8 to 14 days, 15 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 120 days, 121 to 240 days, 241 to 365 days, 366+ days'"
                         }
                     }
                 },
@@ -167,14 +167,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of stayLength. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of stayLength. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of nights for stayLength. OrderedSet: '1 night, 2 to 4 nights, 5 to 7 nights, 8 to 14 nights, 15 to 21 nights, 22+ nights'."
+                            "description": "Property. Ordered set of range of nights for stayLength. OrderedSet: '1 night, 2 to 4 nights, 5 to 7 nights, 8 to 14 nights, 15 to 21 nights, 22+ nights'"
                         }
                     }
                 },
@@ -184,14 +184,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of totalExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of totalExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of money amounts for totalExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'."
+                            "description": "Property. Ordered set of range of money amounts for totalExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'"
                         }
                     }
                 },
@@ -201,14 +201,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of totalAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of totalAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of money amounts for totalAccommodationAndBoardExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'."
+                            "description": "Property. Ordered set of range of money amounts for totalAccommodationAndBoardExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'"
                         }
                     }
                 },
@@ -218,14 +218,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of totalExtraExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of totalExtraExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of money amounts for totalExtraExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'."
+                            "description": "Property. Ordered set of range of money amounts for totalExtraExpenditure. OrderedSet: '0 to 249 \u20ac, 250 to 499 \u20ac, 500 to 749 \u20ac, 750 to 999 \u20ac, 1000 to 1499 \u20ac, 1500 to 1999 \u20ac, 2000 to 2999 \u20ac, 3000 to 3999 \u20ac, 4000 to 4999 \u20ac, 5000+ \u20ac'"
                         }
                     }
                 },
@@ -235,14 +235,14 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of avgDailyExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of avgDailyExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
                             "items": {
                                 "type": "string"
                             },
-                            "description": "Property. Ordered set of range of money amounts for avgDailyExpenditure. OrderedSet: '0 to 24 \u20ac, 25 to 49 \u20ac, 50 to 74 \u20ac, 75 to 99 \u20ac, 100 to 149 \u20ac, 150 to 199 \u20ac, 200 to 249 \u20ac, 250 to 299 \u20ac, 300 to 399 \u20ac, 400 to 499 \u20ac, 500 to 599 \u20ac, 600+ \u20ac'."
+                            "description": "Property. Ordered set of range of money amounts for avgDailyExpenditure. OrderedSet: '0 to 24 \u20ac, 25 to 49 \u20ac, 50 to 74 \u20ac, 75 to 99 \u20ac, 100 to 149 \u20ac, 150 to 199 \u20ac, 200 to 249 \u20ac, 250 to 299 \u20ac, 300 to 399 \u20ac, 400 to 499 \u20ac, 500 to 599 \u20ac, 600+ \u20ac'"
                         }
                     }
                 },
@@ -252,7 +252,7 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of avgDailyAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of avgDailyAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
@@ -269,7 +269,7 @@
                     "properties": {
                         "range": {
                             "type": "string",
-                            "description": "Property. Value of avgDailyExtraExpenditure. It uses the ranges defined by sortingOrder."
+                            "description": "Property. Value of avgDailyExtraExpenditure. It uses the ranges defined by sortingOrder"
                         },
                         "sortingOrder": {
                             "type": "array",
