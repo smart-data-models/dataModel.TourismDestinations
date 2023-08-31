@@ -390,7 +390,7 @@
                 },
                 "doorTimeClose": {
                     "type": "string",
-                    "description": "Property. Doors closing time to access the show."
+                    "description": "Property. Doors closing time to access the show"
                 },
                 "openingHoursSpecification": {
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
