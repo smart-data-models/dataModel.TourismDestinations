@@ -2,12 +2,12 @@ Event:
   description: 'Upcoming or past event associated with this place, organization, or action.'
   properties:
     accessPlan:
-      description: ' Text or Link to the access plan to the item.'
+      description: ' Text or Link to the access plan to the item'
       type: string
       x-ngsi:
         type: Property
     actor:
-      description: List of actors or music group.
+      description: List of actors or music group
       items:
         type: string
       type: array
@@ -17,29 +17,51 @@ Event:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
+          description: 'The country. For example, Spain'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressCountry
+            type: Property
         addressLocality:
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressLocality
+            type: Property
         addressRegion:
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
+          description: 'The region in which the locality is, and which is in the country'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressRegion
+            type: Property
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
+          x-ngsi:
+            type: Property
         postOfficeBoxNumber:
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
+          x-ngsi:
+            model: https://schema.org/postOfficeBoxNumber
+            type: Property
         postalCode:
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
+          description: 'The postal code. For example, 24004'
           type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
+            type: Property
         streetAddress:
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
+          description: The street address
           type: string
+          x-ngsi:
+            model: https://schema.org/streetAddress
+            type: Property
         streetNr:
-          description: Number identifying a specific property on a public street.
+          description: Number identifying a specific property on a public street
           type: string
+          x-ngsi:
+            type: Property
       type: object
       x-ngsi:
         model: https://schema.org/address
@@ -88,33 +110,42 @@ Event:
       x-ngsi:
         type: Property
     composer:
-      description: List of person who wrote the composition.
+      description: List of person who wrote the composition
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     contactPoint:
-      description: The details to contact with the item.
+      description: The details to contact with the item
       properties:
         areaServed:
-          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.
+          description: The geographic area where a service or offered item is provided. Supersedes serviceArea
           type: string
+          x-ngsi:
+            type: Property
         availabilityRestriction:
           anyOf:
-            - description: Property. Array of identifiers format of any NGSI entity.
+            - description: Array of identifiers format of any NGSI entity
               items:
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
               type: array
-            - description: Property. Array of identifiers format of any NGSI entity.
+              x-ngsi:
+                type: Property
+            - description: Array of identifiers format of any NGSI entity
               items:
                 format: uri
                 type: string
               type: array
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'
+              x-ngsi:
+                type: Property
+          description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class
+          x-ngsi:
+            model: http://schema.org/hoursAvailable
+            type: Relationship
         availableLanguage:
           anyOf:
             - anyOf:
@@ -122,43 +153,65 @@ Event:
                 - items:
                     type: string
                   type: array
-          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+          x-ngsi:
+            model: http://schema.org/availableLanguage
+            type: Property
         contactOption:
           anyOf:
             - type: string
             - items:
                 type: string
               type: array
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
+          description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)
+          x-ngsi:
+            model: http://schema.org/contactOption
+            type: Property
         contactType:
-          description: Property. Contact type of this item.
+          description: Contact type of this item
           type: string
+          x-ngsi:
+            type: Property
         email:
-          description: Property. Email address of owner.
+          description: Email address of owner
           format: idn-email
           type: string
+          x-ngsi:
+            type: Property
         faxNumber:
-          description: 'Property. Model:''http://schema.org/Text''. The fax number.'
+          description: The fax number
           type: string
+          x-ngsi:
+            model: http://schema.org/Text
+            type: Property
         name:
-          description: Property. The name of this item.
+          description: The name of this item
           type: string
+          x-ngsi:
+            type: Property
         productSupported:
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
+          description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
           type: string
+          x-ngsi:
+            model: http://schema.org/Text
+            type: Property
         telephone:
-          description: Property. Telephone of this contact.
+          description: Telephone of this contact
           type: string
+          x-ngsi:
+            type: Property
         url:
-          description: Property. URL which provides a description or further information about this item.
+          description: URL which provides a description or further information about this item
           format: uri
           type: string
+          x-ngsi:
+            type: Property
       type: object
       x-ngsi:
         model: https://schema.org/ContactPoint
         type: Property
     contentURL:
-      description: Specifies the URL to the official image or video of the Event for more information.
+      description: Specifies the URL to the official image or video of the Event for more information
       format: uri
       type: string
       x-ngsi:
@@ -171,14 +224,16 @@ Event:
             type: string
           reviews:
             items:
-              article:
-                type: string
-              origin:
-                type: string
-              ratingValue:
-                type: number
-              starRating:
-                type: number
+              properties:
+                article:
+                  type: string
+                origin:
+                  type: string
+                ratingValue:
+                  type: number
+                starRating:
+                  type: number
+              type: object
             type: array
         type: object
       type: array
@@ -196,18 +251,18 @@ Event:
         model: https://schema.org/currenciesAccepted
         type: Property
     dataProvider:
-      description: A sequence of characters identifying the provider of the harmonised data entity.
+      description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.
+      description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
@@ -218,24 +273,24 @@ Event:
       x-ngsi:
         type: Property
     director:
-      description: List of director who manage the composition.
+      description: List of director who manage the composition
       items:
         type: string
       type: array
       x-ngsi:
         type: Property
     doorTimeClose:
-      description: Doors closing time to access the show..
+      description: Doors closing time to access the show
       type: string
       x-ngsi:
         type: Property
     doorTimeOpen:
-      description: Doors opening time to access the show.
+      description: Doors opening time to access the show
       type: string
       x-ngsi:
         type: Property
     duration:
-      description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.'
+      description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**'
       type: number
       x-ngsi:
         type: Property
@@ -259,12 +314,12 @@ Event:
         model: https://schema.org/endDate
         type: Property
     eventPriceFrom:
-      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'
+      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**'
       type: number
       x-ngsi:
         type: Property
     eventPriceTo:
-      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'
+      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**'
       type: number
       x-ngsi:
         type: Property
@@ -305,7 +360,7 @@ Event:
       x-ngsi:
         type: Property
     eventStatus:
-      description: Event Status regarding this event.
+      description: Event Status regarding this event
       items:
         enum:
           - opened
@@ -321,15 +376,19 @@ Event:
       x-ngsi:
         type: Property
     id:
-      anyOf: &event_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
+      anyOf:
+        - description: Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: Property. Identifier format of any NGSI entity
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
           format: uri
           type: string
+          x-ngsi:
+            type: Property
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
@@ -350,7 +409,7 @@ Event:
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: GeoProperty. Geojson reference to the item. Point
+        - description: Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -371,7 +430,9 @@ Event:
             - coordinates
           title: GeoJSON Point
           type: object
-        - description: GeoProperty. Geojson reference to the item. LineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -395,7 +456,9 @@ Event:
             - coordinates
           title: GeoJSON LineString
           type: object
-        - description: GeoProperty. Geojson reference to the item. Polygon
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -421,7 +484,9 @@ Event:
             - coordinates
           title: GeoJSON Polygon
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiPoint
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -444,7 +509,9 @@ Event:
             - coordinates
           title: GeoJSON MultiPoint
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiLineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -470,7 +537,9 @@ Event:
             - coordinates
           title: GeoJSON MultiLineString
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiLineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -498,15 +567,17 @@ Event:
             - coordinates
           title: GeoJSON MultiPolygon
           type: object
+          x-ngsi:
+            type: GeoProperty
       x-ngsi:
         type: GeoProperty
     maximumAttendeeCapacity:
-      description: The total number of people who can attend to the Event at that location.
+      description: The total number of people who can attend to the Event at that location
       type: number
       x-ngsi:
         type: Property
     name:
-      description: The name of this item.
+      description: The name of this item
       type: string
       x-ngsi:
         type: Property
@@ -515,11 +586,14 @@ Event:
       items:
         properties:
           closes:
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'
             format: time
             type: string
+            x-ngsi:
+              type: Property
           dayOfWeek:
             anyOf:
-              - description: Property. Array of days of the week.
+              - description: Array of days of the week
                 enum:
                   - Monday
                   - Tuesday
@@ -530,7 +604,9 @@ Event:
                   - Sunday
                   - PublicHolidays
                 type: string
-              - description: Property. Array of days of the week.
+                x-ngsi:
+                  type: Property
+              - description: Array of days of the week
                 enum:
                   - https://schema.org/Monday
                   - https://schema.org/Tuesday
@@ -541,30 +617,54 @@ Event:
                   - https://schema.org/Sunday
                   - https://schema.org/PublicHolidays
                 type: string
-            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'
+                x-ngsi:
+                  type: Property
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'
             type: string
+            x-ngsi:
+              model: http://schema.org/dayOfWeek
+              type: Property
           opens:
+            description: The opening hour of the place or service on the given day(s) of the week
             format: time
             type: string
+            x-ngsi:
+              type: Property
           validFrom:
             anyOf:
-              - description: 'Property. Model:''http://schema.org/Date.'
+              - description: ""
                 format: date
                 type: string
-              - description: 'Property. Model:''http://schema.org/DateTime.'
+                x-ngsi:
+                  model: http://schema.org/Date
+                  type: Property
+              - description: ""
                 format: date-time
                 type: string
-            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'
+                x-ngsi:
+                  model: http://schema.org/DateTime
+                  type: Property
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
+            x-ngsi:
+              type: Property
           validThrough:
             anyOf:
-              - description: 'Property. Model:''http://schema.org/Date.'
+              - description: ""
                 format: date
                 type: string
-              - description: 'Property. Model:''http://schema.org/DateTime.'
+                x-ngsi:
+                  model: http://schema.org/Date
+                  type: Property
+              - description: ""
                 format: date-time
                 type: string
-            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'
+                x-ngsi:
+                  model: http://schema.org/DateTime
+                  type: Property
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
             type: string
+            x-ngsi:
+              type: Property
         type: object
       minItems: 1
       type: array
@@ -574,8 +674,22 @@ Event:
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
-        anyOf: *event_-_properties_-_owner_-_items_-_anyof
-        description: Property. Unique identifier of the entity
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         type: Property
@@ -593,7 +707,7 @@ Event:
         model: https://schema.org/paymentAccepted
         type: Property
     performer:
-      description: Main actor or presenter or musician or musical group of the event.
+      description: Main actor or presenter or musician or musical group of the event
       items:
         type: string
       type: array
@@ -612,7 +726,7 @@ Event:
       x-ngsi:
         type: Property
     priceSpecification:
-      description: A structured value representing a price or price range depending categories or public.
+      description: A structured value representing a price or price range depending categories or public
       items:
         properties:
           audience:
@@ -645,10 +759,24 @@ Event:
       x-ngsi:
         type: Property
     refPointOfInterest:
-      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.'
+      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order'
       items:
-        anyOf: *event_-_properties_-_owner_-_items_-_anyof
-        description: Property. Unique identifier of the entity
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         type: Relationship
@@ -688,7 +816,7 @@ Event:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
@@ -912,28 +1040,36 @@ Event:
       description: Reference to a list of Minor Events that are part of this major Event
       items:
         anyOf:
-          - description: Property. Identifier format of any NGSI entity
+          - description: Identifier format of any NGSI entity
             maxLength: 256
             minLength: 1
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
-          - description: Property. Identifier format of any NGSI entity
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
             format: uri
             type: string
+            x-ngsi:
+              type: Property
       type: array
       x-ngsi:
         type: Property
     superEvent:
       anyOf:
-        - description: Property. Identifier format of any NGSI entity
+        - description: Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: Property. Identifier format of any NGSI entity
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
           format: uri
           type: string
-      description: Reference to the Major Event that includes this Event.
+          x-ngsi:
+            type: Property
+      description: Reference to the Major Event that includes this Event
       x-ngsi:
         type: Property
     thematic:
@@ -944,7 +1080,7 @@ Event:
       x-ngsi:
         type: Property
     title:
-      description: ' Title of the Event.'
+      description: ' Title of the Event'
       type: string
       x-ngsi:
         type: Property
@@ -1030,20 +1166,19 @@ Event:
         model: https://schema.org/event
         type: Property
     url:
-      description: Url with image related to the item
+      description: URL which provides a description or further information about this item
       format: uri
       type: string
       x-ngsi:
-        model: https://schema.org/URL
         type: Property
     webSite:
-      description: Link to the official website for more information.
+      description: Link to the official website for more information
       format: uri
       type: string
       x-ngsi:
         type: Property
     wheelChairAccessible:
-      description: Access possible for Person with Reduced Mobility.
+      description: Access possible for Person with Reduced Mobility
       type: boolean
       x-ngsi:
         type: Property
@@ -1056,4 +1191,4 @@ Event:
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json
   x-model-tags: ""
-  x-version: 0.1.1
+  x-version: 0.2.0
