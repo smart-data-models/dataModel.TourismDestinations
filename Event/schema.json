@@ -26,7 +26,7 @@
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/touristType"
                 },
                 "url": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/url"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint/properties/url"
                 },
                 "isAccessibleForFree": {
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/isAccessibleForFree"
@@ -35,10 +35,10 @@
                     "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/publicAccess"
                 },
                 "startDate": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Date-Commons/properties/startDate"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/startDate"
                 },
                 "endDate": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Date-Commons/properties/endDate"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/endDate"
                 },
                 "refPointOfInterest": {
                     "type": "array",
