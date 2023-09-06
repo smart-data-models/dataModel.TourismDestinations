@@ -1,141 +1,135 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Événement  
+==================<!-- /10-Header -->  
+<!-- 15-License -->  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Description globale : **Événement à venir ou passé associé à ce lieu, cette organisation ou cette action**.  
+version : 0.2.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-Entité : Event  
-==============
-  
+## Liste des propriétés  
 
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.TourismDestinations/blob/master/Event/LICENSE.md)  
-
-[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-
-Description globale : **Événement à venir ou passé associé à ce lieu, cette organisation ou cette action.**  
-
-version : 0.0.1  
-
-
-## Liste des propriétés  
-
-
-- `accessPlan`:  Texte ou lien vers le plan d'accès à l'article.  
-- `actor`: Liste d'acteurs ou groupe de musique.  
-- `address`: L'adresse postale  
-- `alternateName`: Un nom alternatif pour cet élément  
-- `areaServed`: La zone géographique où un service ou un article offert est fourni  
-- `audience`: Type de public concerné par cet événement. Une combinaison de textes libres (famille, adulte, enfants, adolescent, senior, tout public, ...). Enum : "adulte, allPublic, enfants, famille, senior, adolescent".  
-- `category`: Catégorie de l'événement. Une combinaison de texte libre pour rester flexible à un contexte spécifique est proposée ci-dessous comme référentiel initial ou toute autre valeur nécessaire à une application. Enum : 'shopping, gastronomie, musée, culte religieux, parcs et jardins, histoire, activités de plein air, excursion, bien-être'.  
-- `composer`: Liste de la personne qui a écrit la composition.  
-- `contactPoint`: Les coordonnées à contacter avec l'article.  
-- `contentURL`: Spécifie l'URL de l'image ou de la vidéo officielle de l'événement pour plus d'informations.  
-- `criticReview`: Examen écrit ou publié par une source reconnue pour ses activités d'examen. Chaque article a un format basé sur la [Internationalization (i18N) - W3C recommendation for multilanguage] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les articles dans une seule propriété (ex numéro 71). Chaque article est représenté par une chaîne de caractères avec 'Language Value' : 'Article Value'.  
-- `currencyAccepted`: Monnaie acceptée pour le paiement si `isAccessibleForFree` est False. Une combinaison d'une liste de codes actifs définis dans le modèle. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Monnaies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  
-- `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  
-- `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  
-- `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  
-- `description`: Une description de cet article  
-- `director`: Liste des directeurs qui gèrent la composition.  
-- `doorTimeClose`: Heure de fermeture des portes pour accéder au spectacle..  
-- `doorTimeOpen`: Heure d'ouverture des portes pour accéder au spectacle.  
-- `duration`: La durée de chaque émission. Le code d'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **HUR** représente **Heures**.  
-- `electricTransport`:  Liste des différents types de transport électrique proposés par la ville. Une combinaison de . Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter' (bicyclette électrique, voiture électrique, moto électrique, scooter électrique)  
-- `endDate`: La date et l'heure de fin de l'élément (au format de date ISO 8601).  
-- `eventPriceFrom`: Prix minimum. Le code d'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  
-- `eventPriceTo`: Prix maximum. Le code de l'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  
-- `eventSchedule`: Un événement qui est associé à un programme en utilisant cette propriété ne doit pas avoir de propriétés `startDate` ou `endDate`. Celles-ci sont définies dans le programme associé, ce qui évite toute ambiguïté pour les clients utilisant les données. La propriété peut avoir des valeurs répétées pour spécifier différents programmes (différents mois ou saisons).  
-- `eventStatus`: Statut de l'événement concernant cet événement.  
-- `id`: Identifiant unique de l'entité  
-- `isAccessibleForFree`: Un drapeau pour signaler que l'article, l'événement ou le lieu est accessible gratuitement.  
-- `language`: Liste du langage formel utilisé pendant l'événement exprimé à partir de la norme IETF [BCP 47](https://tools.ietf.org/html/bcp47)  
-- `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  
-- `maximumAttendeeCapacity`: Le nombre total de personnes qui peuvent assister à l'événement à cet endroit.  
-- `name`: Le nom de cet élément.  
-- `openingHoursSpecification`: Une valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  
-- `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  
-- `paymentAccepted`: Paiement accepté si `isAccessibleForFree` est False. Une combinaison d'une liste de codes actifs définis dans le modèle. Enum : 'Cash, CreditCard, CryptoCurrency, other' (espèces, cartes de crédit, crypto-monnaies, autres)  
-- `performer`: Acteur ou présentateur principal ou musicien ou groupe musical de l'événement.  
-- `pitch`: Pitch de l'événement. Chaque article a le format basé sur la [Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les articles dans une seule propriété (ex numéro 71). Chaque élément est représenté par une chaîne de caractères avec Valeur de la langue : Valeur de l'article.  
-- `priceSpecification`: Une valeur structurée représentant un prix ou une fourchette de prix selon les catégories ou le public.  
-- `publicAccess`: Un indicateur pour signaler que le lieu est ouvert aux visiteurs publics. Si cette propriété est omise, il n'y a pas de valeur booléenne par défaut.  
-- `ratingValueAverage`: Valeur d'évaluation de l'événement. Directives d'utilisation : Utilisez des valeurs de 0 à 10 en fonction de votre norme. Il s'agit de la valeur moyenne de toutes les notes détaillées de l'attribut `starRatingDetailed`.  
-- `refPointOfInterest`: Référence à tous les points d'intérêt [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclus dans l'événement. La liste des POI n'a pas d'ordre chronologique.  
-- `routeType`: Liste des transports urbains (métro, Bus, Tram, ...) disponibles à proximité de l'événement selon la norme GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Une combinaison de valeurs. Enum:' bus, cableCar, cableTram, ferry, funiculaire, monorail, métro, train, tram, trolleybus'.  
-- `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  
-- `slogan`: Ligne d'en-tête de l'événement, correspond au crochet de texte.  
-- `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  
-- `starRatingDetailed`: Les évaluations détaillées par étoiles qui ont conduit à la valeur moyenne exprimée dans le ratingValue. Mode d'emploi : Une valeur structurée de 1 à 10 occurrences (étoiles) où chaque élément est une chaîne au format : `NumberOfSTar` : Pourcentage.  
-- `startDate`: La date et l'heure de début de l'élément (au format de date ISO 8601).  
-- `subCategory`: Sous-catégorie de l'attribut `category`. Une combinaison de texte libre pour rester flexible à un contexte spécifique est proposée ci-dessous comme un premier exemple ou toute autre valeur nécessaire à une application.  
-- `subEvent`: Référence à une liste d'événements mineurs qui font partie de cet événement majeur  
-- `superEvent`: Référence à l'événement majeur qui inclut cet événement.  
-- `thematic`: Une liste de thèmes en tant que mots-clés  
-- `title`:  Titre de l'événement.  
-- `touristType`: Type de tourisme en fonction du segment et de la motivation du voyage.  
-- `transportServices`: Liste des transports privés disponibles à proximité de l'événement. Par exemple taxi, uber, vtc, parkingShuttle  
-- `type`: Il doit s'agir d'un événement. Type d'entité NGSI  
-- `url`: Url avec image liée à l'article  
-- `webSite`: Lien vers le site officiel pour plus d'informations.  
-- `wheelChairAccessible`: Accès possible pour les personnes à mobilité réduite.  
-  
-
-Propriétés requises  
-- `id`  
-- `type`  
-  
-
-Ce modèle de données est basé sur la norme UNE178503. Il est également compatible avec schema.org. Certains des éléments de schema.org ont été adaptés dans ce fichier https://smart-data-models.github.io/data-models/schema-org.json. Ce type peut être utilisé seul pour décrire une destination touristique générale, ou être utilisé comme un type supplémentaire pour ajouter des propriétés touristiques à tout autre lieu. Une TouristDestination est définie comme un lieu qui contient, ou est associé à, une ou plusieurs TouristAttractions, souvent liées par un thème ou un intérêt similaire à un TouristType particulier. L'OMT définit la Destination (destination principale d'un voyage touristique) comme le lieu visité qui est central dans la décision de faire le voyage.  
-
-## Description des propriétés du modèle de données  
-
-Classés par ordre alphabétique (cliquez pour plus de détails)  
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `accessPlan[string]`:  Texte ou lien vers le plan d'accès à l'article  - `actor[array]`: Liste d'acteurs ou de groupes musicaux  - `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Le pays. Par exemple, l'Espagne  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localité dans laquelle se trouve l'adresse postale et qui se trouve dans la région  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La région dans laquelle se trouve la localité et qui se trouve dans le pays  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un district est un type de division administrative qui, dans certains pays, est géré par le gouvernement local.    
+	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: Type de public concerné par cet événement. Combinaison de textes libres (famille, adulte, enfants, adolescents, seniors, tout public, ...). Enum : "adulte, tout public, enfant, famille, senior, adolescent  - `category[array]`: Catégorie de l'événement. Une combinaison de texte libre permettant de s'adapter à un contexte spécifique est proposée ci-dessous comme référentiel initial ou toute autre valeur requise par une application. Enum : "shopping, gastronomie, musée, culte, parcs et jardins, histoire, activités de plein air, excursion, bien-être".  - `composer[array]`: Liste de la personne qui a écrit la composition  - `contactPoint[object]`: Les coordonnées à contacter avec l'article  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: Zone géographique dans laquelle un service ou un article est proposé. Remplace serviceArea    
+	- `availabilityRestriction[*]`: Cette propriété relie un point de contact à des informations sur les cas où le point de contact n'est pas disponible. Les détails sont fournis à l'aide de la classe de spécification des heures d'ouverture.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: Langue que quelqu'un peut utiliser avec ou dans l'article, le service ou le lieu. Veuillez utiliser l'un des codes de langue de la norme IETF BCP 47. L'option Texte est mise en œuvre, mais il peut s'agir également de l'option Langue.  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: Une option disponible sur ce point de contact (par exemple, un numéro gratuit ou une assistance pour les malentendants).  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+	- `contactType[string]`: Type de contact de cet article    
+	- `email[idn-email]`: Adresse électronique du propriétaire    
+	- `faxNumber[string]`: Le numéro de fax  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `name[string]`: Le nom de cet élément    
+	- `productSupported[string]`: Le produit ou le service auquel se rapporte ce point de contact d'assistance (par exemple, l'assistance produit pour une ligne de produits particulière). Il peut s'agir d'un produit ou d'une ligne de produits spécifique (par exemple "iPhone") ou d'une catégorie générale de produits ou de services (par exemple "smartphones").  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `telephone[string]`: Téléphone de ce contact    
+- `contentURL[uri]`: Spécifie l'URL de l'image ou de la vidéo officielle de l'événement pour plus d'informations.  - `criticReview[array]`: Revue écrite ou publiée par une source reconnue pour ses activités de revue. Chaque article a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les articles dans une propriété unique (ex numéro 71). Chaque élément est représenté par une chaîne de caractères avec 'Valeur de la langue' : 'Valeur de l'article'  - `currencyAccepted[array]`: Monnaie acceptée pour le paiement si `isAccessibleForFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto-monnaies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Système d'échange de devises](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `director[array]`: Liste des directeurs qui gèrent la composition  - `doorTimeClose[string]`: Heure de fermeture des portes pour accéder au spectacle  - `doorTimeOpen[string]`: Heure d'ouverture des portes pour accéder au spectacle  - `duration[number]`: La durée de chaque émission. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **HUR** représente **Heures**  - `electricTransport[array]`:  Liste des différents types de transport électrique proposés par la ville. Une combinaison de. Enum : "electricBicycle, electricCar, electricMotorBike, electricScooter" (bicyclette électrique, voiture électrique, moto électrique, scooter électrique)  - `endDate[date-time]`: La date et l'heure de fin de l'élément (dans le format de date ISO 8601).  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: Prix min. Le code d'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `eventPriceTo[number]`: Prix maximum. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `eventSchedule[array]`: Un événement associé à une programmation à l'aide de cette propriété ne doit pas avoir de propriétés `startDate` ou `endDate`. Celles-ci sont définies dans l'horaire associé, ce qui évite toute ambiguïté pour les clients qui utilisent les données. La propriété peut avoir des valeurs répétées pour spécifier différents calendriers (différents mois ou saisons).  - `eventStatus[array]`: Statut de l'événement  - `id[*]`: Identifiant unique de l'entité  - `isAccessibleForFree[boolean]`: Un drapeau signalant que l'objet, l'événement ou le lieu est accessible gratuitement.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: Liste des langages formels utilisés lors de l'événement, exprimés à partir de la norme IETF [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `maximumAttendeeCapacity[number]`: Le nombre total de personnes pouvant assister à l'événement à cet endroit.  - `name[string]`: Le nom de cet élément  - `openingHoursSpecification[array]`: Valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `paymentAccepted[array]`: Paiement accepté si `isAccessibleForFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. Enum : "Cash, CreditCard, CryptoCurrency, other" (Espèces, cartes de crédit, crypto-monnaies, autres)  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: Acteur, présentateur, musicien ou groupe musical principal de l'événement  - `pitch[array]`: Pitch de l'événement. Chaque élément a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les éléments dans une propriété unique (par exemple, le numéro 71). Chaque élément est représenté par une chaîne de caractères avec Language Value : Article Value.  - `priceSpecification[array]`: Une valeur structurée représentant un prix ou une fourchette de prix en fonction des catégories ou du public.  - `publicAccess[boolean]`: Un drapeau signalant que le lieu est ouvert aux visiteurs publics. Si cette propriété est omise, il n'y a pas de valeur booléenne par défaut.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: Valeur d'évaluation de l'événement. Conseils d'utilisation : Utilisez des valeurs comprises entre 0 et 10 en fonction de vos normes. Il s'agit de la valeur moyenne de toutes les notes détaillées de l'attribut `starRatingDetailed`.  - `refPointOfInterest[array]`: Référence à tous les points d'intérêt [Point OfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclus dans l'événement. La liste des POI n'a pas d'ordre chronologique.  - `routeType[array]`: Liste des transports urbains (métro, bus, tramway, ...) disponibles à proximité de l'événement conformément à la norme GFTS [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Une combinaison de valeurs. Enum:' bus, cableCar, cableTram, ferry, funiculaire, monorail, métro, train, tram, trolleybus'  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `slogan[string]`: Ligne d'en-tête de l'événement, correspondant au crochet de texte.  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `starRatingDetailed[object]`: Les notes détaillées par étoiles qui ont conduit à la valeur moyenne exprimée dans la valeur de la note. Mode d'emploi : Une valeur structurée de 1 à 10 occurrences (étoiles) où chaque élément est une chaîne au format : `NumberOfSTar` : Pourcentage.  	- `1`:     
+	- `10`:     
+	- `2`:     
+	- `3`:     
+	- `4`:     
+	- `5`:     
+	- `6`:     
+	- `7`:     
+	- `8`:     
+- `startDate[date-time]`: La date et l'heure de début de l'élément (au format ISO 8601).  . Model: [https://schema.org/startDate](https://schema.org/startDate)- `subCategory[array]`: Sous-catégorie de l'attribut `category`. Une combinaison de texte libre permettant de s'adapter à un contexte spécifique est proposée ci-dessous à titre d'exemple initial ou pour toute autre valeur requise par une application.  - `subEvent[array]`: Référence à une liste d'événements mineurs faisant partie de cet événement majeur  - `superEvent[*]`: Référence à l'événement majeur qui inclut cet événement  - `thematic[array]`: Une liste de mots-clés thématiques  - `title[string]`:  Titre de l'événement  - `touristType[string]`: Type de tourisme en fonction du segment et de la motivation du voyage.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transportServices[array]`: Liste des transports privés disponibles à proximité de l'événement. Par exemple, taxi, uber, vtc, parking, navette.  - `type[string]`: Il doit s'agir d'un événement. Type d'entité NGSI  . Model: [https://schema.org/event](https://schema.org/event)- `url[uri]`: URL qui fournit une description ou des informations complémentaires sur cet élément  - `webSite[uri]`: Lien vers le site officiel pour plus d'informations  - `wheelChairAccessible[boolean]`: Accès possible pour les personnes à mobilité réduite  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+Propriétés requises  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Ce modèle de données est basé sur la norme UNE178503. Il est également compatible avec schema.org. Certains éléments de schema.org ont été adaptés dans ce fichier https://smart-data-models.github.io/data-models/schema-org.json. Ce type peut être utilisé seul pour décrire une destination touristique générale, ou être utilisé comme un type supplémentaire pour ajouter des propriétés touristiques à tout autre lieu. Une TouristDestination est définie comme un lieu qui contient ou est associé à une ou plusieurs TouristAttractions, souvent liées par un thème ou un intérêt similaire à un touristType particulier. L'OMT définit la Destination (destination principale d'un voyage touristique) comme le lieu visité qui est au cœur de la décision d'entreprendre le voyage.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modèle de données description des propriétés  
+Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
-
-```yaml  
+```yaml  
 Event:    
   description: 'Upcoming or past event associated with this place, organization, or action.'    
   properties:    
     accessPlan:    
-      description: ' Text or Link to the access plan to the item.'    
+      description: ' Text or Link to the access plan to the item'    
       type: string    
       x-ngsi:    
         type: Property    
     actor:    
-      description: 'List of actors or music group.'    
+      description: List of actors or music group    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -173,33 +167,42 @@ Event:
       x-ngsi:    
         type: Property    
     composer:    
-      description: 'List of person who wrote the composition.'    
+      description: List of person who wrote the composition    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     contactPoint:    
-      description: 'The details to contact with the item.'    
+      description: The details to contact with the item    
       properties:    
         areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.'    
+          description: The geographic area where a service or offered item is provided. Supersedes serviceArea    
           type: string    
+          x-ngsi:    
+            type: Property    
         availabilityRestriction:    
           anyOf:    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 maxLength: 256    
                 minLength: 1    
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
                 type: string    
               type: array    
-            - description: 'Property. Array of identifiers format of any NGSI entity.'    
+              x-ngsi:    
+                type: Property    
+            - description: Array of identifiers format of any NGSI entity    
               items:    
                 format: uri    
                 type: string    
               type: array    
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'    
+              x-ngsi:    
+                type: Property    
+          description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class    
+          x-ngsi:    
+            model: http://schema.org/hoursAvailable    
+            type: Relationship    
         availableLanguage:    
           anyOf:    
             - anyOf:    
@@ -207,43 +210,65 @@ Event:
                 - items:    
                     type: string    
                   type: array    
-          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+          x-ngsi:    
+            model: http://schema.org/availableLanguage    
+            type: Property    
         contactOption:    
           anyOf:    
             - type: string    
             - items:    
                 type: string    
               type: array    
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'    
+          description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)    
+          x-ngsi:    
+            model: http://schema.org/contactOption    
+            type: Property    
         contactType:    
-          description: 'Property. Contact type of this item.'    
+          description: Contact type of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         email:    
-          description: 'Property. Email address of owner.'    
+          description: Email address of owner    
           format: idn-email    
           type: string    
+          x-ngsi:    
+            type: Property    
         faxNumber:    
-          description: 'Property. Model:''http://schema.org/Text''. The fax number.'    
+          description: The fax number    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         name:    
-          description: 'Property. The name of this item.'    
+          description: The name of this item    
           type: string    
+          x-ngsi:    
+            type: Property    
         productSupported:    
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'    
+          description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')    
           type: string    
+          x-ngsi:    
+            model: http://schema.org/Text    
+            type: Property    
         telephone:    
-          description: 'Property. Telephone of this contact.'    
+          description: Telephone of this contact    
           type: string    
+          x-ngsi:    
+            type: Property    
         url:    
-          description: 'Property. URL which provides a description or further information about this item.'    
+          description: URL which provides a description or further information about this item    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
         type: Property    
     contentURL:    
-      description: 'Specifies the URL to the official image or video of the Event for more information.'    
+      description: Specifies the URL to the official image or video of the Event for more information    
       format: uri    
       type: string    
       x-ngsi:    
@@ -256,14 +281,16 @@ Event:
             type: string    
           reviews:    
             items:    
-              article:    
-                type: string    
-              origin:    
-                type: string    
-              ratingValue:    
-                type: number    
-              starRating:    
-                type: number    
+              properties:    
+                article:    
+                  type: string    
+                origin:    
+                  type: string    
+                ratingValue:    
+                  type: number    
+                starRating:    
+                  type: number    
+              type: object    
             type: array    
         type: object    
       type: array    
@@ -281,46 +308,46 @@ Event:
         model: https://schema.org/currenciesAccepted    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     director:    
-      description: 'List of director who manage the composition.'    
+      description: List of director who manage the composition    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     doorTimeClose:    
-      description: 'Doors closing time to access the show..'    
+      description: Doors closing time to access the show    
       type: string    
       x-ngsi:    
         type: Property    
     doorTimeOpen:    
-      description: 'Doors opening time to access the show.'    
+      description: Doors opening time to access the show    
       type: string    
       x-ngsi:    
         type: Property    
     duration:    
-      description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**.'    
+      description: 'The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**'    
       type: number    
       x-ngsi:    
         type: Property    
@@ -337,19 +364,19 @@ Event:
       x-ngsi:    
         type: Property    
     endDate:    
-      description: 'The end date and time of the item (in ISO 8601 date format).'    
+      description: The end date and time of the item (in ISO 8601 date format).    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/endDate    
         type: Property    
     eventPriceFrom:    
-      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      description: 'Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**'    
       type: number    
       x-ngsi:    
         type: Property    
     eventPriceTo:    
-      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**.'    
+      description: 'Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **€uro**'    
       type: number    
       x-ngsi:    
         type: Property    
@@ -385,11 +412,12 @@ Event:
             type: number    
           repeatFrequency:    
             type: string    
+        type: object    
       type: array    
       x-ngsi:    
         type: Property    
     eventStatus:    
-      description: 'Event Status regarding this event.'    
+      description: Event Status regarding this event    
       items:    
         enum:    
           - opened    
@@ -405,16 +433,20 @@ Event:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &event_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     isAccessibleForFree:    
@@ -434,7 +466,7 @@ Event:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'Geoproperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -453,9 +485,11 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -477,9 +511,11 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -503,9 +539,11 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -526,9 +564,11 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -552,9 +592,11 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -580,31 +622,35 @@ Event:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
-        type: Geoproperty    
+        type: GeoProperty    
     maximumAttendeeCapacity:    
-      description: 'The total number of people who can attend to the Event at that location.'    
+      description: The total number of people who can attend to the Event at that location    
       type: number    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place    
       items:    
         properties:    
           closes:    
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           dayOfWeek:    
             anyOf:    
-              - description: 'Property. Array of days of the week.'    
+              - description: Array of days of the week    
                 enum:    
                   - Monday    
                   - Tuesday    
@@ -615,7 +661,9 @@ Event:
                   - Sunday    
                   - PublicHolidays    
                 type: string    
-              - description: 'Property. Array of days of the week.'    
+                x-ngsi:    
+                  type: Property    
+              - description: Array of days of the week    
                 enum:    
                   - https://schema.org/Monday    
                   - https://schema.org/Tuesday    
@@ -626,31 +674,54 @@ Event:
                   - https://schema.org/Sunday    
                   - https://schema.org/PublicHolidays    
                 type: string    
-            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
+                x-ngsi:    
+                  type: Property    
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'    
             type: string    
+            x-ngsi:    
+              model: http://schema.org/dayOfWeek    
+              type: Property    
           opens:    
+            description: The opening hour of the place or service on the given day(s) of the week    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           validFrom:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
+            x-ngsi:    
+              type: Property    
           validThrough:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       minItems: 1    
       type: array    
@@ -658,10 +729,24 @@ Event:
         model: https://schema.org/openingHoursSpecification    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *event_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -679,14 +764,14 @@ Event:
         model: https://schema.org/paymentAccepted    
         type: Property    
     performer:    
-      description: 'Main actor or presenter or musician or musical group of the event.'    
+      description: Main actor or presenter or musician or musical group of the event    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     pitch:    
-      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
+      description: "Pitch of the Event. Each items have the format based on the [Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization) integrating all items in a single property (ex number 71). Each item is represented by a string with Language Value : Article Value. "    
       items:    
         properties:    
           article:    
@@ -698,7 +783,7 @@ Event:
       x-ngsi:    
         type: Property    
     priceSpecification:    
-      description: 'A structured value representing a price or price range depending categories or public.'    
+      description: A structured value representing a price or price range depending categories or public    
       items:    
         properties:    
           audience:    
@@ -720,7 +805,7 @@ Event:
       x-ngsi:    
         type: Property    
     publicAccess:    
-      description: 'A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value'    
+      description: A flag to signal that the Place is open to public visitors. If this property is omitted there is no assumed default boolean value    
       type: boolean    
       x-ngsi:    
         model: https://schema.org/publicAccess    
@@ -731,10 +816,24 @@ Event:
       x-ngsi:    
         type: Property    
     refPointOfInterest:    
-      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.'    
+      description: 'Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order'    
       items:    
-        anyOf: *event_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -757,7 +856,7 @@ Event:
       x-ngsi:    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -774,7 +873,7 @@ Event:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -805,7 +904,7 @@ Event:
       x-ngsi:    
         type: Property    
     startDate:    
-      description: 'The start date and time of the item (in ISO 8601 date format).'    
+      description: The start date and time of the item (in ISO 8601 date format).    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -995,102 +1094,110 @@ Event:
       x-ngsi:    
         type: Property    
     subEvent:    
-      description: 'Reference to a list of Minor Events that are part of this major Event'    
+      description: Reference to a list of Minor Events that are part of this major Event    
       items:    
         anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
+          - description: Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     superEvent:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the Major Event that includes this Event.'    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the Major Event that includes this Event    
       x-ngsi:    
         type: Property    
     thematic:    
-      description: 'A list of thematic as keywords'    
+      description: A list of thematic as keywords    
       items:    
         type: string    
       type: array    
       x-ngsi:    
         type: Property    
     title:    
-      description: ' Title of the Event.'    
+      description: ' Title of the Event'    
       type: string    
       x-ngsi:    
         type: Property    
     touristType:    
-      description: 'Type of tourism depending on the segment and the motivation of the trip.'    
+      description: Type of tourism depending on the segment and the motivation of the trip.    
       enum:    
-        - 'ADVENTURE TOURISM'    
-        - 'ASTRONOMY TOURISM'    
-        - 'BACKPACKING TOURISM'    
-        - 'BEACH AND SUN TOURISM'    
-        - 'BEER TOURISM'    
-        - 'BIRDING TOURISM'    
-        - 'BULLFIGHTING TOURISM'    
+        - ADVENTURE TOURISM    
+        - ASTRONOMY TOURISM    
+        - BACKPACKING TOURISM    
+        - BEACH AND SUN TOURISM    
+        - BEER TOURISM    
+        - BIRDING TOURISM    
+        - BULLFIGHTING TOURISM    
         - BUSINESS    
-        - 'COMMUNITY-BASED TOURISM'    
-        - 'CRUISE TOURISM'    
-        - 'CULTURAL TOURISM'    
-        - 'CYCLING TOURISM'    
-        - 'DIVING TOURISM'    
+        - COMMUNITY-BASED TOURISM    
+        - CRUISE TOURISM    
+        - CULTURAL TOURISM    
+        - CYCLING TOURISM    
+        - DIVING TOURISM    
         - ECOTOURISM    
-        - 'EVENTS AND FESTIVALS TOURISM'    
-        - 'FAMILY TOURISM'    
-        - 'FILM TOURISM'    
-        - 'FISHING TOURISM'    
-        - 'FOOD TOURISM'    
-        - 'GAMBLING TOURISM'    
-        - 'GEOLOGICAL TOURISM'    
-        - 'HERITAGE TOURISM'    
-        - 'HUNTING TOURISM'    
-        - 'INDUSTRIAL TOURISM'    
-        - 'LANGUAGE TOURISM'    
-        - 'LGTBI TOURISM'    
-        - 'LUXURY TOURISM'    
-        - 'MEDICAL TOURISM'    
-        - 'MEMORIAL TOURISM'    
-        - 'MICE TOURISM'    
-        - 'NATURE TOURISM'    
-        - 'OLIVE OIL TOURISM'    
-        - 'PARTY TOURISM'    
-        - 'PHOTOGRAPHY TOURISM'    
-        - 'RELIGIOUS TOURISM'    
-        - 'ROMANTIC TOURISM'    
-        - 'RURAL TOURISM'    
-        - 'SAFARI TOURISM'    
-        - 'SAILING TOURISM'    
-        - 'SENIOR TOURISM'    
-        - 'SHOPPING TOURISM'    
-        - 'SHORT BREAK TOURISM'    
-        - 'SINGLES TOURISM'    
-        - 'SPORTS TOURISM'    
+        - EVENTS AND FESTIVALS TOURISM    
+        - FAMILY TOURISM    
+        - FILM TOURISM    
+        - FISHING TOURISM    
+        - FOOD TOURISM    
+        - GAMBLING TOURISM    
+        - GEOLOGICAL TOURISM    
+        - HERITAGE TOURISM    
+        - HUNTING TOURISM    
+        - INDUSTRIAL TOURISM    
+        - LANGUAGE TOURISM    
+        - LGTBI TOURISM    
+        - LUXURY TOURISM    
+        - MEDICAL TOURISM    
+        - MEMORIAL TOURISM    
+        - MICE TOURISM    
+        - NATURE TOURISM    
+        - OLIVE OIL TOURISM    
+        - PARTY TOURISM    
+        - PHOTOGRAPHY TOURISM    
+        - RELIGIOUS TOURISM    
+        - ROMANTIC TOURISM    
+        - RURAL TOURISM    
+        - SAFARI TOURISM    
+        - SAILING TOURISM    
+        - SENIOR TOURISM    
+        - SHOPPING TOURISM    
+        - SHORT BREAK TOURISM    
+        - SINGLES TOURISM    
+        - SPORTS TOURISM    
         - TOURISM    
-        - 'TREKKING TOURISM'    
-        - 'URBAN TOURISM'    
-        - 'WATER SPORTS TOURISM'    
-        - 'WEDDING & HONEYMOON TOURISM'    
-        - 'WELLNESS TOURISM'    
-        - 'WHISKY TOURISM'    
-        - 'WINE TOURISM'    
-        - 'WINTER SPORTS TOURISM'    
-        - 'WOMEN TOURISM'    
+        - TREKKING TOURISM    
+        - URBAN TOURISM    
+        - WATER SPORTS TOURISM    
+        - WEDDING & HONEYMOON TOURISM    
+        - WELLNESS TOURISM    
+        - WHISKY TOURISM    
+        - WINE TOURISM    
+        - WINTER SPORTS TOURISM    
+        - WOMEN TOURISM    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -1108,7 +1215,7 @@ Event:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'It has to be Event. NGSI entity type'    
+      description: It has to be Event. NGSI entity type    
       enum:    
         - Event    
       type: string    
@@ -1116,20 +1223,19 @@ Event:
         model: https://schema.org/event    
         type: Property    
     url:    
-      description: 'Url with image related to the item'    
+      description: URL which provides a description or further information about this item    
       format: uri    
       type: string    
       x-ngsi:    
-        model: https://schema.org/URL    
         type: Property    
     webSite:    
-      description: 'Link to the official website for more information.'    
+      description: Link to the official website for more information    
       format: uri    
       type: string    
       x-ngsi:    
         type: Property    
     wheelChairAccessible:    
-      description: 'Access possible for Person with Reduced Mobility.'    
+      description: Access possible for Person with Reduced Mobility    
       type: boolean    
       x-ngsi:    
         type: Property    
@@ -1138,23 +1244,23 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.1    
+  x-version: 0.2.0    
 ```  
 </details>    
-
-## Exemples de charges utiles  
-
-#### Événement Valeurs-clés NGSI-v2 Exemple  
-
-Voici un exemple d'événement au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
-
-```json  
-
-{  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Exemples de charges utiles  
+#### Événement Valeurs clés de l'INSIG-v2 Exemple  
+Voici un exemple d'événement au format JSON-LD en tant que valeurs clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données de contexte d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
   "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
@@ -1344,14 +1450,12 @@ Voici un exemple d'événement au format JSON-LD en tant que valeurs-clés. Ceci
   ]  
 }  
 ```  
-
-#### Événement NGSI-v2 normalisé Exemple  
-
-Voici un exemple d'un événement au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-
-```json  
-
-{  
+</details>  
+#### Événement NGSI-v2 normalisé Exemple  
+Voici un exemple d'événement au format JSON-LD tel qu'il a été normalisé. Ce format est compatible avec la norme NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
   "id": {  
     "type": "Text",  
     "value": "uri:ngsi:event:1"  
@@ -1395,14 +1499,12 @@ Voici un exemple d'un événement au format JSON-LD tel que normalisé. Ce forma
   }  
 }  
 ```  
-
-#### Événement Valeurs-clés NGSI-LD Exemple  
-
-Voici un exemple d'événement au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
-
-```json  
-
-{  
+</details>  
+#### Événement Valeurs clés NGSI-LD Exemple  
+Voici un exemple d'événement au format JSON-LD sous forme de valeurs clés. Ceci est compatible avec NGSI-LD lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
     "id": "uri:ngsi:event:1",  
     "type": "Event",  
     "address": {  
@@ -1425,14 +1527,12 @@ Voici un exemple d'événement au format JSON-LD sous forme de valeurs-clés. Ce
     ]  
 }  
 ```  
-
-#### Événement NGSI-LD normalisé Exemple  
-
-Voici un exemple d'un événement au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
-
-```json  
-
-{  
+</details>  
+#### Événement NGSI-LD normalisé Exemple  
+Voici un exemple d'événement au format JSON-LD tel qu'il a été normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
     "id": "urn:ngsi-ld:Event:Event:MNCA-EV-NCE-12552-MARIAGEDENFER",  
     "type": "Event",  
     "accessPlan": {  
@@ -1791,5 +1891,12 @@ Voici un exemple d'un événement au format JSON-LD tel que normalisé. Ce forma
     ]  
 }  
 ```  
-
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10] (https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse à la question de savoir comment traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
