@@ -15,7 +15,14 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `consumptionBehaviour[array]`: Relationship. An array of ConsumptionBehaviour data models.  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `endDate[string]`: Property. End date of the tourist rental.  - `id[*]`: Unique identifier of the entity  - `leadTourist[*]`: Relationship. Reference to the 'tourist' or 'touristProfile' associated with the rental transaction.  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `rentalSource[*]`: Relationship. The object that is rented.  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `startDate[string]`: Property. Start date of the tourist rental.  - `type[string]`: Property. NGSI type. It has to be TouristRental  <!-- /30-PropertiesList -->  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `consumptionBehaviour[array]`: An array of ConsumptionBehaviour data models  - `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `description[string]`: A description of this item  - `endDate[date-time]`: End date of the tourist rental  - `id[*]`: Unique identifier of the entity  - `leadTourist[*]`: Reference to the 'tourist' or 'touristProfile' associated with the rental transaction  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `rentalSource[*]`: The object that is rented  - `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `startDate[date-time]`: Start date of the tourist rental  - `type[string]`: NGSI type. It has to be TouristRental  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -35,29 +42,51 @@ TouristRental:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'Property. A district is a type of administrative division that, in some countries, is managed by the local government'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Property. Number identifying a specific property on a public street    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
@@ -74,18 +103,24 @@ TouristRental:
         model: https://schema.org/Text    
         type: Property    
     consumptionBehaviour:    
-      description: Relationship. An array of ConsumptionBehaviour data models.    
+      description: An array of ConsumptionBehaviour data models    
       items:    
-        anyOf: &touristrental_-_properties_-_id_-_anyof    
-          - description: Property. Identifier format of any NGSI entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: Property. Identifier format of any NGSI entity    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
             format: uri    
             type: string    
-        description: Property. Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Relationship    
@@ -112,25 +147,49 @@ TouristRental:
       x-ngsi:    
         type: Property    
     endDate:    
-      description: Property. End date of the tourist rental.    
+      description: End date of the tourist rental    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: *touristrental_-_properties_-_id_-_anyof    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     leadTourist:    
-      anyOf: *touristrental_-_properties_-_id_-_anyof    
-      description: Relationship. Reference to the 'tourist' or 'touristProfile' associated with the rental transaction.    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the 'tourist' or 'touristProfile' associated with the rental transaction    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -151,7 +210,9 @@ TouristRental:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -175,7 +236,9 @@ TouristRental:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -201,7 +264,9 @@ TouristRental:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -224,7 +289,9 @@ TouristRental:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -250,7 +317,9 @@ TouristRental:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -278,6 +347,8 @@ TouristRental:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
@@ -288,14 +359,40 @@ TouristRental:
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *touristrental_-_properties_-_id_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     rentalSource:    
-      anyOf: *touristrental_-_properties_-_id_-_anyof    
-      description: Relationship. The object that is rented.    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: The object that is rented    
       x-ngsi:    
         type: Property    
     seeAlso:    
@@ -316,13 +413,13 @@ TouristRental:
       x-ngsi:    
         type: Property    
     startDate:    
-      description: Property. Start date of the tourist rental.    
+      description: Start date of the tourist rental    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: Property. NGSI type. It has to be TouristRental    
+      description: NGSI type. It has to be TouristRental    
       enum:    
         - TouristRental    
       type: string    
