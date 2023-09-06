@@ -15,7 +15,24 @@
 ## プロパティのリスト  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
-- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `ageRange[object]`: プロパティ。プロファイルされた人の年齢層。  - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `avgDailyAccommodationAndBoardExpenditure[object]`: 物件。宿泊施設から請求される宿泊・食事コンセプトの1日平均金額の範囲。  - `avgDailyExpenditure[object]`: プロパティ宿泊施設が請求する1日の平均金額の範囲。  - `avgDailyExtraExpenditure[object]`: プロパティ宿泊施設が請求する追加概念の1日平均金額の範囲  - `board[string]`: プロパティ。通常のボードタイプの予約。列挙：「RO、BB、HB、FB、AI」。  - `bookingChannel[string]`: プロパティ。観光客が予約に使用するチャンネル。  - `country[string]`: 財産国籍 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `gender[string]`: プロパティ。プロファイル対象者の性別。Enum:'女性、男性'。  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `lodgingCategory[string]`: 物件。宿泊施設の通常のカテゴリー。Enum:'1, 1 Superior, 2, 2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior'.  - `lodgingSize[object]`: 物件宿泊施設の部屋数の範囲  - `lodgingType[string]`: 物件通常のタイプの宿泊施設。将来UNE178506を参照する可能性がある。Enum:'ホテル、リゾート、ホステル、モーテル、B&B、アパートホテル、ロッジ'.  - `name[string]`: このアイテムの名前。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `reservationLeadTime[object]`: 物件予約からチェックインまでの日数  - `roomOfStayType[string]`: 物件予約した宿泊施設の部屋タイプ。Enum:'Apartment, Bungalow, Studio, Single, Double, Family, Junior Suite, Senior/Executive Suite, Royal/Presidential Suite'.  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨します。  - `stayLength[object]`: 物件宿泊数の範囲  - `totalAccommodationAndBoardExpenditure[object]`: 物件。宿泊施設から請求された宿泊・食事コンセプトの合計金額の範囲。  - `totalExpenditure[object]`: 物件。宿泊施設からの請求金額の総額の範囲。  - `totalExtraExpenditure[object]`: プロパティ。宿泊施設が追加コンセプトで請求した合計金額の範囲。  - `travelPartyComposition[string]`: 物件大人と子供の人数に基づく旅行者の構成。Enum:'Single, Single parent, Family, Couple, Friends/Relatives'.  - `type[string]`: プロパティ。NGSI エンティティタイプ。TouristProfile でなければならない。  <!-- /30-PropertiesList -->  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国。例えば、スペイン  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 番地がある地域と、その地域に含まれる地域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: その地域がある地域、またその国がある地域  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区とは行政区画の一種で、国によっては地方自治体によって管理されている。    
+	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `ageRange[object]`: プロファイル対象者の年齢層  	- `range[string]`: ageRangeの値。sortingOrder で定義された範囲を使用します。    
+- `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `avgDailyAccommodationAndBoardExpenditure[object]`: 宿泊施設から請求される宿泊・食事コンセプトの1日平均金額の範囲  	- `range[string]`: avgDailyAccommodationAndBoardExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `avgDailyExpenditure[object]`: 宿泊施設が請求する1日の平均金額の範囲  	- `range[string]`: avgDailyExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `avgDailyExtraExpenditure[object]`: 宿泊施設が請求する追加概念の1日平均金額の範囲  	- `range[string]`: avgDailyExtraExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `board[string]`: 通常のボードタイプの予約。列挙：「RO、BB、HB、FB、AI  - `bookingChannel[string]`: 旅行者が予約のために使用するチャンネル  - `country[string]`: 国籍 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `gender[string]`: プロファイル対象者の性別。Enum:'女性, 男性'  - `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `lodgingCategory[string]`: 宿泊施設の通常のカテゴリー。Enum:'1, 1スーペリア, 2, 2スーペリア, 3, 3スーペリア, 4, 4スーペリア, 5, 5スーペリア'  - `lodgingSize[object]`: 宿泊施設の部屋数の範囲  	- `range[string]`: lodgingSize の値。sortingOrder で定義された範囲を使用します。    
+- `lodgingType[string]`: 通常のタイプの宿泊施設。将来的にはUNE178506を参照することができる。Enum:'ホテル、リゾート、ホステル、モーテル、B&B、アパートホテル、ロッジ'  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `reservationLeadTime[object]`: 予約からチェックインまでの日数  	- `range[string]`: reservationLeadTimeの値。sortingOrder で定義された範囲を使用します。    
+- `roomOfStayType[string]`: 予約された宿泊施設の部屋タイプEnum:'アパートメント, バンガロー, スタジオ, シングル, ダブル, ファミリー, ジュニアスイート, シニア/エグゼクティブスイート, ロイヤル/プレジデンシャルスイート'  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `stayLength[object]`: 宿泊日数の範囲  	- `range[string]`: stayLengthの値。sortingOrder で定義された範囲を使用する。    
+- `totalAccommodationAndBoardExpenditure[object]`: 宿泊施設から請求された宿泊・食事コンセプトの合計金額の範囲  	- `range[string]`: totalAccommodationAndBoardExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `totalExpenditure[object]`: 宿泊施設からの請求金額合計の範囲  	- `range[string]`: totalExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `totalExtraExpenditure[object]`: 宿泊施設が請求する追加概念の合計金額の範囲  	- `range[string]`: totalExtraExpenditure の値。sortingOrder で定義された範囲を使用します。    
+- `travelPartyComposition[string]`: 大人と子供の人数に基づく旅行者の構成。Enum:'シングル, シングルペアレント, ファミリー, カップル, 友人/親戚'  - `type[string]`: NGSI エンティティタイプ。TouristProfileでなければならない。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -36,44 +53,70 @@ TouristProfile:
       description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
         district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
           type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
         streetNr:    
-          description: Number identifying a specific property on a public street.    
+          description: Number identifying a specific property on a public street    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     ageRange:    
-      description: Property. Age range of the person profiled.    
+      description: Age range of the person profiled    
       properties:    
         range:    
-          description: Property. Value of ageRange. It uses the ranges defined by sortingOrder.    
+          description: Value of ageRange. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of different age groups for ageRange. OrderedSet: ''0-1, 2-5, 6-11, 12-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65+''.'    
+          description: 'Ordered set of different age groups for ageRange. OrderedSet: ''0-1, 2-5, 6-11, 12-17, 18-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65+'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -89,49 +132,61 @@ TouristProfile:
         model: https://schema.org/Text    
         type: Property    
     avgDailyAccommodationAndBoardExpenditure:    
-      description: Property. Range of avg daily amount of money invoiced by the lodging establishment in accommodation and board concepts.    
+      description: Range of avg daily amount of money invoiced by the lodging establishment in accommodation and board concepts    
       properties:    
         range:    
-          description: Property. Value of avgDailyAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of avgDailyAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for avgDailyAccommodationAndBoardExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €'''    
+          description: 'Ordered set of range of money amounts for avgDailyAccommodationAndBoardExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     avgDailyExpenditure:    
-      description: Property. Range of avg daily amount of money invoiced by the lodging establishment.    
+      description: Range of avg daily amount of money invoiced by the lodging establishment    
       properties:    
         range:    
-          description: Property. Value of avgDailyExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of avgDailyExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for avgDailyExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €''.'    
+          description: 'Ordered set of range of money amounts for avgDailyExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     avgDailyExtraExpenditure:    
-      description: Property. Range of avg daily amount of money invoiced by the lodging establishment in extra concepts    
+      description: Range of avg daily amount of money invoiced by the lodging establishment in extra concepts    
       properties:    
         range:    
-          description: Property. Value of avgDailyExtraExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of avgDailyExtraExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for avgDailyExtraExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €'''    
+          description: 'Ordered set of range of money amounts for avgDailyExtraExpenditure. OrderedSet: ''0 to 24 €, 25 to 49 €, 50 to 74 €, 75 to 99 €, 100 to 149 €, 150 to 199 €, 200 to 249 €, 250 to 299 €, 300 to 399 €, 400 to 499 €, 500 to 599 €, 600+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     board:    
-      description: 'Property. Usual type of board type reserved. Enum:''RO, BB, HB, FB, AI''.'    
+      description: 'Usual type of board type reserved. Enum:''RO, BB, HB, FB, AI'''    
       enum:    
         - RO    
         - BB    
@@ -142,28 +197,28 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     bookingChannel:    
-      description: Property. Channel used by the tourist for the reservation.    
+      description: Channel used by the tourist for the reservation    
       type: string    
       x-ngsi:    
         type: Property    
     country:    
-      description: 'Property. Country of nationality - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.'    
+      description: 'Country of nationality - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2'    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -174,7 +229,7 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     gender:    
-      description: 'Property. Gender of the person profiled. Enum:''Female, Male''.'    
+      description: 'Gender of the person profiled. Enum:''Female, Male'''    
       enum:    
         - Female    
         - Male    
@@ -182,22 +237,26 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &touristprofile_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: GeoProperty. Geojson reference to the item. Point    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -218,7 +277,9 @@ TouristProfile:
             - coordinates    
           title: GeoJSON Point    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. LineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -242,7 +303,9 @@ TouristProfile:
             - coordinates    
           title: GeoJSON LineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. Polygon    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -268,7 +331,9 @@ TouristProfile:
             - coordinates    
           title: GeoJSON Polygon    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiPoint    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -291,7 +356,9 @@ TouristProfile:
             - coordinates    
           title: GeoJSON MultiPoint    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -317,7 +384,9 @@ TouristProfile:
             - coordinates    
           title: GeoJSON MultiLineString    
           type: object    
-        - description: GeoProperty. Geojson reference to the item. MultiLineString    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -345,10 +414,12 @@ TouristProfile:
             - coordinates    
           title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     lodgingCategory:    
-      description: 'Property. Usual category of the lodging. Enum:''1, 1 Superior, 2, 2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior''.'    
+      description: 'Usual category of the lodging. Enum:''1, 1 Superior, 2, 2 Superior, 3, 3 Superior, 4, 4 Superior, 5, 5 Superior'''    
       enum:    
         - 1    
         - 1 Superior    
@@ -364,21 +435,25 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     lodgingSize:    
-      description: Property. Range size in number of rooms of the lodging    
+      description: Range size in number of rooms of the lodging    
       properties:    
         range:    
-          description: Property. Value of lodgingSize. It uses the ranges defined by sortingOrder.    
+          description: Value of lodgingSize. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of intervals of the quantity of rooms for lodgingSize. OrderedSet: ''0 - 24 very small, 25 - 100 small, 101 - 300 medium, 301 - 700 large, 701 - 1200 very large, 1201+ massive'''    
+          description: 'Ordered set of intervals of the quantity of rooms for lodgingSize. OrderedSet: ''0 - 24 very small, 25 - 100 small, 101 - 300 medium, 301 - 700 large, 701 - 1200 very large, 1201+ massive'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     lodgingType:    
-      description: 'Property. Usual type of lodging for the stay. Could reference UNE178506 in the future. Enum:''Hotel, Resort, Hostel, Motel, B&B, Aparthotel, Lodge''.'    
+      description: 'Usual type of lodging for the stay. Could reference UNE178506 in the future. Enum:''Hotel, Resort, Hostel, Motel, B&B, Aparthotel, Lodge'''    
       enum:    
         - Hotel    
         - Resort    
@@ -391,34 +466,52 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *touristprofile_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     reservationLeadTime:    
-      description: Property. Range of days between booking and check-in.    
+      description: Range of days between booking and check-in    
       properties:    
         range:    
-          description: Property. Value of reservationLeadTime. It uses the ranges defined by sortingOrder.    
+          description: Value of reservationLeadTime. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of days for reservationLeadTime. OrderedSet: ''1 to 7 days, 8 to 14 days, 15 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 120 days, 121 to 240 days, 241 to 365 days, 366+ days''.'    
+          description: 'Ordered set of range of days for reservationLeadTime. OrderedSet: ''1 to 7 days, 8 to 14 days, 15 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 120 days, 121 to 240 days, 241 to 365 days, 366+ days'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     roomOfStayType:    
-      description: 'Property. Usual type of the accommodation room reserved. Enum:''Apartment, Bungalow, Studio, Single, Double, Family, Junior Suite, Senior/Executive Suite, Royal/Presidential Suite''.'    
+      description: 'Usual type of the accommodation room reserved. Enum:''Apartment, Bungalow, Studio, Single, Double, Family, Junior Suite, Senior/Executive Suite, Royal/Presidential Suite'''    
       enum:    
         - Apartment    
         - Bungalow    
@@ -445,68 +538,84 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     stayLength:    
-      description: Property. Range of number of staying nights.    
+      description: Range of number of staying nights    
       properties:    
         range:    
-          description: Property. Value of stayLength. It uses the ranges defined by sortingOrder.    
+          description: Value of stayLength. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of nights for stayLength. OrderedSet: ''1 night, 2 to 4 nights, 5 to 7 nights, 8 to 14 nights, 15 to 21 nights, 22+ nights''.'    
+          description: 'Ordered set of range of nights for stayLength. OrderedSet: ''1 night, 2 to 4 nights, 5 to 7 nights, 8 to 14 nights, 15 to 21 nights, 22+ nights'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     totalAccommodationAndBoardExpenditure:    
-      description: Property. Range of total amount of money invoiced by the lodging establishment in accommodation and board concepts.    
+      description: Range of total amount of money invoiced by the lodging establishment in accommodation and board concepts    
       properties:    
         range:    
-          description: Property. Value of totalAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of totalAccommodationAndBoardExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for totalAccommodationAndBoardExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €''.'    
+          description: 'Ordered set of range of money amounts for totalAccommodationAndBoardExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     totalExpenditure:    
-      description: Property. Range of total amount of money invoiced by the lodging establishment.    
+      description: Range of total amount of money invoiced by the lodging establishment    
       properties:    
         range:    
-          description: Property. Value of totalExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of totalExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for totalExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €''.'    
+          description: 'Ordered set of range of money amounts for totalExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     totalExtraExpenditure:    
-      description: Property. Range of total amount of money invoiced by the lodging establishment in extra concepts.    
+      description: Range of total amount of money invoiced by the lodging establishment in extra concepts    
       properties:    
         range:    
-          description: Property. Value of totalExtraExpenditure. It uses the ranges defined by sortingOrder.    
+          description: Value of totalExtraExpenditure. It uses the ranges defined by sortingOrder    
           type: string    
+          x-ngsi:    
+            type: Property    
         sortingOrder:    
-          description: 'Property. Ordered set of range of money amounts for totalExtraExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €''.'    
+          description: 'Ordered set of range of money amounts for totalExtraExpenditure. OrderedSet: ''0 to 249 €, 250 to 499 €, 500 to 749 €, 750 to 999 €, 1000 to 1499 €, 1500 to 1999 €, 2000 to 2999 €, 3000 to 3999 €, 4000 to 4999 €, 5000+ €'''    
           items:    
             type: string    
           type: array    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     travelPartyComposition:    
-      description: 'Property. Composition of the travelling party based on the number of adults and children. Enum:''Single, Single parent, Family, Couple, Friends/Relatives''.'    
+      description: 'Composition of the travelling party based on the number of adults and children. Enum:''Single, Single parent, Family, Couple, Friends/Relatives'''    
       enum:    
         - Single    
         - Single parent    
@@ -517,7 +626,7 @@ TouristProfile:
       x-ngsi:    
         type: Property    
     type:    
-      description: Property. NGSI Entity type. It has to be TouristProfile.    
+      description: NGSI Entity type. It has to be TouristProfile    
       enum:    
         - TouristProfile    
       type: string    
@@ -531,7 +640,7 @@ TouristProfile:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristProfile/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristProfile/schema.json    
-  x-model-tags: ""    
+  x-model-tags: 'TOURiLab, Sustainability'    
   x-version: 0.0.1    
 ```  
 </details>    
