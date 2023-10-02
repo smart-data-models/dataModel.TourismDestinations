@@ -1,3 +1,3 @@
-/* (Beta) Export of data model TouristDestination of the subject dataModel.TourismDestinations for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model TouristDestination of the subject dataModel.TourismDestinations for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE TouristDestination_type AS ENUM ('TouristDestination');
-CREATE TABLE TouristDestination (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, includesAttraction json, location json, name text, owner json, seeAlso json, source text, type TouristDestination_type);
+CREATE TABLE TouristDestination (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, includesAttraction JSON, name TEXT, owner JSON, source TEXT, type TouristDestination_type);
