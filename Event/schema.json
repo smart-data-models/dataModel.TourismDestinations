@@ -253,7 +253,13 @@
                             "swimmingPool",
                             "relaxationArea",
                             "massage",
-                            "careCenter"
+                            "careCenter",
+                            "--spectacle--",
+                            "cabaret",
+                            "theater",
+                            "boulevard",
+                            "vaudeville",
+                            "humor"
                         ]
                     }
                 },
