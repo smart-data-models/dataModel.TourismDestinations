@@ -1032,6 +1032,12 @@ Event:
           - relaxationArea
           - massage
           - careCenter
+          - --spectacle--
+          - cabaret
+          - theater
+          - boulevard
+          - vaudeville
+          - humor
         type: string
       type: array
       x-ngsi:
