@@ -12,7 +12,7 @@
             "displayName": "accessPlan",
             "@type": "Property",
             "schema": "string",
-            "comment": " Text or Link to the access plan to the item."
+            "comment": " Text or Link to the access plan to the item"
         },
         {
             "name": "alternateName",
@@ -36,7 +36,7 @@
             "displayName": "contentURL",
             "@type": "Property",
             "schema": "string",
-            "comment": "Specifies the URL to the official image or video of the Event for more information."
+            "comment": "Specifies the URL to the official image or video of the Event for more information"
         },
         {
             "name": "dataProvider",
@@ -44,7 +44,7 @@
             "displayName": "dataProvider",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity"
         },
         {
             "name": "dateCreated",
@@ -52,7 +52,7 @@
             "displayName": "dateCreated",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform"
         },
         {
             "name": "dateModified",
@@ -60,7 +60,7 @@
             "displayName": "dateModified",
             "@type": "Property",
             "schema": "dateTime",
-            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform"
         },
         {
             "name": "description",
@@ -76,7 +76,7 @@
             "displayName": "doorTimeClose",
             "@type": "Property",
             "schema": "string",
-            "comment": "Doors closing time to access the show.."
+            "comment": "Doors closing time to access the show"
         },
         {
             "name": "doorTimeOpen",
@@ -84,7 +84,7 @@
             "displayName": "doorTimeOpen",
             "@type": "Property",
             "schema": "string",
-            "comment": "Doors opening time to access the show."
+            "comment": "Doors opening time to access the show"
         },
         {
             "name": "duration",
@@ -92,7 +92,7 @@
             "displayName": "duration",
             "@type": "Property",
             "schema": "long",
-            "comment": "The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**."
+            "comment": "The duration of each show. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **HUR** represents **Hours**"
         },
         {
             "name": "endDate",
@@ -108,7 +108,7 @@
             "displayName": "eventPriceFrom",
             "@type": "Property",
             "schema": "long",
-            "comment": "Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**."
+            "comment": "Min Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**"
         },
         {
             "name": "eventPriceTo",
@@ -116,7 +116,7 @@
             "displayName": "eventPriceTo",
             "@type": "Property",
             "schema": "long",
-            "comment": "Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**."
+            "comment": "Max Price. The unit code (text) of measurement is given using the [UN/CEFACT Common Codes](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). For instance, **EUR** represents **\u20acuro**"
         },
         {
             "name": "isAccessibleForFree",
@@ -127,12 +127,17 @@
             "comment": "A flag to signal that the item, event, or place is accessible for free."
         },
         {
+            "name": "location",
+            "writable": true,
+            "displayName": "location"
+        },
+        {
             "name": "maximumAttendeeCapacity",
             "writable": true,
             "displayName": "maximumAttendeeCapacity",
             "@type": "Property",
             "schema": "long",
-            "comment": "The total number of people who can attend to the Event at that location."
+            "comment": "The total number of people who can attend to the Event at that location"
         },
         {
             "name": "name",
@@ -140,7 +145,7 @@
             "displayName": "name",
             "@type": "Property",
             "schema": "string",
-            "comment": "The name of this item."
+            "comment": "The name of this item"
         },
         {
             "name": "publicAccess",
@@ -177,7 +182,7 @@
             "displayName": "source",
             "@type": "Property",
             "schema": "string",
-            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object"
         },
         {
             "name": "startDate",
@@ -198,7 +203,7 @@
             "displayName": "title",
             "@type": "Property",
             "schema": "string",
-            "comment": " Title of the Event."
+            "comment": " Title of the Event"
         },
         {
             "name": "url",
@@ -206,7 +211,7 @@
             "displayName": "url",
             "@type": "Property",
             "schema": "string",
-            "comment": "Url with image related to the item"
+            "comment": "URL which provides a description or further information about this item"
         },
         {
             "name": "webSite",
@@ -214,7 +219,7 @@
             "displayName": "webSite",
             "@type": "Property",
             "schema": "string",
-            "comment": "Link to the official website for more information."
+            "comment": "Link to the official website for more information"
         },
         {
             "name": "wheelChairAccessible",
@@ -222,7 +227,7 @@
             "displayName": "wheelChairAccessible",
             "@type": "Property",
             "schema": "boolean",
-            "comment": "Access possible for Person with Reduced Mobility."
+            "comment": "Access possible for Person with Reduced Mobility"
         },
         {
             "@type": "Telemetry",
@@ -231,7 +236,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "List of actors or music group.",
+            "comment": "List of actors or music group",
             "displayName": "actor"
         },
         {
@@ -261,7 +266,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "List of person who wrote the composition.",
+            "comment": "List of person who wrote the composition",
             "displayName": "composer"
         },
         {
@@ -291,7 +296,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "List of director who manage the composition.",
+            "comment": "List of director who manage the composition",
             "displayName": "director"
         },
         {
@@ -321,7 +326,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Event Status regarding this event.",
+            "comment": "Event Status regarding this event",
             "displayName": "eventStatus"
         },
         {
@@ -371,7 +376,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Main actor or presenter or musician or musical group of the event.",
+            "comment": "Main actor or presenter or musician or musical group of the event",
             "displayName": "performer"
         },
         {
@@ -391,7 +396,7 @@
                 "@type": "Array",
                 "elementSchema": "object"
             },
-            "comment": "A structured value representing a price or price range depending categories or public.",
+            "comment": "A structured value representing a price or price range depending categories or public",
             "displayName": "priceSpecification"
         },
         {
@@ -401,7 +406,7 @@
                 "@type": "Array",
                 "elementSchema": "string"
             },
-            "comment": "Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order.",
+            "comment": "Reference to all the Point Of interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) included in the Event. The POI list does not have a chronological order",
             "displayName": "refPointOfInterest"
         },
         {
@@ -473,6 +478,10 @@
                     "schema": "string"
                 },
                 {
+                    "name": "district",
+                    "schema": "string"
+                },
+                {
                     "name": "postOfficeBoxNumber",
                     "schema": "string"
                 },
@@ -483,13 +492,17 @@
                 {
                     "name": "streetAddress",
                     "schema": "string"
+                },
+                {
+                    "name": "streetNr",
+                    "schema": "string"
                 }
             ]
         },
         {
             "@type": "object",
             "name": "contactPoint",
-            "comment": "The details to contact with the item.",
+            "comment": "The details to contact with the item",
             "displayName": "contactPoint",
             "fields": [
                 {
@@ -585,36 +598,6 @@
                     "schema": "long"
                 }
             ]
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Point",
-            "schema": "point"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_LineString",
-            "schema": "lineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_Polygon",
-            "schema": "polygon"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPoint",
-            "schema": "multiPoint"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiLineString",
-            "schema": "multiLineString"
-        },
-        {
-            "@type": "Telemetry",
-            "name": "location_MultiPolygon",
-            "schema": "multiPolygon"
         },
         {
             "@type": "Telemetry",
