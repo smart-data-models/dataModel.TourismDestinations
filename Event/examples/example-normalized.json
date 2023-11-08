@@ -12,9 +12,12 @@
     "value": "Concierto de Revólver"
   },
   "address": {
-    "addressLocality": "Salamanca",
-    "postalCode": "37008",
-    "streetAddress": "Calle Monte Olivete, s/n"
+    "type": "StructuredValue",
+    "value": {
+      "addressLocality": "Salamanca",
+      "postalCode": "37008",
+      "streetAddress": "Calle Monte Olivete, s/n"
+    }
   },
   "startDate": {
     "type": "Text",
