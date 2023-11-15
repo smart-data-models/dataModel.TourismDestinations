@@ -1,72 +1,220 @@
 {
-    "id": "urn:hosp:tourpro:0001",
-    "type": "TouristProfile",
-    "country": {
-        "type": "Text",
-        "value": "NL"
-    },
-    "ageRange": {
-            "type": "Text",
-            "value": "30-34"
-    },
-    "gender": {
-        "type": "Text",
-        "value": "Male"
-    },
-    "travelPartyComposition": {
-        "type": "Text",
-        "value": "Couple"
-    },
-    "lodgingType": {
-        "type": "Text",
-        "value": "Resort"
-    },
-    "lodgingCategory": {
-        "type": "Text",
-        "value": "4"
-    },
-    "lodgingSize": {
-        "type": "Text",
-        "value": "101 - 300 Medium"
-    },
-    "roomOfStayType": {
-        "type": "Text",
-        "value": "Double"
-    },
-    "board": {
-        "type": "Text",
-        "value": "HB"
-    },
-    "bookingChannel": {
-        "type": "Text",
-        "value": "Tour Operator"
-    },
-    "reservationLeadTime": {
-        "type": "Text",
-        "value": "91 to 120 days"
-    },
-    "stayLength": {
-        "type": "Text",
-        "value": "5 to 7 days"
-    },
-    "totalExpenditure": {
-        "type": "Text",
-        "value": "1250 to 1499 €"
-    },
-    "totalAccomodationAndBoardExpenditure": {
-        "type": "Text",
-        "value": "1000 to 1249 €"
-    },
-    "totalExtraExpenditure": {
-        "type": "Text",
-        "value": "0 to 249 €"
-    },
-    "avgDailyAccomodationAndBoardExpenditure": {
-        "type": "Text",
-        "value": "200 to 249 €"
-    },
-    "avgDailyExtraExpenditure": {
-        "type": "Text",
-        "value": "0 to 24 €"
+  "ageRange": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "30-34",
+      "sortingOrder": [
+        "0-1",
+        "2-5",
+        "6-11",
+        "12-17",
+        "18-24",
+        "25-29",
+        "30-34",
+        "35-39",
+        "40-44",
+        "45-49",
+        "50-54",
+        "55-59",
+        "60-64",
+        "65+"
+      ]
     }
+  },
+  "avgDailyAccomodationAndBoardExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "200 to 249 \u20ac",
+      "sortingOrder": [
+        "0 to 24 \u20ac",
+        "25 to 49 \u20ac",
+        "50 to 74 \u20ac",
+        "75 to 99 \u20ac",
+        "100 to 149 \u20ac",
+        "150 to 199 \u20ac",
+        "200 to 249 \u20ac",
+        "250 to 299 \u20ac",
+        "300 to 399 \u20ac",
+        "400 to 499 \u20ac",
+        "500 to 599 \u20ac",
+        "600+ \u20ac"
+      ]
+    }
+  },
+  "avgDailyExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "200 to 249 \u20ac",
+      "sortingOrder": [
+        "0 to 24 \u20ac",
+        "25 to 49 \u20ac",
+        "50 to 74 \u20ac",
+        "75 to 99 \u20ac",
+        "100 to 149 \u20ac",
+        "150 to 199 \u20ac",
+        "200 to 249 \u20ac",
+        "250 to 299 \u20ac",
+        "300 to 399 \u20ac",
+        "400 to 499 \u20ac",
+        "500 to 599 \u20ac",
+        "600+ \u20ac"
+      ]
+    }
+  },
+  "avgDailyExtraExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "0 to 24 \u20ac",
+      "sortingOrder": [
+        "0 to 24 \u20ac",
+        "25 to 49 \u20ac",
+        "50 to 74 \u20ac",
+        "75 to 99 \u20ac",
+        "100 to 149 \u20ac",
+        "150 to 199 \u20ac",
+        "200 to 249 \u20ac",
+        "250 to 299 \u20ac",
+        "300 to 399 \u20ac",
+        "400 to 499 \u20ac",
+        "500 to 599 \u20ac",
+        "600+ \u20ac"
+      ]
+    }
+  },
+  "board": {
+    "type": "Text",
+    "value": "HB"
+  },
+  "bookingChannel": {
+    "type": "Text",
+    "value": "Tour Operator"
+  },
+  "country": {
+    "type": "Text",
+    "value": "NL"
+  },
+  "gender": {
+    "type": "Text",
+    "value": "Male"
+  },
+  "id": "urn:hosp:tourpro:0001",
+  "lodgingCategory": {
+    "type": "Text",
+    "value": "4"
+  },
+  "lodgingSize": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "101 - 300 Medium",
+      "sortingOrder": [
+        "0 - 24 Very Small",
+        "25 - 100 Small",
+        "101 - 300 Medium",
+        "301 - 700 Large",
+        "701 - 1200 Very Large",
+        "1201+ Massive"
+      ]
+    }
+  },
+  "lodgingType": {
+    "type": "Text",
+    "value": "Resort"
+  },
+  "reservationLeadTime": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "91 to 120 days",
+      "sortingOrder": [
+        "1 to 7 Days",
+        "8 to 14 Days",
+        "15 to 30 Days",
+        "31 to 60 Days",
+        "61 to 90 Days",
+        "91 to 120 Days",
+        "121 to 240 Days",
+        "241 to 365 Days",
+        "366+ Days"
+      ]
+    }
+  },
+  "roomOfStayType": {
+    "type": "Text",
+    "value": "Double"
+  },
+  "stayLength": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "5 to 7 days",
+      "sortingOrder": [
+        "1 day",
+        "2 to 4 days",
+        "5 to 7 days",
+        "8 to 14 days",
+        "15 to 21 days",
+        "22+ days"
+      ]
+    }
+  },
+  "totalAccomodationAndBoardExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "1000 to 1249 \u20ac",
+      "sortingOrder": [
+        "0 to 249 \u20ac",
+        "250 to 499 \u20ac",
+        "250 to 499 \u20ac",
+        "500 to 749 \u20ac",
+        "750 to 999 \u20ac",
+        "1000 to 1499 \u20ac",
+        "1500 to 1999 \u20ac",
+        "2000 to 2999 \u20ac",
+        "3000 to 3999 \u20ac",
+        "4000 to 4999 \u20ac",
+        "5000+ \u20ac"
+      ]
+    }
+  },
+  "totalExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "1250 to 1499 \u20ac",
+      "sortingOrder": [
+        "0 to 249 \u20ac",
+        "250 to 499 \u20ac",
+        "250 to 499 \u20ac",
+        "500 to 749 \u20ac",
+        "750 to 999 \u20ac",
+        "1000 to 1499 \u20ac",
+        "1500 to 1999 \u20ac",
+        "2000 to 2999 \u20ac",
+        "3000 to 3999 \u20ac",
+        "4000 to 4999 \u20ac",
+        "5000+ \u20ac"
+      ]
+    }
+  },
+  "totalExtraExpenditure": {
+    "type": "StructuredValue",
+    "value": {
+      "range": "0 to 249 \u20ac",
+      "sortingOrder": [
+        "0 to 249 \u20ac",
+        "250 to 499 \u20ac",
+        "250 to 499 \u20ac",
+        "500 to 749 \u20ac",
+        "750 to 999 \u20ac",
+        "1000 to 1499 \u20ac",
+        "1500 to 1999 \u20ac",
+        "2000 to 2999 \u20ac",
+        "3000 to 3999 \u20ac",
+        "4000 to 4999 \u20ac",
+        "5000+ \u20ac"
+      ]
+    }
+  },
+  "travelPartyComposition": {
+    "type": "Text",
+    "value": "Couple"
+  },
+  "type": "TouristProfile"
 }
