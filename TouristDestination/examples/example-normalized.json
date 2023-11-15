@@ -1,22 +1,16 @@
 {
-  "id": {
-    "type": "string",
-    "value": "ngsi:uri:TouristDestination:1"
-  },
-  "type": {
-    "type": "string",
-    "value": "TouristDestination"
-  },
+  "id": "ngsi:uri:TouristDestination:1",
+  "type": "TouristDestination",
   "name": {
-    "type": "string",
+    "type": "Text",
     "value": "Sitios Patrimonio de la Humanidad os spain"
   },
   "description": {
-    "type": "string",
+    "type": "Text",
     "value": "Ejemplo tecnico de Destino Turistico, incluyendo el uso del atributo includesAttraction. Lista de sitios abreviada>"
   },
   "includesAttraction": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "type": [
