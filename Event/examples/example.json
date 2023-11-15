@@ -3,7 +3,7 @@
   "type": "Event",
   "name": "MARIAGE D ENFER",
   "alternateName": "Elle en revait, il l a fait : ils vont se marier !",
-  "description": "Information sur la piéce de théatre",
+  "description": "Information sur la pi\u00e9ce de th\u00e9atre",
   "seeAlso": "https://www.billetreduc.com/260539/evt.htm",
   "location": {
     "type": "Point",
@@ -48,7 +48,7 @@
   "eventStatus": [
     "scheduled"
   ],
-  "locationName": "Théâtre Bellecour",
+  "locationName": "Th\u00e9\u00e2tre Bellecour",
   "title": "MARIAGE D ENFER",
   "slogan": "Elle en revait, il l a fait : ils vont se marier !",
   "language": [
@@ -93,7 +93,7 @@
   "pitch": [
     {
       "language ": "fr",
-      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"
+      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"
     },
     {
       "language": "en",
@@ -112,17 +112,17 @@
     "Yann Bruno-Martinez"
   ],
   "composer": [
-    "Céline Cara"
+    "C\u00e9line Cara"
   ],
   "director": [
-    "Sébastien El Fassi"
+    "S\u00e9bastien El Fassi"
   ],
   "criticReview": [
     {
       "language": "fr",
       "reviews": [
         {
-          "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",
+          "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",
           "origin": "Revue Theatrale - L. Dupont",
           "ratingValue": 9,
           "starRating": 6
