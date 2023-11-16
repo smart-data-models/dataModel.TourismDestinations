@@ -1,22 +1,22 @@
 {
-    "id": "uri:ngsi:event:1",
-    "type": "Event",
-    "address": {
-        "addressLocality": "Salamanca",
-        "postalCode": "37008",
-        "streetAddress": "Calle Monte Olivete, s/n"
-    },
-    "endDate": "2019-06-08T23:00:00",
-    "name": "Concierto de Revolver",
-    "offeredBy": {
-        "type": "Organization",
-        "name": "Notikumi",
-        "url": "https://www.notikumi.com/"
-    },
-    "startDate": "2019-06-08T21:00:00",
-    "touristType": "EVENTS AND FESTIVALS TOURISM",
-    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
-    ]
+  "id": "uri:ngsi:event:1",
+  "type": "Event",
+  "address": {
+    "addressLocality": "Salamanca",
+    "postalCode": "37008",
+    "streetAddress": "Calle Monte Olivete, s/n"
+  },
+  "endDate": "2019-06-08T23:00:00",
+  "name": "Concierto de Revolver",
+  "offeredBy": {
+    "type": "Organization",
+    "name": "Notikumi",
+    "url": "https://www.notikumi.com/"
+  },
+  "startDate": "2019-06-08T21:00:00",
+  "touristType": "EVENTS AND FESTIVALS TOURISM",
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"
+  ]
 }
