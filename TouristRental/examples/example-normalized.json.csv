@@ -1,2 +1,2 @@
 "id_", "type_", "rentalSource__type_", "rentalSource__value_", "startDate__type_", "startDate__value_", "endDate__type_", "endDate__value_", "leadTourist__type_", "leadTourist__value_", "consumptionBehaviour__type_", "consumptionBehaviour__value__0_"
-"urn:ngsi-ld:TouristRental:VC:17", "TouristRental", "URI", "urn:ngsi-ld:Vehicle:VC:0001", "DateTime", "2018-09-21T12:00:00Z", "DateTime", "2018-09-21T12:00:00Z", "URI", "urn:ngsi-ld:TouristProfile:VC:0001", "Array", "urn:ngsi-ld:ConsumptionBehaviour:VC:42"
+"urn:ngsi-ld:TouristRental:VC:17", "TouristRental", "Text", "urn:ngsi-ld:Vehicle:VC:0001", "DateTime", "2018-09-21T12:00:00Z", "DateTime", "2018-09-21T12:00:00Z", "Text", "urn:ngsi-ld:TouristProfile:VC:0001", "StructuredValue", "urn:ngsi-ld:ConsumptionBehaviour:VC:42"
