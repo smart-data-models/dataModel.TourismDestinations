@@ -80,7 +80,7 @@
       "5000+ \u20ac"
     ]
   },
-  "totalAccomodationAndBoardExpenditure": {
+  "totalAccommodationAndBoardExpenditure": {
     "range": "1000 to 1249 \u20ac",
     "sortingOrder": [
       "0 to 249 \u20ac",
@@ -129,7 +129,7 @@
       "600+ \u20ac"
     ]
   },
-  "avgDailyAccomodationAndBoardExpenditure": {
+  "avgDailyAccommodationAndBoardExpenditure": {
     "range": "200 to 249 \u20ac",
     "sortingOrder": [
       "0 to 24 \u20ac",
