@@ -53,7 +53,7 @@
     "type": "Property",
     "value": "1250 to 1499 €"
   },
-  "totalAccomodationAndBoardExpenditure": {
+  "totalAccommodationAndBoardExpenditure": {
     "type": "Property",
     "value": "1000 to 1249 €"
   },
@@ -61,7 +61,7 @@
     "type": "Property",
     "value": "0 to 249 €"
   },
-  "avgDailyAccomodationAndBoardExpenditure": {
+  "avgDailyAccommodationAndBoardExpenditure": {
     "type": "Property",
     "value": "200 to 249 €"
   },
