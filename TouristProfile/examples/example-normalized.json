@@ -21,7 +21,7 @@
       ]
     }
   },
-  "avgDailyAccomodationAndBoardExpenditure": {
+  "avgDailyAccommodationAndBoardExpenditure": {
     "type": "StructuredValue",
     "value": {
       "range": "200 to 249 \u20ac",
@@ -155,7 +155,7 @@
       ]
     }
   },
-  "totalAccomodationAndBoardExpenditure": {
+  "totalAccommodationAndBoardExpenditure": {
     "type": "StructuredValue",
     "value": {
       "range": "1000 to 1249 \u20ac",
