@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 グローバルな説明**この場所、組織、行動に関連する、近日または過去のイベント。  
-バージョン: 0.2.0  
+バージョン: 0.2.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -28,13 +28,16 @@
 	- `availableLanguage[*]`: そのアイテム、サービス、場所で誰かが使う可能性のある言語。IETF BCP 47標準の言語コードのいずれかを使用してください。Text」オプションが実装されていますが、「Language」でもかまいません。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: このコンタクトポイントで利用可能なオプション（フリーダイヤルや聴覚障害者へのサポートなど）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
 	- `contactType[string]`: このアイテムのコンタクトタイプ    
-	- `email[idn-email]`: オーナーのEメールアドレス    
+	- `email[idn-email]`: 所有者のEメールアドレス    
 	- `faxNumber[string]`: ファックス番号  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `name[string]`: このアイテムの名前    
 	- `productSupported[string]`: このサポートコンタクトポイントが関連する製品またはサービス（特定の製品ラインの製品サポートなど）。これは、特定の製品または製品ライン（例：「iPhone」）または製品やサービスの一般的なカテゴリ（例：「スマートフォン」）とすることができます。  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 連絡先の電話番号    
 	- `url[uri]`: このアイテムに関する説明や詳細情報を提供するURL    
-- `contentURL[uri]`: イベントの公式画像または動画のURLを指定します。  - `criticReview[array]`: レビュー活動で認められている情報源によって書かれた、または発行されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づく形式を持ち、全ての項目を一つのプロパティに統合する(例：番号71)。各項目は、'Language Value' : 'Article Value' の文字列で表現される。  - `currencyAccepted[array]`: isAccessibleForFree` が False の場合に支払いに使用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `director[array]`: 編成を管理する取締役のリスト  - `doorTimeClose[string]`: 開場時間  - `doorTimeOpen[string]`: 開場時間  - `duration[number]`: 各ショーの継続時間。計測の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**HUR**は**時間**を表す。  - `electricTransport[array]`: 市が提案するさまざまなタイプの電気輸送のリスト。の組み合わせ。Enum:'電動自転車, 電動自動車, 電動バイク, 電動スクーター'  - `endDate[date-time]`: アイテムの終了日時（ISO 8601の日付形式）。  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 最低価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `eventPriceTo[number]`: 最大価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `eventSchedule[array]`: このプロパティを使用してスケジュールに関連付けられたイベントは `startDate` または `endDate` プロパティを持つべきではありません。これらは関連するSchedule内で定義され、これによりデータを使用するクライアントが曖昧になることを避けることができます。このプロパティは、異なるスケジュール(異なる月や季節)を指定するために、繰り返し値を持つかもしれません。  - `eventStatus[array]`: このイベントに関するステータス  - `id[*]`: エンティティの一意識別子  - `isAccessibleForFree[boolean]`: アイテム、イベント、場所が無料でアクセスできることを示す旗。  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: IETF[BCP47](https://tools.ietf.org/html/bcp47)標準から引用された、イベント中に使用された形式言語のリスト。  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `maximumAttendeeCapacity[number]`: その場所でイベントに参加できる総人数  - `name[string]`: このアイテムの名前  - `openingHoursSpecification[array]`: 場所の営業時間や場所内の特定のサービスに関する情報を提供する構造化された値。  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `paymentAccepted[array]`: isAccessibleForFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブなコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other'.  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: イベントの主役、司会者、ミュージシャン、音楽グループ  - `pitch[array]`: イベントのピッチ。各項目は、[国際化(i18N) - 多言語化のためのW3C勧告](https://www.w3.org/TR/json-ld/#string-internationalization)に基づく書式を持ち、全ての項目を一つのプロパティに統合する(例：71番)。各項目は、言語値：記事値の文字列で表される。  - `priceSpecification[array]`: カテゴリーやパブリックによって、価格や価格帯を表す構造化された値。  - `publicAccess[boolean]`: Place が一般訪問者に開放されていることを示すフラグ。このプロパティが省略された場合、想定されるデフォルトの真偽値はありません。  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: イベントの評価値。使用ガイドライン：0から10までの値を基準に応じて使用してください。これは `starRatingDetailed` 属性のすべての詳細スコアの平均値です。  - `refPointOfInterest[array]`: イベントに含まれるすべてのPOI[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。POIリストには時系列はありません。  - `routeType[array]`: GFTS標準[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に従った、イベント周辺で利用可能な都市交通機関(地下鉄、バス、トラム、...)のリスト。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `slogan[string]`: イベントヘッダ行、テキストフックと一致。  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `starRatingDetailed[object]`: 評価値で表される平均値につながった詳細な星評価。使用方法：各要素は以下の形式の文字列である：NumberOfSTar`：パーセント。  	- `1`:     
+- `contentURL[uri]`: イベントの公式画像または動画のURLを指定します。  - `criticReview[array]`: レビュー活動で認められている情報源によって書かれた、または発行されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づく形式を持ち、全ての項目を一つのプロパティに統合する(例：番号71)。各項目は、'Language Value' : 'Article Value' の文字列で表現される。  - `currencyAccepted[array]`: isAccessibleForFree` が False の場合に支払いに使用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `director[array]`: 編成を管理する取締役のリスト  - `doorTimeClose[string]`: 開場時間  - `doorTimeOpen[string]`: 開場時間  - `duration[number]`: 各ショーの継続時間。計測の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**HUR**は**時間**を表す。  - `electricTransport[array]`: 市が提案するさまざまなタイプの電気輸送のリスト。の組み合わせ。Enum:'電動自転車, 電動自動車, 電動バイク, 電動スクーター'  - `endDate[date-time]`: アイテムの終了日時（ISO 8601の日付形式）。  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 最低価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `eventPriceTo[number]`: 最大価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `eventSchedule[array]`: このプロパティを使用してスケジュールに関連付けられたイベントは `startDate` または `endDate` プロパティを持つべきではありません。これらは関連するSchedule内で定義され、これによりデータを使用するクライアントが曖昧になることを避けることができます。このプロパティは、異なるスケジュール(異なる月や季節)を指定するために、繰り返し値を持つかもしれません。  - `eventStatus[array]`: このイベントに関するステータス  - `id[*]`: エンティティの一意識別子  - `isAccessibleForFree[boolean]`: アイテム、イベント、場所が無料でアクセスできることを示す旗。  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: IETF[BCP47](https://tools.ietf.org/html/bcp47)標準から引用された、イベント中に使用された形式言語のリスト。  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `maximumAttendeeCapacity[number]`: その場所でイベントに参加できる総人数  - `name[string]`: このアイテムの名前  - `offeredBy[object]`: イーブン・オーガナイザー・エンティティの説明  	- `name[string]`: イベント主催団体名    
+	- `type[string]`: イベント主催者エンティティのタイプ。例：団体、企業、協会    
+	- `url[uri]`: イベント主催団体のメインサイトへのURL    
+- `openingHoursSpecification[array]`: 場所の営業時間や場所内の特定のサービスに関する情報を提供する構造化された値。  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `paymentAccepted[array]`: isAccessibleForFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブなコードのリストの組み合わせ。Enum:'Cash, CreditCard, CryptoCurrency, other'.  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: イベントの主役、司会者、ミュージシャン、音楽グループ  - `pitch[array]`: イベントのピッチ。各項目は、[国際化(i18N) - 多言語化のためのW3C勧告](https://www.w3.org/TR/json-ld/#string-internationalization)に基づく書式を持ち、全ての項目を一つのプロパティに統合する(例：71番)。各項目は、言語値：記事値の文字列で表される。  - `priceSpecification[array]`: カテゴリーやパブリックによって、価格や価格帯を表す構造化された値。  - `publicAccess[boolean]`: Place が一般訪問者に開放されていることを示すフラグ。このプロパティが省略された場合、想定されるデフォルトの真偽値はありません。  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: イベントの評価値。使用ガイドライン：0から10までの値を基準に応じて使用してください。これは `starRatingDetailed` 属性のすべての詳細スコアの平均値です。  - `refPointOfInterest[array]`: イベントに含まれるすべてのPOI[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。POIリストには時系列はありません。  - `routeType[array]`: GFTS標準[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に従った、イベント周辺で利用可能な都市交通機関(地下鉄、バス、トラム、...)のリスト。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `slogan[string]`: イベントヘッダ行、テキストフックと一致。  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `starRatingDetailed[object]`: 評価値で表される平均値につながった詳細な星評価。使用方法：各要素は以下の形式の文字列である：NumberOfSTar`：パーセント。  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -48,9 +51,9 @@
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 このデータモデルは標準UNE178503に基づいている。schema.orgとも互換性がある。schema.orgの要素の一部は、このファイルhttps://smart-data-models.github.io/data-models/schema-org.json。この型は、それ自体で一般的なTouristDestinationを記述するために使用することも、他のPlaceに観光関連のプロパティを追加するためのadditionalTypeとして使用することもできる。TouristDestinationは、1つ以上のTouristAttractionsを含む、またはそれと一緒に配置される場所として定義される。国連世界観光機関（UNWTO）は、Destination（観光旅行の主な目的地）を、その旅行を決 定する上で中心となる訪問地と定義している。  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順（クリックで詳細表示）  
@@ -639,6 +642,28 @@ Event:
     name:    
       description: The name of this item    
       type: string    
+      x-ngsi:    
+        type: Property    
+    offeredBy:    
+      description: Description of the even organizer entity    
+      properties:    
+        name:    
+          description: Name of the event organizer entity    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        type:    
+          description: 'Type of event organizer entity. I.e. organization, company, association'    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        url:    
+          description: Url to the main site of the event organizer entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
@@ -1253,11 +1278,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -1274,7 +1299,7 @@ Event:
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
   "alternateName": "Elle en revait, il l a fait : ils vont se marier !",  
-  "description": "Information sur la piéce de théatre",  
+  "description": "Information sur la pi\u00e9ce de th\u00e9atre",  
   "seeAlso": "https://www.billetreduc.com/260539/evt.htm",  
   "location": {  
     "type": "Point",  
@@ -1319,7 +1344,7 @@ Event:
   "eventStatus": [  
     "scheduled"  
   ],  
-  "locationName": "Théâtre Bellecour",  
+  "locationName": "Th\u00e9\u00e2tre Bellecour",  
   "title": "MARIAGE D ENFER",  
   "slogan": "Elle en revait, il l a fait : ils vont se marier !",  
   "language": [  
@@ -1364,7 +1389,7 @@ Event:
   "pitch": [  
     {  
       "language ": "fr",  
-      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"  
+      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"  
     },  
     {  
       "language": "en",  
@@ -1383,17 +1408,17 @@ Event:
     "Yann Bruno-Martinez"  
   ],  
   "composer": [  
-    "Céline Cara"  
+    "C\u00e9line Cara"  
   ],  
   "director": [  
-    "Sébastien El Fassi"  
+    "S\u00e9bastien El Fassi"  
   ],  
   "criticReview": [  
     {  
       "language": "fr",  
       "reviews": [  
         {  
-          "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",  
+          "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",  
           "origin": "Revue Theatrale - L. Dupont",  
           "ratingValue": 9,  
           "starRating": 6  
@@ -1465,29 +1490,26 @@ Event:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": {  
-    "type": "Text",  
-    "value": "uri:ngsi:event:1"  
-  },  
-  "type": {  
-    "type": "Text",  
-    "value": "Event"  
-  },  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
   "name": {  
     "type": "Text",  
-    "value": "Concierto de Revólver"  
+    "value": "Concierto de Rev\u00f3lver"  
   },  
   "address": {  
-    "addressLocality": "Salamanca",  
-    "postalCode": "37008",  
-    "streetAddress": "Calle Monte Olivete, s/n"  
+    "type": "StructuredValue",  
+    "value": {  
+      "addressLocality": "Salamanca",  
+      "postalCode": "37008",  
+      "streetAddress": "Calle Monte Olivete, s/n"  
+    }  
   },  
   "startDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T21:00:00"  
   },  
   "endDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T23:00:00"  
   },  
   "url": {  
@@ -1495,7 +1517,7 @@ Event:
     "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
   },  
   "offeredBy": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": {  
       "type": "Organization",  
       "name": "Notikumi",  
@@ -1514,26 +1536,26 @@ Event:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "uri:ngsi:event:1",  
-    "type": "Event",  
-    "address": {  
-        "addressLocality": "Salamanca",  
-        "postalCode": "37008",  
-        "streetAddress": "Calle Monte Olivete, s/n"  
-    },  
-    "endDate": "2019-06-08T23:00:00",  
-    "name": "Concierto de Revolver",  
-    "offeredBy": {  
-        "type": "Organization",  
-        "name": "Notikumi",  
-        "url": "https://www.notikumi.com/"  
-    },  
-    "startDate": "2019-06-08T21:00:00",  
-    "touristType": "EVENTS AND FESTIVALS TOURISM",  
-    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
-    ]  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "address": {  
+    "addressLocality": "Salamanca",  
+    "postalCode": "37008",  
+    "streetAddress": "Calle Monte Olivete, s/n"  
+  },  
+  "endDate": "2019-06-08T23:00:00",  
+  "name": "Concierto de Revolver",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "startDate": "2019-06-08T21:00:00",  
+  "touristType": "EVENTS AND FESTIVALS TOURISM",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
