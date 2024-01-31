@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Globale Beschreibung: **Kommendes oder vergangenes Ereignis, das mit diesem Ort, dieser Organisation oder dieser Aktion verbunden ist**.  
-Version: 0.2.0  
+Version: 0.2.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -34,7 +34,10 @@
 	- `productSupported[string]`: Das Produkt oder die Dienstleistung, auf die sich diese Support-Kontaktstelle bezieht (z. B. Produktsupport für eine bestimmte Produktlinie). Dies kann ein bestimmtes Produkt oder eine Produktlinie (z. B. "iPhone") oder eine allgemeine Kategorie von Produkten oder Dienstleistungen (z. B. "Smartphones") sein.  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: Telefon dieser Kontaktperson    
 	- `url[uri]`: URL, die eine Beschreibung oder weitere Informationen zu diesem Artikel enthält    
-- `contentURL[uri]`: Gibt die URL zum offiziellen Bild oder Video des Ereignisses für weitere Informationen an  - `criticReview[array]`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch eine Zeichenkette mit "Language Value" : "Article Value" dargestellt.  - `currencyAccepted[array]`: Währung, die für die Zahlung akzeptiert wird, wenn "isAccessibleForFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Börsenhandelssystem](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `director[array]`: Liste der Direktoren, die die Zusammensetzung verwalten  - `doorTimeClose[string]`: Schließzeit der Türen für den Zutritt zur Ausstellung  - `doorTimeOpen[string]`: Öffnungszeiten der Türen für den Zugang zur Ausstellung  - `duration[number]`: Die Dauer der einzelnen Sendungen. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport[array]`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate[date-time]`: Datum und Uhrzeit des Endes der Sendung (im Datumsformat ISO 8601).  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: Mindestpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `eventPriceTo[number]`: Höchstpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `eventSchedule[array]`: Ein Ereignis, das über diese Eigenschaft mit einem Zeitplan verknüpft ist, sollte keine Eigenschaften "StartDate" oder "EndDate" haben. Diese werden stattdessen im zugehörigen Zeitplan definiert, so dass für Kunden, die die Daten verwenden, keine Unklarheiten entstehen. Die Eigenschaft kann mehrere Werte haben, um verschiedene Zeitpläne (verschiedene Monate oder Jahreszeiten) anzugeben.  - `eventStatus[array]`: Ereignisstatus zu diesem Ereignis  - `id[*]`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree[boolean]`: Eine Flagge, die anzeigt, dass der Gegenstand, die Veranstaltung oder der Ort kostenlos zugänglich ist.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: Liste der während der Veranstaltung verwendeten formalen Sprache aus dem IETF-Standard [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAttendeeCapacity[number]`: Die Gesamtzahl der Personen, die an der Veranstaltung an diesem Ort teilnehmen können  - `name[string]`: Der Name dieses Artikels  - `openingHoursSpecification[array]`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted[array]`: Akzeptierte Zahlung, wenn "isAccessibleForFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. Enum:'Bargeld, Kreditkarte, CryptoCurrency, andere'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: Hauptdarsteller oder -moderator oder Musiker oder Musikgruppe der Veranstaltung  - `pitch[array]`: Tonhöhe des Ereignisses. Jedes Element hat das Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch einen String mit Language Value : Article Value dargestellt.  - `priceSpecification[array]`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne je nach Kategorie oder Publikum darstellt  - `publicAccess[boolean]`: Ein Kennzeichen, das anzeigt, dass der Ort für öffentliche Besucher geöffnet ist. Wenn diese Eigenschaft weggelassen wird, wird kein boolescher Standardwert angenommen.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: Bewertungswert des Ereignisses. Verwendungsrichtlinien: Verwenden Sie Werte zwischen 0 und 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "starRatingDetailed".  - `refPointOfInterest[array]`: Verweis auf alle im Ereignis enthaltenen Point Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md). Die POI-Liste ist nicht chronologisch geordnet  - `routeType[array]`: Liste der in der Nähe des Ereignisses verfügbaren städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...) gemäß dem GFTS-Standard [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `slogan[string]`: Ereigniskopfzeile, entspricht dem Texthaken.  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `starRatingDetailed[object]`: Detaillierte Sternebewertungen, die zu dem in ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element eine Zeichenkette im Format ist: `Anzahl derSterne`: Prozentsatz.  	- `1`:     
+- `contentURL[uri]`: Gibt die URL zum offiziellen Bild oder Video des Ereignisses für weitere Informationen an  - `criticReview[array]`: Rezensionen, die von einer Quelle geschrieben oder veröffentlicht wurden, die für ihre Rezensionsaktivitäten anerkannt ist. Jedes Element hat ein Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch eine Zeichenkette mit "Language Value" : "Article Value" dargestellt.  - `currencyAccepted[array]`: Währung, die für die Zahlung akzeptiert wird, wenn "isAccessibleForFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Kryptowährungen](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Börsenhandelssystem](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `director[array]`: Liste der Direktoren, die die Zusammensetzung verwalten  - `doorTimeClose[string]`: Schließzeit der Türen für den Zutritt zur Ausstellung  - `doorTimeOpen[string]`: Öffnungszeiten der Türen für den Zugang zur Ausstellung  - `duration[number]`: Die Dauer der einzelnen Sendungen. Der Einheitencode (Text) der Messung wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **HUR** für **Stunden**.  - `electricTransport[array]`:  Liste der verschiedenen von der Stadt vorgeschlagenen Arten von Elektrofahrzeugen. Eine Kombination aus. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'  - `endDate[date-time]`: Datum und Uhrzeit des Endes der Sendung (im Datumsformat ISO 8601).  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: Mindestpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `eventPriceTo[number]`: Höchstpreis. Der Code der Maßeinheit (Text) wird unter Verwendung der [UN/CEFACT Common Codes] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) angegeben. Zum Beispiel steht **EUR** für **€uro**.  - `eventSchedule[array]`: Ein Ereignis, das über diese Eigenschaft mit einem Zeitplan verknüpft ist, sollte keine Eigenschaften "StartDate" oder "EndDate" haben. Diese werden stattdessen im zugehörigen Zeitplan definiert, so dass für Kunden, die die Daten verwenden, keine Unklarheiten entstehen. Die Eigenschaft kann mehrere Werte haben, um verschiedene Zeitpläne (verschiedene Monate oder Jahreszeiten) anzugeben.  - `eventStatus[array]`: Ereignisstatus zu diesem Ereignis  - `id[*]`: Eindeutiger Bezeichner der Entität  - `isAccessibleForFree[boolean]`: Eine Flagge, die anzeigt, dass der Gegenstand, die Veranstaltung oder der Ort kostenlos zugänglich ist.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: Liste der während der Veranstaltung verwendeten formalen Sprache aus dem IETF-Standard [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `maximumAttendeeCapacity[number]`: Die Gesamtzahl der Personen, die an der Veranstaltung an diesem Ort teilnehmen können  - `name[string]`: Der Name dieses Artikels  - `offeredBy[object]`: Beschreibung der Entität "Even Organizer  	- `name[string]`: Name der veranstaltenden Einrichtung    
+	- `type[string]`: Art der veranstaltenden Einrichtung. D.h. Organisation, Unternehmen, Verein    
+	- `url[uri]`: Url zur Hauptseite des Veranstalters    
+- `openingHoursSpecification[array]`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted[array]`: Akzeptierte Zahlung, wenn "isAccessibleForFree" auf "False" steht. Eine Kombination aus einer Liste aktiver Codes, die im Modell definiert sind. Enum:'Bargeld, Kreditkarte, CryptoCurrency, andere'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: Hauptdarsteller oder -moderator oder Musiker oder Musikgruppe der Veranstaltung  - `pitch[array]`: Tonhöhe des Ereignisses. Jedes Element hat das Format, das auf der [Internationalisierung (i18N) - W3C-Empfehlung für Mehrsprachigkeit] (https://www.w3.org/TR/json-ld/#string-internationalization) basiert und alle Elemente in einer einzigen Eigenschaft (z. B. Nummer 71) zusammenfasst. Jedes Element wird durch einen String mit Language Value : Article Value dargestellt.  - `priceSpecification[array]`: Ein strukturierter Wert, der einen Preis oder eine Preisspanne je nach Kategorie oder Publikum darstellt  - `publicAccess[boolean]`: Ein Kennzeichen, das anzeigt, dass der Ort für öffentliche Besucher geöffnet ist. Wenn diese Eigenschaft weggelassen wird, wird kein boolescher Standardwert angenommen.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: Bewertungswert des Ereignisses. Verwendungsrichtlinien: Verwenden Sie Werte zwischen 0 und 10, je nach Ihrem Standard. Dies ist der Durchschnittswert aller detaillierten Bewertungen des Attributs "starRatingDetailed".  - `refPointOfInterest[array]`: Verweis auf alle im Ereignis enthaltenen Point Of Interest [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md). Die POI-Liste ist nicht chronologisch geordnet  - `routeType[array]`: Liste der in der Nähe des Ereignisses verfügbaren städtischen Verkehrsmittel (U-Bahn, Bus, Straßenbahn, ...) gemäß dem GFTS-Standard [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Eine Kombination von Werten. Enum:' Bus, CableCar, CableTram, Fähre, Standseilbahn, Einschienenbahn, U-Bahn, Zug, Straßenbahn, Oberleitungsbus'  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `slogan[string]`: Ereigniskopfzeile, entspricht dem Texthaken.  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `starRatingDetailed[object]`: Detaillierte Sternebewertungen, die zu dem in ratingValue ausgedrückten Durchschnittswert führten. Anweisungen zur Verwendung: Ein strukturierter Wert von 1 bis 10 Vorkommen (Sterne), wobei jedes Element eine Zeichenkette im Format ist: `Anzahl derSterne`: Prozentsatz.  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -48,9 +51,9 @@
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 Dieses Datenmodell basiert auf dem Standard UNE178503. Es ist auch mit schema.org kompatibel. Einige der Elemente von schema.org wurden in dieser Datei angepasst https://smart-data-models.github.io/data-models/schema-org.json. Dieser Typ kann für sich allein verwendet werden, um ein allgemeines TouristDestination zu beschreiben, oder er kann als zusätzlicher Typ verwendet werden, um tourismusrelevante Eigenschaften zu jedem anderen Ort hinzuzufügen. Ein TouristDestination ist definiert als ein Ort, der eine oder mehrere TouristAttractions enthält oder mit ihnen verbunden ist, die oft durch ein ähnliches Thema oder Interesse mit einem bestimmten TouristType verbunden sind. Die UNWTO definiert Destination (Hauptziel einer touristischen Reise) als den besuchten Ort, der für die Entscheidung, die Reise anzutreten, zentral ist.  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -639,6 +642,28 @@ Event:
     name:    
       description: The name of this item    
       type: string    
+      x-ngsi:    
+        type: Property    
+    offeredBy:    
+      description: Description of the even organizer entity    
+      properties:    
+        name:    
+          description: Name of the event organizer entity    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        type:    
+          description: 'Type of event organizer entity. I.e. organization, company, association'    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        url:    
+          description: Url to the main site of the event organizer entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
@@ -1253,11 +1278,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -1274,7 +1299,7 @@ Event:
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
   "alternateName": "Elle en revait, il l a fait : ils vont se marier !",  
-  "description": "Information sur la piéce de théatre",  
+  "description": "Information sur la pi\u00e9ce de th\u00e9atre",  
   "seeAlso": "https://www.billetreduc.com/260539/evt.htm",  
   "location": {  
     "type": "Point",  
@@ -1319,7 +1344,7 @@ Event:
   "eventStatus": [  
     "scheduled"  
   ],  
-  "locationName": "Théâtre Bellecour",  
+  "locationName": "Th\u00e9\u00e2tre Bellecour",  
   "title": "MARIAGE D ENFER",  
   "slogan": "Elle en revait, il l a fait : ils vont se marier !",  
   "language": [  
@@ -1364,7 +1389,7 @@ Event:
   "pitch": [  
     {  
       "language ": "fr",  
-      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"  
+      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"  
     },  
     {  
       "language": "en",  
@@ -1383,17 +1408,17 @@ Event:
     "Yann Bruno-Martinez"  
   ],  
   "composer": [  
-    "Céline Cara"  
+    "C\u00e9line Cara"  
   ],  
   "director": [  
-    "Sébastien El Fassi"  
+    "S\u00e9bastien El Fassi"  
   ],  
   "criticReview": [  
     {  
       "language": "fr",  
       "reviews": [  
         {  
-          "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",  
+          "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",  
           "origin": "Revue Theatrale - L. Dupont",  
           "ratingValue": 9,  
           "starRating": 6  
@@ -1465,29 +1490,26 @@ Event:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": {  
-    "type": "Text",  
-    "value": "uri:ngsi:event:1"  
-  },  
-  "type": {  
-    "type": "Text",  
-    "value": "Event"  
-  },  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
   "name": {  
     "type": "Text",  
-    "value": "Concierto de Revólver"  
+    "value": "Concierto de Rev\u00f3lver"  
   },  
   "address": {  
-    "addressLocality": "Salamanca",  
-    "postalCode": "37008",  
-    "streetAddress": "Calle Monte Olivete, s/n"  
+    "type": "StructuredValue",  
+    "value": {  
+      "addressLocality": "Salamanca",  
+      "postalCode": "37008",  
+      "streetAddress": "Calle Monte Olivete, s/n"  
+    }  
   },  
   "startDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T21:00:00"  
   },  
   "endDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T23:00:00"  
   },  
   "url": {  
@@ -1495,7 +1517,7 @@ Event:
     "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
   },  
   "offeredBy": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": {  
       "type": "Organization",  
       "name": "Notikumi",  
@@ -1510,30 +1532,30 @@ Event:
 ```  
 </details>  
 #### Ereignis NGSI-LD-Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für ein Ereignis im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein Ereignis im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "uri:ngsi:event:1",  
-    "type": "Event",  
-    "address": {  
-        "addressLocality": "Salamanca",  
-        "postalCode": "37008",  
-        "streetAddress": "Calle Monte Olivete, s/n"  
-    },  
-    "endDate": "2019-06-08T23:00:00",  
-    "name": "Concierto de Revolver",  
-    "offeredBy": {  
-        "type": "Organization",  
-        "name": "Notikumi",  
-        "url": "https://www.notikumi.com/"  
-    },  
-    "startDate": "2019-06-08T21:00:00",  
-    "touristType": "EVENTS AND FESTIVALS TOURISM",  
-    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
-    ]  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "address": {  
+    "addressLocality": "Salamanca",  
+    "postalCode": "37008",  
+    "streetAddress": "Calle Monte Olivete, s/n"  
+  },  
+  "endDate": "2019-06-08T23:00:00",  
+  "name": "Concierto de Revolver",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "startDate": "2019-06-08T21:00:00",  
+  "touristType": "EVENTS AND FESTIVALS TOURISM",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
