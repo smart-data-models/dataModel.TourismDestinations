@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 全局描述：**与该地点、组织或行动相关的**即将发生或已经发生的事件。  
-版本： 0.2.0  
+版本： 0.2.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -23,7 +23,7 @@
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 标识公共街道上特定房产的编号    
-- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 该活动涉及的公众类型。自由文本（家庭、成人、儿童、青少年、老人、所有公众......）的组合。枚举：'成人、所有公众、儿童、家庭、老人、青少年'。  - `category[array]`: 事件类别。以下是自由文本的组合，可根据具体情况灵活运用，作为初始存储库或应用程序所需的任何其他值。枚举：'购物、美食、博物馆、宗教礼拜、公园和花园、历史、户外活动、游览、保健'。  - `composer[array]`: 作文作者名单  - `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 该活动涉及的公众类型。自由文本（家庭、成人、儿童、青少年、老人、所有公众......）的组合。枚举：'成人、所有公众、儿童、家庭、老人、青少年'。  - `category[array]`: 事件类别。下面提供了一个自由文本组合，作为初始存储库或应用程序所需的任何其他值，以便根据具体情况保持灵活性。枚举：'购物、美食、博物馆、宗教礼拜、公园和花园、历史、户外活动、游览、保健'。  - `composer[array]`: 作文作者名单  - `contactPoint[object]`: 与物品联系的详细信息  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 提供服务或所提供项目的地理区域。取代服务区域    
 	- `availabilityRestriction[*]`: 该属性将一个联络点与该联络点不在时的信息联系起来。详细信息通过 "开放时间规范 "类提供  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: 某人在使用物品、服务或场所时可能使用的语言。请使用 IETF BCP 47 标准中的一种语言代码。可使用 "文本 "选项，但也可以使用 "语言 "选项。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: 该联络点的可用选项（如免费电话号码或对听力受损来电者的支持）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
@@ -34,7 +34,10 @@
 	- `productSupported[string]`: 该支持联络点所涉及的产品或服务（如特定产品系列的产品支持）。可以是特定产品或产品系列（如 "iPhone"），也可以是产品或服务的一般类别（如 "智能手机）  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 联系人电话    
 	- `url[uri]`: 提供有关此项目的描述或更多信息的 URL    
-- `contentURL[uri]`: 指定活动官方图片或视频的 URL，以获取更多信息  - `criticReview[array]`: 由在审查活动中得到认可的来源撰写或发表的审查报告。每个条目的格式都基于[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization)，将所有条目整合在一个属性中（例如编号 71）。每个项目由一个字符串表示，其中包含 "语言值"："文章值  - `currencyAccepted[array]`: 如果 `isAccessibleForFree` 为 False，则接受的支付货币。模型中定义的活动代码列表的组合。[ISO 4217 标准](http://en.wikipedia.org/wiki/ISO_4217), [加密货币](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [交易所交易系统](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `director[array]`: 管理构成的主任名单  - `doorTimeClose[string]`: 观看演出的关门时间  - `doorTimeOpen[string]`: 入场时间  - `duration[number]`: 每个节目的持续时间。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**HUR** 表示**小时**  - `electricTransport[array]`: 城市提出的各种电动交通工具清单。由以下元素组合而成。枚举:'电动自行车、电动汽车、电动摩托车、电动滑板车  - `endDate[date-time]`: 项目的结束日期和时间（ISO 8601 日期格式）。  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 最低价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**欧元**代表**欧元**。  - `eventPriceTo[number]`: 最高价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**EUR** 表示**欧元**。  - `eventSchedule[array]`: 使用此属性与时间表关联的事件不应具有 `startDate` 或 `endDate` 属性。这些属性在关联的日程表中定义，这样可以避免客户在使用数据时产生歧义。该属性可能有重复值，以指定不同的时间表（不同的月份或季节）***。  - `eventStatus[array]`: 事件状态  - `id[*]`: 实体的唯一标识符  - `isAccessibleForFree[boolean]`: 表示物品、活动或地点可免费获取的标志。  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: 根据 IETF [BCP 47](https://tools.ietf.org/html/bcp47)标准表述的活动期间使用的正式语言列表  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `maximumAttendeeCapacity[number]`: 该地点可参加活动的总人数  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `paymentAccepted[array]`: 如果 `isAccessibleForFree` 为 False，则接受付款。模型中定义的活动代码列表的组合。枚举："现金、信用卡、加密货币、其他  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: 活动的主要演员或主持人或音乐家或音乐组合  - `pitch[array]`: 活动间距。每个项目的格式都是根据[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization) 将所有项目整合到一个属性中（例如编号 71）。每个项目由一个字符串表示，语言值为：文章值。  - `priceSpecification[array]`: 代表价格或价格范围的结构化数值，取决于类别或公众  - `publicAccess[boolean]`: 标志，表示该场所向公众游客开放。如果省略该属性，则默认值为布尔值。  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: 事件的评级值。使用指南：根据您的标准，使用 0 到 10 之间的值。这是 `starRatingDetailed` 属性所有详细评分的平均值。  - `refPointOfInterest[array]`: 事件中包含的所有兴趣点[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)的参考。兴趣点列表不按时间顺序排列  - `routeType[array]`: 根据 GFTS 标准 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)，事件附近可用的城市交通工具（地铁、公交车、有轨电车......）列表。各种值的组合。枚举：' 公共汽车、缆车、有轨电车、渡轮、缆车、单轨铁路、地铁、火车、有轨电车、无轨电车  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `slogan[string]`: 事件标题行，与文本钩子匹配。  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `starRatingDetailed[object]`: 详细的星级评定导致了用 ratingValue 表示的平均值。使用说明：从 1 到 10 个出现次数（星级）的结构化值，其中每个元素都是格式为字符串的字符串：NumberOfSTar`（星星数量）：百分比。  	- `1`:     
+- `contentURL[uri]`: 指定活动官方图片或视频的 URL，以获取更多信息  - `criticReview[array]`: 由在审查活动中得到认可的来源撰写或发表的审查报告。每个条目的格式都基于[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization)，将所有条目整合在一个属性中（例如编号 71）。每个项目由一个字符串表示，其中包含 "语言值"："文章值  - `currencyAccepted[array]`: 如果 `isAccessibleForFree` 为 False，则接受的支付货币。模型中定义的活动代码列表的组合。[ISO 4217 标准](http://en.wikipedia.org/wiki/ISO_4217), [加密货币](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [交易所交易系统](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `director[array]`: 管理构成的主任名单  - `doorTimeClose[string]`: 观看演出的关门时间  - `doorTimeOpen[string]`: 入场时间  - `duration[number]`: 每个节目的持续时间。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**HUR** 表示**小时**  - `electricTransport[array]`: 城市提出的各种电动交通工具清单。由以下元素组合而成。枚举:'电动自行车、电动汽车、电动摩托车、电动滑板车  - `endDate[date-time]`: 项目的结束日期和时间（ISO 8601 日期格式）。  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 最低价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**欧元**代表**欧元**。  - `eventPriceTo[number]`: 最高价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**EUR** 表示**欧元**。  - `eventSchedule[array]`: 使用此属性与时间表关联的事件不应具有 `startDate` 或 `endDate` 属性。这些属性在关联的日程表中定义，这样可以避免客户在使用数据时产生歧义。该属性可能有重复值，以指定不同的时间表（不同的月份或季节）***。  - `eventStatus[array]`: 事件状态  - `id[*]`: 实体的唯一标识符  - `isAccessibleForFree[boolean]`: 表示物品、活动或地点可免费获取的标志。  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: 根据 IETF [BCP 47](https://tools.ietf.org/html/bcp47)标准表述的活动期间使用的正式语言列表  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `maximumAttendeeCapacity[number]`: 该地点可参加活动的总人数  - `name[string]`: 该项目的名称  - `offeredBy[object]`: 甚至组织者实体的说明  	- `name[string]`: 活动主办方实体名称    
+	- `type[string]`: 活动组织者实体类型。即组织、公司、协会    
+	- `url[uri]`: 活动主办方实体主网站的网址    
+- `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `paymentAccepted[array]`: 如果 `isAccessibleForFree` 为 False，则接受付款。模型中定义的活动代码列表的组合。枚举："现金、信用卡、加密货币、其他  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: 活动的主要演员或主持人或音乐家或音乐组合  - `pitch[array]`: 活动间距。每个项目的格式都是根据[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization) 将所有项目整合到一个属性中（例如编号 71）。每个项目由一个字符串表示，语言值为：文章值。  - `priceSpecification[array]`: 代表价格或价格范围的结构化数值，取决于类别或公众  - `publicAccess[boolean]`: 标志，表示该场所向公众游客开放。如果省略该属性，则默认值为布尔值。  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: 事件的评级值。使用指南：根据您的标准，使用 0 到 10 之间的值。这是 `starRatingDetailed` 属性所有详细评分的平均值。  - `refPointOfInterest[array]`: 事件中包含的所有兴趣点[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)的参考。兴趣点列表不按时间顺序排列  - `routeType[array]`: 根据 GFTS 标准 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)，事件附近可用的城市交通工具（地铁、公交车、有轨电车......）列表。各种值的组合。枚举：' 公共汽车、缆车、有轨电车、渡轮、缆车、单轨铁路、地铁、火车、有轨电车、无轨电车  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `slogan[string]`: 事件标题行，与文本钩子匹配。  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `starRatingDetailed[object]`: 详细的星级评定导致了用 ratingValue 表示的平均值。使用说明：从 1 到 10 个出现次数（星级）的结构化值，其中每个元素都是格式为字符串的字符串：NumberOfSTar`（星星数量）：百分比。  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -48,9 +51,9 @@
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 该数据模型基于 UNE178503 标准。它也与 schema.org 兼容。本文件 https://smart-data-models.github.io/data-models/schema-org.json 采用了 schema.org 的部分元素。该类型可单独用于描述一般的旅游目的地，也可作为附加类型为任何其他地点添加旅游相关属性。旅游目的地（TouristDestination）被定义为包含一个或多个旅游景点（TouristAttractions）或与这些景点同处一地的地方，这些景点通常与特定的旅游类型（TouristType）有着相似的主题或兴趣。联合国世界旅游组织将旅游目的地（旅游行程的主要目的地）定义为对旅游决定起核心作用的游览地。  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 属性的数据模型描述  
 按字母顺序排列（点击查看详情）  
@@ -639,6 +642,28 @@ Event:
     name:    
       description: The name of this item    
       type: string    
+      x-ngsi:    
+        type: Property    
+    offeredBy:    
+      description: Description of the even organizer entity    
+      properties:    
+        name:    
+          description: Name of the event organizer entity    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        type:    
+          description: 'Type of event organizer entity. I.e. organization, company, association'    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        url:    
+          description: Url to the main site of the event organizer entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
@@ -1253,11 +1278,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -1274,7 +1299,7 @@ Event:
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
   "alternateName": "Elle en revait, il l a fait : ils vont se marier !",  
-  "description": "Information sur la piéce de théatre",  
+  "description": "Information sur la pi\u00e9ce de th\u00e9atre",  
   "seeAlso": "https://www.billetreduc.com/260539/evt.htm",  
   "location": {  
     "type": "Point",  
@@ -1319,7 +1344,7 @@ Event:
   "eventStatus": [  
     "scheduled"  
   ],  
-  "locationName": "Théâtre Bellecour",  
+  "locationName": "Th\u00e9\u00e2tre Bellecour",  
   "title": "MARIAGE D ENFER",  
   "slogan": "Elle en revait, il l a fait : ils vont se marier !",  
   "language": [  
@@ -1364,7 +1389,7 @@ Event:
   "pitch": [  
     {  
       "language ": "fr",  
-      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"  
+      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"  
     },  
     {  
       "language": "en",  
@@ -1383,17 +1408,17 @@ Event:
     "Yann Bruno-Martinez"  
   ],  
   "composer": [  
-    "Céline Cara"  
+    "C\u00e9line Cara"  
   ],  
   "director": [  
-    "Sébastien El Fassi"  
+    "S\u00e9bastien El Fassi"  
   ],  
   "criticReview": [  
     {  
       "language": "fr",  
       "reviews": [  
         {  
-          "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",  
+          "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",  
           "origin": "Revue Theatrale - L. Dupont",  
           "ratingValue": 9,  
           "starRating": 6  
@@ -1465,29 +1490,26 @@ Event:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": {  
-    "type": "Text",  
-    "value": "uri:ngsi:event:1"  
-  },  
-  "type": {  
-    "type": "Text",  
-    "value": "Event"  
-  },  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
   "name": {  
     "type": "Text",  
-    "value": "Concierto de Revólver"  
+    "value": "Concierto de Rev\u00f3lver"  
   },  
   "address": {  
-    "addressLocality": "Salamanca",  
-    "postalCode": "37008",  
-    "streetAddress": "Calle Monte Olivete, s/n"  
+    "type": "StructuredValue",  
+    "value": {  
+      "addressLocality": "Salamanca",  
+      "postalCode": "37008",  
+      "streetAddress": "Calle Monte Olivete, s/n"  
+    }  
   },  
   "startDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T21:00:00"  
   },  
   "endDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T23:00:00"  
   },  
   "url": {  
@@ -1495,7 +1517,7 @@ Event:
     "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
   },  
   "offeredBy": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": {  
       "type": "Organization",  
       "name": "Notikumi",  
@@ -1514,26 +1536,26 @@ Event:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "uri:ngsi:event:1",  
-    "type": "Event",  
-    "address": {  
-        "addressLocality": "Salamanca",  
-        "postalCode": "37008",  
-        "streetAddress": "Calle Monte Olivete, s/n"  
-    },  
-    "endDate": "2019-06-08T23:00:00",  
-    "name": "Concierto de Revolver",  
-    "offeredBy": {  
-        "type": "Organization",  
-        "name": "Notikumi",  
-        "url": "https://www.notikumi.com/"  
-    },  
-    "startDate": "2019-06-08T21:00:00",  
-    "touristType": "EVENTS AND FESTIVALS TOURISM",  
-    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
-    ]  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "address": {  
+    "addressLocality": "Salamanca",  
+    "postalCode": "37008",  
+    "streetAddress": "Calle Monte Olivete, s/n"  
+  },  
+  "endDate": "2019-06-08T23:00:00",  
+  "name": "Concierto de Revolver",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "startDate": "2019-06-08T21:00:00",  
+  "touristType": "EVENTS AND FESTIVALS TOURISM",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
