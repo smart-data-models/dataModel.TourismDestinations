@@ -581,6 +581,28 @@ Event:
       type: string
       x-ngsi:
         type: Property
+    offeredBy:
+      description: Description of the even organizer entity
+      properties:
+        name:
+          description: Name of the event organizer entity
+          type: string
+          x-ngsi:
+            type: Property
+        type:
+          description: 'Type of event organizer entity. I.e. organization, company, association'
+          type: string
+          x-ngsi:
+            type: Property
+        url:
+          description: Url to the main site of the event organizer entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        type: Property
     openingHoursSpecification:
       description: A structured value providing information about the opening hours of a place or a certain service inside a place
       items:
@@ -1193,8 +1215,8 @@ Event:
     - type
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json
   x-model-tags: ""
-  x-version: 0.2.0
+  x-version: 0.2.1
