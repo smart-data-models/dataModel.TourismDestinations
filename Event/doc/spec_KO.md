@@ -8,33 +8,36 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 글로벌 설명: **이 장소, 조직 또는 작업과 관련된 예정된 또는 과거 이벤트**.  
-버전: 0.2.0  
+버전: 0.2.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## 속성 목록  
 
 <sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.  
-- `accessPlan[string]`:  항목에 대한 액세스 요금제 텍스트 또는 링크  - `actor[array]`: 배우 또는 음악 그룹 목록  - `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역에 속한 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+- `accessPlan[string]`:  항목에 대한 접근 권한 계획에 대한 텍스트 또는 링크  - `actor[array]`: 배우 또는 음악 그룹 목록  - `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예: 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역 내 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.    
 	- `postOfficeBoxNumber[string]`: 사서함 주소의 우체국 사서함 번호입니다. 예: 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 이 이벤트와 관련된 대중의 유형. 자유 텍스트(가족, 성인, 어린이, 청소년, 시니어, 모든공개, ...)의 조합입니다. 열거형: '성인, 모든공개, 어린이, 가족, 시니어, 청소년'  - `category[array]`: 이벤트의 카테고리. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트의 조합은 아래에 초기 저장소 또는 애플리케이션에 필요한 기타 값으로 제공됩니다. 열거형: '쇼핑, 미식, 박물관, 종교예배, 공원 및 정원, 역사, 야외활동, 소풍, 웰빙'  - `composer[array]`: 작곡을 작성한 사람 목록  - `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
-	- `availabilityRestriction[*]`: 이 속성은 연락처를 연락처를 사용할 수 없는 시간에 대한 정보에 연결합니다. 세부 정보는 영업 시간 지정 클래스를 사용하여 제공됩니다.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
-	- `availableLanguage[*]`: 누군가가 해당 상품, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
-	- `contactOption[*]`: 이 연락처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 이 이벤트와 관련된 대중의 유형입니다. 자유 텍스트(가족, 성인, 어린이, 청소년, 시니어, 모든공개, ...)의 조합입니다. 열거형:'성인, 모든공개, 어린이, 가족, 노인, 청소년'  - `category[array]`: 이벤트의 카테고리. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트 조합은 아래에 초기 저장소 또는 애플리케이션에 필요한 기타 값으로 제공됩니다. 열거형: '쇼핑, 미식, 박물관, 종교예배, 공원 및 정원, 역사, 야외활동, 소풍, 웰빙'  - `composer[array]`: 작곡을 작성한 사람 목록  - `contactPoint[object]`: 항목과 관련하여 문의할 세부 정보  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역입니다. 서비스 지역 대체    
+	- `availabilityRestriction[*]`: 이 속성은 연락처를 사용할 수 없는 시간에 대한 정보에 연락처를 연결합니다. 세부 정보는 영업 시간 지정 클래스를 사용하여 제공됩니다.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: 누군가가 해당 아이템, 서비스 또는 장소에서 사용할 수 있는 언어입니다. IETF BCP 47 표준의 언어 코드 중 하나를 사용하세요. 텍스트 옵션이 구현되어 있지만 언어  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: 이 문의처에서 사용할 수 있는 옵션(예: 수신자 부담 번호 또는 청각 장애가 있는 발신자를 위한 지원)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
 	- `contactType[string]`: 이 항목의 연락처 유형    
 	- `email[idn-email]`: 소유자의 이메일 주소    
 	- `faxNumber[string]`: 팩스 번호  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `name[string]`: 이 항목의 이름    
-	- `productSupported[string]`: 이 지원 문의처가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품 라인(예: 'iPhone') 또는 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `productSupported[string]`: 이 지원 문의창구가 관련된 제품 또는 서비스(예: 특정 제품 라인에 대한 제품 지원). 특정 제품 또는 제품군(예: 'iPhone')이거나 일반적인 제품 또는 서비스 카테고리(예: '스마트폰')일 수 있습니다.  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: 이 연락처의 전화    
 	- `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.    
-- `contentURL[uri]`: 자세한 정보를 확인할 수 있는 이벤트의 공식 이미지 또는 동영상 URL을 지정합니다.  - `criticReview[array]`: 검토 활동을 인정받은 출처에서 작성하거나 게시한 리뷰입니다. 각 항목은 모든 항목을 하나의 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 한 형식을 갖습니다. 각 항목은 '언어 값' : '문서 값'의 문자열로 표시됩니다.  - `currencyAccepted[array]`: isAccessibleForFree`가 거짓인 경우 결제에 사용할 수 있는 통화입니다. 모델에 정의된 활성 코드 목록의 조합입니다. [표준 ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [암호화 통화](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [거래소 거래 시스템](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `director[array]`: 구성을 관리하는 디렉터 목록  - `doorTimeClose[string]`: 공연 입장 마감 시간  - `doorTimeOpen[string]`: 공연장 입장 시간  - `duration[number]`: 각 쇼의 지속 시간입니다. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **HUR**은 **시간**을 나타냅니다.  - `electricTransport[array]`:  시에서 제안하는 다양한 유형의 전기 교통수단 목록입니다. 의 조합입니다. Enum:'전기자전거, 전기자동차, 전기모터바이크, 전기스쿠터'  - `endDate[date-time]`: 항목의 종료 날짜 및 시간(ISO 8601 날짜 형식)입니다.  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 최소 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**는 **유로**를 나타냅니다.  - `eventPriceTo[number]`: 최대 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**는 **유로**를 나타냅니다.  - `eventSchedule[array]`: 이 속성을 사용하여 스케줄과 연결된 이벤트에는 `startDate` 또는 `endDate` 속성이 없어야 합니다. 대신 연결된 일정 내에서 정의되므로 데이터를 사용하는 클라이언트의 모호함을 방지할 수 있습니다. 속성에는 다른 일정(다른 월 또는 계절)을 지정하기 위해 반복되는 값이 있을 수 있습니다.***  - `eventStatus[array]`: 이 이벤트 관련 이벤트 현황  - `id[*]`: 엔티티의 고유 식별자  - `isAccessibleForFree[boolean]`: 아이템, 이벤트 또는 장소에 무료로 액세스할 수 있음을 알리는 플래그입니다.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: 이벤트 기간 동안 사용된 공식 언어 목록은 IETF [BCP 47](https://tools.ietf.org/html/bcp47) 표준에 따라 표현되었습니다.  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `maximumAttendeeCapacity[number]`: 해당 위치에서 이벤트에 참석할 수 있는 총 인원 수입니다.  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `paymentAccepted[array]`: isAccessibleForFree`가 거짓인 경우 허용된 결제입니다. 모델에 정의된 활성 코드 목록의 조합입니다. 열거형:'현금, 신용 카드, 암호 화폐, 기타'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: 이벤트의 주연 배우, 발표자, 음악가 또는 음악 그룹  - `pitch[array]`: 이벤트의 피치. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 하는 형식을 갖습니다. 각 항목은 언어 값: 기사 값의 문자열로 표시됩니다.  - `priceSpecification[array]`: 카테고리 또는 공개에 따라 가격 또는 가격 범위를 나타내는 구조화된 값입니다.  - `publicAccess[boolean]`: 플레이스가 일반 방문자에게 개방되어 있음을 알리는 플래그입니다. 이 속성을 생략하면 기본 부울 값으로 가정되는 기본값이 없습니다.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: 이벤트의 등급 값입니다. 사용 가이드라인: 기준에 따라 0에서 10 사이의 값을 사용합니다. 이 값은 '별점 평가 상세' 속성의 모든 세부 점수의 평균값입니다.  - `refPointOfInterest[array]`: 이벤트에 포함된 모든 관심 지점[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) 참조. POI 목록에는 시간 순서가 없습니다.  - `routeType[array]`: 행사장 근처에서 이용할 수 있는 도시 교통수단(지하철, 버스, 트램 등) 목록은 GFTS 표준 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)에 따릅니다. 값의 조합. Enum:'버스, 케이블카, 케이블트램, 페리, 푸니쿨라, 모노레일, 지하철, 기차, 트램, 트롤리버스'  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `slogan[string]`: 이벤트 헤더 라인, 텍스트 후크와 일치합니다.  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `starRatingDetailed[object]`: ratingValue에 표시된 평균값으로 이어진 자세한 별점 평가입니다. 사용 지침: 각 요소가 형식의 문자열인 1~10개(별)의 구조화된 값입니다: NumberOfSTar`: 퍼센트.  	- `1`:     
+- `contentURL[uri]`: 자세한 내용을 보려면 이벤트의 공식 이미지 또는 동영상 URL을 지정합니다.  - `criticReview[array]`: 검토 활동으로 인정받은 출처에서 작성하거나 게시한 리뷰입니다. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 한 형식을 갖습니다. 각 항목은 '언어 값' : '문서 값'의 문자열로 표시됩니다.  - `currencyAccepted[array]`: isAccessibleForFree`가 False인 경우 결제에 사용할 수 있는 통화입니다. 모델에 정의된 활성 코드 목록의 조합입니다. [표준 ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [암호화 통화](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [거래소 거래 시스템](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자열입니다.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `director[array]`: 구성을 관리하는 디렉터 목록  - `doorTimeClose[string]`: 공연 입장 마감 시간  - `doorTimeOpen[string]`: 공연장 입장 시간  - `duration[number]`: 각 쇼의 지속 시간입니다. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **HUR**은 **시간**을 나타냅니다.  - `electricTransport[array]`:  시에서 제안하는 다양한 유형의 전기 교통수단 목록입니다. 의 조합입니다. Enum:'전기자전거, 전기자동차, 전기모터바이크, 전기스쿠터'  - `endDate[date-time]`: 항목의 종료 날짜 및 시간(ISO 8601 날짜 형식)입니다.  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: 최소 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**은 **€유로**를 나타냅니다.  - `eventPriceTo[number]`: 최대 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**은 **€유로**를 나타냅니다.  - `eventSchedule[array]`: 이 속성을 사용하여 스케줄과 연결된 이벤트에는 `startDate` 또는 `endDate` 속성이 없어야 합니다. 대신 연결된 스케줄 내에서 정의하면 데이터를 사용하는 클라이언트의 모호성을 방지할 수 있습니다. 이 속성에는 다른 일정(다른 월 또는 계절)을 지정하기 위해 반복되는 값이 있을 수 있습니다.  - `eventStatus[array]`: 이 이벤트 관련 이벤트 현황  - `id[*]`: 엔티티의 고유 식별자  - `isAccessibleForFree[boolean]`: 아이템, 이벤트 또는 장소에 무료로 액세스할 수 있음을 알리는 플래그입니다.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: 이벤트 기간 동안 사용된 공식 언어 목록은 IETF [BCP 47](https://tools.ietf.org/html/bcp47) 표준에 따라 표현되었습니다.  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `maximumAttendeeCapacity[number]`: 해당 위치에서 이벤트에 참석할 수 있는 총 인원 수입니다.  - `name[string]`: 이 항목의 이름  - `offeredBy[object]`: 짝수 편성자 엔티티에 대한 설명  	- `name[string]`: 이벤트 주최자 단체의 이름    
+	- `type[string]`: 이벤트 주최자 주체 유형. 예: 단체, 회사, 협회    
+	- `url[uri]`: 이벤트 주최자 엔티티의 메인 사이트 URL    
+- `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `paymentAccepted[array]`: isAccessibleForFree`가 거짓인 경우 수락된 결제입니다. 모델에 정의된 활성 코드 목록의 조합입니다. Enum:'현금, 신용카드, 암호화폐, 기타'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: 이벤트의 주연 배우, 발표자, 음악가, 음악 그룹  - `pitch[array]`: 이벤트의 피치. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 하는 형식을 갖습니다. 각 항목은 언어 값: 기사 값의 문자열로 표시됩니다.  - `priceSpecification[array]`: 카테고리 또는 공개에 따라 가격 또는 가격 범위를 나타내는 구조화된 값입니다.  - `publicAccess[boolean]`: 플레이스가 일반 방문객에게 개방되어 있음을 알리는 플래그입니다. 이 속성을 생략하면 기본 부울 값으로 간주되지 않습니다.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: 이벤트의 등급 값입니다. 사용 지침: 기준에 따라 0~10 사이의 값을 사용합니다. 이 값은 '별점 평가 상세' 속성의 모든 세부 점수의 평균값입니다.  - `refPointOfInterest[array]`: 이벤트에 포함된 모든 관심 지점[포인트 오브 인터레스트](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) 참조. 관심 지점 목록에는 시간 순서가 없습니다.  - `routeType[array]`: 행사장 근처에서 이용 가능한 도시 교통수단(지하철, 버스, 트램 등) 목록으로, GFTS 표준 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)에 따라 표시됩니다. 값의 조합입니다. Enum:'버스, 케이블카, 케이블트램, 페리, 푸니쿨라, 모노레일, 지하철, 기차, 트램, 트롤리버스'  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `slogan[string]`: 이벤트 헤더 라인, 텍스트 후크와 일치합니다.  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `starRatingDetailed[object]`: 등급 값에 표시된 평균값으로 이어진 세부 별점입니다. 사용 지침: 각 요소가 형식의 문자열인 1~10개(별)로 구성된 구조화된 값입니다: NumberOfSTar`: 퍼센트.  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -44,13 +47,13 @@
 	- `7`:     
 	- `8`:     
 	- `9`:     
-- `startDate[date-time]`: 항목의 시작 날짜 및 시간(ISO 8601 날짜 형식)입니다.  . Model: [https://schema.org/startDate](https://schema.org/startDate)- `subCategory[array]`: 카테고리` 속성의 하위 카테고리입니다. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트 조합은 아래에 초기 예시 또는 애플리케이션에 필요한 기타 값으로 제공됩니다.  - `subEvent[array]`: 이 주요 이벤트의 일부인 마이너 이벤트 목록 참조  - `superEvent[*]`: 이 이벤트가 포함된 주요 이벤트에 대한 참조  - `thematic[array]`: 키워드로서의 주제별 목록  - `title[string]`:  이벤트 제목  - `touristType[string]`: 구간과 여행 동기에 따라 관광 유형이 달라집니다.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transportServices[array]`: 이벤트 근처에서 이용할 수 있는 개인 교통수단 목록입니다. 예: 택시, 우버, vtc, 파킹셔틀  - `type[string]`: 이벤트여야 합니다. NGSI 엔티티 유형  . Model: [https://schema.org/event](https://schema.org/event)- `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.  - `webSite[uri]`: 자세한 내용은 공식 웹사이트에 링크하세요.  - `wheelChairAccessible[boolean]`: 거동이 불편한 분도 이용 가능  <!-- /30-PropertiesList -->  
+- `startDate[date-time]`: 항목의 시작 날짜 및 시간(ISO 8601 날짜 형식)입니다.  . Model: [https://schema.org/startDate](https://schema.org/startDate)- `subCategory[array]`: 카테고리` 속성의 하위 카테고리. 특정 컨텍스트에 맞게 유연하게 사용할 수 있는 자유 텍스트 조합은 아래에 초기 예시 또는 애플리케이션에 필요한 다른 값으로 제공됩니다.  - `subEvent[array]`: 이 주요 이벤트의 일부인 마이너 이벤트 목록을 참조하세요.  - `superEvent[*]`: 이 이벤트가 포함된 주요 이벤트에 대한 참조  - `thematic[array]`: 키워드로서의 주제별 목록  - `title[string]`:  이벤트 제목  - `touristType[string]`: 구간과 여행 동기에 따라 관광 유형이 달라집니다.  . Model: [https://schema.org/Text](https://schema.org/Text)- `transportServices[array]`: 이벤트 근처에서 이용 가능한 개인 교통수단 목록. 예: 택시, 우버, VTC, 주차 셔틀  - `type[string]`: 이벤트여야 합니다. NGSI 엔티티 유형  . Model: [https://schema.org/event](https://schema.org/event)- `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.  - `webSite[uri]`: 자세한 내용은 공식 웹사이트 링크  - `wheelChairAccessible[boolean]`: 거동이 불편한 분도 이용 가능  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-이 데이터 모델은 표준 UNE178503을 기반으로 합니다. 또한 schema.org와 호환됩니다. schema.org의 일부 요소는 이 파일(https://smart-data-models.github.io/data-models/schema-org.json)에 적용되었습니다. 이 유형은 그 자체로 일반적인 관광지를 설명하는 데 사용하거나 다른 장소에 관광 관련 속성을 추가하기 위한 추가 유형으로 사용할 수 있습니다. 관광목적지는 하나 이상의 관광명소를 포함하거나 함께 배치된 장소로 정의되며, 특정 관광유형과 유사한 테마나 관심사로 연결되는 경우가 많습니다. UNWTO는 목적지(관광 여행의 주요 목적지)를 여행 결정의 중심이 되는 방문 장소로 정의합니다.  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+이 데이터 모델은 표준 UNE178503을 기반으로 합니다. 또한 schema.org와 호환됩니다. 이 파일(https://smart-data-models.github.io/data-models/schema-org.json)에는 schema.org의 일부 요소가 적용되었습니다. 이 유형은 일반적인 관광지를 설명하는 데 단독으로 사용하거나 다른 장소에 관광 관련 속성을 추가하는 데 추가 유형으로 사용할 수 있습니다. 관광지 유형은 하나 이상의 관광 명소를 포함하거나 함께 배치된 장소로 정의되며, 특정 관광 유형과 유사한 테마나 관심사로 연결되는 경우가 많습니다. UNWTO는 관광 목적지(관광 여행의 주요 목적지)를 여행 결정의 중심이 되는 방문 장소로 정의합니다.  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 속성에 대한 데이터 모델 설명  
 알파벳순으로 정렬(자세한 내용을 보려면 클릭)  
@@ -639,6 +642,28 @@ Event:
     name:    
       description: The name of this item    
       type: string    
+      x-ngsi:    
+        type: Property    
+    offeredBy:    
+      description: Description of the even organizer entity    
+      properties:    
+        name:    
+          description: Name of the event organizer entity    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        type:    
+          description: 'Type of event organizer entity. I.e. organization, company, association'    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        url:    
+          description: Url to the main site of the event organizer entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      type: object    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
@@ -1253,11 +1278,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -1266,7 +1291,7 @@ Event:
 <!-- 80-Examples -->  
 ## 페이로드 예시  
 #### 이벤트 NGSI-v2 키-값 예시  
-다음은 키-값으로 JSON-LD 형식의 이벤트의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+다음은 JSON-LD 형식의 이벤트가 키 값으로 제공되는 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1274,7 +1299,7 @@ Event:
   "type": "Event",  
   "name": "MARIAGE D ENFER",  
   "alternateName": "Elle en revait, il l a fait : ils vont se marier !",  
-  "description": "Information sur la piéce de théatre",  
+  "description": "Information sur la pi\u00e9ce de th\u00e9atre",  
   "seeAlso": "https://www.billetreduc.com/260539/evt.htm",  
   "location": {  
     "type": "Point",  
@@ -1319,7 +1344,7 @@ Event:
   "eventStatus": [  
     "scheduled"  
   ],  
-  "locationName": "Théâtre Bellecour",  
+  "locationName": "Th\u00e9\u00e2tre Bellecour",  
   "title": "MARIAGE D ENFER",  
   "slogan": "Elle en revait, il l a fait : ils vont se marier !",  
   "language": [  
@@ -1364,7 +1389,7 @@ Event:
   "pitch": [  
     {  
       "language ": "fr",  
-      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a déjà tout anticipé dans le moindre détail ! Tout ? Peut-être pas... En tout cas, un mariage ça se gère à deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les préparatifs d un mariage ! Que vous soyez mariés, fiancés, en couple, juste amis ou célibataire, cette comédie est faite pour vous ! Venez découvrir les coulisses des préparatifs d un mariage haut en couleurs avant de faire le grand saut !"  
+      "article": "Heureusement pour Max, la wedding planner c est elle, et elle a d\u00e9j\u00e0 tout anticip\u00e9 dans le moindre d\u00e9tail ! Tout ? Peut-\u00eatre pas... En tout cas, un mariage \u00e7a se g\u00e8re \u00e0 deux... Et les conflits aussi ! Quand on dit pour le meilleur et pour le pire, le pire c est certainement les pr\u00e9paratifs d un mariage ! Que vous soyez mari\u00e9s, fianc\u00e9s, en couple, juste amis ou c\u00e9libataire, cette com\u00e9die est faite pour vous ! Venez d\u00e9couvrir les coulisses des pr\u00e9paratifs d un mariage haut en couleurs avant de faire le grand saut !"  
     },  
     {  
       "language": "en",  
@@ -1383,17 +1408,17 @@ Event:
     "Yann Bruno-Martinez"  
   ],  
   "composer": [  
-    "Céline Cara"  
+    "C\u00e9line Cara"  
   ],  
   "director": [  
-    "Sébastien El Fassi"  
+    "S\u00e9bastien El Fassi"  
   ],  
   "criticReview": [  
     {  
       "language": "fr",  
       "reviews": [  
         {  
-          "article": "Comédie à ne pas rater. Tout y est la mère, la belle mère, les copains et avant tout les rires les quiproquos, les retournements et tout cela  enchaîne avec une grande vitesse.  Alors allez  pour feliciter les époux et rire de bon coeur avec eux.",  
+          "article": "Com\u00e9die \u00e0 ne pas rater. Tout y est la m\u00e8re, la belle m\u00e8re, les copains et avant tout les rires les quiproquos, les retournements et tout cela  encha\u00eene avec une grande vitesse.  Alors allez  pour feliciter les \u00e9poux et rire de bon coeur avec eux.",  
           "origin": "Revue Theatrale - L. Dupont",  
           "ratingValue": 9,  
           "starRating": 6  
@@ -1460,34 +1485,31 @@ Event:
 }  
 ```  
 </details>  
-#### 이벤트 NGSI-v2 정규화 예제  
+#### 이벤트 NGSI-v2 정규화 예시  
 다음은 정규화된 JSON-LD 형식의 이벤트 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": {  
-    "type": "Text",  
-    "value": "uri:ngsi:event:1"  
-  },  
-  "type": {  
-    "type": "Text",  
-    "value": "Event"  
-  },  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
   "name": {  
     "type": "Text",  
-    "value": "Concierto de Revólver"  
+    "value": "Concierto de Rev\u00f3lver"  
   },  
   "address": {  
-    "addressLocality": "Salamanca",  
-    "postalCode": "37008",  
-    "streetAddress": "Calle Monte Olivete, s/n"  
+    "type": "StructuredValue",  
+    "value": {  
+      "addressLocality": "Salamanca",  
+      "postalCode": "37008",  
+      "streetAddress": "Calle Monte Olivete, s/n"  
+    }  
   },  
   "startDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T21:00:00"  
   },  
   "endDate": {  
-    "type": "Text",  
+    "type": "DateTime",  
     "value": "2019-06-08T23:00:00"  
   },  
   "url": {  
@@ -1495,7 +1517,7 @@ Event:
     "value": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca"  
   },  
   "offeredBy": {  
-    "type": "object",  
+    "type": "StructuredValue",  
     "value": {  
       "type": "Organization",  
       "name": "Notikumi",  
@@ -1510,34 +1532,34 @@ Event:
 ```  
 </details>  
 #### 이벤트 NGSI-LD 키-값 예시  
-다음은 키-값으로 JSON-LD 형식의 이벤트의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+다음은 JSON-LD 형식의 이벤트가 키값으로 제공되는 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "uri:ngsi:event:1",  
-    "type": "Event",  
-    "address": {  
-        "addressLocality": "Salamanca",  
-        "postalCode": "37008",  
-        "streetAddress": "Calle Monte Olivete, s/n"  
-    },  
-    "endDate": "2019-06-08T23:00:00",  
-    "name": "Concierto de Revolver",  
-    "offeredBy": {  
-        "type": "Organization",  
-        "name": "Notikumi",  
-        "url": "https://www.notikumi.com/"  
-    },  
-    "startDate": "2019-06-08T21:00:00",  
-    "touristType": "EVENTS AND FESTIVALS TOURISM",  
-    "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
-    ]  
+  "id": "uri:ngsi:event:1",  
+  "type": "Event",  
+  "address": {  
+    "addressLocality": "Salamanca",  
+    "postalCode": "37008",  
+    "streetAddress": "Calle Monte Olivete, s/n"  
+  },  
+  "endDate": "2019-06-08T23:00:00",  
+  "name": "Concierto de Revolver",  
+  "offeredBy": {  
+    "type": "Organization",  
+    "name": "Notikumi",  
+    "url": "https://www.notikumi.com/"  
+  },  
+  "startDate": "2019-06-08T21:00:00",  
+  "touristType": "EVENTS AND FESTIVALS TOURISM",  
+  "url": "https://www.notikumi.com/2019/6/8/evento-de-revolver-en-salamanca",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
-#### 이벤트 NGSI-LD 정규화 예시  
+#### 이벤트 NGSI-LD 정규화 예제  
 다음은 정규화된 JSON-LD 형식의 이벤트 예시입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -1904,7 +1926,7 @@ Event:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+크기 단위를 다루는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
