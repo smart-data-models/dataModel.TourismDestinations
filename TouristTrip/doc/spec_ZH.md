@@ -22,7 +22,9 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
 - `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 本次旅行涉及的公众类型。自由文本（家庭、成人、儿童、青少年、老人、所有公众......）的组合。枚举："成人、所有公众、儿童、家庭、老人、青少年"。  - `category[array]`: 旅行类别。下面提供了一个自由文本组合，作为初始存储库或应用程序所需的任何其他值，以便根据具体情况保持灵活性。 枚举：'游览、美食、历史、博物馆、户外活动、公园和花园、宗教崇拜、购物、保健'。  - `contentURL[uri]`: 指定旅行的官方图片或视频的 URL，以获取更多信息  - `criticReview[array]`: 由在审查活动中得到认可的来源撰写或发表的审查报告。每个条目的格式都基于[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization)，将所有条目整合在一个属性中（例如编号 71）。每个项目由一个字符串表示，其中包含 "语言值"："文章值  - `currencyAccepted[array]`: 如果 `TripFree` 为 False，则接受的付款货币。模型中定义的活动代码列表的组合。[Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateLastReported[date-time]`: 最近以 ISO 8601 格式正式更新的数据  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `duration[number]`: 每个节目的持续时间。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**HUR** 表示**小时**  - `electricTransport[array]`: 城市提出的各种电动交通工具清单。由以下元素组合而成。枚举:'电动自行车、电动汽车、电动摩托车、电动滑板车  - `endDate[date-time]`: ISO8601 UTC 格式的结束日期和时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: 实体的唯一标识符  - `image[uri]`: 物品的图片  . Model: [https://schema.org/URL](https://schema.org/URL)- `isAccessibleForFree[boolean]`: 免费或付费旅行（真=免费/假=付费）  - `itinerary[array]`: 组成行程的目的地或地点。对于目的地顺序很重要的行程，可以使用 ItemList 来指定行程中的目的地顺序。  - `language[array]`: Trip 期间使用的正式语言列表，摘自 IETF [BCP 47](https://tools.ietf.org/html/bcp47) 标准  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `locationName[string]`: 旅行地点名称  - `maximumAttendeeCapacity[number]`: 该地点可参加旅行的总人数  - `name[string]`: 该项目的名称  - `openingHoursSpecification[array]`: 一个结构化数值，提供有关某个场所或场所内某项服务开放时间的信息  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `paymentAccepted[array]`: 如果 `TripFree` 为 False，则接受付款。模型中定义的活动代码列表的组合。枚举："现金、信用卡、加密货币、其他  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: 行程的间距。每个项目的格式都是根据[国际化（i18N）--W3C 多语言建议](https://www.w3.org/TR/json-ld/#string-internationalization) 将所有项目整合到一个属性中（例如编号 71）。每个项目由一个字符串表示，语言值为：文章值。  	- `article`:     
+	- `language`:     
 - `priceSpecification[array]`: 代表价格或价格范围的结构化数值，取决于类别或公众  - `ratingValueAverage[number]`: 旅行的评级值。使用指南：这是 `starRatingDetailed` 属性所有详细评分的平均值。  - `refPointOfInterest[array]`: 行程中包含的所有兴趣点[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)的参考。兴趣点列表不按时间顺序排列  - `routeType[array]`: 根据 GFTS 标准 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)，行程附近可用的城市交通工具（地铁、公共汽车、有轨电车......）列表。各种值的组合。枚举：' 公共汽车、缆车、有轨电车、渡轮、缆车、单轨铁路、地铁、火车、有轨电车、无轨电车  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `slogan[string]`: 行程标题行，与文本钩子匹配。  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `starRatingDetailed[object]`: 详细的星级评定导致了用 ratingValue 表示的平均值。使用说明：从 1 到 10 个出现次数（星级）的结构化值，其中每个元素都是格式为字符串的字符串：NumberOfSTar`（星星数量）：百分比。  	- `1`:     
 	- `10`:     
 	- `2`:     
@@ -32,13 +34,14 @@
 	- `6`:     
 	- `7`:     
 	- `8`:     
-- `startDate[date-time]`: ISO8601 UTC 格式的起始日期和时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: 类别 "属性的子类别。下面提供了一个自由文本组合，作为初始示例或应用程序所需的任何其他值，以保持对特定上下文的灵活性。  - `subTrip[array]`: 作为主要旅行一部分的次要旅行清单参考  - `superTrip[*]`: 包括此行程在内的主要行程参考  - `thematic[array]`: 作为关键词的专题清单  - `title[string]`: 旅行名称  - `touristType[array]`: 适用于 TouristTrip 的不同游客类型的枚举  - `transportServices[array]`: 行程附近可使用的私人交通工具列表。例如出租车、优步、VTC、停车班车  - `tripPriceFrom[number]`: 最低价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**欧元**代表**欧元**。  - `tripPriceTo[number]`: 最高价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**EUR** 表示**欧元**。  - `tripSchedule[array]`: 行程计划。该属性允许在一段重复的时间内设置时间表，用于描述定期发生的行程。本节开头的示例说明了使用此属性的限制。  - `tripStatus[string]`: 有关此行程的行程状态。枚举："取消、关闭、完成、开启、推迟、改期、计划、暂停"。  - `type[string]`: 必须是 TouristTrip。NGSI 实体类型  - `url[uri]`: 提供有关此项目的描述或更多信息的 URL  - `video[uri]`: 项目相关视频的网址  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: 更多信息请链接至官方网站  - `wheelChairAccessible[boolean]`: 可为行动不便者提供通道  <!-- /30-PropertiesList -->  
+	- `9`:     
+- `startDate[date-time]`: ISO8601 UTC 格式的起始日期和时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: 类别 "属性的子类别。下面提供了一个自由文本组合，作为初始示例或应用程序所需的任何其他值，以保持对特定上下文的灵活性。  - `subTrip[array]`: 作为主要旅行一部分的次要旅行清单参考  - `superTrip[*]`: 包括此行程在内的主要行程参考  - `thematic[array]`: 作为关键词的专题清单  - `title[string]`: 旅行名称  - `touristType[array]`: 适用于 TouristTrip 的不同游客类型的枚举  - `transportServices[array]`: 行程附近可使用的私人交通工具列表。例如出租车、优步、VTC、停车班车  - `tripPriceFrom[number]`: 最低价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**欧元**代表**欧元**。  - `tripPriceTo[number]`: 最高价格。计量单位代码（文本）使用 [UN/CEFACT 通用代码](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)。例如，**EUR** 表示**欧元**。  - `tripSchedule[array]`: 行程计划。该属性允许在一段重复的时间内设置时间表，用于描述定期发生的行程。本节开头的示例说明了使用此属性的限制。  - `tripStatus[string]`: 有关此行程的行程状态。枚举："取消、关闭、完成、开启、推迟、改期、计划、暂停"。  - `type[string]`: 必须是 TouristTrip。NGSI 实体类型  - `url[uri]`: 提供有关此项目的说明或更多信息的 URL  - `video[uri]`: 项目相关视频的网址  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: 更多信息请链接至官方网站  - `wheelChairAccessible[boolean]`: 可为行动不便者提供通道  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 该数据模型基于 UNE178503 标准。它也与 schema.org 兼容。本文件 https://smart-data-models.github.io/data-models/schema-org.json 采用了 schema.org 的部分元素。为保持与 schema.org 的兼容性，有必要进行少量调整。  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 属性的数据模型描述  
 按字母顺序排列（点击查看详情）  
@@ -1150,7 +1153,7 @@ TouristTrip:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json    
   x-model-tags: ""    
@@ -1182,7 +1185,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -1412,10 +1414,6 @@ TouristTrip:
   "electricTransport": [  
     "electricBicycle",  
     "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
@@ -1455,10 +1453,6 @@ TouristTrip:
   "image": {  
     "type": "Text",  
     "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
-  },  
-  "sameAs": {  
-    "type": "Text",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "video": {  
     "type": "Text",  
@@ -1827,7 +1821,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -2355,10 +2348,6 @@ TouristTrip:
       "subway",  
       "bus"  
     ]  
-  },  
-  "sameAs": {  
-    "type": "Property",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "seeAlso": {  
     "type": "Property",  
