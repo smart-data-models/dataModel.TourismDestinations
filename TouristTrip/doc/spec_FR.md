@@ -22,7 +22,9 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
 - `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: Type de public concerné par ce voyage. Une combinaison de texte libre (famille, adulte, enfants, adolescents, seniors, tout public, ...). Enum : "adulte, tout public, enfant, famille, senior, adolescent  - `category[array]`: Catégorie du voyage. Une combinaison de texte libre pour rester flexible à un contexte spécifique est proposée ci-dessous comme référentiel initial ou toute autre valeur nécessaire à une application. enum : "excursion, gastronomie, histoire, musée, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness  - `contentURL[uri]`: Spécifie l'URL de l'image ou de la vidéo officielle du voyage pour plus d'informations.  - `criticReview[array]`: Revue écrite ou publiée par une source reconnue pour ses activités de revue. Chaque article a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les articles dans une propriété unique (ex numéro 71). Chaque élément est représenté par une chaîne de caractères avec 'Valeur de la langue' : 'Valeur de l'article'  - `currencyAccepted[array]`: Devise acceptée pour le paiement si `TripFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto-monnaies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Système d'échange de devises](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateLastReported[date-time]`: Dernière mise à jour officielle des données au format ISO 8601  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `duration[number]`: La durée de chaque émission. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **HUR** représente **Heures**  - `electricTransport[array]`:  Liste des différents types de transport électrique proposés par la ville. Une combinaison de. Enum : "electricBicycle, electricCar, electricMotorBike, electricScooter" (bicyclette électrique, voiture électrique, moto électrique, scooter électrique)  - `endDate[date-time]`: Date et heure de fin au format ISO8601 UTC  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Identifiant unique de l'entité  - `image[uri]`: Une image de l'objet  . Model: [https://schema.org/URL](https://schema.org/URL)- `isAccessibleForFree[boolean]`: Voyage gratuit ou payant (Vrai = Gratuit / Faux = Payant)  - `itinerary[array]`: Destinations ou lieux qui composent un voyage. Pour un voyage où l'ordre des destinations est important, utilisez ItemList pour spécifier l'ordre inclus dans le voyage.  - `language[array]`:  Liste des langages formels utilisés pendant le voyage exprimés à partir de la norme IETF [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `locationName[string]`: Nom du lieu du voyage  - `maximumAttendeeCapacity[number]`: Le nombre total de personnes pouvant assister au voyage à cet endroit  - `name[string]`: Le nom de cet élément  - `openingHoursSpecification[array]`: Valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `paymentAccepted[array]`: Paiement accepté si `TripFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. Enum : "Cash, CreditCard, CryptoCurrency, other" (Espèces, cartes de crédit, crypto-monnaies, autres)  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: Emplacement du voyage. Chaque élément a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les éléments dans une propriété unique (par exemple, le numéro 71). Chaque élément est représenté par une chaîne de caractères avec Language Value : Article Value.  	- `article`:     
+	- `language`:     
 - `priceSpecification[array]`: Une valeur structurée représentant un prix ou une fourchette de prix en fonction des catégories ou du public.  - `ratingValueAverage[number]`: Valeur d'évaluation des voyages. Conseils d'utilisation : Utilisez des valeurs de 0 à 10 en fonction de votre norme. Il s'agit de la valeur moyenne de toutes les notes détaillées de l'attribut `starRatingDetailed`.  - `refPointOfInterest[array]`: Référence à tous les points d'intérêt [PointOfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclus dans les voyages. La liste des POI n'a pas d'ordre chronologique.  - `routeType[array]`: Liste des transports urbains (métro, bus, tramway, ...) disponibles à proximité du trajet conformément à la norme GFTS [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). Une combinaison de valeurs. Enum:' bus, cableCar, cableTram, ferry, funiculaire, monorail, métro, train, tram, trolleybus'  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `slogan[string]`: Ligne d'en-tête de voyage, correspond à l'accroche du texte.  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `starRatingDetailed[object]`: Les notes détaillées par étoiles qui ont conduit à la valeur moyenne exprimée dans la valeur de la note. Mode d'emploi : Une valeur structurée de 1 à 10 occurrences (étoiles) où chaque élément est une chaîne au format : `NumberOfSTar` : Pourcentage.  	- `1`:     
 	- `10`:     
 	- `2`:     
@@ -32,13 +34,14 @@
 	- `6`:     
 	- `7`:     
 	- `8`:     
+	- `9`:     
 - `startDate[date-time]`: Date et heure de début au format ISO8601 UTC  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: Sous-catégorie de l'attribut `category`. Une combinaison de texte libre permettant de s'adapter à un contexte spécifique est proposée ci-dessous à titre d'exemple initial ou pour toute autre valeur requise par une application.  - `subTrip[array]`: Référence à une liste de déplacements mineurs faisant partie de ce déplacement principal  - `superTrip[*]`: Référence au voyage principal qui inclut ce voyage  - `thematic[array]`: Une liste de mots-clés thématiques  - `title[string]`:  Titre du voyage  - `touristType[array]`: énumération des différents types de touristes applicables au TouristTrip  - `transportServices[array]`: Liste des transports privés disponibles à proximité du voyage. Par exemple : taxi, uber, vtc, parking, navette.  - `tripPriceFrom[number]`: Prix min. Le code d'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `tripPriceTo[number]`: Prix maximum. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `tripSchedule[array]`: Programme de voyage. Cet attribut permet de définir un horaire sur une période répétée, utilisé pour décrire un déplacement qui se produit régulièrement. Dans l'exemple noté au début de la section pour la restriction de l'utilisation de cet attribut.  - `tripStatus[string]`: Statut du voyage concernant ce voyage. Enum : "annulé, fermé, terminé, ouvert, reporté, reprogrammé, programmé, suspendu".  - `type[string]`: Il doit s'agir de TouristTrip. Type d'entité NGSI  - `url[uri]`: URL qui fournit une description ou des informations complémentaires sur cet élément  - `video[uri]`: Url de la vidéo relative à l'article  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: Lien vers le site officiel pour plus d'informations  - `wheelChairAccessible[boolean]`: Accès possible pour les personnes à mobilité réduite  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 Ce modèle de données est basé sur la norme UNE178503. Il est également compatible avec schema.org. Certains éléments de schema.org ont été adaptés dans ce fichier https://smart-data-models.github.io/data-models/schema-org.json. Des ajustements mineurs ont été nécessaires pour maintenir la compatibilité avec schema.org.  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -1150,7 +1153,7 @@ TouristTrip:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json    
   x-model-tags: ""    
@@ -1182,7 +1185,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -1412,10 +1414,6 @@ TouristTrip:
   "electricTransport": [  
     "electricBicycle",  
     "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
@@ -1455,10 +1453,6 @@ TouristTrip:
   "image": {  
     "type": "Text",  
     "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
-  },  
-  "sameAs": {  
-    "type": "Text",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "video": {  
     "type": "Text",  
@@ -1827,7 +1821,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -2355,10 +2348,6 @@ TouristTrip:
       "subway",  
       "bus"  
     ]  
-  },  
-  "sameAs": {  
-    "type": "Property",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "seeAlso": {  
     "type": "Property",  
