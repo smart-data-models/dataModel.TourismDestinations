@@ -286,10 +286,6 @@
       "bus"
     ]
   },
-  "sameAs": {
-    "type": "Property",
-    "value": "https://inventrip.com/conil/trip/1907"
-  },
   "seeAlso": {
     "type": "Property",
     "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"
