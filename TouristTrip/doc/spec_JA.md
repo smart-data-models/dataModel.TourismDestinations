@@ -22,7 +22,9 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
 - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: このトリップの対象者のタイプ。フリーテキスト（family, adult, children, teenager, senior, allPublic, ...）の組み合わせ。Enum:'大人, allPublic, 子供, 家族, シニア, ティーンエイジャー'  - `category[array]`: 旅行のカテゴリー。特定のコンテキストに柔軟に対応するためのフリーテキストの組み合わせは、初期リポジトリまたはアプリケーションが必要とする他の値として、以下に提供されています。 enum:'excursion, gastronomy, history, museum, outdoorActivities, parksAndGardens, religiousWorship, shopping, wellness'  - `contentURL[uri]`: トリップの公式画像またはビデオのURLを指定する。  - `criticReview[array]`: レビュー活動で認められている情報源によって書かれた、または発行されたレビュー。各項目は、[Internationalization (i18N) - W3C recommendation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づく形式を持ち、全ての項目を一つのプロパティに統合する(例：番号71)。各項目は、'Language Value' : 'Article Value' の文字列で表現される。  - `currencyAccepted[array]`: TripFree`がFalseの場合に支払いに利用できる通貨。モデルで定義されたアクティブコードのリストの組み合わせ。[標準ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [暗号通貨](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [取引所取引システム](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateLastReported[date-time]`: ISO 8601フォーマットによるデータの最終公式更新日  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `duration[number]`: 各ショーの継続時間。計測の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を用いて与えられる。例えば、**HUR**は**時間**を表す。  - `electricTransport[array]`: 市が提案するさまざまなタイプの電気輸送のリスト。の組み合わせ。Enum:'電動自転車, 電動自動車, 電動バイク, 電動スクーター'  - `endDate[date-time]`: ISO8601 UTCフォーマットでの終了日時  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: エンティティの一意識別子  - `image[uri]`: 商品の画像  . Model: [https://schema.org/URL](https://schema.org/URL)- `isAccessibleForFree[boolean]`: 無料または有料の旅行（真＝無料／偽＝有料）  - `itinerary[array]`: 旅行を構成する目的地または場所。目的地の順番が重要な旅行では、ItemListを使用して、旅行に含まれる順番を指定します。  - `language[array]`: IETF[BCP47](https://tools.ietf.org/html/bcp47)標準から引用された、トリップ中に使用された形式言語のリスト。  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `locationName[string]`: 旅行地名  - `maximumAttendeeCapacity[number]`: その場所でトリップに参加できる総人数  - `name[string]`: このアイテムの名前  - `openingHoursSpecification[array]`: 場所の営業時間や場所内の特定のサービスに関する情報を提供する構造化された値。  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `paymentAccepted[array]`: TripFree`がFalseの場合に受理される支払い。モデルで定義されたアクティブなコードのリストの組み合わせ。Enum:'現金、クレジットカード、暗号通貨、その他'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: 旅のピッチ。各項目は、[国際化(i18N) - W3C recommandation for multilanguage](https://www.w3.org/TR/json-ld/#string-internationalization)に基づいて、全ての項目を一つのプロパティ(例：71番)に統合する形式を持つ。各項目はLanguage Value : Article Valueの文字列で表される。  	- `article`:     
+	- `language`:     
 - `priceSpecification[array]`: カテゴリーやパブリックによって、価格や価格帯を表す構造化された値。  - `ratingValueAverage[number]`: トリップの評価値使用ガイドライン：これは `starRatingDetailed` 属性のすべての詳細スコアの平均値です。  - `refPointOfInterest[array]`: トリップに含まれるすべてのPOI[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md)への参照。POIリストには時系列はありません。  - `routeType[array]`: GFTS標準[STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)に従った、トリップ付近で利用可能な都市交通（地下鉄、バス、トラム、...）のリスト。値の組み合わせ。Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'.  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `slogan[string]`: トリップヘッダーライン、テキストフックと一致する。  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `starRatingDetailed[object]`: 評価値で表される平均値につながった詳細な星評価。使用方法：各要素は以下の形式の文字列である：NumberOfSTar`：パーセント。  	- `1`:     
 	- `10`:     
 	- `2`:     
@@ -32,13 +34,14 @@
 	- `6`:     
 	- `7`:     
 	- `8`:     
+	- `9`:     
 - `startDate[date-time]`: ISO8601 UTCフォーマットでの開始日時  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: category`属性のサブカテゴリーです。特定の文脈に柔軟に対応するためのフリーテキストの組み合わせが、最初の例として、あるいはアプリケーションが必要とする他の値として、以下に提供されます。  - `subTrip[array]`: このメジャー・トリップの一部であるマイナー・トリップのリストへの言及。  - `superTrip[*]`: この旅行を含む主な旅行に関する言及  - `thematic[array]`: キーワードとしてのテーマ一覧  - `title[string]`: 旅行のタイトル  - `touristType[array]`: TouristTripに適用されるさまざまな観光客のタイプの列挙  - `transportServices[array]`: トリップ周辺で利用可能な民間交通機関のリスト。例：タクシー、ウーバー、VTC、パーキングシャトル  - `tripPriceFrom[number]`: 最低価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `tripPriceTo[number]`: 最大価格。測定の単位コード（テキスト）は、[UN/CEFACT 共通コード](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes) を使用して与えられます。例えば、**EUR**は**ユーロ**を表す。  - `tripSchedule[array]`: トリップスケジュール。これは、定期的に発生するトリップを記述するために使用される、繰り返される期間にわたってスケジュールを設定することができます。このアトリビュートを使用するための制限については、セクションの冒頭にある例の注記を参照してください。  - `tripStatus[string]`: このトリップに関するトリップステータス。Enum:'キャンセル、クローズ、終了、オープン、延期、再スケジュール、予定、中断'  - `type[string]`: TouristTripでなければならない。NGSIエンティティタイプ  - `url[uri]`: このアイテムに関する説明や詳細情報を提供するURL  - `video[uri]`: アイテムに関連するビデオを含むURL  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: 詳細は公式サイトへリンク  - `wheelChairAccessible[boolean]`: 移動が困難な方でもアクセス可能  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 このデータモデルは標準UNE178503に基づいている。schema.orgとも互換性がある。schema.orgの要素の一部は、このファイルhttps://smart-data-models.github.io/data-models/schema-org.json。schema.orgとの互換性を保つために、細かい調整が必要でした。  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順（クリックで詳細表示）  
@@ -1150,7 +1153,7 @@ TouristTrip:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json    
   x-model-tags: ""    
@@ -1182,7 +1185,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -1412,10 +1414,6 @@ TouristTrip:
   "electricTransport": [  
     "electricBicycle",  
     "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
@@ -1455,10 +1453,6 @@ TouristTrip:
   "image": {  
     "type": "Text",  
     "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
-  },  
-  "sameAs": {  
-    "type": "Text",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "video": {  
     "type": "Text",  
@@ -1827,7 +1821,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -2355,10 +2348,6 @@ TouristTrip:
       "subway",  
       "bus"  
     ]  
-  },  
-  "sameAs": {  
-    "type": "Property",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "seeAlso": {  
     "type": "Property",  
