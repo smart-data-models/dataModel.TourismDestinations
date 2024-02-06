@@ -7,7 +7,7 @@
 [문서 자동 생성](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-글로벌 설명: **관광 여행. 특정 관광 유형과 유사한 테마, 지역 또는 관심사로 연결된 하나 이상의 관심 장소(관광 명소/관광 목적지)를 방문하는 일정으로 구성된 여정입니다. UNWTO는 관광 여행을 방문객이 떠나는 여행으로 정의합니다**.  
+글로벌 설명: **관광 여행. 특정 관광 유형과 유사한 테마, 지역 또는 관심사로 연결된 하나 이상의 관심 장소(관광 명소/관광 목적지)를 방문하는 일정으로 구성된 여행 일정입니다. UNWTO는 관광 여행을 방문객이 떠나는 여행으로 정의합니다**.  
 버전: 0.2.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
@@ -15,17 +15,17 @@
 ## 속성 목록  
 
 <sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.  
-- `accessPlan[string]`: 트립 액세스 플랜에 대한 텍스트 또는 링크  - `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역에 속한 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+- `accessPlan[string]`: 여행에 대한 액세스 플랜 텍스트 또는 링크  - `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예: 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역 내 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
 	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.    
 	- `postOfficeBoxNumber[string]`: 사서함 주소의 우체국 사서함 번호입니다. 예: 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
 	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호    
-- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 이 여행과 관련된 일반인 유형. 자유 텍스트(가족, 성인, 어린이, 청소년, 시니어, 모든 공개, ...)의 조합입니다. 열거형: '성인, 모든공개, 어린이, 가족, 시니어, 청소년'  - `category[array]`: 여행의 카테고리. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트의 조합은 아래에 초기 저장소 또는 애플리케이션에 필요한 기타 값으로 제공됩니다. 열거형: '여행, 미식, 역사, 박물관, 야외활동, 공원 및 정원, 종교예배, 쇼핑, 웰빙'  - `contentURL[uri]`: 자세한 정보를 확인할 수 있는 여행의 공식 이미지 또는 동영상 URL을 지정합니다.  - `criticReview[array]`: 검토 활동을 인정받은 출처에서 작성하거나 게시한 리뷰입니다. 각 항목은 모든 항목을 하나의 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 한 형식을 갖습니다. 각 항목은 '언어 값' : '문서 값'의 문자열로 표시됩니다.  - `currencyAccepted[array]`: 트립프리`가 거짓인 경우 결제에 사용할 수 있는 통화입니다. 모델에 정의된 활성 코드 목록의 조합입니다. [노르메 ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [암호화 통화](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [거래소 거래 시스템](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: ISO 8601 형식의 데이터에 대한 마지막 공식 업데이트  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `duration[number]`: 각 쇼의 지속 시간입니다. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **HUR**은 **시간**을 나타냅니다.  - `electricTransport[array]`:  시에서 제안하는 다양한 유형의 전기 교통수단 목록입니다. 의 조합입니다. Enum:'전기자전거, 전기자동차, 전기모터바이크, 전기스쿠터'  - `endDate[date-time]`: ISO8601 UTC 형식의 종료 날짜 및 시간  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: 엔티티의 고유 식별자  - `image[uri]`: 항목 이미지  . Model: [https://schema.org/URL](https://schema.org/URL)- `isAccessibleForFree[boolean]`: 무료 또는 유료 여행(참 = 무료/거짓 = 유료)  - `itinerary[array]`: 여행을 구성하는 목적지 또는 장소. 목적지 순서가 중요한 여행의 경우 ItemList를 사용하여 여행에 포함된 순서를 지정합니다.  - `language[array]`:  여행 중 사용되는 공식 언어 목록은 IETF [BCP 47](https://tools.ietf.org/html/bcp47) 표준에서 발췌한 것입니다.  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `locationName[string]`: 여행 위치 이름  - `maximumAttendeeCapacity[number]`: 해당 위치에서 여행에 참여할 수 있는 총 인원 수  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `paymentAccepted[array]`: 트립프리`가 거짓인 경우 결제 수락. 모델에 정의된 활성 코드 목록의 조합입니다. Enum:'현금, 신용카드, 암호화폐, 기타'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: 여행의 피치. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 하는 형식을 갖습니다. 각 항목은 언어 값: 항목 값의 문자열로 표시됩니다.  	- `article`:     
+- `alternateName[string]`: 이 항목의 대체 이름  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `audience[array]`: 이 여행에 관심이 있는 일반인 유형. 자유 텍스트(가족, 성인, 어린이, 청소년, 노인, allPublic, ...)의 조합입니다. 열거형:'성인, 모든공개, 어린이, 가족, 노인, 청소년'  - `category[array]`: 여행의 카테고리. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트 조합은 아래에 초기 저장소 또는 애플리케이션에 필요한 기타 값으로 제공됩니다. 열거형:'여행, 미식, 역사, 박물관, 야외활동, 공원 및 정원, 종교예배, 쇼핑, 웰니스'  - `contentURL[uri]`: 자세한 정보를 확인할 수 있는 여행의 공식 이미지 또는 동영상 URL을 지정합니다.  - `criticReview[array]`: 검토 활동으로 인정받은 출처에서 작성하거나 게시한 리뷰입니다. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 한 형식을 갖습니다. 각 항목은 '언어 값' : '문서 값'의 문자열로 표시됩니다.  - `currencyAccepted[array]`: 트립프리`가 거짓인 경우 결제에 사용할 수 있는 통화입니다. 모델에 정의된 활성 코드 목록의 조합입니다. [표준 ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [암호화 통화](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [거래소 거래 시스템](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자열입니다.  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateLastReported[date-time]`: ISO 8601 형식 데이터의 마지막 공식 업데이트  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `duration[number]`: 각 쇼의 지속 시간입니다. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **HUR**은 **시간**을 나타냅니다.  - `electricTransport[array]`:  시에서 제안하는 다양한 유형의 전기 교통수단 목록입니다. 의 조합입니다. Enum:'전기자전거, 전기자동차, 전기모터바이크, 전기스쿠터'  - `endDate[date-time]`: ISO8601 UTC 형식의 종료 날짜 및 시간  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: 엔티티의 고유 식별자  - `image[uri]`: 항목의 이미지  . Model: [https://schema.org/URL](https://schema.org/URL)- `isAccessibleForFree[boolean]`: 무료 또는 유료 여행(참 = 무료 / 거짓 = 유료)  - `itinerary[array]`: 여행을 구성하는 목적지 또는 장소. 목적지 순서가 중요한 여행의 경우 ItemList를 사용하여 여행에 포함된 순서를 지정합니다.  - `language[array]`:  여행 중 사용되는 공식 언어 목록은 IETF [BCP 47](https://tools.ietf.org/html/bcp47) 표준에서 발췌한 것입니다.  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `locationName[string]`: 여행 위치 이름  - `maximumAttendeeCapacity[number]`: 해당 위치에서 여행에 참가할 수 있는 총 인원수입니다.  - `name[string]`: 이 항목의 이름  - `openingHoursSpecification[array]`: 장소의 영업 시간 또는 장소 내 특정 서비스에 대한 정보를 제공하는 구조화된 값입니다.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `paymentAccepted[array]`: 트립 무료`가 거짓인 경우 수락된 결제입니다. 모델에 정의된 활성 코드 목록의 조합입니다. Enum:'현금, 신용카드, 암호화폐, 기타'  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `pitch[object]`: 여행의 피치. 각 항목은 모든 항목을 단일 속성(예: 71번)에 통합하는 [국제화(i18N) - 다국어에 대한 W3C 권장 사항](https://www.w3.org/TR/json-ld/#string-internationalization)을 기반으로 하는 형식을 갖습니다. 각 항목은 언어 값: 항목 값의 문자열로 표시됩니다.  	- `article`:     
 	- `language`:     
-- `priceSpecification[array]`: 카테고리 또는 공개에 따라 가격 또는 가격 범위를 나타내는 구조화된 값입니다.  - `ratingValueAverage[number]`: 트립의 평점 값입니다. 사용 지침: 기준에 따라 0~10 사이의 값을 사용하세요. 이 값은 '별점 평가 상세' 속성의 모든 상세 점수의 평균값입니다.  - `refPointOfInterest[array]`: 여행에 포함된 모든 관심 지점[PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) 참조. POI 목록에는 시간 순서가 없습니다.  - `routeType[array]`: GFTS 표준 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)에 따라 여행 근처에서 이용할 수 있는 도시 교통수단(지하철, 버스, 트램 등) 목록입니다. 값의 조합. Enum:'버스, 케이블카, 케이블트램, 페리, 푸니쿨라, 모노레일, 지하철, 기차, 트램, 트롤리버스'  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `slogan[string]`: 트립 헤더 라인, 텍스트 후크와 일치합니다.  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `starRatingDetailed[object]`: ratingValue에 표시된 평균값으로 이어진 자세한 별점 평가입니다. 사용 지침: 각 요소가 형식의 문자열인 1~10개(별)의 구조화된 값입니다: NumberOfSTar`: 퍼센트.  	- `1`:     
+- `priceSpecification[array]`: 카테고리 또는 공개에 따라 가격 또는 가격 범위를 나타내는 구조화된 값입니다.  - `ratingValueAverage[number]`: 여행의 평점 값입니다. 사용 지침: 기준에 따라 0~10 사이의 값을 사용하세요. 이 값은 '별점 평가 상세' 속성의 모든 상세 점수의 평균값입니다.  - `refPointOfInterest[array]`: 여행에 포함된 모든 관심 지점[포인트 오브 인터레스트](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) 참조. 관심 지점 목록에는 시간 순서가 없습니다.  - `routeType[array]`: GFTS 표준 [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt)에 따라 여행 근처에서 이용할 수 있는 도시 교통수단(지하철, 버스, 트램 등) 목록입니다. 값의 조합입니다. Enum:'버스, 케이블카, 케이블트램, 페리, 푸니쿨라, 모노레일, 지하철, 기차, 트램, 트롤리버스'  - `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `slogan[string]`: 트립 헤더 라인, 텍스트 후크와 일치합니다.  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 일련의 문자입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `starRatingDetailed[object]`: 등급 값에 표시된 평균값으로 이어진 세부 별점입니다. 사용 지침: 각 요소가 형식의 문자열인 1~10개(별)로 구성된 구조화된 값입니다: NumberOfSTar`: 퍼센트.  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -35,13 +35,13 @@
 	- `7`:     
 	- `8`:     
 	- `9`:     
-- `startDate[date-time]`: ISO8601 UTC 형식의 시작 날짜 및 시간  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: 카테고리` 속성의 하위 카테고리입니다. 특정 컨텍스트에 유연하게 대응할 수 있는 자유 텍스트 조합은 아래에 초기 예시 또는 애플리케이션에 필요한 기타 값으로 제공됩니다.  - `subTrip[array]`: 이 주요 여행에 포함된 마이너 여행 목록 참조  - `superTrip[*]`: 이 여행이 포함된 주요 여행 참조  - `thematic[array]`: 키워드로서의 주제별 목록  - `title[string]`:  여행 제목  - `touristType[array]`: 투어리스트 트립에 적용 가능한 다양한 여행자 유형 열거  - `transportServices[array]`: 여행 근처에서 이용할 수 있는 개인 교통수단 목록. 예: 택시, 우버, VTC, 파킹셔틀  - `tripPriceFrom[number]`: 최소 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**는 **유로**를 나타냅니다.  - `tripPriceTo[number]`: 최대 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**는 **유로**를 나타냅니다.  - `tripSchedule[array]`: 여행 일정. 이를 통해 정기적으로 발생하는 여행을 설명하는 데 반복되는 기간 동안 일정을 설정할 수 있습니다. 이 속성의 사용 제한에 대한 예시는 섹션 시작 부분에 참고하세요.  - `tripStatus[string]`: 이 여행에 관한 여행 상태. Enum:'취소, 마감, 완료, 오픈, 연기, 일정 변경, 예정, 일시 중단'  - `type[string]`: TouristTrip이어야 합니다. NGSI 엔티티 유형  - `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.  - `video[uri]`: 항목과 관련된 동영상이 포함된 URL  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: 자세한 내용은 공식 웹사이트에 링크하세요.  - `wheelChairAccessible[boolean]`: 거동이 불편한 분도 이용 가능  <!-- /30-PropertiesList -->  
+- `startDate[date-time]`: ISO8601 UTC 형식의 시작 날짜 및 시간  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `subCategory[array]`: 카테고리` 속성의 하위 카테고리. 특정 컨텍스트에 맞게 유연하게 사용할 수 있는 자유 텍스트 조합은 아래에 초기 예시 또는 애플리케이션에 필요한 다른 값으로 제공됩니다.  - `subTrip[array]`: 이 주요 여행에 포함된 마이너 여행 목록 참조  - `superTrip[*]`: 이 여행이 포함된 주요 여행 참조  - `thematic[array]`: 키워드로서의 주제별 목록  - `title[string]`:  여행 제목  - `touristType[array]`: 투어리스트 트립에 적용 가능한 다양한 여행자 유형 열거  - `transportServices[array]`: 여행 근처에서 이용할 수 있는 개인 교통수단 목록. 예: 택시, 우버, VTC, 주차 셔틀  - `tripPriceFrom[number]`: 최소 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**은 **€유로**를 나타냅니다.  - `tripPriceTo[number]`: 최대 가격. 측정 단위 코드(텍스트)는 [UN/CEFACT 공통 코드](http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes)를 사용하여 지정합니다. 예를 들어 **EUR**은 **€유로**를 나타냅니다.  - `tripSchedule[array]`: 여행 일정. 이를 통해 정기적으로 발생하는 여행을 설명하는 데 반복되는 기간 동안 일정을 설정할 수 있습니다. 이 속성의 사용 제한에 대한 예시는 섹션 시작 부분에 참고하세요.  - `tripStatus[string]`: 이 여행에 관한 여행 상태. Enum:'취소됨, 마감됨, 완료됨, 개장됨, 연기됨, 일정 변경됨, 예정됨, 일시 중단됨'  - `type[string]`: TouristTrip이어야 합니다. NGSI 엔티티 유형  - `url[uri]`: 이 항목에 대한 설명이나 추가 정보를 제공하는 URL입니다.  - `video[uri]`: 항목과 관련된 동영상이 포함된 URL  . Model: [https://schema.org/URL](https://schema.org/URL)- `webSite[uri]`: 자세한 내용은 공식 웹사이트 링크  - `wheelChairAccessible[boolean]`: 거동이 불편한 분도 이용 가능  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 필수 속성  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-이 데이터 모델은 표준 UNE178503을 기반으로 합니다. 또한 schema.org와 호환됩니다. schema.org의 일부 요소는 이 파일(https://smart-data-models.github.io/data-models/schema-org.json)에 적용되었습니다. schema.org와의 호환성을 유지하기 위해 약간의 조정이 필요했습니다.  
-<!-- /40-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
+이 데이터 모델은 표준 UNE178503을 기반으로 합니다. 또한 schema.org와 호환됩니다. 이 파일(https://smart-data-models.github.io/data-models/schema-org.json)에는 schema.org의 일부 요소가 적용되었습니다. schema.org와의 호환성을 유지하기 위해 약간의 조정이 필요했습니다.  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## 속성에 대한 데이터 모델 설명  
 알파벳순으로 정렬(자세한 내용을 보려면 클릭)  
@@ -1153,7 +1153,7 @@ TouristTrip:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/TouristTrip/schema.json    
   x-model-tags: ""    
@@ -1165,8 +1165,8 @@ TouristTrip:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## 페이로드 예시  
-#### TouristTrip NGSI-v2 키값 예시  
-다음은 키-값으로 JSON-LD 형식의 TouristTrip의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TouristTrip NGSI-v2 키 값 예시  
+다음은 JSON-LD 형식의 TouristTrip을 키 값으로 사용하는 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1185,7 +1185,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -1415,10 +1414,6 @@ TouristTrip:
   "electricTransport": [  
     "electricBicycle",  
     "electricMotorBike"  
-  ],  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/dataModel.TourismDestinations/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
   ]  
 }  
 ```  
@@ -1458,10 +1453,6 @@ TouristTrip:
   "image": {  
     "type": "Text",  
     "value": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG"  
-  },  
-  "sameAs": {  
-    "type": "Text",  
-    "value": "https://inventrip.com/conil/trip/1907"  
   },  
   "video": {  
     "type": "Text",  
@@ -1810,8 +1801,8 @@ TouristTrip:
 }  
 ```  
 </details>  
-#### TouristTrip NGSI-LD 키-값 예시  
-다음은 키 값으로 JSON-LD 형식의 TouristTrip의 예입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
+#### TouristTrip NGSI-LD 키 값 예시  
+다음은 JSON-LD 형식의 TouristTrip을 키 값으로 사용하는 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -1830,7 +1821,6 @@ TouristTrip:
     "https://www.spain.info/es/que-quieres/ciudades-pueblos/otros-destinos/conil_de_la_frontera.html"  
   ],  
   "image": "http://www.turismo.conil.org/PortalTurismo/DocTurismo.nsf/voTodosPorIdiomaUNID/4AC02453BEE8F5CDC125750400315F48/$FILE/IMGP2024.JPG",  
-  "sameAs": "https://inventrip.com/conil/trip/1907",  
   "video": "https://www.youtube.com/watch?v=IhnvlIzxPLg",  
   "seeAlso": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais",  
   "location": {  
@@ -2359,10 +2349,6 @@ TouristTrip:
       "bus"  
     ]  
   },  
-  "sameAs": {  
-    "type": "Property",  
-    "value": "https://inventrip.com/conil/trip/1907"  
-  },  
   "seeAlso": {  
     "type": "Property",  
     "value": "https://www.nice.fr/fr/culture/musees-et-galeries/palais-lascaris-le-palais"  
@@ -2465,7 +2451,7 @@ TouristTrip:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+크기 단위를 다루는 방법에 대한 답변은 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
