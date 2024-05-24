@@ -24,13 +24,18 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "TouristDestination"
 subject = "dataModel.TourismDestinations"
-includesAttraction = {'type': 'array', 'value': [{'type': ['TouristAttraction', 'WorldHeritageSite', 'CivilBuilding'], 'name': 'Alhambra, Generalife y Albaicin de Granada', 'url': 'https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html'}, {'type': ['TouristAttraction', 'WorldHeritageSite', 'PlaceOfWorship'], 'name': 'Catedral de Burgos', 'url': 'https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html'}]}
+includesAttraction = [{'type': ['TouristAttraction', 'WorldHeritageSite', 'CivilBuilding'], 'name': 'Alhambra, Generalife y Albaicin de Granada', 'url': 'https://www.spain.info/es/que-quieres/arte/monumentos/granada/la_alhambra.html'}, {'type': ['TouristAttraction', 'WorldHeritageSite', 'PlaceOfWorship'], 'name': 'Catedral de Burgos', 'url': 'https://www.spain.info/es/que-quieres/arte/monumentos/burgos/catedral_de_burgos.html'}]
 attribute = "includesAttraction"
 value = includesAttraction
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
