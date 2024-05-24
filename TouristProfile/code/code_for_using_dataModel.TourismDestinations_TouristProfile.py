@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "TouristProfile"
 subject = "dataModel.TourismDestinations"
-country = "{'type': 'Property', 'value': 'NL'}"
+country = "NL"
 attribute = "country"
 value = country
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-ageRange = {'type': 'Property', 'value': '30-34'}
+ageRange = {'range': '30-34', 'sortingOrder': ['0-1', '2-5', '6-11', '12-17', '18-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64', '65+']}
 attribute = "ageRange"
 value = ageRange
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-gender = "{'type': 'Property', 'value': 'Male'}"
+gender = "Male"
 attribute = "gender"
 value = gender
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-travelPartyComposition = "{'type': 'Property', 'value': 'Couple'}"
+travelPartyComposition = "Couple"
 attribute = "travelPartyComposition"
 value = travelPartyComposition
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
