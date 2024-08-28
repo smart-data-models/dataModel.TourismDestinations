@@ -37,7 +37,7 @@
 - `contentURL[uri]`: Spécifie l'URL de l'image ou de la vidéo officielle de l'événement pour plus d'informations.  - `criticReview[array]`: Revue écrite ou publiée par une source reconnue pour ses activités de revue. Chaque article a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les articles dans une propriété unique (ex numéro 71). Chaque élément est représenté par une chaîne de caractères avec 'Valeur de la langue' : 'Valeur de l'article'  - `currencyAccepted[array]`: Monnaie acceptée pour le paiement si `isAccessibleForFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. [Norme ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto-monnaies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Système d'échange de devises](https://en.wikipedia.org/wiki/Local_exchange_trading_system)  . Model: [https://schema.org/currenciesAccepted](https://schema.org/currenciesAccepted)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `director[array]`: Liste des directeurs qui gèrent la composition  - `doorTimeClose[string]`: Heure de fermeture des portes pour accéder au spectacle  - `doorTimeOpen[string]`: Heure d'ouverture des portes pour accéder au spectacle  - `duration[number]`: La durée de chaque émission. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **HUR** représente **Heures**  - `electricTransport[array]`:  Liste des différents types de transport électrique proposés par la ville. Une combinaison de. Enum : "electricBicycle, electricCar, electricMotorBike, electricScooter" (bicyclette électrique, voiture électrique, moto électrique, scooter électrique)  - `endDate[date-time]`: La date et l'heure de fin de l'élément (dans le format de date ISO 8601).  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `eventPriceFrom[number]`: Prix min. Le code d'unité (texte) de mesure est donné en utilisant les [Codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `eventPriceTo[number]`: Prix maximum. Le code d'unité (texte) de mesure est donné en utilisant les [codes communs du CEFACT-ONU] (http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes). Par exemple, **EUR** représente **€uro**.  - `eventSchedule[array]`: Un événement associé à une programmation à l'aide de cette propriété ne doit pas avoir de propriétés `startDate` ou `endDate`. Celles-ci sont définies dans l'horaire associé, ce qui évite toute ambiguïté pour les clients qui utilisent les données. La propriété peut avoir des valeurs répétées pour spécifier différents calendriers (différents mois ou saisons).  - `eventStatus[array]`: Statut de l'événement  - `id[*]`: Identifiant unique de l'entité  - `isAccessibleForFree[boolean]`: Un drapeau signalant que l'objet, l'événement ou le lieu est accessible gratuitement.  . Model: [https://schema.org/isAccessibleForFree](https://schema.org/isAccessibleForFree)- `language[array]`: Liste des langages formels utilisés lors de l'événement, exprimés à partir de la norme IETF [BCP 47] (https://tools.ietf.org/html/bcp47)  . Model: [https://schema.org/language](https://schema.org/language)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `maximumAttendeeCapacity[number]`: Le nombre total de personnes pouvant assister à l'événement à cet endroit.  - `name[string]`: Le nom de cet élément  - `offeredBy[object]`: Description de l'entité organisatrice  	- `name[string]`: Nom de l'entité organisatrice de l'événement    
 	- `type[string]`: Type d'entité organisatrice de l'événement. Par exemple, organisation, entreprise, association    
 	- `url[uri]`: Url vers le site principal de l'entité organisatrice de l'événement    
-- `openingHoursSpecification[array]`: Valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `paymentAccepted[array]`: Paiement accepté si `isAccessibleForFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. Enum : "Cash, CreditCard, CryptoCurrency, other" (Espèces, cartes de crédit, crypto-monnaies, autres)  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: Acteur, présentateur, musicien ou groupe musical principal de l'événement  - `pitch[array]`: Pitch de l'événement. Chaque élément a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les éléments dans une propriété unique (par exemple, le numéro 71). Chaque élément est représenté par une chaîne de caractères avec Language Value : Article Value.  - `priceSpecification[array]`: Valeur structurée représentant un prix ou une fourchette de prix en fonction des catégories ou du public.  - `publicAccess[boolean]`: Un drapeau signalant que le lieu est ouvert aux visiteurs publics. Si cette propriété est omise, il n'y a pas de valeur booléenne par défaut.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: Valeur d'évaluation de l'événement. Conseils d'utilisation : Utilisez des valeurs comprises entre 0 et 10 en fonction de vos normes. Il s'agit de la valeur moyenne de toutes les notes détaillées de l'attribut `starRatingDetailed`.  - `refPointOfInterest[array]`: Référence à tous les points d'intérêt [Point OfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclus dans l'événement. La liste des POI n'a pas d'ordre chronologique.  - `routeType[array]`: Liste des transports urbains (métro, bus, tramway, ...) disponibles à proximité de l'événement conformément à la norme GFTS [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Une combinaison de valeurs. Enum:' bus, cableCar, cableTram, ferry, funiculaire, monorail, métro, train, tram, trolleybus'  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `slogan[string]`: Ligne d'en-tête de l'événement, correspondant au crochet de texte.  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `starRatingDetailed[object]`: Les notes détaillées par étoiles qui ont conduit à la valeur moyenne exprimée dans la valeur de la note. Mode d'emploi : Une valeur structurée de 1 à 10 occurrences (étoiles) où chaque élément est une chaîne au format : `NumberOfSTar` : Pourcentage.  	- `1`:     
+- `openingHoursSpecification[array]`: Valeur structurée fournissant des informations sur les heures d'ouverture d'un lieu ou d'un certain service à l'intérieur d'un lieu.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `paymentAccepted[array]`: Paiement accepté si `isAccessibleForFree` est False. Combinaison d'une liste de codes actifs définis dans le modèle. Enum : "Cash, CreditCard, CryptoCurrency, other" (Espèces, cartes de crédit, crypto-monnaies, autres)  . Model: [https://schema.org/paymentAccepted](https://schema.org/paymentAccepted)- `performer[array]`: Acteur, présentateur, musicien ou groupe musical principal de l'événement  - `pitch[array]`: Pitch de l'événement. Chaque élément a un format basé sur l'[Internationalisation (i18N) - Recommandation du W3C pour le multilinguisme] (https://www.w3.org/TR/json-ld/#string-internationalization) intégrant tous les éléments dans une propriété unique (par exemple, le numéro 71). Chaque élément est représenté par une chaîne de caractères avec Language Value : Article Value.  - `priceSpecification[array]`: Une valeur structurée représentant un prix ou une fourchette de prix en fonction des catégories ou du public.  - `publicAccess[boolean]`: Un drapeau signalant que le lieu est ouvert aux visiteurs publics. Si cette propriété est omise, il n'y a pas de valeur booléenne par défaut.  . Model: [https://schema.org/publicAccess](https://schema.org/publicAccess)- `ratingValueAverage[number]`: Valeur d'évaluation de l'événement. Conseils d'utilisation : Utilisez des valeurs comprises entre 0 et 10 en fonction de vos normes. Il s'agit de la valeur moyenne de toutes les notes détaillées de l'attribut `starRatingDetailed`.  - `refPointOfInterest[array]`: Référence à tous les points d'intérêt [Point OfInterest] (https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/doc/spec.md) inclus dans l'événement. La liste des POI n'a pas d'ordre chronologique.  - `routeType[array]`: Liste des transports urbains (métro, bus, tramway, ...) disponibles à proximité de l'événement conformément à la norme GFTS [STOP] (https://developers.google.com/transit/gtfs/reference/#stopstxt). Une combinaison de valeurs. Enum:' bus, cableCar, cableTram, ferry, funiculaire, monorail, métro, train, tram, trolleybus'  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `slogan[string]`: Ligne d'en-tête de l'événement, correspondant au crochet de texte.  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `starRatingDetailed[object]`: Les notes détaillées par étoiles qui ont conduit à la valeur moyenne exprimée dans la valeur de la note. Mode d'emploi : Une valeur structurée de 1 à 10 occurrences (étoiles) où chaque élément est une chaîne au format : `NumberOfSTar` : Pourcentage.  	- `1`:     
 	- `10`:     
 	- `2`:     
 	- `3`:     
@@ -72,7 +72,10 @@ Event:
     actor:    
       description: List of actors or music group    
       items:    
+        description: Every actor participating in the event    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -175,7 +178,10 @@ Event:
     composer:    
       description: List of person who wrote the composition    
       items:    
+        description: Every composer participating in the event    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -242,7 +248,7 @@ Event:
           x-ngsi:    
             type: Property    
         faxNumber:    
-          description: The fax number    
+          description: The fax number of the item    
           type: string    
           x-ngsi:    
             model: http://schema.org/Text    
@@ -284,18 +290,33 @@ Event:
       items:    
         properties:    
           language:    
+            description: Language of the critic to the event    
             type: string    
+            x-ngsi:    
+              type: Property    
           reviews:    
             items:    
               properties:    
                 article:    
+                  description: Content of the review of the event    
                   type: string    
+                  x-ngsi:    
+                    type: Property    
                 origin:    
+                  description: Origin of the review of the event    
                   type: string    
+                  x-ngsi:    
+                    type: Property    
                 ratingValue:    
+                  description: Numeric value of the review of the event    
                   type: number    
+                  x-ngsi:    
+                    type: Property    
                 starRating:    
+                  description: Numeric value between 1 and 10 of the review    
                   type: number    
+                  x-ngsi:    
+                    type: Property    
               type: object    
             type: array    
         type: object    
@@ -305,10 +326,13 @@ Event:
     currencyAccepted:    
       description: 'Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)'    
       items:    
+        description: Every acronym of the currencies accepted    
         enum:    
           - EUR    
           - USD    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/currenciesAccepted    
@@ -338,7 +362,10 @@ Event:
     director:    
       description: List of director who manage the composition    
       items:    
+        description: Every director participating in the event    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -360,12 +387,15 @@ Event:
     electricTransport:    
       description: ' List of the different types of electric transport proposed by the city. A combination of. Enum:''electricBicycle, electricCar, electricMotorBike, electricScooter'''    
       items:    
+        description: Every element of the possible electric transports to the event    
         enum:    
           - electricBicycle    
           - electricCar    
           - electricMotorBike    
           - electricScooter    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -391,13 +421,25 @@ Event:
       items:    
         properties:    
           byDay:    
+            description: Event repeated daily    
             type: string    
+            x-ngsi:    
+              type: Property    
           byMonth:    
+            description: Event repeated once a month    
             type: number    
+            x-ngsi:    
+              type: Property    
           byMonthDay:    
+            description: Event repeated on a specific day of the month    
             type: number    
+            x-ngsi:    
+              type: Property    
           byMonthWeek:    
+            description: Event repeated in a specific week oof the month    
             type: number    
+            x-ngsi:    
+              type: Property    
           dayOfWeek:    
             enum:    
               - Monday    
@@ -410,14 +452,26 @@ Event:
               - PublicHolidays    
             type: string    
           duration:    
+            description: Duration fo the event    
             type: number    
+            x-ngsi:    
+              type: Property    
           exceptDate:    
+            description: Event not held on this date    
             format: date-time    
             type: string    
+            x-ngsi:    
+              type: Property    
           repeatCount:    
+            description: Amount of times the event is being repeated    
             type: number    
+            x-ngsi:    
+              type: Property    
           repeatFrequency:    
+            description: 'Frequency of repetition of the Event '    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -781,12 +835,15 @@ Event:
     paymentAccepted:    
       description: 'Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:''Cash, CreditCard, CryptoCurrency, other'''    
       items:    
+        description: Every element of the payment methods    
         enum:    
           - Cash    
           - CreditCard    
           - CryptoCurrency    
           - other    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/paymentAccepted    
@@ -803,9 +860,15 @@ Event:
       items:    
         properties:    
           article:    
+            description: Content of the pitch for the chosen languages    
             type: string    
+            x-ngsi:    
+              type: Property    
           language:    
+            description: Language in which the pitch of the event is stored    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -816,18 +879,36 @@ Event:
         properties:    
           audience:    
             items:    
+              description: Every element of  potential audience of the event    
               type: string    
+              x-ngsi:    
+                type: Property    
             type: array    
           categoryDescription:    
+            description: Description of the pricing category    
             type: string    
+            x-ngsi:    
+              type: Property    
           eligibleQuantity:    
+            description: How many tickets are allowed to be purchased    
             type: number    
+            x-ngsi:    
+              type: Property    
           maxPrice:    
+            description: Maximum price of the pricing category    
             type: number    
+            x-ngsi:    
+              type: Property    
           minPrice:    
+            description: Minimum price of the pricing category    
             type: number    
+            x-ngsi:    
+              type: Property    
           price:    
+            description: Price of the ticket category    
             type: number    
+            x-ngsi:    
+              type: Property    
         type: object    
       type: array    
       x-ngsi:    
@@ -868,6 +949,7 @@ Event:
     routeType:    
       description: "List of the urban transports (subway, Bus, Tram, ...) available near the event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'"    
       items:    
+        description: Every element of the possible routes to the event    
         enum:    
           - bus    
           - cableCar    
@@ -880,6 +962,8 @@ Event:
           - tram    
           - trolleybus    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -909,25 +993,55 @@ Event:
       description: 'Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. '    
       properties:    
         1:    
+          description: Value 1 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         10:    
+          description: Value 10 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         2:    
+          description: Value 2 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         3:    
+          description: Value 3 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         4:    
+          description: Value 4 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         5:    
+          description: Value 5 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         6:    
+          description: Value 6 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         7:    
+          description: Value 7 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         8:    
+          description: Value 8 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
         9:    
+          description: Value 9 in the rating of the event    
           type: number    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
@@ -1239,12 +1353,15 @@ Event:
     transportServices:    
       description: 'List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle '    
       items:    
+        description: Every element of the possible transport services to the event    
         enum:    
           - parkingShuttle    
           - taxi    
           - uber    
           - vtc    
         type: string    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
@@ -1278,11 +1395,11 @@ Event:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/Event/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json    
   x-model-tags: ""    
-  x-version: 0.2.1    
+  x-version: 0.2.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
