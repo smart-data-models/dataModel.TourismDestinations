@@ -553,6 +553,26 @@
         },
         {
             "@type": "object",
+            "name": "offeredBy",
+            "comment": "Description of the even organizer entity",
+            "displayName": "offeredBy",
+            "fields": [
+                {
+                    "name": "name",
+                    "schema": "string"
+                },
+                {
+                    "name": "type",
+                    "schema": "string"
+                },
+                {
+                    "name": "url",
+                    "schema": "string"
+                }
+            ]
+        },
+        {
+            "@type": "object",
             "name": "starRatingDetailed",
             "comment": "Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. ",
             "displayName": "starRatingDetailed",
