@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.2.1",
+  "$schemaVersion": "0.2.2",
   "modelTags": "",
   "$id": "https://smart-data-models.github.io/dataModel.TourismDestinations/Event/schema.json",
   "title": "Smart Data Models - Event",
@@ -359,29 +359,37 @@
                 ]
               },
               "byDay": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Event repeated daily"
               },
               "byMonth": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Event repeated once a month"
               },
               "byMonthDay": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Event repeated on a specific day of the month"
               },
               "byMonthWeek": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Event repeated in a specific week oof the month"
               },
               "exceptDate": {
                 "type": "string",
-                "format": "date-time"
+                "format": "date-time",
+                "description": "Property. Event not held on this date"
               },
               "duration": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Duration fo the event"
               },
               "repeatFrequency": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Frequency of repetition of the Event "
               },
               "repeatCount": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Amount of times the event is being repeated"
               }
             }
           }
@@ -408,10 +416,12 @@
             "type": "object",
             "properties": {
               "language": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Language in which the pitch of the event is stored"
               },
               "article": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Content of the pitch for the chosen languages"
               }
             }
           }
@@ -437,21 +447,24 @@
           "type": "array",
           "description": "Property. List of actors or music group",
           "items": {
-            "type": "string"
+            "type": "string",
+            "description": "Property. Every actor participating in the event"
           }
         },
         "composer": {
           "type": "array",
           "description": "Property. List of person who wrote the composition",
           "items": {
-            "type": "string"
+            "type": "string",
+            "description": "Property. Every composer participating in the event"
           }
         },
         "director": {
           "type": "array",
           "description": "Property. List of director who manage the composition",
           "items": {
-            "type": "string"
+            "type": "string",
+            "description": "Property. Every director participating in the event"
           }
         },
         "criticReview": {
@@ -461,7 +474,8 @@
             "type": "object",
             "properties": {
               "language": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Language of the critic to the event"
               },
               "reviews": {
                 "type": "array",
@@ -469,16 +483,20 @@
                   "type": "object",
                   "properties": {
                     "article": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Property. Content of the review of the event"
                     },
                     "origin": {
-                      "type": "string"
+                      "type": "string",
+                      "description": "Property. Origin of the review of the event"
                     },
                     "ratingValue": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Property. Numeric value of the review of the event"
                     },
                     "starRating": {
-                      "type": "number"
+                      "type": "number",
+                      "description": "Property. Numeric value between 1 and 10 of the review"
                     }
                   }
                 }
@@ -495,34 +513,44 @@
           "description": "Property. Detailed star ratings which led to the average value expressed in the ratingValue. Instructions for use: A structured value from 1 to 10 occurrences (Stars) where each element is a string in the format: `NumberOfSTar`: Percent. ",
           "properties": {
             "10": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 10 in the rating of the event"
             },
             "9": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 9 in the rating of the event"
             },
             "8": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 8 in the rating of the event"
             },
             "7": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 7 in the rating of the event"
             },
             "6": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 6 in the rating of the event"
             },
             "5": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 5 in the rating of the event"
             },
             "4": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 4 in the rating of the event"
             },
             "3": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 3 in the rating of the event"
             },
             "2": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 2 in the rating of the event"
             },
             "1": {
-              "type": "number"
+              "type": "number",
+              "description": "Property. Value 1 in the rating of the event"
             }
           }
         },
@@ -564,25 +592,31 @@
             "type": "object",
             "properties": {
               "categoryDescription": {
-                "type": "string"
+                "type": "string",
+                "description": "Property. Description of the pricing category"
               },
               "audience": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Property. Every element of  potential audience of the event"
                 }
               },
               "eligibleQuantity": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. How many tickets are allowed to be purchased"
               },
               "price": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Price of the ticket category"
               },
               "minPrice": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Minimum price of the pricing category"
               },
               "maxPrice": {
-                "type": "number"
+                "type": "number",
+                "description": "Property. Maximum price of the pricing category"
               }
             }
           }
@@ -592,6 +626,7 @@
           "description": "Property. Accepted payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Enum:'Cash, CreditCard, CryptoCurrency, other'. Model:'https://schema.org/paymentAccepted'",
           "items": {
             "type": "string",
+            "description": "Property. Every element of the payment methods",
             "enum": [
               "Cash",
               "CreditCard",
@@ -605,6 +640,7 @@
           "description": "Property. Currency accepted for payment if `isAccessibleForFree` is False. A combination of a list of active codes defined in the model. Model:'https://schema.org/currenciesAccepted'. [Standard ISO 4217](http://en.wikipedia.org/wiki/ISO_4217), [Crypto Currencies](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) , [Exchange Trading System](https://en.wikipedia.org/wiki/Local_exchange_trading_system)",
           "items": {
             "type": "string",
+            "description": "Property. Every acronym of the currencies accepted",
             "enum": [
               "EUR",
               "USD"
@@ -616,6 +652,7 @@
           "description": "Property. List of the urban transports (subway, Bus, Tram, ...) available near the event according to the GFTS standard [STOP](https://developers.google.com/transit/gtfs/reference/#stopstxt). A combination of values. Enum:' bus, cableCar, cableTram, ferry, funicular, monorail, subway, train, tram, trolleybus'",
           "items": {
             "type": "string",
+            "description": "Property. Every element of the possible routes to the event",
             "enum": [
               "bus",
               "cableCar",
@@ -635,6 +672,7 @@
           "description": "Property. List of private transport available near the Event. In example taxi, uber, vtc, parkingShuttle ",
           "items": {
             "type": "string",
+            "description": "Property. Every element of the possible transport services to the event",
             "enum": [
               "parkingShuttle",
               "taxi",
@@ -648,6 +686,7 @@
           "description": "Property.  List of the different types of electric transport proposed by the city. A combination of. Enum:'electricBicycle, electricCar, electricMotorBike, electricScooter'",
           "items": {
             "type": "string",
+            "description": "Property. Every element of the possible electric transports to the event",
             "enum": [
               "electricBicycle",
               "electricCar",
