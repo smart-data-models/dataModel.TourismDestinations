@@ -34,7 +34,7 @@
         "avgDailyExtraExpenditure": "https://smartdatamodels.org/dataModel.TourismDestinations/avgDailyExtraExpenditure",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "board": "https://smartdatamodels.org/dataModel.TourismDestinations/board",
         "bookingChannel": "https://smartdatamodels.org/dataModel.TourismDestinations/bookingChannel",
@@ -53,7 +53,7 @@
         "contentURL": "https://smartdatamodels.org/dataModel.TourismDestinations/contentURL",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "country": "https://smartdatamodels.org/dataModel.TourismDestinations/country",
         "criticReview": "https://smartdatamodels.org/dataModel.TourismDestinations/criticReview",
@@ -90,7 +90,7 @@
         "itinerary": "https://smartdatamodels.org/dataModel.TourismDestinations/itinerary",
         "language": "https://smartdatamodels.org/dataModel.TourismDestinations/language",
         "leadTourist": "https://smartdatamodels.org/dataModel.TourismDestinations/leadTourist",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "locationName": "https://smartdatamodels.org/dataModel.TourismDestinations/locationName",
         "lodgingCategory": "https://smartdatamodels.org/dataModel.TourismDestinations/lodgingCategory",
         "lodgingSize": "https://smartdatamodels.org/dataModel.TourismDestinations/lodgingSize",
