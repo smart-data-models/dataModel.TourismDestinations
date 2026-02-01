@@ -1,0 +1,439 @@
+TourismPresenceObserved:
+  description: Hourly observation of visitor presence at a specific location (municipality), segmented by nationality. Each entity represents one hour of observation.
+  properties:
+    address:
+      description: The mailing address
+      properties:
+        addressCountry:
+          description: The country. For example, Spain
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressCountry
+            type: Property
+        addressLocality:
+          description: The locality in which the street address is, and which is in the region
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressLocality
+            type: Property
+        addressRegion:
+          description: The region in which the locality is, and which is in the country
+          type: string
+          x-ngsi:
+            model: https://schema.org/addressRegion
+            type: Property
+        district:
+          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          type: string
+          x-ngsi:
+            type: Property
+        postOfficeBoxNumber:
+          description: The post office box number for PO box addresses. For example, 03578
+          type: string
+          x-ngsi:
+            model: https://schema.org/postOfficeBoxNumber
+            type: Property
+        postalCode:
+          description: The postal code. For example, 24004
+          type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
+            type: Property
+        streetAddress:
+          description: The street address
+          type: string
+          x-ngsi:
+            model: https://schema.org/streetAddress
+            type: Property
+        streetNr:
+          description: Number identifying a specific property on a public street
+          type: string
+          x-ngsi:
+            type: Property
+      type: object
+      x-ngsi:
+        model: https://schema.org/address
+        type: Property
+    aggregationType:
+      description: Type of aggregation used for this hourly observation
+      enum:
+        - hourly_sum
+        - hourly_average
+        - hourly_snapshot
+        - hourly_estimate
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    alternateName:
+      description: An alternative name for this item
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    areaServed:
+      description: The geographic area where the service or data applies
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    dataProvider:
+      description: Provider of the harmonised data entity
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    dateCreated:
+      description: Entity creation timestamp. This will usually be allocated by the storage platform
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateModified:
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateObserved:
+      description: Date and time of this hourly observation in ISO8601 UTC format. It should represent the middle of the hour (e.g. 10:30 for 10:00–10:59)
+      format: date-time
+      type: string
+      x-ngsi:
+        model: https://schema.org/DateTime
+        type: Property
+    description:
+      description: A description of this item
+      type: string
+      x-ngsi:
+        type: Property
+    district:
+      description: Administrative district of the location
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    hour:
+      description: Hour of the day (0–23) for this observation
+      maximum: 23
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+    id:
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      description: Unique identifier of the entity
+      x-ngsi:
+        type: Relationship
+    location:
+      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+      oneOf:
+        - description: Geojson reference to the item. Point
+          properties:
+            bbox:
+              description: BBox of the  Point
+              items:
+                type: number
+              minItems: 4
+              type: array
+              x-ngsi:
+                type: Property
+            coordinates:
+              description: Coordinates of the Point
+              items:
+                type: number
+              minItems: 2
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON Point
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. LineString
+          properties:
+            bbox:
+              description: BBox coordinates of the LineString
+              items:
+                type: number
+              minItems: 4
+              type: array
+              x-ngsi:
+                type: Property
+            coordinates:
+              description: Coordinates of the LineString
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON LineString
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. Polygon
+          properties:
+            bbox:
+              description: BBox coordinates of the Polygon
+              items:
+                type: number
+              minItems: 4
+              type: array
+              x-ngsi:
+                type: Property
+            coordinates:
+              description: Coordinates of the Polygon
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON Polygon
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiPoint
+          properties:
+            bbox:
+              description: BBox coordinates of the LineString
+              items:
+                type: number
+              minItems: 4
+              type: array
+              x-ngsi:
+                type: Property
+            coordinates:
+              description: Coordinates of the MulitPoint
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiPoint
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
+          properties:
+            bbox:
+              description: BBox coordinates of the LineString
+              items:
+                type: number
+              minItems: 4
+              type: array
+              x-ngsi:
+                type: Property
+            coordinates:
+              description: Coordinates of the MultiLineString
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiLineString
+          type: object
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
+          properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              description: Coordinates of the MultiPolygon
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+              x-ngsi:
+                type: Property
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: GeoJSON MultiPolygon
+          type: object
+          x-ngsi:
+            type: GeoProperty
+      x-ngsi:
+        type: GeoProperty
+    locationCode:
+      description: Official code of the location/municipality (e.g. DICOFRE code in Portugal)
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    locationName:
+      description: Name of the location/municipality
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    name:
+      description: The name of this item
+      type: string
+      x-ngsi:
+        type: Property
+    nationality:
+      description: Nationality of visitors expressed as ISO 3166-1 alpha-2 country code (e.g. ES, FR, PT)
+      pattern: ^[A-Z]{2}$
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    nationalityName:
+      description: Full name of the nationality country (optional, for human readability)
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    owner:
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
+      items:
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Relationship
+      type: array
+      x-ngsi:
+        type: Property
+    seeAlso:
+      description: list of uri pointing to additional resources about the item
+      oneOf:
+        - items:
+            format: uri
+            type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      x-ngsi:
+        type: Property
+    source:
+      description: Original source of the data as a URL
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    type:
+      description: NGSI entity type. It has to be TourismPresenceObserved
+      enum:
+        - TourismPresenceObserved
+      type: string
+      x-ngsi:
+        type: Property
+    visitorCount:
+      description: Number of visitors observed during this specific hour
+      minimum: 0
+      type: number
+      x-ngsi:
+        model: https://schema.org/Number
+        type: Property
+        units: persons
+  required:
+    - id
+    - type
+    - dateObserved
+    - location
+    - locationCode
+    - nationality
+    - visitorCount
+    - hour
+  type: object
+  x-derived-from: ''
+  x-disclaimer: Redistribution and use in source and binary forms...
+  x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismPresenceObserved/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.Tourism/TourismPresenceObserved/schema.json
+  x-model-tags: tourism,presence,statistics
+  x-version: 0.0.1
