@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$schemaVersion": "0.0.1",
-  "$id": "https://smart-data-models.github.io/dataModel.Tourism/TourismDwellTimeObserved/schema.json",
+  "$id": "https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismDwellTimeObserved/schema.json",
   "title": "Tourism Dwell Time Observed",
   "modelTags": "tourism,dwellTime,statistics",
   "description": "Hourly observation of visitor dwell time (permanence duration) at a specific location (municipality), segmented by nationality and dwell time range.",
