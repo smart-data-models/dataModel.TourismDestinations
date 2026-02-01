@@ -13,6 +13,7 @@
         "ConsumptionBehaviour": "https://smartdatamodels.org/dataModel.TourismDestinations/ConsumptionBehaviour",
         "Event": "https://smartdatamodels.org/dataModel.TourismDestinations/Event",
         "TourismDwellTimeObserved": "https://smartdatamodels.org/dataModel.TourismDestinations/TourismDwellTimeObserved",
+        "TourismPresenceObserved": "https://smartdatamodels.org/dataModel.TourismDestinations/TourismPresenceObserved",
         "TouristDestination": "https://smartdatamodels.org/dataModel.TourismDestinations/TouristDestination",
         "TouristProfile": "https://smartdatamodels.org/dataModel.TourismDestinations/TouristProfile",
         "TouristRental": "https://smartdatamodels.org/dataModel.TourismDestinations/TouristRental",
