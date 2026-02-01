@@ -442,6 +442,6 @@ TourismDwellTimeObserved:
   x-derived-from: ''
   x-disclaimer: Redistribution and use in source and binary forms...
   x-license-url: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismDwellTimeObserved/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.Tourism/TourismDwellTimeObserved/schema.json
+  x-model-schema: https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismDwellTimeObserved/schema.json
   x-model-tags: tourism,dwellTime,statistics
   x-version: 0.0.1
