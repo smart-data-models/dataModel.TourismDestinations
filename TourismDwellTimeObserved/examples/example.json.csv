@@ -1,0 +1,2 @@
+"id_", "type_", "dateObserved_", "hour_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "locationCode_", "locationName_", "nationality_", "nationalityName_", "dwellTimeRange_", "visitorCount_", "aggregationType_", "dataProvider_", "source_"
+"urn:ngsi-ld:TourismDwellTimeObserved:PT:CO1313:DE:20241231T10:30:30-60", "TourismDwellTimeObserved", "2024-12-31T10:30:00Z", "10", "Point", "-8.76116", "41.37472", "CO1313", "Póvoa de Varzim", "DE", "Germany", "30-60", "15", "hourly_sum", "MEO", "MobilityDataPlatform"
