@@ -1,5 +1,7 @@
 # dataModel.TourismDestinations
 
+
+
 ### List of data models
 
 The following entity types are available:
@@ -9,17 +11,16 @@ The following entity types are available:
 
 - [TouristDestination](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristDestination/README.md). A tourist destination. In principle any Place can be a TouristDestination from a City, Region or Country to an AmusementPark or Hotel.
 
+- [TourismDwellTimeObserved](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismDwellTimeObserved/README.md). Hourly observation of visitor dwell time (permanence duration) at a specific location (municipality), segmented by nationality and dwell time range.
+
 - [TouristProfile](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristProfile/README.md). Description of a tourist profile based on the characteristics of a person, trip, choice of stay and spending while in destination.
 
 - [TouristRental](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristRental/README.md). A rental of a facility from a tourist
 
 - [TouristTrip](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristTrip/README.md). A tourist trip. A created itinerary of visits to one or more places of interest (TouristAttraction/TouristDestination) often linked by a similar theme, geographic area, or interest to a particular touristType. The UNWTO defines tourism trip as the Trip taken by visitors.
 
-
-
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
-
+[Link](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/CONTRIBUTORS.yaml) to the 4 current contributors.
 
 ### Contribution
-You can raise an [issue](https://github.com/smart-data-models/dataModel.TourismDestinations/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.TourismDestinations/pulls) on existing data models
+You can raise an [issue](https://github.com/smart-data-models/dataModel.TourismDestinations/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.TourismDestinations/pulls) on existing data models.
