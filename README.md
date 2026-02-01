@@ -13,6 +13,8 @@ The following entity types are available:
 
 - [TourismDwellTimeObserved](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismDwellTimeObserved/README.md). Hourly observation of visitor dwell time (permanence duration) at a specific location (municipality), segmented by nationality and dwell time range.
 
+- [TourismPresenceObserved](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TourismPresenceObserved/README.md). .
+
 - [TouristProfile](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristProfile/README.md). Description of a tourist profile based on the characteristics of a person, trip, choice of stay and spending while in destination.
 
 - [TouristRental](https://github.com/smart-data-models/dataModel.TourismDestinations/blob/master/TouristRental/README.md). A rental of a facility from a tourist
