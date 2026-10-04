@@ -1,3 +1,26 @@
 /* (Beta) Export of data model ConsumptionBehaviour of the subject dataModel.TourismDestinations for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE resourceType_type AS ENUM ('Diesel','Petrol','Electricity','Gas','Water');CREATE TYPE ConsumptionBehaviour_type AS ENUM ('ConsumptionBehaviour');
-CREATE TABLE ConsumptionBehaviour (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, endDate TIMESTAMP, finalMeasurement NUMERIC, id TEXT PRIMARY KEY, initialMeasurement NUMERIC, location JSON, name TEXT, owner JSON, resourceType resourceType_type, seeAlso JSON, source TEXT, startDate TIMESTAMP, type ConsumptionBehaviour_type, usersInvolved NUMERIC);
+CREATE TYPE resourceType_type AS ENUM ('Diesel', 'Petrol', 'Electricity', 'Gas', 'Water');
+CREATE TYPE ConsumptionBehaviour_type AS ENUM ('ConsumptionBehaviour');
+CREATE TABLE ConsumptionBehaviour (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "endDate" TIMESTAMP,
+  "finalMeasurement" NUMERIC,
+  "id" TEXT PRIMARY KEY,
+  "initialMeasurement" NUMERIC,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "resourceType" resourceType_type,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "sourceOfConsumption" JSON,
+  "startDate" TIMESTAMP,
+  "type" ConsumptionBehaviour_type,
+  "usersInvolved" NUMERIC
+);
