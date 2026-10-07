@@ -1,5 +1,5 @@
 /* (Beta) Export of data model ConsumptionBehaviour of the subject dataModel.TourismDestinations for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE resourceType_type AS ENUM ('Diesel', 'Petrol', 'Electricity', 'Gas', 'Water');
+CREATE TYPE ConsumptionBehaviour_resourceType_type AS ENUM ('Diesel', 'Petrol', 'Electricity', 'Gas', 'Water');
 CREATE TYPE ConsumptionBehaviour_type AS ENUM ('ConsumptionBehaviour');
 CREATE TABLE ConsumptionBehaviour (
   "address" JSON,
@@ -16,7 +16,7 @@ CREATE TABLE ConsumptionBehaviour (
   "location" JSON,
   "name" TEXT,
   "owner" JSON,
-  "resourceType" resourceType_type,
+  "resourceType" ConsumptionBehaviour_resourceType_type,
   "seeAlso" JSON,
   "source" TEXT,
   "sourceOfConsumption" JSON,
