@@ -1,5 +1,5 @@
 /* (Beta) Export of data model TouristTrip of the subject dataModel.TourismDestinations for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE tripStatus_type AS ENUM ('cancelled', 'closed', 'finished', 'opened', 'postponed', 'rescheduled', 'scheduled', 'suspended');
+CREATE TYPE TouristTrip_tripStatus_type AS ENUM ('cancelled', 'closed', 'finished', 'opened', 'postponed', 'rescheduled', 'scheduled', 'suspended');
 CREATE TYPE TouristTrip_type AS ENUM ('TouristTrip');
 CREATE TABLE TouristTrip (
   "accessPlan" TEXT,
@@ -51,7 +51,7 @@ CREATE TABLE TouristTrip (
   "tripPriceFrom" NUMERIC,
   "tripPriceTo" NUMERIC,
   "tripSchedule" JSON,
-  "tripStatus" tripStatus_type,
+  "tripStatus" TouristTrip_tripStatus_type,
   "type" TouristTrip_type,
   "url" TEXT,
   "video" TEXT,
