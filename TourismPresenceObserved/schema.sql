@@ -1,9 +1,9 @@
 /* (Beta) Export of data model TourismPresenceObserved of the subject dataModel.TourismDestinations for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE aggregationType_type AS ENUM ('hourly_sum', 'hourly_average', 'hourly_snapshot', 'hourly_estimate');
+CREATE TYPE TourismPresenceObserved_aggregationType_type AS ENUM ('hourly_sum', 'hourly_average', 'hourly_snapshot', 'hourly_estimate');
 CREATE TYPE TourismPresenceObserved_type AS ENUM ('TourismPresenceObserved');
 CREATE TABLE TourismPresenceObserved (
   "address" JSON,
-  "aggregationType" aggregationType_type,
+  "aggregationType" TourismPresenceObserved_aggregationType_type,
   "alternateName" TEXT,
   "areaServed" TEXT,
   "dataProvider" TEXT,
